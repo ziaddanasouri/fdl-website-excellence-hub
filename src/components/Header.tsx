@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Truck, Package, Globe, Phone } from 'lucide-react';
+import { Menu, X, Truck, Package, Globe, Phone, User } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,6 +57,12 @@ const Header = () => {
               <Phone className="h-4 w-4 mr-2" />
               1-800-FDL-SHIP
             </Button>
+            <Link to="/portal/login">
+              <Button variant="outline" size="sm">
+                <User className="h-4 w-4 mr-2" />
+                Customer Portal
+              </Button>
+            </Link>
             <Button className="cta-button">
               Get Quote
             </Button>
@@ -97,6 +103,12 @@ const Header = () => {
                   <Phone className="h-4 w-4 mr-2" />
                   1-800-FDL-SHIP
                 </Button>
+                <Link to="/portal/login">
+                  <Button variant="outline" size="sm">
+                    <User className="h-4 w-4 mr-2" />
+                    Customer Portal
+                  </Button>
+                </Link>
                 <Button className="cta-button">
                   Get Quote
                 </Button>
