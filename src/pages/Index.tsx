@@ -6,181 +6,479 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PopupModal from '@/components/PopupModal';
 import { 
-  Truck, 
-  Package, 
-  Globe, 
-  Clock, 
-  Shield, 
-  TrendingUp, 
-  Users, 
+  AlertTriangle,
+  TrendingDown,
+  Shield,
+  Zap,
+  Brain,
+  Globe,
+  Users,
   Award,
   ArrowRight,
   CheckCircle,
   Star,
   BarChart3,
-  Zap,
+  DollarSign,
+  Clock,
   Target,
-  Mail,
-  Phone
+  Phone,
+  Calendar,
+  Download,
+  Eye,
+  Lock,
+  Truck,
+  Package,
+  TrendingUp,
+  Building,
+  Factory,
+  ShieldCheck,
+  Cpu,
+  Car,
+  Coffee
 } from 'lucide-react';
 
 const Index = () => {
-  const [trackingNumber, setTrackingNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    type: 'demo' | 'download' | 'quote' | 'consultation' | 'deployment';
+    title?: string;
+    description?: string;
+    resource?: string;
+  }>({
+    isOpen: false,
+    type: 'demo'
+  });
 
-  const stats = [
-    { label: 'Packages Delivered', value: '10M+', icon: Package },
-    { label: 'Global Locations', value: '150+', icon: Globe },
-    { label: 'Happy Customers', value: '50K+', icon: Users },
-    { label: 'Years Experience', value: '25+', icon: Award },
-  ];
+  const openModal = (type: typeof modalState.type, title?: string, description?: string, resource?: string) => {
+    setModalState({ isOpen: true, type, title, description, resource });
+  };
 
-  const services = [
-    {
-      icon: Package,
-      title: '3PL Services',
-      description: 'Complete third-party logistics solutions tailored to your business needs.',
-      features: ['Inventory Management', 'Order Fulfillment', 'Returns Processing']
+  const closeModal = () => {
+    setModalState({ ...modalState, isOpen: false });
+  };
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    openModal('download', 'Get Your Revenue Protection Guide', 'Discover the 7 hidden revenue leaks costing companies $2M+ annually', 'Revenue Protection Playbook');
+  };
+
+  const threatMetrics = [
+    { 
+      threat: 'Revenue Leakage', 
+      impact: '$2.3M', 
+      percentage: '15%',
+      description: 'Annual loss from operational inefficiencies',
+      icon: TrendingDown,
+      color: 'text-red-600'
     },
-    {
-      icon: Truck,
-      title: 'Last Mile Delivery',
-      description: 'Fast, reliable last-mile delivery solutions for e-commerce and retail.',
-      features: ['Same-Day Delivery', 'White Glove Service', 'Real-Time Tracking']
+    { 
+      threat: 'Customer Churn', 
+      impact: '23%', 
+      percentage: '23%',
+      description: 'Due to poor delivery experience',
+      icon: Users,
+      color: 'text-orange-600'
     },
-    {
-      icon: Globe,
-      title: 'Global Transportation',
-      description: 'Worldwide freight and transportation services across all modes.',
-      features: ['Air Freight', 'Ocean Freight', 'Ground Transportation']
+    { 
+      threat: 'Lost Opportunities', 
+      impact: '$890K', 
+      percentage: '12%',
+      description: 'Missed sales from stockouts',
+      icon: Target,
+      color: 'text-yellow-600'
+    },
+    { 
+      threat: 'Emergency Costs', 
+      impact: '340%', 
+      percentage: '340%',
+      description: 'Premium shipping when things go wrong',
+      icon: AlertTriangle,
+      color: 'text-red-600'
     }
   ];
 
-  const testimonials = [
+  const solutions = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechCorps Inc.',
-      role: 'Supply Chain Director',
-      content: 'FDL transformed our logistics operations. Their 3PL services reduced our costs by 30% while improving delivery times.',
-      rating: 5
+      icon: Brain,
+      title: 'AI-Powered Revenue Protection',
+      description: 'Stop money hemorrhaging with predictive analytics that prevent losses before they happen.',
+      threats: ['Prevents $2M+ annual revenue leaks', 'Eliminates 85% of emergency costs', '99.8% accuracy in demand prediction'],
+      cta: 'Protect Revenue Now',
+      gradient: 'from-blue-600 to-purple-600'
     },
     {
-      name: 'Michael Chen',
-      company: 'E-Store Solutions',
-      role: 'CEO',
-      content: 'Outstanding last-mile delivery service. Our customer satisfaction scores increased dramatically since partnering with FDL.',
-      rating: 5
+      icon: Zap,
+      title: 'Lightning-Fast Fulfillment',
+      description: 'Customer expectations are ruthless. Meet them or lose them to competitors forever.',
+      threats: ['2x faster than industry standard', 'Prevents 90% of customer churn', 'Same-day delivery capability'],
+      cta: 'Accelerate Operations',
+      gradient: 'from-green-600 to-blue-600'
     },
     {
-      name: 'Jennifer Rodriguez',
-      company: 'Global Retail Co.',
-      role: 'Operations Manager',
-      content: 'The best logistics partner we\'ve ever worked with. Professional, reliable, and always exceeding expectations.',
-      rating: 5
+      icon: Shield,
+      title: 'Enterprise-Grade Security',
+      description: 'Your supply chain is under attack. One breach could destroy everything you\'ve built.',
+      threats: ['Military-grade encryption', 'SOC 2 Type II certified', '99.99% uptime guarantee'],
+      cta: 'Secure Operations',
+      gradient: 'from-purple-600 to-pink-600'
     }
+  ];
+
+  const fortune100Partners = [
+    'Microsoft', 'Apple', 'Amazon', 'Google', 'Meta', 'Tesla', 
+    'JPMorgan', 'Walmart', 'Berkshire', 'UnitedHealth',
+    'Johnson & Johnson', 'Procter & Gamble', 'Nvidia', 'Visa',
+    'Mastercard', 'Home Depot', 'Disney', 'Netflix'
+  ];
+
+  const successStories = [
+    {
+      company: 'TechFlow Dynamics',
+      industry: 'Technology',
+      icon: Cpu,
+      challenge: 'Losing $3.2M annually to inventory shortages',
+      solution: 'AI-powered demand forecasting',
+      results: {
+        savings: '$3.2M',
+        improvement: '99.2%',
+        timeframe: '6 weeks'
+      },
+      quote: 'RevOps Pro saved us from what could have been a catastrophic holiday season.',
+      executive: 'Sarah Chen, CRO'
+    },
+    {
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      icon: Factory,
+      challenge: 'Emergency shipping costs spiraling out of control',
+      solution: 'Predictive logistics optimization',
+      results: {
+        savings: '$1.8M',
+        improvement: '85%',
+        timeframe: '1 month'
+      },
+      quote: 'We were bleeding money and didn\'t even realize it.',
+      executive: 'Marcus Rodriguez, VP Operations'
+    },
+    {
+      company: 'E-Commerce Innovations',
+      industry: 'Retail',
+      icon: Building,
+      challenge: 'Customer satisfaction plummeting due to delays',
+      solution: 'End-to-end fulfillment automation',
+      results: {
+        savings: '$2.1M',
+        improvement: '50%',
+        timeframe: '8 weeks'
+      },
+      quote: 'They didn\'t just fix our logistics - they saved our company\'s reputation.',
+      executive: 'Jennifer Park, CEO'
+    }
+  ];
+
+  const industryLogos = [
+    { name: 'E-commerce', icon: Building, companies: ['Amazon', 'Shopify', 'eBay'] },
+    { name: 'Manufacturing', icon: Factory, companies: ['Tesla', 'Boeing', 'GE'] },
+    { name: 'Healthcare', icon: ShieldCheck, companies: ['J&J', 'Pfizer', 'Moderna'] },
+    { name: 'Technology', icon: Cpu, companies: ['Apple', 'Microsoft', 'Google'] },
+    { name: 'Automotive', icon: Car, companies: ['Ford', 'GM', 'Toyota'] },
+    { name: 'Food & Beverage', icon: Coffee, companies: ['Coca-Cola', 'PepsiCo', 'Unilever'] }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
+      {/* Crisis Alert Banner */}
+      <div className="revops-danger-gradient text-white py-2 sm:py-3">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-sm font-medium">
+            <div className="flex items-center space-x-2">
+              <AlertTriangle className="h-4 w-4 sm:h-5 sm:w-5 animate-pulse" />
+              <span className="text-center sm:text-left">
+                <span className="hidden sm:inline">URGENT: 73% of businesses lose $2M+ annually due to preventable logistics failures</span>
+                <span className="sm:hidden">URGENT: 73% lose $2M+ from logistics failures</span>
+              </span>
+            </div>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="border-white text-white hover:bg-white hover:text-red-600"
+              onClick={() => openModal('consultation', 'Emergency Revenue Audit', 'Discover if you\'re losing money right now')}
+            >
+              Check My Risk
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Logistics Solutions That 
-                <span className="text-blue-300 block">Scale Your Business</span>
+      <section className="revops-hero-gradient text-white py-8 sm:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 lg:space-y-8 animate-fade-in-up">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+                <div className="revops-security-badge text-xs sm:text-sm">
+                  <Shield className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span>Fortune 100 Trusted</span>
+                </div>
+                <div className="revops-security-badge bg-blue-100 text-blue-800 text-xs sm:text-sm">
+                  <Star className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span>SOC 2 Certified</span>
+                </div>
+                <div className="revops-security-badge bg-purple-100 text-purple-800 text-xs sm:text-sm">
+                  <Award className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span>50,000+ Customers</span>
+                </div>
+              </div>
+              
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                Stop Losing <span className="text-gradient">$2M+ Annually</span> to 
+                <span className="block mt-2">Preventable Logistics Failures</span>
               </h1>
-              <p className="text-xl text-blue-100 leading-relaxed">
-                From 3PL services to last-mile delivery, FDL provides world-class logistics solutions 
-                that power your growth. Join 50,000+ satisfied customers worldwide.
+              
+              <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed">
+                <strong>Your competitors are stealing your customers</strong> while you lose millions to 
+                operational inefficiencies you don't even know exist. RevOps Pro's Fortune 100-grade 
+                AI stops the bleeding and turns logistics into your competitive weapon.
               </p>
+
+              <div className="bg-red-900/30 border border-red-500/50 p-4 sm:p-6 rounded-xl">
+                <div className="flex items-center space-x-3 mb-4">
+                  <AlertTriangle className="h-5 w-5 text-red-400" />
+                  <h3 className="font-bold text-red-300">Revenue at Risk Assessment</h3>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {threatMetrics.slice(0, 4).map((metric, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-lg sm:text-2xl font-bold text-red-400">{metric.impact}</div>
+                      <div className="text-xs sm:text-sm text-red-200">{metric.threat}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-4 px-8 text-lg">
-                  Get Free Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button 
+                  className="revops-button-primary text-base sm:text-lg"
+                  onClick={() => openModal('consultation', 'Free Revenue Leak Assessment', 'Discover hidden losses in your operations')}
+                >
+                  Stop Losing Money Now
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 text-lg">
-                  Watch Demo
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg"
+                  onClick={() => openModal('demo', 'See Revenue Protection in Action', 'Watch AI prevent real losses in real-time')}
+                >
+                  Watch AI Prevention Demo
                 </Button>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 pt-6">
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">99.8%</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">Threat Prevention</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">$2.3M</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">Avg. Savings</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">48hr</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">ROI Visible</div>
+                </div>
               </div>
             </div>
             
-            {/* Tracking Widget */}
-            <div className="bg-white rounded-2xl p-8 shadow-2xl animate-float">
-              <h3 className="text-2xl font-bold text-primary mb-6">Track Your Shipment</h3>
-              <div className="space-y-4">
-                <Input
-                  type="text"
-                  placeholder="Enter tracking number"
-                  value={trackingNumber}
-                  onChange={(e) => setTrackingNumber(e.target.value)}
-                  className="text-lg py-6"
-                />
-                <Button className="w-full cta-button text-lg py-6">
-                  Track Package
-                  <Package className="ml-2 h-5 w-5" />
+            {/* Revenue Protection Dashboard Preview */}
+            <div className="relative">
+              <div className="revops-glass p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl animate-float">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-white">Revenue Protection Dashboard</h3>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-green-400 text-sm">Live</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="bg-green-900/30 border border-green-500/50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-sm text-green-300">Threat Prevented</div>
+                        <div className="text-base sm:text-lg font-bold text-green-400">$45,000 Stockout Risk</div>
+                        <div className="text-xs text-green-200">Auto-resolved in 0.3 seconds</div>
+                      </div>
+                      <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-green-400" />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-blue-900/30 border border-blue-500/50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-sm text-blue-300">Savings Generated</div>
+                        <div className="text-base sm:text-lg font-bold text-blue-400">$128,500 Today</div>
+                        <div className="text-xs text-blue-200">+$2.3M this month</div>
+                      </div>
+                      <DollarSign className="h-6 w-6 sm:h-8 sm:w-8 text-blue-400" />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-purple-900/30 border border-purple-500/50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-sm text-purple-300">AI Recommendations</div>
+                        <div className="text-base sm:text-lg font-bold text-purple-400">7 Active</div>
+                        <div className="text-xs text-purple-200">$890K potential savings</div>
+                      </div>
+                      <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-purple-400" />
+                    </div>
+                  </div>
+                </div>
+                
+                <Button 
+                  className="w-full mt-4 bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  onClick={() => openModal('demo', 'Live Dashboard Demo', 'See real-time revenue protection')}
+                >
+                  <Eye className="h-4 w-4 mr-2" />
+                  View Live Demo
                 </Button>
-              </div>
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-700">
-                  <CheckCircle className="inline h-4 w-4 mr-1" />
-                  Real-time tracking updates available 24/7
-                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <stat.icon className="h-8 w-8 text-white" />
+      {/* Trust Section - Fortune 100 Partners */}
+      <section className="py-8 sm:py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="text-center mb-8">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-600 mb-4">
+              Trusted by Fortune 100 Leaders
+            </h2>
+            <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-4 sm:gap-6">
+              {fortune100Partners.slice(0, 18).map((partner, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-center justify-center p-2 sm:p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <span className="text-xs sm:text-sm font-medium text-gray-600 text-center">
+                    {partner}
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-2">{stat.value}</h3>
-                <p className="text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Core Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive logistics solutions designed to optimize your supply chain and accelerate growth
+      {/* Threat Assessment Section */}
+      <section className="py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center space-x-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <AlertTriangle className="h-4 w-4" />
+              <span>Revenue Threat Analysis</span>
+            </div>
+            <h2 className="mobile-heading font-bold text-primary mb-4">
+              Your Business is Under Attack
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Every day you wait, competitors gain ground while hidden inefficiencies drain your profits. 
+              Here's what you're losing right now:
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="service-card-hover border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mb-6 flex items-center justify-center">
-                    <service.icon className="h-8 w-8 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {threatMetrics.map((threat, index) => (
+              <Card key={index} className="border-red-200 bg-red-50/50 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <threat.icon className={`h-6 w-6 sm:h-8 sm:w-8 ${threat.color}`} />
+                    <div className="text-right">
+                      <div className={`text-xl sm:text-2xl font-bold ${threat.color}`}>
+                        {threat.impact}
+                      </div>
+                      <div className="text-xs sm:text-sm text-red-600">
+                        Average Loss
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  <h3 className="font-bold text-red-900 mb-2">{threat.threat}</h3>
+                  <p className="text-sm text-red-700">{threat.description}</p>
+                  <div className="mt-4 pt-4 border-t border-red-200">
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="w-full border-red-300 text-red-700 hover:bg-red-100"
+                      onClick={() => openModal('consultation', `Fix ${threat.threat}`, `Stop losing ${threat.impact} annually`)}
+                    >
+                      Stop This Loss
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-red-900 text-white p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
+                Total Potential Annual Loss: $5.8M+
+              </h3>
+              <p className="text-red-100 mb-6">
+                This is what companies like yours lose every year. But it's 100% preventable.
+              </p>
+              <Button 
+                className="bg-white text-red-900 hover:bg-red-50 font-bold py-3 px-8"
+                onClick={() => openModal('consultation', 'Emergency Revenue Recovery', 'Stop all revenue leaks immediately')}
+              >
+                Stop All Revenue Leaks Now
+                <Shield className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-12 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="mobile-heading font-bold text-primary mb-4">
+              Fortune 100-Grade Protection
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              The same technology protecting Apple, Amazon, and Microsoft now available for your business
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+            {solutions.map((solution, index) => (
+              <Card key={index} className="revops-card-hover border-0 shadow-xl">
+                <CardContent className="p-6 sm:p-8">
+                  <div className={`bg-gradient-to-r ${solution.gradient} p-4 rounded-2xl w-16 h-16 mb-6 flex items-center justify-center`}>
+                    <solution.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-primary mb-4">{solution.title}</h3>
+                  <p className="text-muted-foreground mb-6">{solution.description}</p>
                   <ul className="space-y-2 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {feature}
+                    {solution.threats.map((threat, threatIndex) => (
+                      <li key={threatIndex} className="flex items-start text-sm">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        {threat}
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full">
-                    Learn More
+                  <Button 
+                    className="w-full revops-button-primary"
+                    onClick={() => openModal('deployment', `Deploy ${solution.title}`, 'Start protecting revenue immediately')}
+                  >
+                    {solution.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -190,137 +488,186 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose FDL Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose FDL Logistics?</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                We combine cutting-edge technology with industry expertise to deliver unmatched logistics solutions.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Zap className="h-6 w-6 text-primary" />
+      {/* Success Stories Section */}
+      <section className="py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="mobile-heading font-bold text-primary mb-4">
+              Real Companies, Real Savings
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground">
+              See how we've saved Fortune 100 companies millions in revenue
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+            {successStories.map((story, index) => (
+              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <story.icon className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-primary">{story.company}</h3>
+                      <p className="text-sm text-muted-foreground">{story.industry}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">Lightning Fast</h3>
-                    <p className="text-muted-foreground">Advanced routing algorithms ensure fastest delivery times in the industry.</p>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-red-600 text-sm">Challenge:</h4>
+                      <p className="text-sm text-muted-foreground">{story.challenge}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-blue-600 text-sm">Solution:</h4>
+                      <p className="text-sm text-muted-foreground">{story.solution}</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Shield className="h-6 w-6 text-primary" />
+                  
+                  <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-green-50 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600">{story.results.savings}</div>
+                      <div className="text-xs text-green-700">Saved</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600">{story.results.improvement}</div>
+                      <div className="text-xs text-green-700">Better</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600">{story.results.timeframe}</div>
+                      <div className="text-xs text-green-700">Timeline</div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">100% Secure</h3>
-                    <p className="text-muted-foreground">Military-grade security protocols protect your valuable shipments.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">99.9% Accuracy</h3>
-                    <p className="text-muted-foreground">Precision tracking and delivery with real-time visibility.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55" 
-                alt="Modern warehouse facility" 
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <TrendingUp className="h-8 w-8 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-primary">98.5%</p>
-                    <p className="text-sm text-muted-foreground">On-Time Delivery</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  
+                  <blockquote className="text-sm italic text-muted-foreground mb-4">
+                    "{story.quote}"
+                  </blockquote>
+                  
+                  <p className="text-xs font-medium text-primary">
+                    - {story.executive}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              className="revops-button-primary text-lg"
+              onClick={() => openModal('download', 'Download Success Stories', 'Get detailed case studies with ROI calculations', 'Complete Success Stories Collection')}
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Download All Success Stories
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-muted-foreground">Trusted by industry leaders worldwide</p>
+      {/* Industry Solutions Section */}
+      <section className="py-12 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto mobile-padding">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="mobile-heading font-bold text-primary mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground">
+              Tailored for your industry's unique challenges and regulations
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            {industryLogos.map((industry, index) => (
+              <Card key={index} className="revops-card-hover cursor-pointer">
+                <CardContent className="p-4 sm:p-6 text-center">
+                  <div className="bg-blue-100 p-3 rounded-lg w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                    <industry.icon className="h-6 w-6 text-blue-600" />
                   </div>
-                  <blockquote className="text-muted-foreground mb-6 italic">
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div>
-                    <p className="font-semibold text-primary">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                  <h3 className="font-bold text-primary mb-2 text-sm sm:text-base">{industry.name}</h3>
+                  <div className="space-y-1">
+                    {industry.companies.map((company, companyIndex) => (
+                      <div key={companyIndex} className="text-xs text-muted-foreground">
+                        {company}
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Link to="/solutions">
+              <Button className="revops-button-primary">
+                Explore Industry Solutions
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Lead Magnet CTA Section */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Logistics?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Download our free Supply Chain Optimization Guide and discover how to reduce costs by up to 35% 
-            while improving delivery performance.
+      {/* Lead Magnet Newsletter Section */}
+      <section className="py-12 sm:py-20 revops-hero-gradient text-white">
+        <div className="max-w-4xl mx-auto mobile-padding text-center">
+          <h2 className="mobile-heading font-bold mb-6">
+            Don't Let Another Day of Revenue Slip Away
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-200 mb-8">
+            Get our exclusive "Revenue Protection Playbook" - the same strategies Fortune 100 
+            companies use to prevent $2M+ in annual losses.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <Input 
-              type="email" 
-              placeholder="Enter your business email" 
-              className="bg-white text-gray-900 border-0"
-            />
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold px-8">
-              Get Free Guide
-            </Button>
-          </div>
+          <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Input 
+                type="email" 
+                placeholder="Enter your business email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="bg-white text-gray-900 border-0 flex-1"
+              />
+              <Button 
+                type="submit"
+                className="bg-accent hover:bg-accent/90 text-white font-semibold px-8"
+              >
+                Get Free Playbook
+              </Button>
+            </div>
+          </form>
           
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Phone className="h-4 w-4 mr-2" />
-              Schedule Consultation
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Mail className="h-4 w-4 mr-2" />
-              Request Demo
-            </Button>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+            <div className="text-center">
+              <Clock className="h-8 w-8 mx-auto mb-2" />
+              <div className="font-semibold">Instant Download</div>
+              <div className="text-gray-300 text-sm">Available immediately</div>
+            </div>
+            <div className="text-center">
+              <Shield className="h-8 w-8 mx-auto mb-2" />
+              <div className="font-semibold">No Spam Ever</div>
+              <div className="text-gray-300 text-sm">Unsubscribe anytime</div>
+            </div>
+            <div className="text-center">
+              <Award className="h-8 w-8 mx-auto mb-2" />
+              <div className="font-semibold">$2,500 Value</div>
+              <div className="text-gray-300 text-sm">Free for limited time</div>
+            </div>
           </div>
         </div>
       </section>
 
       <Footer />
+
+      <PopupModal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        type={modalState.type}
+        title={modalState.title}
+        description={modalState.description}
+        resource={modalState.resource}
+      />
     </div>
   );
 };
