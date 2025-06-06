@@ -3,229 +3,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FDL Logistics - Professional Blue Design System */
+/* Logistics & 3PL Professional Design System */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 40% 8%;
+    --foreground: 218 27% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 8%;
+    --card-foreground: 218 27% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 8%;
+    --popover-foreground: 218 27% 14%;
 
-    --primary: 220 100% 26%;
+    --primary: 217 91% 24%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 94%;
-    --secondary-foreground: 210 40% 8%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 218 27% 14%;
 
-    --muted: 210 40% 96%;
+    --muted: 220 14% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 217 91% 60%;
+    --accent: 217 71% 53%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 220 100% 26%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 24%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Custom FDL blue colors */
-    --fdl-navy: 220 100% 26%;
-    --fdl-blue: 217 91% 60%;
-    --fdl-light-blue: 213 94% 68%;
-    --fdl-dark-blue: 224 76% 20%;
-    --fdl-accent: 199 89% 48%;
-    --fdl-gray-900: 210 40% 8%;
-    --fdl-gray-800: 215 25% 15%;
-    --fdl-gray-700: 215 20% 25%;
-    --fdl-gray-600: 215 16% 35%;
-    --fdl-gray-100: 210 40% 96%;
+    /* Custom logistics colors */
+    --logistics-blue: 217 91% 24%;
+    --logistics-light-blue: 217 71% 53%;
+    --logistics-navy: 218 27% 14%;
+    --logistics-gray: 215 16% 47%;
+    --logistics-light-gray: 220 14% 96%;
+    --logistics-orange: 24 95% 53%;
+    --logistics-green: 142 76% 36%;
   }
 
   .dark {
-    --background: 210 40% 8%;
-    --foreground: 0 0% 95%;
-    --card: 215 25% 15%;
-    --card-foreground: 0 0% 95%;
-    --popover: 215 25% 15%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 215 25% 20%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 215 25% 20%;
+    --background: 218 27% 8%;
+    --foreground: 210 40% 98%;
+    --card: 218 27% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 218 27% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 71% 53%;
+    --primary-foreground: 218 27% 8%;
+    --secondary: 218 27% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 218 27% 16%;
     --muted-foreground: 215 20% 65%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 98%;
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 217 91% 60%;
+    --accent: 217 71% 53%;
+    --accent-foreground: 218 27% 8%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 218 27% 16%;
+    --input: 218 27% 16%;
+    --ring: 217 71% 53%;
   }
 }
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    @apply border-border;
   }
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: system-ui, -apple-system, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  html {
-    scroll-behavior: smooth;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
 @layer components {
-  .fdl-gradient {
-    background: linear-gradient(135deg, hsl(var(--fdl-navy)) 0%, hsl(var(--fdl-dark-blue)) 50%, hsl(var(--fdl-blue)) 100%);
+  .logistics-gradient {
+    background: linear-gradient(135deg, hsl(var(--logistics-blue)) 0%, hsl(var(--logistics-light-blue)) 100%);
   }
   
-  .fdl-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--fdl-gray-900)) 0%, hsl(var(--fdl-navy)) 40%, hsl(var(--fdl-blue)) 100%);
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--logistics-navy)) 0%, hsl(var(--logistics-blue)) 50%, hsl(var(--logistics-light-blue)) 100%);
   }
   
-  .fdl-light-gradient {
-    background: linear-gradient(135deg, hsl(var(--fdl-blue)) 0%, hsl(var(--fdl-light-blue)) 100%);
+  .service-card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
   
-  .fdl-card-hover {
-    transition: all 0.3s ease;
-  }
-  .fdl-card-hover:hover {
-    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
-    transform: translateY(-8px);
-    border-color: hsl(var(--accent) / 0.5);
+  .cta-button {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105;
   }
   
-  .fdl-button-primary {
-    background-color: hsl(var(--fdl-blue));
-    color: hsl(var(--accent-foreground));
-    font-weight: 600;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    border: 1px solid hsl(var(--fdl-blue));
-  }
-  .fdl-button-primary:hover {
-    background-color: hsl(var(--fdl-navy));
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
-    transform: scale(1.05);
-  }
-  
-  .fdl-button-secondary {
-    border: 2px solid hsl(var(--fdl-blue) / 0.3);
-    color: hsl(var(--foreground));
-    font-weight: 600;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(4px);
-  }
-  .fdl-button-secondary:hover {
-    background-color: hsl(var(--fdl-blue));
-    color: hsl(var(--accent-foreground));
-  }
-
-  .fdl-success-badge {
-    background-color: rgb(220 252 231);
-    color: rgb(22 101 52);
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .fdl-warning-badge {
-    background-color: rgb(254 226 226);
-    color: rgb(153 27 27);
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .fdl-glass {
-    backdrop-filter: blur(16px);
-    background-color: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-  }
-
-  /* Mobile optimizations */
-  .mobile-padding {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @media (min-width: 640px) {
-    .mobile-padding {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    .mobile-padding {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-
-  .mobile-text {
-    font-size: 0.875rem;
-  }
-  @media (min-width: 640px) {
-    .mobile-text {
-      font-size: 1rem;
-    }
-  }
-
-  .mobile-heading {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 640px) {
-    .mobile-heading {
-      font-size: 1.875rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    .mobile-heading {
-      font-size: 2.25rem;
-    }
-  }
-  @media (min-width: 1280px) {
-    .mobile-heading {
-      font-size: 3rem;
-    }
-  }
-
-  .mobile-subheading {
-    font-size: 1.25rem;
-  }
-  @media (min-width: 640px) {
-    .mobile-subheading {
-      font-size: 1.5rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    .mobile-subheading {
-      font-size: 1.875rem;
-    }
+  .secondary-button {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-300;
   }
 }
 
@@ -236,25 +108,6 @@
   
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  .text-gradient {
-    background: linear-gradient(to right, hsl(var(--fdl-blue)), hsl(var(--fdl-navy)));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  .border-gradient {
-    border-image: linear-gradient(45deg, hsl(var(--fdl-blue)), hsl(var(--fdl-navy))) 1;
   }
 }
 
@@ -271,65 +124,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 20px hsl(var(--fdl-blue) / 0.2);
-  }
-  to {
-    box-shadow: 0 0 30px hsl(var(--fdl-blue) / 0.4);
-  }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--fdl-blue));
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--fdl-navy));
-}
-
-/* Mobile responsive typography */
-@media (max-width: 640px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1.125rem; }
-  .text-xl { font-size: 1.125rem; }
-  .text-lg { font-size: 1rem; }
-}
-
-/* Mobile responsive containers */
-@media (max-width: 640px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .grid-responsive {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 640px) and (max-width: 1024px) {
-  .grid-responsive {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-responsive {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
