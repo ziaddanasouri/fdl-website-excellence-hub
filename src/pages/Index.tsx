@@ -193,7 +193,7 @@ const Index = () => {
       <Header />
       
       {/* Crisis Alert Banner */}
-      <div className="revops-danger-gradient text-white py-2 sm:py-3">
+      <div className="fdl-light-gradient text-white py-2 sm:py-3">
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-sm font-medium">
             <div className="flex items-center space-x-2">
@@ -206,7 +206,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="sm" 
-              className="border-white text-white hover:bg-white hover:text-red-600"
+              className="border-white text-white hover:bg-white hover:text-blue-600"
               onClick={() => openModal('consultation', 'Emergency Logistics Audit', 'Discover if you\'re losing money on shipping right now')}
             >
               Check My Shipping Risk
@@ -216,20 +216,20 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="revops-hero-gradient text-white py-8 sm:py-16 lg:py-24">
+      <section className="fdl-hero-gradient text-white py-8 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6 lg:space-y-8 animate-fade-in-up">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
-                <div className="revops-security-badge text-xs sm:text-sm">
+                <div className="fdl-success-badge text-xs sm:text-sm">
                   <Truck className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span>Fortune 100 Logistics</span>
                 </div>
-                <div className="revops-security-badge bg-blue-100 text-blue-800 text-xs sm:text-sm">
+                <div className="fdl-success-badge bg-blue-100 text-blue-800 text-xs sm:text-sm">
                   <Star className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span>99.2% On-Time Delivery</span>
                 </div>
-                <div className="revops-security-badge bg-purple-100 text-purple-800 text-xs sm:text-sm">
+                <div className="fdl-success-badge bg-purple-100 text-purple-800 text-xs sm:text-sm">
                   <Award className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span>50,000+ Shipments Monthly</span>
                 </div>
@@ -246,16 +246,16 @@ const Index = () => {
                 AI turns logistics into your competitive weapon.
               </p>
 
-              <div className="bg-red-900/30 border border-red-500/50 p-4 sm:p-6 rounded-xl">
+              <div className="bg-blue-900/30 border border-blue-500/50 p-4 sm:p-6 rounded-xl">
                 <div className="flex items-center space-x-3 mb-4">
-                  <AlertTriangle className="h-5 w-5 text-red-400" />
-                  <h3 className="font-bold text-red-300">Logistics Risk Assessment</h3>
+                  <AlertTriangle className="h-5 w-5 text-blue-400" />
+                  <h3 className="font-bold text-blue-300">Logistics Risk Assessment</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   {threatMetrics.slice(0, 4).map((metric, index) => (
                     <div key={index} className="text-center">
-                      <div className="text-lg sm:text-2xl font-bold text-red-400">{metric.impact}</div>
-                      <div className="text-xs sm:text-sm text-red-200">{metric.threat}</div>
+                      <div className="text-lg sm:text-2xl font-bold text-blue-400">{metric.impact}</div>
+                      <div className="text-xs sm:text-sm text-blue-200">{metric.threat}</div>
                     </div>
                   ))}
                 </div>
@@ -263,7 +263,7 @@ const Index = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  className="revops-button-primary text-base sm:text-lg"
+                  className="fdl-button-primary text-base sm:text-lg"
                   onClick={() => openModal('consultation', 'Free Shipping Cost Assessment', 'Discover hidden losses in your logistics')}
                 >
                   Stop Losing Money Now
@@ -280,15 +280,15 @@ const Index = () => {
 
               <div className="grid grid-cols-3 gap-4 pt-6">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">99.2%</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-400">99.2%</div>
                   <div className="text-gray-300 text-xs sm:text-sm">On-Time Delivery</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">$1.8M</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-400">$1.8M</div>
                   <div className="text-gray-300 text-xs sm:text-sm">Avg. Savings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">24hr</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-400">24hr</div>
                   <div className="text-gray-300 text-xs sm:text-sm">Setup Time</div>
                 </div>
               </div>
@@ -296,7 +296,7 @@ const Index = () => {
             
             {/* Logistics Dashboard Preview */}
             <div className="relative">
-              <div className="revops-glass p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl animate-float">
+              <div className="fdl-glass p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl animate-float">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-lg sm:text-xl font-bold text-white">FDL Logistics Dashboard</h3>
                   <div className="flex items-center space-x-2">
@@ -380,7 +380,7 @@ const Index = () => {
       <section className="py-12 sm:py-20">
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center space-x-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <AlertTriangle className="h-4 w-4" />
               <span>Logistics Risk Analysis</span>
             </div>
@@ -395,7 +395,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {threatMetrics.map((threat, index) => (
-              <Card key={index} className="border-red-200 bg-red-50/50 hover:shadow-xl transition-all duration-300">
+              <Card key={index} className="border-blue-200 bg-blue-50/50 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4">
                     <threat.icon className={`h-6 w-6 sm:h-8 sm:w-8 ${threat.color}`} />
@@ -403,18 +403,18 @@ const Index = () => {
                       <div className={`text-xl sm:text-2xl font-bold ${threat.color}`}>
                         {threat.impact}
                       </div>
-                      <div className="text-xs sm:text-sm text-red-600">
+                      <div className="text-xs sm:text-sm text-blue-600">
                         Average Loss
                       </div>
                     </div>
                   </div>
-                  <h3 className="font-bold text-red-900 mb-2">{threat.threat}</h3>
-                  <p className="text-sm text-red-700">{threat.description}</p>
-                  <div className="mt-4 pt-4 border-t border-red-200">
+                  <h3 className="font-bold text-blue-900 mb-2">{threat.threat}</h3>
+                  <p className="text-sm text-blue-700">{threat.description}</p>
+                  <div className="mt-4 pt-4 border-t border-blue-200">
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full border-red-300 text-red-700 hover:bg-red-100"
+                      className="w-full border-blue-300 text-blue-700 hover:bg-blue-100"
                       onClick={() => openModal('consultation', `Fix ${threat.threat}`, `Stop losing ${threat.impact} annually`)}
                     >
                       Stop This Loss
@@ -426,15 +426,15 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <div className="bg-red-900 text-white p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto">
+            <div className="bg-blue-900 text-white p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Total Potential Annual Loss: $4.2M+
               </h3>
-              <p className="text-red-100 mb-6">
+              <p className="text-blue-100 mb-6">
                 This is what companies like yours lose every year to poor logistics. But it's 100% preventable.
               </p>
               <Button 
-                className="bg-white text-red-900 hover:bg-red-50 font-bold py-3 px-8"
+                className="bg-white text-blue-900 hover:bg-blue-50 font-bold py-3 px-8"
                 onClick={() => openModal('consultation', 'Emergency Logistics Recovery', 'Stop all shipping losses immediately')}
               >
                 Stop All Logistics Losses Now
@@ -459,7 +459,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {solutions.map((solution, index) => (
-              <Card key={index} className="revops-card-hover border-0 shadow-xl">
+              <Card key={index} className="fdl-card-hover border-0 shadow-xl">
                 <CardContent className="p-6 sm:p-8">
                   <div className={`bg-gradient-to-r ${solution.gradient} p-4 rounded-2xl w-16 h-16 mb-6 flex items-center justify-center`}>
                     <solution.icon className="h-8 w-8 text-white" />
@@ -475,7 +475,7 @@ const Index = () => {
                     ))}
                   </ul>
                   <Button 
-                    className="w-full revops-button-primary"
+                    className="w-full fdl-button-primary"
                     onClick={() => openModal('deployment', `Deploy ${solution.title}`, 'Start optimizing logistics immediately')}
                   >
                     {solution.cta}
@@ -579,7 +579,7 @@ const Index = () => {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
             {industryLogos.map((industry, index) => (
-              <Card key={index} className="revops-card-hover cursor-pointer">
+              <Card key={index} className="fdl-card-hover cursor-pointer">
                 <CardContent className="p-4 sm:p-6 text-center">
                   <div className="bg-blue-100 p-3 rounded-lg w-12 h-12 mx-auto mb-4 flex items-center justify-center">
                     <industry.icon className="h-6 w-6 text-blue-600" />
@@ -599,7 +599,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <Link to="/solutions">
-              <Button className="revops-button-primary">
+              <Button className="fdl-button-primary">
                 Explore Logistics Solutions
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -609,7 +609,7 @@ const Index = () => {
       </section>
 
       {/* Lead Magnet Newsletter Section */}
-      <section className="py-12 sm:py-20 revops-hero-gradient text-white">
+      <section className="py-12 sm:py-20 fdl-hero-gradient text-white">
         <div className="max-w-4xl mx-auto mobile-padding text-center">
           <h2 className="mobile-heading font-bold mb-6">
             Don't Let Another Day of Profits Slip Away
@@ -631,7 +631,7 @@ const Index = () => {
               />
               <Button 
                 type="submit"
-                className="bg-accent hover:bg-accent/90 text-white font-semibold px-8"
+                className="fdl-button-primary font-semibold px-8"
               >
                 Get Free Playbook
               </Button>

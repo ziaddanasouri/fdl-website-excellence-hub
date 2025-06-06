@@ -70,7 +70,7 @@ const SuccessStories = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="revops-hero-gradient text-white py-20">
+      <section className="fdl-hero-gradient text-white py-20">
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="text-center space-y-8">
             <div className="flex items-center justify-center space-x-3">
@@ -105,27 +105,27 @@ const SuccessStories = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-red-600 mb-2">The Crisis:</h4>
+                    <h4 className="font-semibold text-blue-600 mb-2">The Crisis:</h4>
                     <p className="text-muted-foreground">{story.challenge}</p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-2">FDL's Solution:</h4>
+                    <h4 className="font-semibold text-green-600 mb-2">FDL's Solution:</h4>
                     <p className="text-muted-foreground">{story.solution}</p>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-4 p-4 bg-green-50 rounded-lg">
+                  <div className="grid grid-cols-3 gap-4 p-4 bg-blue-50 rounded-lg">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600">{story.results.savings}</div>
-                      <div className="text-xs text-green-700">Value</div>
+                      <div className="text-2xl font-bold text-blue-600">{story.results.savings}</div>
+                      <div className="text-xs text-blue-700">Value</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600">{story.results.efficiency}</div>
-                      <div className="text-xs text-green-700">Performance</div>
+                      <div className="text-2xl font-bold text-blue-600">{story.results.efficiency}</div>
+                      <div className="text-xs text-blue-700">Performance</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600">{story.results.satisfaction}</div>
-                      <div className="text-xs text-green-700">Outcome</div>
+                      <div className="text-2xl font-bold text-blue-600">{story.results.satisfaction}</div>
+                      <div className="text-xs text-blue-700">Outcome</div>
                     </div>
                   </div>
 
@@ -143,7 +143,7 @@ const SuccessStories = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 revops-hero-gradient text-white">
+      <section className="py-20 fdl-hero-gradient text-white">
         <div className="max-w-4xl mx-auto mobile-padding text-center">
           <h2 className="mobile-subheading font-bold mb-6">
             Ready to Write Your Success Story?
@@ -154,7 +154,7 @@ const SuccessStories = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              className="revops-button-primary text-lg"
+              className="fdl-button-primary text-lg"
               onClick={() => openModal('consultation', 'Start Your Success Story', 'Begin your logistics transformation today')}
             >
               Start Your Success Story

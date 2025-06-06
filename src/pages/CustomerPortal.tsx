@@ -92,7 +92,7 @@ const CustomerPortal = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center mobile-padding">
         <Card className="w-full max-w-md shadow-2xl">
           <CardHeader className="text-center pb-8">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <div className="fdl-light-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Truck className="h-8 w-8 text-white" />
             </div>
             <CardTitle className="text-2xl">FDL Logistics Portal</CardTitle>
@@ -131,7 +131,7 @@ const CustomerPortal = () => {
                 </label>
                 <a href="#" className="text-sm text-primary hover:underline">Forgot password?</a>
               </div>
-              <Button type="submit" className="w-full revops-button-primary">
+              <Button type="submit" className="w-full fdl-button-primary">
                 <Lock className="mr-2 h-4 w-4" />
                 Access Portal
               </Button>
@@ -165,7 +165,7 @@ const CustomerPortal = () => {
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+              <div className="fdl-light-gradient p-2 rounded-lg">
                 <Truck className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -205,7 +205,7 @@ const CustomerPortal = () => {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <Button className="revops-button-primary h-20 flex-col">
+          <Button className="fdl-button-primary h-20 flex-col">
             <Package className="h-6 w-6 mb-2" />
             <span className="text-sm">New Shipment</span>
           </Button>
@@ -295,9 +295,9 @@ const CustomerPortal = () => {
                   <div key={index} className="p-4 border rounded-lg">
                     <div className="flex items-center justify-between mb-2">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        insight.urgency === 'high' ? 'bg-red-100 text-red-700' :
+                        insight.urgency === 'high' ? 'bg-blue-100 text-blue-700' :
                         insight.urgency === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                        'bg-blue-100 text-blue-700'
+                        'bg-green-100 text-green-700'
                       }`}>
                         {insight.type}
                       </span>
@@ -376,7 +376,7 @@ const CustomerPortal = () => {
                 Get immediate help from our logistics experts.
               </p>
               <div className="space-y-3">
-                <Button className="w-full revops-button-primary">
+                <Button className="w-full fdl-button-primary">
                   <Phone className="mr-2 h-4 w-4" />
                   Call (408) 759-5351
                 </Button>

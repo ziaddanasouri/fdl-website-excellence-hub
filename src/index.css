@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* RevOps Pro - Fortune 100 Professional Design System */
+/* FDL Logistics - Professional Blue Design System */
 
 @layer base {
   :root {
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 8%;
 
-    --primary: 210 100% 12%;
+    --primary: 220 100% 26%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 40% 94%;
@@ -25,7 +25,7 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 346 77% 49%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -33,22 +33,21 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 210 100% 12%;
+    --ring: 220 100% 26%;
 
     --radius: 0.5rem;
 
-    /* Custom RevOps Pro colors */
-    --revops-dark: 210 100% 12%;
-    --revops-red: 346 77% 49%;
-    --revops-orange: 25 95% 53%;
-    --revops-green: 142 76% 36%;
-    --revops-blue: 217 91% 60%;
-    --revops-purple: 262 83% 58%;
-    --revops-gray-900: 210 40% 8%;
-    --revops-gray-800: 215 25% 15%;
-    --revops-gray-700: 215 20% 25%;
-    --revops-gray-600: 215 16% 35%;
-    --revops-gray-100: 210 40% 96%;
+    /* Custom FDL blue colors */
+    --fdl-navy: 220 100% 26%;
+    --fdl-blue: 217 91% 60%;
+    --fdl-light-blue: 213 94% 68%;
+    --fdl-dark-blue: 224 76% 20%;
+    --fdl-accent: 199 89% 48%;
+    --fdl-gray-900: 210 40% 8%;
+    --fdl-gray-800: 215 25% 15%;
+    --fdl-gray-700: 215 20% 25%;
+    --fdl-gray-600: 215 16% 35%;
+    --fdl-gray-100: 210 40% 96%;
   }
 
   .dark {
@@ -58,17 +57,17 @@
     --card-foreground: 0 0% 95%;
     --popover: 215 25% 15%;
     --popover-foreground: 0 0% 95%;
-    --primary: 346 77% 49%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
     --secondary: 215 25% 20%;
     --secondary-foreground: 0 0% 95%;
     --muted: 215 25% 20%;
     --muted-foreground: 215 20% 65%;
-    --accent: 346 77% 49%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 98%;
     --border: 215 25% 20%;
     --input: 215 25% 20%;
-    --ring: 346 77% 49%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -89,44 +88,44 @@
 }
 
 @layer components {
-  .revops-gradient {
-    background: linear-gradient(135deg, hsl(var(--revops-dark)) 0%, hsl(var(--revops-gray-800)) 50%, hsl(var(--revops-red)) 100%);
+  .fdl-gradient {
+    background: linear-gradient(135deg, hsl(var(--fdl-navy)) 0%, hsl(var(--fdl-dark-blue)) 50%, hsl(var(--fdl-blue)) 100%);
   }
   
-  .revops-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--revops-gray-900)) 0%, hsl(var(--revops-dark)) 40%, hsl(var(--revops-red)) 100%);
+  .fdl-hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--fdl-gray-900)) 0%, hsl(var(--fdl-navy)) 40%, hsl(var(--fdl-blue)) 100%);
   }
   
-  .revops-danger-gradient {
-    background: linear-gradient(135deg, hsl(var(--destructive)) 0%, hsl(var(--revops-red)) 100%);
+  .fdl-light-gradient {
+    background: linear-gradient(135deg, hsl(var(--fdl-blue)) 0%, hsl(var(--fdl-light-blue)) 100%);
   }
   
-  .revops-card-hover {
+  .fdl-card-hover {
     transition: all 0.3s ease;
   }
-  .revops-card-hover:hover {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  .fdl-card-hover:hover {
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
     transform: translateY(-8px);
     border-color: hsl(var(--accent) / 0.5);
   }
   
-  .revops-button-primary {
-    background-color: hsl(var(--accent));
+  .fdl-button-primary {
+    background-color: hsl(var(--fdl-blue));
     color: hsl(var(--accent-foreground));
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
-    border: 1px solid hsl(var(--accent));
+    border: 1px solid hsl(var(--fdl-blue));
   }
-  .revops-button-primary:hover {
-    background-color: hsl(var(--accent) / 0.9);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  .fdl-button-primary:hover {
+    background-color: hsl(var(--fdl-navy));
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
     transform: scale(1.05);
   }
   
-  .revops-button-secondary {
-    border: 2px solid hsl(var(--accent) / 0.2);
+  .fdl-button-secondary {
+    border: 2px solid hsl(var(--fdl-blue) / 0.3);
     color: hsl(var(--foreground));
     font-weight: 600;
     padding: 1rem 2rem;
@@ -134,12 +133,12 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(4px);
   }
-  .revops-button-secondary:hover {
-    background-color: hsl(var(--accent));
+  .fdl-button-secondary:hover {
+    background-color: hsl(var(--fdl-blue));
     color: hsl(var(--accent-foreground));
   }
 
-  .revops-security-badge {
+  .fdl-success-badge {
     background-color: rgb(220 252 231);
     color: rgb(22 101 52);
     padding: 0.25rem 0.75rem;
@@ -151,7 +150,7 @@
     gap: 0.5rem;
   }
 
-  .revops-threat-badge {
+  .fdl-warning-badge {
     background-color: rgb(254 226 226);
     color: rgb(153 27 27);
     padding: 0.25rem 0.75rem;
@@ -163,10 +162,10 @@
     gap: 0.5rem;
   }
 
-  .revops-glass {
+  .fdl-glass {
     backdrop-filter: blur(16px);
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
   }
 
   /* Mobile optimizations */
@@ -248,14 +247,14 @@
   }
 
   .text-gradient {
-    background: linear-gradient(to right, hsl(var(--accent)), hsl(var(--primary)));
+    background: linear-gradient(to right, hsl(var(--fdl-blue)), hsl(var(--fdl-navy)));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
   .border-gradient {
-    border-image: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--primary))) 1;
+    border-image: linear-gradient(45deg, hsl(var(--fdl-blue)), hsl(var(--fdl-navy))) 1;
   }
 }
 
@@ -277,10 +276,10 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px hsl(var(--accent) / 0.2);
+    box-shadow: 0 0 20px hsl(var(--fdl-blue) / 0.2);
   }
   to {
-    box-shadow: 0 0 30px hsl(var(--accent) / 0.4);
+    box-shadow: 0 0 30px hsl(var(--fdl-blue) / 0.4);
   }
 }
 
@@ -294,12 +293,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--accent));
+  background: hsl(var(--fdl-blue));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent) / 0.8);
+  background: hsl(var(--fdl-navy));
 }
 
 /* Mobile responsive typography */
