@@ -47,42 +47,42 @@ const CustomerPortal = () => {
   };
 
   const dashboardMetrics = [
-    { title: 'Orders This Month', value: '47,392', change: '+12.5%', icon: Package, color: 'text-blue-600' },
+    { title: 'Shipments This Month', value: '47,392', change: '+12.5%', icon: Package, color: 'text-blue-600' },
     { title: 'On-Time Delivery', value: '99.2%', change: '+0.8%', icon: Clock, color: 'text-green-600' },
     { title: 'Cost Per Shipment', value: '$3.28', change: '-15.2%', icon: TrendingUp, color: 'text-purple-600' },
-    { title: 'Revenue Protected', value: '$2.3M', change: '+25.1%', icon: Shield, color: 'text-emerald-600' }
+    { title: 'Cost Savings Generated', value: '$2.3M', change: '+25.1%', icon: DollarSign, color: 'text-emerald-600' }
   ];
 
   const recentOrders = [
-    { id: 'ROP-2024-001234', status: 'Delivered', destination: 'Los Angeles, CA', date: '2024-01-15', items: 24, value: '$12,450' },
-    { id: 'ROP-2024-001235', status: 'In Transit', destination: 'Chicago, IL', date: '2024-01-15', items: 18, value: '$8,920' },
-    { id: 'ROP-2024-001236', status: 'Processing', destination: 'Miami, FL', date: '2024-01-15', items: 32, value: '$15,680' },
-    { id: 'ROP-2024-001237', status: 'Delivered', destination: 'Seattle, WA', date: '2024-01-14', items: 15, value: '$6,750' }
+    { id: 'FDL-2024-001234', status: 'Delivered', destination: 'Los Angeles, CA', date: '2024-01-15', items: 24, value: '$12,450' },
+    { id: 'FDL-2024-001235', status: 'In Transit', destination: 'Chicago, IL', date: '2024-01-15', items: 18, value: '$8,920' },
+    { id: 'FDL-2024-001236', status: 'Processing', destination: 'Miami, FL', date: '2024-01-15', items: 32, value: '$15,680' },
+    { id: 'FDL-2024-001237', status: 'Delivered', destination: 'Seattle, WA', date: '2024-01-14', items: 15, value: '$6,750' }
   ];
 
   const aiInsights = [
     {
-      type: 'Revenue Protection',
-      title: 'Potential Revenue Leak Detected',
-      description: 'AI analysis identified a 15% spike in returns from Chicago region',
-      impact: 'Potential loss: $45,000/month',
-      action: 'Investigate Now',
+      type: 'Route Optimization',
+      title: 'Potential Route Delay Detected',
+      description: 'AI analysis identified a 15% slowdown on I-75 corridor affecting Chicago routes',
+      impact: 'Potential delay prevention: 4.5 hours',
+      action: 'Auto-Reroute Now',
       urgency: 'high'
     },
     {
-      type: 'Optimization',
-      title: 'Inventory Rebalancing Opportunity',
-      description: 'ML suggests moving 20% of SKU-001 inventory from Dallas to Atlanta',
+      type: 'Inventory Optimization',
+      title: 'Warehouse Rebalancing Opportunity',
+      description: 'ML suggests moving 20% of electronics inventory from Dallas to Atlanta warehouse',
       impact: 'Potential savings: $18,500/month',
       action: 'Review Recommendation',
       urgency: 'medium'
     },
     {
-      type: 'Prediction',
-      title: 'Demand Spike Forecast',
-      description: 'ML models predict 35% demand increase for electronics in next 2 weeks',
-      impact: 'Recommended stock increase: 40%',
-      action: 'Auto-Implement',
+      type: 'Demand Prediction',
+      title: 'Shipping Volume Spike Forecast',
+      description: 'ML models predict 35% increase in electronics shipping in next 2 weeks',
+      impact: 'Recommended capacity increase: 40%',
+      action: 'Auto-Scale Fleet',
       urgency: 'low'
     }
   ];
@@ -92,11 +92,11 @@ const CustomerPortal = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center mobile-padding">
         <Card className="w-full max-w-md shadow-2xl">
           <CardHeader className="text-center pb-8">
-            <div className="revops-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <Lock className="h-8 w-8 text-white" />
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <Truck className="h-8 w-8 text-white" />
             </div>
-            <CardTitle className="text-2xl">RevOps Pro Portal</CardTitle>
-            <p className="text-muted-foreground">Secure access to your logistics command center</p>
+            <CardTitle className="text-2xl">FDL Logistics Portal</CardTitle>
+            <p className="text-muted-foreground">Secure access to your logistics dashboard</p>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
@@ -165,11 +165,11 @@ const CustomerPortal = () => {
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
-              <div className="revops-gradient p-2 rounded-lg">
-                <Shield className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                <Truck className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-primary">RevOps Pro Portal</h1>
+                <h1 className="text-xl font-bold text-primary">FDL Logistics Portal</h1>
                 <p className="text-sm text-muted-foreground">TechFlow Dynamics</p>
               </div>
             </div>
@@ -177,7 +177,7 @@ const CustomerPortal = () => {
             <div className="flex items-center space-x-4">
               <div className="hidden sm:flex items-center space-x-2 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span>System Healthy</span>
+                <span>All Shipments On-Time</span>
               </div>
               <Button variant="outline" size="sm">
                 <Settings className="h-4 w-4 mr-2" />
@@ -199,7 +199,7 @@ const CustomerPortal = () => {
             Welcome back, Sarah Chen
           </h2>
           <p className="text-muted-foreground">
-            Your revenue protection systems saved $45,000 today and prevented 3 critical issues.
+            Your logistics operations saved $45,000 today and prevented 3 potential delays.
           </p>
         </div>
 
@@ -207,11 +207,11 @@ const CustomerPortal = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           <Button className="revops-button-primary h-20 flex-col">
             <Package className="h-6 w-6 mb-2" />
-            <span className="text-sm">New Quote</span>
+            <span className="text-sm">New Shipment</span>
           </Button>
           <Button variant="outline" className="h-20 flex-col">
             <Search className="h-6 w-6 mb-2" />
-            <span className="text-sm">Track Order</span>
+            <span className="text-sm">Track Package</span>
           </Button>
           <Button variant="outline" className="h-20 flex-col">
             <Phone className="h-6 w-6 mb-2" />
@@ -247,7 +247,7 @@ const CustomerPortal = () => {
                 <CardTitle className="flex items-center justify-between">
                   <div className="flex items-center">
                     <Package className="mr-2 h-5 w-5" />
-                    Recent Orders
+                    Recent Shipments
                   </div>
                   <Button variant="outline" size="sm">
                     View All
@@ -286,7 +286,7 @@ const CustomerPortal = () => {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Brain className="mr-2 h-5 w-5" />
-                AI Revenue Protection
+                AI Logistics Optimization
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -313,13 +313,13 @@ const CustomerPortal = () => {
           </Card>
         </div>
 
-        {/* Revenue Protection Analytics */}
+        {/* Logistics Performance Analytics */}
         <Card className="border-0 shadow-xl mb-8">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <div className="flex items-center">
                 <BarChart3 className="mr-2 h-5 w-5" />
-                Revenue Protection Analytics
+                Logistics Performance Analytics
               </div>
               <div className="flex space-x-2">
                 <Button variant="outline" size="sm">
@@ -338,25 +338,25 @@ const CustomerPortal = () => {
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <DollarSign className="h-8 w-8 text-green-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-green-600">$2.3M</div>
-                <div className="text-sm text-green-700">Revenue Protected (YTD)</div>
+                <div className="text-sm text-green-700">Cost Savings Generated (YTD)</div>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                <Truck className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-blue-600">127</div>
-                <div className="text-sm text-blue-700">Threats Prevented</div>
+                <div className="text-sm text-blue-700">Issues Prevented</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
                 <TrendingUp className="h-8 w-8 text-purple-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-purple-600">99.8%</div>
-                <div className="text-sm text-purple-700">Prevention Rate</div>
+                <div className="text-sm text-purple-700">Success Rate</div>
               </div>
             </div>
             
             <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
               <div className="text-center">
                 <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                <p className="text-gray-600">Interactive Revenue Analytics Chart</p>
-                <p className="text-sm text-gray-500">Real-time data visualization</p>
+                <p className="text-gray-600">Interactive Logistics Analytics Chart</p>
+                <p className="text-sm text-gray-500">Real-time shipping performance data</p>
               </div>
             </div>
           </CardContent>
@@ -373,7 +373,7 @@ const CustomerPortal = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                Get immediate help from our expert team.
+                Get immediate help from our logistics experts.
               </p>
               <div className="space-y-3">
                 <Button className="w-full revops-button-primary">
@@ -399,11 +399,11 @@ const CustomerPortal = () => {
               <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-start">
                   <Download className="mr-2 h-4 w-4" />
-                  User Guides
+                  Shipping Guides
                 </Button>
                 <Button variant="outline" className="w-full justify-start">
                   <Eye className="mr-2 h-4 w-4" />
-                  Video Tutorials
+                  Tutorial Videos
                 </Button>
                 <Button variant="outline" className="w-full justify-start">
                   <Calendar className="mr-2 h-4 w-4" />
@@ -424,7 +424,7 @@ const CustomerPortal = () => {
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-sm">Plan:</span>
-                  <span className="text-sm font-medium">Enterprise Pro</span>
+                  <span className="text-sm font-medium">Premium Logistics</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Status:</span>

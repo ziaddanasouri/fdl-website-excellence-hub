@@ -62,40 +62,40 @@ const Index = () => {
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    openModal('download', 'Get Your Revenue Protection Guide', 'Discover the 7 hidden revenue leaks costing companies $2M+ annually', 'Revenue Protection Playbook');
+    openModal('download', 'Get Your Logistics Optimization Guide', 'Discover the 7 hidden logistics costs draining your profits', 'Logistics Optimization Playbook');
   };
 
   const threatMetrics = [
     { 
-      threat: 'Revenue Leakage', 
-      impact: '$2.3M', 
-      percentage: '15%',
-      description: 'Annual loss from operational inefficiencies',
-      icon: TrendingDown,
+      threat: 'Shipping Delays', 
+      impact: '$1.8M', 
+      percentage: '18%',
+      description: 'Annual loss from late deliveries',
+      icon: Clock,
       color: 'text-red-600'
     },
     { 
-      threat: 'Customer Churn', 
-      impact: '23%', 
-      percentage: '23%',
-      description: 'Due to poor delivery experience',
-      icon: Users,
+      threat: 'Damaged Goods', 
+      impact: '15%', 
+      percentage: '15%',
+      description: 'Of shipments arrive damaged',
+      icon: AlertTriangle,
       color: 'text-orange-600'
     },
     { 
-      threat: 'Lost Opportunities', 
-      impact: '$890K', 
+      threat: 'Inventory Issues', 
+      impact: '$650K', 
       percentage: '12%',
-      description: 'Missed sales from stockouts',
-      icon: Target,
+      description: 'Lost sales from stockouts',
+      icon: Package,
       color: 'text-yellow-600'
     },
     { 
-      threat: 'Emergency Costs', 
-      impact: '340%', 
-      percentage: '340%',
-      description: 'Premium shipping when things go wrong',
-      icon: AlertTriangle,
+      threat: 'Emergency Freight', 
+      impact: '280%', 
+      percentage: '280%',
+      description: 'Higher costs for rush shipping',
+      icon: Truck,
       color: 'text-red-600'
     }
   ];
@@ -103,26 +103,26 @@ const Index = () => {
   const solutions = [
     {
       icon: Brain,
-      title: 'AI-Powered Revenue Protection',
-      description: 'Stop money hemorrhaging with predictive analytics that prevent losses before they happen.',
-      threats: ['Prevents $2M+ annual revenue leaks', 'Eliminates 85% of emergency costs', '99.8% accuracy in demand prediction'],
-      cta: 'Protect Revenue Now',
+      title: 'AI-Powered Logistics Intelligence',
+      description: 'Stop losing money with predictive analytics that optimize routes, inventory, and delivery timing.',
+      threats: ['Prevents $1.8M+ annual shipping losses', 'Eliminates 85% of emergency freight costs', '99.8% accuracy in delivery predictions'],
+      cta: 'Optimize Logistics Now',
       gradient: 'from-blue-600 to-purple-600'
     },
     {
       icon: Zap,
       title: 'Lightning-Fast Fulfillment',
-      description: 'Customer expectations are ruthless. Meet them or lose them to competitors forever.',
-      threats: ['2x faster than industry standard', 'Prevents 90% of customer churn', 'Same-day delivery capability'],
-      cta: 'Accelerate Operations',
+      description: 'Customer expectations are ruthless. We deliver faster than your competitors ever could.',
+      threats: ['2x faster than industry standard', 'Same-day delivery capability', '99.2% on-time delivery rate'],
+      cta: 'Accelerate Shipping',
       gradient: 'from-green-600 to-blue-600'
     },
     {
       icon: Shield,
-      title: 'Enterprise-Grade Security',
-      description: 'Your supply chain is under attack. One breach could destroy everything you\'ve built.',
-      threats: ['Military-grade encryption', 'SOC 2 Type II certified', '99.99% uptime guarantee'],
-      cta: 'Secure Operations',
+      title: 'Secure Supply Chain',
+      description: 'Your cargo is protected with military-grade tracking and security throughout the supply chain.',
+      threats: ['Real-time cargo monitoring', 'Insurance coverage included', '99.99% secure delivery rate'],
+      cta: 'Secure Your Shipments',
       gradient: 'from-purple-600 to-pink-600'
     }
   ];
@@ -139,14 +139,14 @@ const Index = () => {
       company: 'TechFlow Dynamics',
       industry: 'Technology',
       icon: Cpu,
-      challenge: 'Losing $3.2M annually to inventory shortages',
-      solution: 'AI-powered demand forecasting',
+      challenge: 'Losing $3.2M annually to shipping delays and damage',
+      solution: 'AI-powered route optimization and secure packaging',
       results: {
         savings: '$3.2M',
         improvement: '99.2%',
         timeframe: '6 weeks'
       },
-      quote: 'RevOps Pro saved us from what could have been a catastrophic holiday season.',
+      quote: 'FDL Logistics transformed our shipping from our biggest headache to our competitive advantage.',
       executive: 'Sarah Chen, CRO'
     },
     {
@@ -154,21 +154,21 @@ const Index = () => {
       industry: 'Manufacturing',
       icon: Factory,
       challenge: 'Emergency shipping costs spiraling out of control',
-      solution: 'Predictive logistics optimization',
+      solution: 'Predictive logistics and strategic warehouse placement',
       results: {
         savings: '$1.8M',
         improvement: '85%',
         timeframe: '1 month'
       },
-      quote: 'We were bleeding money and didn\'t even realize it.',
+      quote: 'We were bleeding money on freight costs and didn\'t even realize it.',
       executive: 'Marcus Rodriguez, VP Operations'
     },
     {
       company: 'E-Commerce Innovations',
       industry: 'Retail',
       icon: Building,
-      challenge: 'Customer satisfaction plummeting due to delays',
-      solution: 'End-to-end fulfillment automation',
+      challenge: 'Customer satisfaction plummeting due to shipping delays',
+      solution: 'End-to-end fulfillment and same-day delivery network',
       results: {
         savings: '$2.1M',
         improvement: '50%',
@@ -199,17 +199,17 @@ const Index = () => {
             <div className="flex items-center space-x-2">
               <AlertTriangle className="h-4 w-4 sm:h-5 sm:w-5 animate-pulse" />
               <span className="text-center sm:text-left">
-                <span className="hidden sm:inline">URGENT: 73% of businesses lose $2M+ annually due to preventable logistics failures</span>
-                <span className="sm:hidden">URGENT: 73% lose $2M+ from logistics failures</span>
+                <span className="hidden sm:inline">URGENT: 73% of businesses lose $1.8M+ annually due to preventable shipping failures</span>
+                <span className="sm:hidden">URGENT: 73% lose $1.8M+ from shipping failures</span>
               </span>
             </div>
             <Button 
               variant="outline" 
               size="sm" 
               className="border-white text-white hover:bg-white hover:text-red-600"
-              onClick={() => openModal('consultation', 'Emergency Revenue Audit', 'Discover if you\'re losing money right now')}
+              onClick={() => openModal('consultation', 'Emergency Logistics Audit', 'Discover if you\'re losing money on shipping right now')}
             >
-              Check My Risk
+              Check My Shipping Risk
             </Button>
           </div>
         </div>
@@ -222,34 +222,34 @@ const Index = () => {
             <div className="space-y-6 lg:space-y-8 animate-fade-in-up">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
                 <div className="revops-security-badge text-xs sm:text-sm">
-                  <Shield className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span>Fortune 100 Trusted</span>
+                  <Truck className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span>Fortune 100 Logistics</span>
                 </div>
                 <div className="revops-security-badge bg-blue-100 text-blue-800 text-xs sm:text-sm">
                   <Star className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span>SOC 2 Certified</span>
+                  <span>99.2% On-Time Delivery</span>
                 </div>
                 <div className="revops-security-badge bg-purple-100 text-purple-800 text-xs sm:text-sm">
                   <Award className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span>50,000+ Customers</span>
+                  <span>50,000+ Shipments Monthly</span>
                 </div>
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Stop Losing <span className="text-gradient">$2M+ Annually</span> to 
-                <span className="block mt-2">Preventable Logistics Failures</span>
+                Stop Losing <span className="text-gradient">$1.8M+ Annually</span> to 
+                <span className="block mt-2">Preventable Shipping Failures</span>
               </h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed">
                 <strong>Your competitors are stealing your customers</strong> while you lose millions to 
-                operational inefficiencies you don't even know exist. RevOps Pro's Fortune 100-grade 
-                AI stops the bleeding and turns logistics into your competitive weapon.
+                shipping delays, damaged goods, and inventory issues. FDL Logistics' Fortune 100-grade 
+                AI turns logistics into your competitive weapon.
               </p>
 
               <div className="bg-red-900/30 border border-red-500/50 p-4 sm:p-6 rounded-xl">
                 <div className="flex items-center space-x-3 mb-4">
                   <AlertTriangle className="h-5 w-5 text-red-400" />
-                  <h3 className="font-bold text-red-300">Revenue at Risk Assessment</h3>
+                  <h3 className="font-bold text-red-300">Logistics Risk Assessment</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   {threatMetrics.slice(0, 4).map((metric, index) => (
@@ -264,7 +264,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   className="revops-button-primary text-base sm:text-lg"
-                  onClick={() => openModal('consultation', 'Free Revenue Leak Assessment', 'Discover hidden losses in your operations')}
+                  onClick={() => openModal('consultation', 'Free Shipping Cost Assessment', 'Discover hidden losses in your logistics')}
                 >
                   Stop Losing Money Now
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -272,36 +272,36 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg"
-                  onClick={() => openModal('demo', 'See Revenue Protection in Action', 'Watch AI prevent real losses in real-time')}
+                  onClick={() => openModal('demo', 'See AI Logistics in Action', 'Watch AI optimize real shipments in real-time')}
                 >
-                  Watch AI Prevention Demo
+                  Watch AI Logistics Demo
                 </Button>
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-6">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">99.8%</div>
-                  <div className="text-gray-300 text-xs sm:text-sm">Threat Prevention</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">99.2%</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">On-Time Delivery</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">$2.3M</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">$1.8M</div>
                   <div className="text-gray-300 text-xs sm:text-sm">Avg. Savings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">48hr</div>
-                  <div className="text-gray-300 text-xs sm:text-sm">ROI Visible</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">24hr</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">Setup Time</div>
                 </div>
               </div>
             </div>
             
-            {/* Revenue Protection Dashboard Preview */}
+            {/* Logistics Dashboard Preview */}
             <div className="relative">
               <div className="revops-glass p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl animate-float">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white">Revenue Protection Dashboard</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-white">FDL Logistics Dashboard</h3>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 text-sm">Live</span>
+                    <span className="text-green-400 text-sm">Live Tracking</span>
                   </div>
                 </div>
                 
@@ -309,20 +309,20 @@ const Index = () => {
                   <div className="bg-green-900/30 border border-green-500/50 p-4 rounded-lg">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="text-sm text-green-300">Threat Prevented</div>
-                        <div className="text-base sm:text-lg font-bold text-green-400">$45,000 Stockout Risk</div>
-                        <div className="text-xs text-green-200">Auto-resolved in 0.3 seconds</div>
+                        <div className="text-sm text-green-300">Issue Prevented</div>
+                        <div className="text-base sm:text-lg font-bold text-green-400">$45,000 Delay Avoided</div>
+                        <div className="text-xs text-green-200">Auto-rerouted in 0.3 seconds</div>
                       </div>
-                      <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-green-400" />
+                      <Truck className="h-6 w-6 sm:h-8 sm:w-8 text-green-400" />
                     </div>
                   </div>
                   
                   <div className="bg-blue-900/30 border border-blue-500/50 p-4 rounded-lg">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="text-sm text-blue-300">Savings Generated</div>
+                        <div className="text-sm text-blue-300">Cost Savings</div>
                         <div className="text-base sm:text-lg font-bold text-blue-400">$128,500 Today</div>
-                        <div className="text-xs text-blue-200">+$2.3M this month</div>
+                        <div className="text-xs text-blue-200">+$1.8M this month</div>
                       </div>
                       <DollarSign className="h-6 w-6 sm:h-8 sm:w-8 text-blue-400" />
                     </div>
@@ -331,18 +331,18 @@ const Index = () => {
                   <div className="bg-purple-900/30 border border-purple-500/50 p-4 rounded-lg">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="text-sm text-purple-300">AI Recommendations</div>
-                        <div className="text-base sm:text-lg font-bold text-purple-400">7 Active</div>
-                        <div className="text-xs text-purple-200">$890K potential savings</div>
+                        <div className="text-sm text-purple-300">Active Shipments</div>
+                        <div className="text-base sm:text-lg font-bold text-purple-400">2,847</div>
+                        <div className="text-xs text-purple-200">All on-time</div>
                       </div>
-                      <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-purple-400" />
+                      <Package className="h-6 w-6 sm:h-8 sm:w-8 text-purple-400" />
                     </div>
                   </div>
                 </div>
                 
                 <Button 
                   className="w-full mt-4 bg-white/20 hover:bg-white/30 text-white border-white/30"
-                  onClick={() => openModal('demo', 'Live Dashboard Demo', 'See real-time revenue protection')}
+                  onClick={() => openModal('demo', 'Live Logistics Demo', 'See real-time shipment optimization')}
                 >
                   <Eye className="h-4 w-4 mr-2" />
                   View Live Demo
@@ -358,7 +358,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="text-center mb-8">
             <h2 className="text-lg sm:text-xl font-bold text-gray-600 mb-4">
-              Trusted by Fortune 100 Leaders
+              Trusted by Fortune 100 Companies
             </h2>
             <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-4 sm:gap-6">
               {fortune100Partners.slice(0, 18).map((partner, index) => (
@@ -382,13 +382,13 @@ const Index = () => {
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center space-x-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <AlertTriangle className="h-4 w-4" />
-              <span>Revenue Threat Analysis</span>
+              <span>Logistics Risk Analysis</span>
             </div>
             <h2 className="mobile-heading font-bold text-primary mb-4">
-              Your Business is Under Attack
+              Your Shipments are at Risk
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every day you wait, competitors gain ground while hidden inefficiencies drain your profits. 
+              Every day you wait, competitors deliver faster while hidden inefficiencies drain your profits. 
               Here's what you're losing right now:
             </p>
           </div>
@@ -428,17 +428,17 @@ const Index = () => {
           <div className="text-center mt-12">
             <div className="bg-red-900 text-white p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                Total Potential Annual Loss: $5.8M+
+                Total Potential Annual Loss: $4.2M+
               </h3>
               <p className="text-red-100 mb-6">
-                This is what companies like yours lose every year. But it's 100% preventable.
+                This is what companies like yours lose every year to poor logistics. But it's 100% preventable.
               </p>
               <Button 
                 className="bg-white text-red-900 hover:bg-red-50 font-bold py-3 px-8"
-                onClick={() => openModal('consultation', 'Emergency Revenue Recovery', 'Stop all revenue leaks immediately')}
+                onClick={() => openModal('consultation', 'Emergency Logistics Recovery', 'Stop all shipping losses immediately')}
               >
-                Stop All Revenue Leaks Now
-                <Shield className="ml-2 h-5 w-5" />
+                Stop All Logistics Losses Now
+                <Truck className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -450,10 +450,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="mobile-heading font-bold text-primary mb-4">
-              Fortune 100-Grade Protection
+              Fortune 100-Grade Logistics
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              The same technology protecting Apple, Amazon, and Microsoft now available for your business
+              The same technology shipping for Apple, Amazon, and Microsoft now available for your business
             </p>
           </div>
           
@@ -476,7 +476,7 @@ const Index = () => {
                   </ul>
                   <Button 
                     className="w-full revops-button-primary"
-                    onClick={() => openModal('deployment', `Deploy ${solution.title}`, 'Start protecting revenue immediately')}
+                    onClick={() => openModal('deployment', `Deploy ${solution.title}`, 'Start optimizing logistics immediately')}
                   >
                     {solution.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -496,7 +496,7 @@ const Index = () => {
               Real Companies, Real Savings
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
-              See how we've saved Fortune 100 companies millions in revenue
+              See how we've saved Fortune 100 companies millions in logistics costs
             </p>
           </div>
           
@@ -556,7 +556,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button 
               className="revops-button-primary text-lg"
-              onClick={() => openModal('download', 'Download Success Stories', 'Get detailed case studies with ROI calculations', 'Complete Success Stories Collection')}
+              onClick={() => openModal('download', 'Download Success Stories', 'Get detailed case studies with cost savings', 'Complete Success Stories Collection')}
             >
               <Download className="mr-2 h-5 w-5" />
               Download All Success Stories
@@ -570,10 +570,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto mobile-padding">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="mobile-heading font-bold text-primary mb-4">
-              Industry-Specific Solutions
+              Industry-Specific Logistics
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Tailored for your industry's unique challenges and regulations
+              Specialized logistics solutions for your industry's unique challenges
             </p>
           </div>
           
@@ -600,7 +600,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Link to="/solutions">
               <Button className="revops-button-primary">
-                Explore Industry Solutions
+                Explore Logistics Solutions
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -612,11 +612,11 @@ const Index = () => {
       <section className="py-12 sm:py-20 revops-hero-gradient text-white">
         <div className="max-w-4xl mx-auto mobile-padding text-center">
           <h2 className="mobile-heading font-bold mb-6">
-            Don't Let Another Day of Revenue Slip Away
+            Don't Let Another Day of Profits Slip Away
           </h2>
           <p className="text-lg sm:text-xl text-gray-200 mb-8">
-            Get our exclusive "Revenue Protection Playbook" - the same strategies Fortune 100 
-            companies use to prevent $2M+ in annual losses.
+            Get our exclusive "Logistics Optimization Playbook" - the same strategies Fortune 100 
+            companies use to prevent $1.8M+ in annual shipping losses.
           </p>
           
           <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
@@ -645,7 +645,7 @@ const Index = () => {
               <div className="text-gray-300 text-sm">Available immediately</div>
             </div>
             <div className="text-center">
-              <Shield className="h-8 w-8 mx-auto mb-2" />
+              <Truck className="h-8 w-8 mx-auto mb-2" />
               <div className="font-semibold">No Spam Ever</div>
               <div className="text-gray-300 text-sm">Unsubscribe anytime</div>
             </div>

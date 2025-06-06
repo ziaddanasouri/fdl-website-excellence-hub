@@ -12,7 +12,8 @@ import {
   Users, 
   ArrowRight,
   CheckCircle,
-  Star
+  Star,
+  Truck
 } from 'lucide-react';
 
 const SuccessStories = () => {
@@ -39,27 +40,27 @@ const SuccessStories = () => {
     {
       company: 'MegaRetail Corp',
       sector: 'E-commerce & Retail',
-      challenge: 'Black Friday inventory crisis threatening $50M in sales',
-      solution: 'AI-powered demand forecasting and automated reordering',
+      challenge: 'Black Friday shipping crisis threatening $50M in customer satisfaction',
+      solution: 'AI-powered demand forecasting and automated logistics scaling with FDL',
       results: {
         savings: '$18.5M',
-        efficiency: '97% stock availability',
-        satisfaction: 'Zero stockouts during peak'
+        efficiency: '97% on-time delivery',
+        satisfaction: 'Zero shipping complaints'
       },
-      quote: 'RevOps Pro saved our Black Friday. Their AI predicted the surge perfectly.',
+      quote: 'FDL Logistics saved our Black Friday. Their AI predicted the surge perfectly and scaled our shipping capacity seamlessly.',
       executive: 'Sarah Johnson, CEO'
     },
     {
       company: 'TechFlow Innovations',
       sector: 'Technology',
-      challenge: 'Critical component shortage delaying $20M product launch',
-      solution: 'Multi-source procurement optimization with real-time tracking',
+      challenge: 'Critical component delays threatening $20M product launch timeline',
+      solution: 'Multi-modal transportation optimization with real-time rerouting by FDL',
       results: {
         savings: '$20M',
         efficiency: 'On-time launch achieved',
         satisfaction: '200% revenue growth'
       },
-      quote: 'They turned our biggest threat into our competitive advantage.',
+      quote: 'FDL turned our biggest logistics nightmare into our competitive advantage. They delivered when everyone else said impossible.',
       executive: 'David Chen, CTO'
     }
   ];
@@ -74,17 +75,17 @@ const SuccessStories = () => {
           <div className="text-center space-y-8">
             <div className="flex items-center justify-center space-x-3">
               <Award className="h-8 w-8 text-yellow-400" />
-              <span className="text-yellow-400 font-semibold">Fortune 100 Success Stories</span>
+              <span className="text-yellow-400 font-semibold">Fortune 100 Logistics Success Stories</span>
             </div>
             
             <h1 className="mobile-heading font-bold leading-tight">
               Real Companies, Real Results
-              <span className="block text-gradient">Billions in Revenue Protected</span>
+              <span className="block text-gradient">Billions in Value Delivered</span>
             </h1>
             
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               From preventing Black Friday disasters to saving $50M product launches, 
-              see how Fortune 100 companies use RevOps Pro to turn supply chain threats 
+              see how Fortune 100 companies use FDL Logistics to turn shipping challenges 
               into competitive advantages.
             </p>
           </div>
@@ -109,22 +110,22 @@ const SuccessStories = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-2">The Solution:</h4>
+                    <h4 className="font-semibold text-blue-600 mb-2">FDL's Solution:</h4>
                     <p className="text-muted-foreground">{story.solution}</p>
                   </div>
 
                   <div className="grid grid-cols-3 gap-4 p-4 bg-green-50 rounded-lg">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-600">{story.results.savings}</div>
-                      <div className="text-xs text-green-700">Saved</div>
+                      <div className="text-xs text-green-700">Value</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-600">{story.results.efficiency}</div>
-                      <div className="text-xs text-green-700">Efficiency</div>
+                      <div className="text-xs text-green-700">Performance</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-600">{story.results.satisfaction}</div>
-                      <div className="text-xs text-green-700">Performance</div>
+                      <div className="text-xs text-green-700">Outcome</div>
                     </div>
                   </div>
 
@@ -148,13 +149,13 @@ const SuccessStories = () => {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-xl mb-8">
-            Join the Fortune 100 companies protecting billions in revenue with RevOps Pro.
+            Join the Fortune 100 companies saving billions with FDL Logistics.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               className="revops-button-primary text-lg"
-              onClick={() => openModal('consultation', 'Start Your Success Story', 'Begin your transformation today')}
+              onClick={() => openModal('consultation', 'Start Your Success Story', 'Begin your logistics transformation today')}
             >
               Start Your Success Story
               <ArrowRight className="ml-2 h-5 w-5" />
