@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { 
   DollarSign, 
   CreditCard, 
@@ -15,100 +17,168 @@ import {
   Download,
   Eye,
   Filter,
-  Calendar
+  CalendarIcon,
+  X
 } from 'lucide-react';
+import { format, addDays, subDays, subMonths, isWithinInterval, parseISO } from 'date-fns';
 import PortalLayout from '@/components/portal/PortalLayout';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { cn } from '@/lib/utils';
 
 const Billing = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('3m');
+  const [dateRange, setDateRange] = useState<{ from: Date; to: Date } | null>(null);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  // Mock data
-  const billingOverview = {
-    totalSpend: 87432.50,
-    outstanding: 4250.75,
-    paidInvoices: 83181.75,
-    overdueAmount: 1850.25,
-    avgMonthlySpend: 14572.08
+  // Extended mock data with more history
+  const allSpendData = [
+    { month: 'Jan', date: '2024-01-15', amount: 11500, budget: 15000 },
+    { month: 'Feb', date: '2024-02-15', amount: 13200, budget: 15000 },
+    { month: 'Mar', date: '2024-03-15', amount: 12800, budget: 15000 },
+    { month: 'Apr', date: '2024-04-15', amount: 14900, budget: 15000 },
+    { month: 'May', date: '2024-05-15', amount: 15200, budget: 15000 },
+    { month: 'Jun', date: '2024-06-15', amount: 13832, budget: 15000 },
+    { month: 'Jul', date: '2024-07-15', amount: 12500, budget: 15000 },
+    { month: 'Aug', date: '2024-08-15', amount: 14200, budget: 15000 },
+    { month: 'Sep', date: '2024-09-15', amount: 13800, budget: 15000 },
+    { month: 'Oct', date: '2024-10-15', amount: 15900, budget: 15000 },
+    { month: 'Nov', date: '2024-11-15', amount: 16200, budget: 15000 },
+    { month: 'Dec', date: '2024-12-15', amount: 14832, budget: 15000 }
+  ];
+
+  const allInvoices = [
+    { id: 'INV-2024-0234', date: '2024-01-15', dueDate: '2024-02-14', amount: 2450.75, status: 'paid', services: 'LTL Freight' },
+    { id: 'INV-2024-0235', date: '2024-01-18', dueDate: '2024-02-17', amount: 1850.25, status: 'overdue', services: 'FTL Freight' },
+    { id: 'INV-2024-0236', date: '2024-01-20', dueDate: '2024-02-19', amount: 950.50, status: 'pending', services: 'Warehousing' },
+    { id: 'INV-2024-0237', date: '2024-01-22', dueDate: '2024-02-21', amount: 3200.00, status: 'pending', services: 'Last Mile' },
+    { id: 'INV-2024-0220', date: '2024-02-05', dueDate: '2024-03-05', amount: 2100.00, status: 'paid', services: 'LTL Freight' },
+    { id: 'INV-2024-0221', date: '2024-02-10', dueDate: '2024-03-10', amount: 3500.75, status: 'paid', services: 'FTL Freight' },
+    { id: 'INV-2024-0222', date: '2024-02-15', dueDate: '2024-03-15', amount: 1200.50, status: 'paid', services: 'Warehousing' },
+    { id: 'INV-2024-0180', date: '2024-03-08', dueDate: '2024-04-08', amount: 2800.00, status: 'paid', services: 'Last Mile' },
+    { id: 'INV-2024-0181', date: '2024-03-12', dueDate: '2024-04-12', amount: 1750.25, status: 'paid', services: 'LTL Freight' },
+    { id: 'INV-2024-0182', date: '2024-03-18', dueDate: '2024-04-18', amount: 4200.50, status: 'paid', services: 'FTL Freight' }
+  ];
+
+  const allPayments = [
+    { id: 'PAY-2024-0112', date: '2024-01-15', amount: 2450.75, method: 'Bank Transfer', invoice: 'INV-2024-0234', status: 'completed' },
+    { id: 'PAY-2024-0111', date: '2024-01-10', amount: 4200.50, method: 'ACH', invoice: 'INV-2024-0233', status: 'completed' },
+    { id: 'PAY-2024-0110', date: '2024-01-08', amount: 1750.25, method: 'Wire Transfer', invoice: 'INV-2024-0232', status: 'completed' },
+    { id: 'PAY-2024-0105', date: '2024-02-12', amount: 2100.00, method: 'Bank Transfer', invoice: 'INV-2024-0220', status: 'completed' },
+    { id: 'PAY-2024-0106', date: '2024-02-18', amount: 3500.75, method: 'ACH', invoice: 'INV-2024-0221', status: 'completed' },
+    { id: 'PAY-2024-0107', date: '2024-02-22', amount: 1200.50, method: 'Wire Transfer', invoice: 'INV-2024-0222', status: 'completed' }
+  ];
+
+  // Date range preset options
+  const datePresets = [
+    { label: 'Last 7 days', value: 'last7days', days: 7 },
+    { label: 'Last 30 days', value: 'last30days', days: 30 },
+    { label: 'Last 3 months', value: 'last3months', months: 3 },
+    { label: 'Last 6 months', value: 'last6months', months: 6 },
+    { label: 'Last year', value: 'lastyear', months: 12 }
+  ];
+
+  // Helper functions for date filtering
+  const filterDataByDateRange = (data: any[], dateField: string) => {
+    if (!dateRange) return data;
+    return data.filter(item => {
+      const itemDate = parseISO(item[dateField]);
+      return isWithinInterval(itemDate, { start: dateRange.from, end: dateRange.to });
+    });
   };
 
-  const spendData = [
-    { month: 'Jul', amount: 12500, budget: 15000 },
-    { month: 'Aug', amount: 14200, budget: 15000 },
-    { month: 'Sep', amount: 13800, budget: 15000 },
-    { month: 'Oct', amount: 15900, budget: 15000 },
-    { month: 'Nov', amount: 16200, budget: 15000 },
-    { month: 'Dec', amount: 14832, budget: 15000 }
-  ];
+  const calculateFilteredData = () => {
+    const filteredInvoices = filterDataByDateRange(allInvoices, 'date');
+    const filteredPayments = filterDataByDateRange(allPayments, 'date');
+    const filteredSpendData = filterDataByDateRange(allSpendData, 'date');
 
-  const serviceBreakdown = [
-    { name: 'LTL Freight', value: 45, amount: 39244.13, color: 'hsl(var(--primary))' },
-    { name: 'FTL Freight', value: 30, amount: 26229.75, color: 'hsl(var(--accent))' },
-    { name: 'Warehousing', value: 15, amount: 13114.88, color: 'hsl(var(--logistics-orange))' },
-    { name: 'Last Mile', value: 10, amount: 8743.25, color: 'hsl(var(--logistics-green))' }
-  ];
+    // Calculate KPIs based on filtered data
+    const totalSpend = filteredInvoices.reduce((sum, inv) => sum + inv.amount, 0);
+    const paidInvoices = filteredInvoices.filter(inv => inv.status === 'paid').reduce((sum, inv) => sum + inv.amount, 0);
+    const outstanding = filteredInvoices.filter(inv => inv.status === 'pending').reduce((sum, inv) => sum + inv.amount, 0);
+    const overdueAmount = filteredInvoices.filter(inv => inv.status === 'overdue').reduce((sum, inv) => sum + inv.amount, 0);
 
-  const recentInvoices = [
-    {
-      id: 'INV-2024-0234',
-      date: '2024-01-15',
-      dueDate: '2024-02-14',
-      amount: 2450.75,
-      status: 'paid',
-      services: 'LTL Freight'
+    // Calculate service breakdown based on filtered invoices
+    const serviceAmounts = filteredInvoices.reduce((acc, invoice) => {
+      acc[invoice.services] = (acc[invoice.services] || 0) + invoice.amount;
+      return acc;
+    }, {} as Record<string, number>);
+
+    const serviceBreakdown = [
+      { name: 'LTL Freight', amount: serviceAmounts['LTL Freight'] || 0, color: 'hsl(var(--primary))' },
+      { name: 'FTL Freight', amount: serviceAmounts['FTL Freight'] || 0, color: 'hsl(var(--accent))' },
+      { name: 'Warehousing', amount: serviceAmounts['Warehousing'] || 0, color: 'hsl(var(--logistics-orange))' },
+      { name: 'Last Mile', amount: serviceAmounts['Last Mile'] || 0, color: 'hsl(var(--logistics-green))' }
+    ].map(service => ({
+      ...service,
+      value: totalSpend > 0 ? Math.round((service.amount / totalSpend) * 100) : 0
+    }));
+
+    return {
+      billingOverview: {
+        totalSpend,
+        outstanding,
+        paidInvoices,
+        overdueAmount,
+        avgMonthlySpend: filteredSpendData.length > 0 ? totalSpend / filteredSpendData.length : 0
+      },
+      spendData: filteredSpendData,
+      serviceBreakdown,
+      recentInvoices: filteredInvoices.slice(0, 10),
+      payments: filteredPayments.slice(0, 10)
+    };
+  };
+
+  // Use filtered data if date range is set, otherwise use default last 6 months
+  const {
+    billingOverview,
+    spendData,
+    serviceBreakdown,
+    recentInvoices,
+    payments
+  } = dateRange ? calculateFilteredData() : {
+    billingOverview: {
+      totalSpend: 87432.50,
+      outstanding: 4250.75,
+      paidInvoices: 83181.75,
+      overdueAmount: 1850.25,
+      avgMonthlySpend: 14572.08
     },
-    {
-      id: 'INV-2024-0235',
-      date: '2024-01-18',
-      dueDate: '2024-02-17',
-      amount: 1850.25,
-      status: 'overdue',
-      services: 'FTL Freight'
-    },
-    {
-      id: 'INV-2024-0236',
-      date: '2024-01-20',
-      dueDate: '2024-02-19',
-      amount: 950.50,
-      status: 'pending',
-      services: 'Warehousing'
-    },
-    {
-      id: 'INV-2024-0237',
-      date: '2024-01-22',
-      dueDate: '2024-02-21',
-      amount: 3200.00,
-      status: 'pending',
-      services: 'Last Mile'
+    spendData: allSpendData.slice(-6),
+    serviceBreakdown: [
+      { name: 'LTL Freight', value: 45, amount: 39244.13, color: 'hsl(var(--primary))' },
+      { name: 'FTL Freight', value: 30, amount: 26229.75, color: 'hsl(var(--accent))' },
+      { name: 'Warehousing', value: 15, amount: 13114.88, color: 'hsl(var(--logistics-orange))' },
+      { name: 'Last Mile', value: 10, amount: 8743.25, color: 'hsl(var(--logistics-green))' }
+    ],
+    recentInvoices: allInvoices.slice(0, 4),
+    payments: allPayments.slice(0, 3)
+  };
+
+  const handlePresetSelect = (preset: any) => {
+    const now = new Date();
+    let from: Date;
+    
+    if (preset.days) {
+      from = subDays(now, preset.days);
+    } else if (preset.months) {
+      from = subMonths(now, preset.months);
+    } else {
+      return;
     }
-  ];
+    
+    setDateRange({ from, to: now });
+    setIsFilterOpen(false);
+  };
 
-  const payments = [
-    {
-      id: 'PAY-2024-0112',
-      date: '2024-01-15',
-      amount: 2450.75,
-      method: 'Bank Transfer',
-      invoice: 'INV-2024-0234',
-      status: 'completed'
-    },
-    {
-      id: 'PAY-2024-0111',
-      date: '2024-01-10',
-      amount: 4200.50,
-      method: 'ACH',
-      invoice: 'INV-2024-0233',
-      status: 'completed'
-    },
-    {
-      id: 'PAY-2024-0110',
-      date: '2024-01-08',
-      amount: 1750.25,
-      method: 'Wire Transfer',
-      invoice: 'INV-2024-0232',
-      status: 'completed'
-    }
-  ];
+  const clearFilter = () => {
+    setDateRange(null);
+    setIsFilterOpen(false);
+  };
+
+  const formatDateRange = () => {
+    if (!dateRange) return 'Filter';
+    return `${format(dateRange.from, 'MMM dd')} - ${format(dateRange.to, 'MMM dd, yyyy')}`;
+  };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -141,13 +211,87 @@ const Billing = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-foreground">Billing & Finance</h1>
-            <p className="text-muted-foreground">Manage your account spending and invoices</p>
+            <p className="text-muted-foreground">
+              Manage your account spending and invoices
+              {dateRange && (
+                <span className="ml-2 text-primary font-medium">
+                  • Filtered: {format(dateRange.from, 'MMM dd')} - {format(dateRange.to, 'MMM dd, yyyy')}
+                </span>
+              )}
+            </p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm">
-              <Filter className="h-4 w-4 mr-2" />
-              Filter
-            </Button>
+            <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
+              <PopoverTrigger asChild>
+                <Button 
+                  variant={dateRange ? "default" : "outline"} 
+                  size="sm"
+                  className={cn(
+                    "gap-2",
+                    dateRange && "bg-primary text-primary-foreground"
+                  )}
+                >
+                  <CalendarIcon className="h-4 w-4" />
+                  {formatDateRange()}
+                  {dateRange && (
+                    <X 
+                      className="h-3 w-3 ml-1" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        clearFilter();
+                      }}
+                    />
+                  )}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="end">
+                <div className="p-4 space-y-4">
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-sm">Date Range</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      {datePresets.map((preset) => (
+                        <Button
+                          key={preset.value}
+                          variant="ghost"
+                          size="sm"
+                          className="justify-start"
+                          onClick={() => handlePresetSelect(preset)}
+                        >
+                          {preset.label}
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="border-t pt-4">
+                    <h4 className="font-medium text-sm mb-2">Custom Range</h4>
+                    <Calendar
+                      mode="range"
+                      selected={dateRange}
+                      onSelect={(range) => {
+                        if (range?.from && range?.to) {
+                          setDateRange(range as { from: Date; to: Date });
+                          setIsFilterOpen(false);
+                        }
+                      }}
+                      className={cn("pointer-events-auto")}
+                      numberOfMonths={2}
+                    />
+                  </div>
+                  {dateRange && (
+                    <div className="border-t pt-4">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        onClick={clearFilter}
+                        className="w-full"
+                      >
+                        Clear Filter
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              </PopoverContent>
+            </Popover>
             <Button variant="outline" size="sm">
               <Download className="h-4 w-4 mr-2" />
               Export
