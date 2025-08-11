@@ -23,6 +23,8 @@ import PortalTracking from "./pages/portal/tracking/PortalTracking";
 import Reports from "./pages/portal/reports/Reports";
 import Support from "./pages/portal/support/Support";
 import Settings from "./pages/portal/settings/Settings";
+import Billing from "./pages/portal/billing/Billing";
+import Inventory from "./pages/portal/inventory/Inventory";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/portal/shipments/create" element={<CreateShipment />} />
           <Route path="/portal/tracking" element={<PortalTracking />} />
           <Route path="/portal/reports" element={<Reports />} />
+          <Route path="/portal/billing" element={<Billing />} />
+          <Route path="/portal/inventory" element={<Inventory />} />
           <Route path="/portal/support" element={<Support />} />
           <Route path="/portal/settings" element={<Settings />} />
           

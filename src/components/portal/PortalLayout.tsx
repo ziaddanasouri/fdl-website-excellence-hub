@@ -17,7 +17,9 @@ import {
   X,
   Truck,
   Bell,
-  Search
+  Search,
+  Receipt,
+  Warehouse
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
@@ -37,6 +39,8 @@ const PortalLayout = ({ children }: PortalLayoutProps) => {
     { name: 'Shipments', href: '/portal/shipments', icon: Package, badge: '12' },
     { name: 'Quotes', href: '/portal/quotes', icon: DollarSign, badge: '3' },
     { name: 'Tracking', href: '/portal/tracking', icon: MapPin },
+    { name: 'Billing', href: '/portal/billing', icon: Receipt, badge: '2' },
+    { name: 'Inventory', href: '/portal/inventory', icon: Warehouse },
     { name: 'Reports', href: '/portal/reports', icon: BarChart3 },
     { name: 'Support', href: '/portal/support', icon: MessageSquare },
     { name: 'Settings', href: '/portal/settings', icon: Settings },
