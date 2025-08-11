@@ -6,6 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import { useForm } from 'react-hook-form';
 import { 
   Package, 
   Search, 
@@ -18,18 +24,16 @@ import {
   Truck,
   Clock,
   CheckCircle,
-  AlertTriangle
+  AlertTriangle,
+  DollarSign,
+  FileText,
+  X
 } from 'lucide-react';
 import PortalLayout from '@/components/portal/PortalLayout';
 import { Link } from 'react-router-dom';
 
-const ShipmentsList = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('all');
-  const [dateFilter, setDateFilter] = useState('all');
-
-  // Sample shipment data
-  const shipments = [
+// Enhanced shipment data with exception details
+const initialShipments = [
     {
       id: 'FDL-2024-001',
       status: 'delivered',
@@ -80,9 +84,49 @@ const ShipmentsList = () => {
       cost: '$35.99',
       service: 'Standard',
       trackingNumber: 'TRK123456792',
-      exception: 'Address correction needed'
+      exceptionType: 'oversize',
+      exceptionDetails: 'Package exceeds standard dimensions (36" x 24" x 12"). Additional handling charges apply.',
+      additionalCharges: 45.00,
+      resolutionOptions: [
+        { id: 'accept_charges', label: 'Accept additional charges ($45.00)', description: 'Pay oversize handling fee and proceed with delivery' },
+        { id: 'split_package', label: 'Split into multiple packages', description: 'Repack items into standard-sized packages (additional packaging fee: $15.00)' },
+        { id: 'upgrade_freight', label: 'Upgrade to freight service', description: 'Transfer to freight network for large items (additional cost: $75.00)' }
+      ]
+    },
+    {
+      id: 'FDL-2024-005',
+      status: 'exception',
+      origin: 'Austin, TX',
+      destination: 'Portland, OR',
+      createdDate: '2024-01-17',
+      packages: 2,
+      weight: '12.3 lbs',
+      cost: '$67.50',
+      service: 'Express',
+      trackingNumber: 'TRK123456793',
+      exceptionType: 'address',
+      exceptionDetails: 'Delivery address incomplete or incorrect. Unable to locate recipient.',
+      additionalCharges: 0,
+      resolutionOptions: [
+        { id: 'correct_address', label: 'Provide corrected address', description: 'Update delivery address information' },
+        { id: 'contact_recipient', label: 'Contact recipient for verification', description: 'Request recipient to confirm delivery details' },
+        { id: 'return_sender', label: 'Return to sender', description: 'Return package to origin (return shipping fee: $25.00)' }
+      ]
     }
-  ];
+];
+
+const ShipmentsList = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
+  const [dateFilter, setDateFilter] = useState('all');
+  const [exceptionDialogOpen, setExceptionDialogOpen] = useState(false);
+  const [selectedShipment, setSelectedShipment] = useState<any>(null);
+  const [shipmentData, setShipmentData] = useState(initialShipments);
+  
+  const { toast } = useToast();
+  const form = useForm();
+
+  const shipments = shipmentData;
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -121,6 +165,53 @@ const ShipmentsList = () => {
     const matchesStatus = statusFilter === 'all' || shipment.status === statusFilter;
     return matchesSearch && matchesStatus;
   });
+
+  const exceptionShipments = shipments.filter(s => s.status === 'exception');
+
+  const handleReviewExceptions = () => {
+    if (exceptionShipments.length > 0) {
+      setSelectedShipment(exceptionShipments[0]);
+      setExceptionDialogOpen(true);
+    }
+  };
+
+  const handleResolutionSubmit = (data: any) => {
+    if (!selectedShipment) return;
+
+    // Update shipment status to pending
+    setShipmentData(prev => prev.map(shipment => 
+      shipment.id === selectedShipment.id 
+        ? { ...shipment, status: 'pending', resolutionSubmitted: new Date().toISOString() }
+        : shipment
+    ));
+
+    // Close dialog and show success message
+    setExceptionDialogOpen(false);
+    setSelectedShipment(null);
+    form.reset();
+
+    toast({
+      title: "Resolution Submitted",
+      description: `Exception for shipment ${selectedShipment.id} has been submitted for review. Status updated to pending.`,
+    });
+
+    // Check if there are more exceptions to review
+    const remainingExceptions = exceptionShipments.filter(s => s.id !== selectedShipment.id);
+    if (remainingExceptions.length > 0) {
+      setTimeout(() => {
+        setSelectedShipment(remainingExceptions[0]);
+        setExceptionDialogOpen(true);
+      }, 1000);
+    }
+  };
+
+  const getResolutionCost = (option: any, shipment: any) => {
+    if (option.id === 'accept_charges') return shipment.additionalCharges || 0;
+    if (option.id === 'split_package') return 15.00;
+    if (option.id === 'upgrade_freight') return 75.00;
+    if (option.id === 'return_sender') return 25.00;
+    return 0;
+  };
 
   const statusStats = {
     total: shipments.length,
@@ -350,13 +441,159 @@ const ShipmentsList = () => {
                     Please review and take necessary action.
                   </p>
                 </div>
-                <Button variant="outline" className="ml-auto">
+                <Button variant="outline" className="ml-auto" onClick={handleReviewExceptions}>
                   Review Exceptions
                 </Button>
               </div>
             </CardContent>
           </Card>
         )}
+
+        {/* Exception Resolution Dialog */}
+        <Dialog open={exceptionDialogOpen} onOpenChange={setExceptionDialogOpen}>
+          <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <AlertTriangle className="h-5 w-5 text-red-600" />
+                Exception Resolution - {selectedShipment?.id}
+              </DialogTitle>
+              <DialogDescription>
+                Review the exception details and select a resolution option for this shipment.
+              </DialogDescription>
+            </DialogHeader>
+
+            {selectedShipment && (
+              <div className="space-y-6">
+                {/* Shipment Details */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Shipment Details</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Route</p>
+                        <p className="text-sm">{selectedShipment.origin} → {selectedShipment.destination}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Service</p>
+                        <p className="text-sm">{selectedShipment.service}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Packages</p>
+                        <p className="text-sm">{selectedShipment.packages} package(s) - {selectedShipment.weight}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Original Cost</p>
+                        <p className="text-sm">{selectedShipment.cost}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Exception Details */}
+                <Card className="border-red-200 bg-red-50">
+                  <CardHeader>
+                    <CardTitle className="text-lg text-red-800">Exception Details</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-start gap-3">
+                      <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-red-800 capitalize">
+                          {selectedShipment.exceptionType} Issue
+                        </p>
+                        <p className="text-red-700 text-sm mt-1">
+                          {selectedShipment.exceptionDetails}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Resolution Options */}
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(handleResolutionSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="resolution"
+                      rules={{ required: "Please select a resolution option" }}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-base font-semibold">Resolution Options</FormLabel>
+                          <FormControl>
+                            <RadioGroup
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                              className="space-y-3"
+                            >
+                              {selectedShipment.resolutionOptions?.map((option: any) => {
+                                const additionalCost = getResolutionCost(option, selectedShipment);
+                                return (
+                                  <div key={option.id} className="flex items-start space-x-3 space-y-0">
+                                    <RadioGroupItem value={option.id} className="mt-1" />
+                                    <div className="flex-1 space-y-1">
+                                      <div className="flex items-center justify-between">
+                                        <p className="font-medium">{option.label}</p>
+                                        {additionalCost > 0 && (
+                                          <Badge variant="outline" className="text-orange-600 border-orange-200">
+                                            <DollarSign className="h-3 w-3 mr-1" />
+                                            +${additionalCost.toFixed(2)}
+                                          </Badge>
+                                        )}
+                                      </div>
+                                      <p className="text-sm text-muted-foreground">{option.description}</p>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </RadioGroup>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    {/* Additional Notes */}
+                    <FormField
+                      control={form.control}
+                      name="notes"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Additional Notes (Optional)</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Add any additional information or special instructions..."
+                              className="min-h-[80px]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    {/* Action Buttons */}
+                    <div className="flex justify-between pt-4">
+                      <Button 
+                        type="button" 
+                        variant="outline" 
+                        onClick={() => setExceptionDialogOpen(false)}
+                      >
+                        <X className="h-4 w-4 mr-2" />
+                        Cancel
+                      </Button>
+                      <Button type="submit">
+                        <FileText className="h-4 w-4 mr-2" />
+                        Submit Resolution
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </PortalLayout>
   );
