@@ -32,8 +32,9 @@ import {
 import PortalLayout from '@/components/portal/PortalLayout';
 import { Link } from 'react-router-dom';
 
-// Enhanced shipment data with exception details
-const initialShipments = [
+const ShipmentsList = () => {
+  // Enhanced shipment data with exception details
+  const initialShipments = [
     {
       id: 'FDL-2024-001',
       status: 'delivered',
@@ -113,9 +114,8 @@ const initialShipments = [
         { id: 'return_sender', label: 'Return to sender', description: 'Return package to origin (return shipping fee: $25.00)' }
       ]
     }
-];
+  ];
 
-const ShipmentsList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [dateFilter, setDateFilter] = useState('all');
