@@ -27,13 +27,15 @@ import {
   AlertTriangle,
   DollarSign,
   FileText,
-  X
+  X,
+  Image as ImageIcon
 } from 'lucide-react';
 import PortalLayout from '@/components/portal/PortalLayout';
 import { Link } from 'react-router-dom';
+import podImage from '@/assets/pod-wine-delivery.jpg';
 
 const ShipmentsList = () => {
-  // Enhanced shipment data with exception details
+  // Enhanced shipment data with exception details and POD information
   const initialShipments = [
     {
       id: 'FDL-2024-001',
@@ -46,7 +48,12 @@ const ShipmentsList = () => {
       weight: '15.5 lbs',
       cost: '$89.99',
       service: 'Express',
-      trackingNumber: 'TRK123456789'
+      trackingNumber: 'TRK123456789',
+      podImageUrl: podImage,
+      deliveryAgent: 'Mike Johnson',
+      recipient: 'Wine Store Manager',
+      deliveryTime: '2:30 PM',
+      deliveryNotes: 'Wine bottles delivered and properly stored in retail wine section'
     },
     {
       id: 'FDL-2024-002',
@@ -120,6 +127,7 @@ const ShipmentsList = () => {
   const [statusFilter, setStatusFilter] = useState('all');
   const [dateFilter, setDateFilter] = useState('all');
   const [exceptionDialogOpen, setExceptionDialogOpen] = useState(false);
+  const [podDialogOpen, setPodDialogOpen] = useState(false);
   const [selectedShipment, setSelectedShipment] = useState<any>(null);
   const [shipmentData, setShipmentData] = useState(initialShipments);
   
@@ -172,6 +180,13 @@ const ShipmentsList = () => {
     if (exceptionShipments.length > 0) {
       setSelectedShipment(exceptionShipments[0]);
       setExceptionDialogOpen(true);
+    }
+  };
+
+  const handleViewPOD = (shipment: any) => {
+    if (shipment.status === 'delivered') {
+      setSelectedShipment(shipment);
+      setPodDialogOpen(true);
     }
   };
 
@@ -415,7 +430,12 @@ const ShipmentsList = () => {
                             Track
                           </Button>
                         </Link>
-                        <Button variant="outline" size="sm">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => handleViewPOD(shipment)}
+                          disabled={shipment.status !== 'delivered'}
+                        >
                           <Eye className="h-4 w-4 mr-1" />
                           View
                         </Button>
@@ -590,6 +610,110 @@ const ShipmentsList = () => {
                     </div>
                   </form>
                 </Form>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
+
+        {/* POD Dialog */}
+        <Dialog open={podDialogOpen} onOpenChange={setPodDialogOpen}>
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <ImageIcon className="h-5 w-5 text-primary" />
+                Proof of Delivery - {selectedShipment?.id}
+              </DialogTitle>
+              <DialogDescription>
+                Delivery confirmation for shipment from {selectedShipment?.origin} to {selectedShipment?.destination}
+              </DialogDescription>
+            </DialogHeader>
+
+            {selectedShipment && (
+              <div className="space-y-6">
+                {/* Delivery Summary */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-600" />
+                      Delivery Confirmed
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Delivered On</p>
+                        <p className="text-sm font-semibold">{selectedShipment.deliveredDate}</p>
+                        <p className="text-xs text-muted-foreground">{selectedShipment.deliveryTime}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Delivery Agent</p>
+                        <p className="text-sm font-semibold">{selectedShipment.deliveryAgent}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Received By</p>
+                        <p className="text-sm font-semibold">{selectedShipment.recipient}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground">Packages</p>
+                        <p className="text-sm font-semibold">{selectedShipment.packages} package(s)</p>
+                      </div>
+                    </div>
+                    {selectedShipment.deliveryNotes && (
+                      <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md">
+                        <p className="text-sm text-green-800">
+                          <strong>Delivery Notes:</strong> {selectedShipment.deliveryNotes}
+                        </p>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+
+                {/* POD Image */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Proof of Delivery Photo</CardTitle>
+                    <CardDescription>
+                      Visual confirmation of wine bottles properly stored in retail location
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="relative">
+                      <img 
+                        src={selectedShipment.podImageUrl} 
+                        alt="Proof of Delivery - Wine bottles in retail store"
+                        className="w-full h-auto rounded-lg border shadow-sm"
+                        style={{ maxHeight: '500px', objectFit: 'contain' }}
+                      />
+                      <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-md text-sm">
+                        Delivered: {selectedShipment.deliveredDate} {selectedShipment.deliveryTime}
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-3 text-center">
+                      Wine bottles delivered and properly stored in retail wine section
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Action Buttons */}
+                <div className="flex justify-between pt-4 border-t">
+                  <Button 
+                    variant="outline"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = selectedShipment.podImageUrl;
+                      link.download = `POD_${selectedShipment.id}_${selectedShipment.deliveredDate}.jpg`;
+                      link.click();
+                    }}
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Download POD
+                  </Button>
+                  <Button 
+                    onClick={() => setPodDialogOpen(false)}
+                  >
+                    Close
+                  </Button>
+                </div>
               </div>
             )}
           </DialogContent>
