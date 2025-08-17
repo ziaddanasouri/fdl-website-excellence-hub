@@ -129,23 +129,23 @@ const ShipmentsList = () => {
     }
   ];
 
-  // Mock data for consignees and inventory (expanded list to show handling of many consignees)
+  // Mock data for consignees and inventory (expanded list with full addresses)
   const consignees = [
-    { id: 'c1', name: 'LA Retail Store', city: 'Los Angeles', state: 'CA', zip: '90001' },
-    { id: 'c2', name: 'NYC Distributor', city: 'New York', state: 'NY', zip: '10001' },
-    { id: 'c3', name: 'Miami Outlet', city: 'Miami', state: 'FL', zip: '33101' },
-    { id: 'c4', name: 'Chicago Branch', city: 'Chicago', state: 'IL', zip: '60601' },
-    { id: 'c5', name: 'Seattle Office', city: 'Seattle', state: 'WA', zip: '98101' },
-    { id: 'c6', name: 'Dallas Distribution Center', city: 'Dallas', state: 'TX', zip: '75201' },
-    { id: 'c7', name: 'Phoenix Warehouse', city: 'Phoenix', state: 'AZ', zip: '85001' },
-    { id: 'c8', name: 'Denver Hub', city: 'Denver', state: 'CO', zip: '80201' },
-    { id: 'c9', name: 'Atlanta Regional', city: 'Atlanta', state: 'GA', zip: '30301' },
-    { id: 'c10', name: 'Boston Store', city: 'Boston', state: 'MA', zip: '02101' },
-    { id: 'c11', name: 'Portland Branch', city: 'Portland', state: 'OR', zip: '97201' },
-    { id: 'c12', name: 'Las Vegas Depot', city: 'Las Vegas', state: 'NV', zip: '89101' },
-    { id: 'c13', name: 'Minneapolis Center', city: 'Minneapolis', state: 'MN', zip: '55401' },
-    { id: 'c14', name: 'Nashville Facility', city: 'Nashville', state: 'TN', zip: '37201' },
-    { id: 'c15', name: 'San Diego Location', city: 'San Diego', state: 'CA', zip: '92101' }
+    { id: 'c1', name: 'LA Retail Store', address: '1234 Sunset Blvd', city: 'Los Angeles', state: 'CA', zip: '90001' },
+    { id: 'c2', name: 'NYC Distributor', address: '456 Broadway Ave', city: 'New York', state: 'NY', zip: '10001' },
+    { id: 'c3', name: 'Miami Outlet', address: '789 Ocean Drive', city: 'Miami', state: 'FL', zip: '33101' },
+    { id: 'c4', name: 'Chicago Branch', address: '321 Michigan Ave', city: 'Chicago', state: 'IL', zip: '60601' },
+    { id: 'c5', name: 'Seattle Office', address: '654 Pike Street', city: 'Seattle', state: 'WA', zip: '98101' },
+    { id: 'c6', name: 'Dallas Distribution Center', address: '987 Commerce St', city: 'Dallas', state: 'TX', zip: '75201' },
+    { id: 'c7', name: 'Phoenix Warehouse', address: '147 Desert Rd', city: 'Phoenix', state: 'AZ', zip: '85001' },
+    { id: 'c8', name: 'Denver Hub', address: '258 Mountain View Dr', city: 'Denver', state: 'CO', zip: '80201' },
+    { id: 'c9', name: 'Atlanta Regional', address: '369 Peachtree St', city: 'Atlanta', state: 'GA', zip: '30301' },
+    { id: 'c10', name: 'Boston Store', address: '741 Beacon Hill Rd', city: 'Boston', state: 'MA', zip: '02101' },
+    { id: 'c11', name: 'Portland Branch', address: '852 Forest Ave', city: 'Portland', state: 'OR', zip: '97201' },
+    { id: 'c12', name: 'Las Vegas Depot', address: '963 Strip Blvd', city: 'Las Vegas', state: 'NV', zip: '89101' },
+    { id: 'c13', name: 'Minneapolis Center', address: '159 Lake St', city: 'Minneapolis', state: 'MN', zip: '55401' },
+    { id: 'c14', name: 'Nashville Facility', address: '357 Music Row', city: 'Nashville', state: 'TN', zip: '37201' },
+    { id: 'c15', name: 'San Diego Location', address: '486 Harbor Dr', city: 'San Diego', state: 'CA', zip: '92101' }
   ];
 
   const inventoryItems = [
@@ -171,8 +171,10 @@ const ShipmentsList = () => {
     return saved ? JSON.parse(saved) : initialShipments;
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [orderItems, setOrderItems] = useState([{ sku: '', quantity: 1 }]);
-  const [selectedConsignee, setSelectedConsignee] = useState('');
+  // New structure: array of consignee orders, each with consigneeId and items
+  const [consigneeOrders, setConsigneeOrders] = useState([
+    { consigneeId: '', items: [{ sku: '', quantity: 1 }] }
+  ]);
   const [emailUpdates, setEmailUpdates] = useState(() => {
     const saved = localStorage.getItem('fdl_portal_email_updates');
     return saved ? JSON.parse(saved) : false;
@@ -308,21 +310,34 @@ const ShipmentsList = () => {
   };
 
   const handleInventoryOrderSubmit = async () => {
-    if (!selectedConsignee || orderItems.length === 0) return;
+    // Validate that we have at least one consignee with items
+    const validOrders = consigneeOrders.filter(order => 
+      order.consigneeId && order.items.some(item => item.sku && item.quantity > 0)
+    );
+    
+    if (validOrders.length === 0) return;
     
     setIsSubmitting(true);
     
     // Simulate validation time
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    const consignee = consignees.find(c => c.id === selectedConsignee);
-    const totalItems = orderItems.reduce((sum, item) => sum + item.quantity, 0);
+    // Calculate totals across all consignees
+    const totalItems = validOrders.reduce((sum, order) => 
+      sum + order.items.reduce((itemSum, item) => itemSum + item.quantity, 0), 0
+    );
+    
+    // Create destination string (first consignee's location for simplicity)
+    const firstConsignee = consignees.find(c => c.id === validOrders[0].consigneeId);
+    const destinationSummary = validOrders.length > 1 
+      ? `${firstConsignee?.city}, ${firstConsignee?.state} + ${validOrders.length - 1} more`
+      : `${firstConsignee?.city}, ${firstConsignee?.state}`;
     
     const newOrder = {
       id: `ORD-${Date.now()}`,
       status: 'pending',
       origin: 'FDL Warehouse, NJ',
-      destination: `${consignee?.city}, ${consignee?.state}`,
+      destination: destinationSummary,
       createdDate: new Date().toISOString().split('T')[0],
       estimatedDelivery: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       packages: totalItems,
@@ -335,8 +350,8 @@ const ShipmentsList = () => {
     setShipmentData(prev => [newOrder, ...prev]);
     setIsSubmitting(false);
     setNewOrderDialogOpen(false);
-    setOrderItems([{ sku: '', quantity: 1 }]);
-    setSelectedConsignee('');
+    // Reset to initial state
+    setConsigneeOrders([{ consigneeId: '', items: [{ sku: '', quantity: 1 }] }]);
 
     toast({
       title: "Order submitted",
@@ -344,19 +359,46 @@ const ShipmentsList = () => {
     });
   };
 
-  const addOrderItem = () => {
-    setOrderItems([...orderItems, { sku: '', quantity: 1 }]);
+  const addConsigneeOrder = () => {
+    setConsigneeOrders([...consigneeOrders, { consigneeId: '', items: [{ sku: '', quantity: 1 }] }]);
   };
 
-  const removeOrderItem = (index: number) => {
-    if (orderItems.length > 1) {
-      setOrderItems(orderItems.filter((_, i) => i !== index));
+  const removeConsigneeOrder = (orderIndex: number) => {
+    if (consigneeOrders.length > 1) {
+      setConsigneeOrders(consigneeOrders.filter((_, i) => i !== orderIndex));
     }
   };
 
-  const updateOrderItem = (index: number, field: string, value: any) => {
-    setOrderItems(orderItems.map((item, i) => 
-      i === index ? { ...item, [field]: value } : item
+  const updateConsigneeOrder = (orderIndex: number, field: string, value: any) => {
+    setConsigneeOrders(consigneeOrders.map((order, i) => 
+      i === orderIndex ? { ...order, [field]: value } : order
+    ));
+  };
+
+  const addOrderItem = (orderIndex: number) => {
+    setConsigneeOrders(consigneeOrders.map((order, i) => 
+      i === orderIndex ? { ...order, items: [...order.items, { sku: '', quantity: 1 }] } : order
+    ));
+  };
+
+  const removeOrderItem = (orderIndex: number, itemIndex: number) => {
+    setConsigneeOrders(consigneeOrders.map((order, i) => 
+      i === orderIndex && order.items.length > 1 
+        ? { ...order, items: order.items.filter((_, j) => j !== itemIndex) }
+        : order
+    ));
+  };
+
+  const updateOrderItem = (orderIndex: number, itemIndex: number, field: string, value: any) => {
+    setConsigneeOrders(consigneeOrders.map((order, i) => 
+      i === orderIndex 
+        ? { 
+            ...order, 
+            items: order.items.map((item, j) => 
+              j === itemIndex ? { ...item, [field]: value } : item
+            )
+          }
+        : order
     ));
   };
 
@@ -481,71 +523,113 @@ const ShipmentsList = () => {
                   </TabsContent>
                   
                   <TabsContent value="inventory" className="space-y-4">
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <Label>Select Consignee</Label>
-                        <Select value={selectedConsignee} onValueChange={setSelectedConsignee}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Choose a consignee" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {consignees.map((consignee) => (
-                              <SelectItem key={consignee.id} value={consignee.id}>
-                                {consignee.name} - {consignee.city}, {consignee.state}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      
-                      <div className="space-y-3">
-                        <Label>Order Items</Label>
-                        {orderItems.map((item, index) => (
-                          <div key={index} className="flex gap-3 items-end">
-                            <div className="flex-1">
-                              <Label className="text-xs">SKU</Label>
-                              <Select 
-                                value={item.sku} 
-                                onValueChange={(value) => updateOrderItem(index, 'sku', value)}
+                    <div className="space-y-6">
+                      {/* Multiple Consignee Orders */}
+                      {consigneeOrders.map((order, orderIndex) => (
+                        <div key={orderIndex} className="border rounded-lg p-4 space-y-4">
+                          <div className="flex items-center justify-between">
+                            <h4 className="font-medium">Consignee {orderIndex + 1}</h4>
+                            {consigneeOrders.length > 1 && (
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => removeConsigneeOrder(orderIndex)}
                               >
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select SKU" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                  {inventoryItems.map((invItem) => (
-                                    <SelectItem key={invItem.sku} value={invItem.sku}>
-                                      {invItem.sku} - {invItem.name} (Available: {invItem.availableQty})
-                                    </SelectItem>
-                                  ))}
-                                </SelectContent>
-                              </Select>
-                            </div>
-                            <div className="w-24">
-                              <Label className="text-xs">Quantity</Label>
-                              <Input
-                                type="number"
-                                min="1"
-                                max={inventoryItems.find(i => i.sku === item.sku)?.availableQty || 999}
-                                value={item.quantity}
-                                onChange={(e) => updateOrderItem(index, 'quantity', parseInt(e.target.value) || 1)}
-                              />
-                            </div>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => removeOrderItem(index)}
-                              disabled={orderItems.length === 1}
+                                <X className="h-4 w-4" />
+                              </Button>
+                            )}
+                          </div>
+                          
+                          {/* Consignee Selection */}
+                          <div className="space-y-2">
+                            <Label>Select Consignee</Label>
+                            <Select 
+                              value={order.consigneeId} 
+                              onValueChange={(value) => updateConsigneeOrder(orderIndex, 'consigneeId', value)}
                             >
-                              <X className="h-4 w-4" />
+                              <SelectTrigger className="bg-background">
+                                <SelectValue placeholder="Choose a consignee" />
+                              </SelectTrigger>
+                              <SelectContent className="bg-background border shadow-lg z-50">
+                                {consignees.map((consignee) => (
+                                  <SelectItem key={consignee.id} value={consignee.id} className="bg-background hover:bg-muted">
+                                    <div className="flex flex-col items-start">
+                                      <span className="font-medium">{consignee.name}</span>
+                                      <span className="text-sm text-muted-foreground">
+                                        {consignee.address}, {consignee.city}, {consignee.state} {consignee.zip}
+                                      </span>
+                                    </div>
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          
+                          {/* Items for this consignee */}
+                          <div className="space-y-3">
+                            <Label>Items for this Consignee</Label>
+                            {order.items.map((item, itemIndex) => (
+                              <div key={itemIndex} className="flex gap-3 items-end">
+                                <div className="flex-1">
+                                  <Label className="text-xs">SKU</Label>
+                                  <Select 
+                                    value={item.sku} 
+                                    onValueChange={(value) => updateOrderItem(orderIndex, itemIndex, 'sku', value)}
+                                  >
+                                    <SelectTrigger className="bg-background">
+                                      <SelectValue placeholder="Select SKU" />
+                                    </SelectTrigger>
+                                    <SelectContent className="bg-background border shadow-lg z-50">
+                                      {inventoryItems.map((invItem) => (
+                                        <SelectItem key={invItem.sku} value={invItem.sku} className="bg-background hover:bg-muted">
+                                          {invItem.sku} - {invItem.name} (Available: {invItem.availableQty})
+                                        </SelectItem>
+                                      ))}
+                                    </SelectContent>
+                                  </Select>
+                                </div>
+                                <div className="w-24">
+                                  <Label className="text-xs">Quantity</Label>
+                                  <Input
+                                    type="number"
+                                    min="1"
+                                    max={inventoryItems.find(i => i.sku === item.sku)?.availableQty || 999}
+                                    value={item.quantity}
+                                    onChange={(e) => updateOrderItem(orderIndex, itemIndex, 'quantity', parseInt(e.target.value) || 1)}
+                                  />
+                                </div>
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() => removeOrderItem(orderIndex, itemIndex)}
+                                  disabled={order.items.length === 1}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ))}
+                            
+                            <Button 
+                              variant="outline" 
+                              onClick={() => addOrderItem(orderIndex)} 
+                              className="w-full"
+                            >
+                              <Plus className="h-4 w-4 mr-2" />
+                              Add Item to this Consignee
                             </Button>
                           </div>
-                        ))}
-                        
-                        <Button variant="outline" onClick={addOrderItem} className="w-full">
-                          <Plus className="h-4 w-4 mr-2" />
-                          Add Item
-                        </Button>
-                      </div>
+                        </div>
+                      ))}
+                      
+                      {/* Add New Consignee Button */}
+                      <Button 
+                        variant="outline" 
+                        onClick={addConsigneeOrder} 
+                        className="w-full"
+                      >
+                        <Building2 className="h-4 w-4 mr-2" />
+                        Add Another Consignee
+                      </Button>
                       
                       <div className="flex items-center space-x-2">
                         <Checkbox 
@@ -558,7 +642,9 @@ const ShipmentsList = () => {
                       
                       <Button 
                         onClick={handleInventoryOrderSubmit}
-                        disabled={isSubmitting || !selectedConsignee || orderItems.some(item => !item.sku)}
+                        disabled={isSubmitting || consigneeOrders.every(order => 
+                          !order.consigneeId || order.items.every(item => !item.sku)
+                        )}
                         className="w-full"
                       >
                         {isSubmitting ? (
