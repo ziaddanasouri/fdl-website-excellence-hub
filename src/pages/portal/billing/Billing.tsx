@@ -31,6 +31,21 @@ const Billing = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('3m');
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date } | null>(null);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  // Define allInvoices first before using it in useState
+  const allInvoices = [
+    { id: 'INV-2024-0234', date: '2024-01-15', dueDate: '2024-02-14', amount: 2450.75, status: 'paid', services: 'LTL Freight' },
+    { id: 'INV-2024-0235', date: '2024-01-18', dueDate: '2024-02-17', amount: 1850.25, status: 'overdue', services: 'FTL Freight' },
+    { id: 'INV-2024-0236', date: '2024-01-20', dueDate: '2024-02-19', amount: 950.50, status: 'pending', services: 'Warehousing' },
+    { id: 'INV-2024-0237', date: '2024-01-22', dueDate: '2024-02-21', amount: 3200.00, status: 'pending', services: 'Last Mile' },
+    { id: 'INV-2024-0220', date: '2024-02-05', dueDate: '2024-03-05', amount: 2100.00, status: 'paid', services: 'LTL Freight' },
+    { id: 'INV-2024-0221', date: '2024-02-10', dueDate: '2024-03-10', amount: 3500.75, status: 'paid', services: 'FTL Freight' },
+    { id: 'INV-2024-0222', date: '2024-02-15', dueDate: '2024-03-15', amount: 1200.50, status: 'paid', services: 'Warehousing' },
+    { id: 'INV-2024-0180', date: '2024-03-08', dueDate: '2024-04-08', amount: 2800.00, status: 'paid', services: 'Last Mile' },
+    { id: 'INV-2024-0181', date: '2024-03-12', dueDate: '2024-04-12', amount: 1750.25, status: 'paid', services: 'LTL Freight' },
+    { id: 'INV-2024-0182', date: '2024-03-18', dueDate: '2024-04-18', amount: 4200.50, status: 'paid', services: 'FTL Freight' }
+  ];
+
   const [invoices, setInvoices] = useState(() => {
     const saved = localStorage.getItem('fdl_portal_invoices');
     return saved ? JSON.parse(saved) : allInvoices;
@@ -59,19 +74,6 @@ const Billing = () => {
   useEffect(() => {
     localStorage.setItem('fdl_portal_invoices', JSON.stringify(invoices));
   }, [invoices]);
-
-  const allInvoices = [
-    { id: 'INV-2024-0234', date: '2024-01-15', dueDate: '2024-02-14', amount: 2450.75, status: 'paid', services: 'LTL Freight' },
-    { id: 'INV-2024-0235', date: '2024-01-18', dueDate: '2024-02-17', amount: 1850.25, status: 'overdue', services: 'FTL Freight' },
-    { id: 'INV-2024-0236', date: '2024-01-20', dueDate: '2024-02-19', amount: 950.50, status: 'pending', services: 'Warehousing' },
-    { id: 'INV-2024-0237', date: '2024-01-22', dueDate: '2024-02-21', amount: 3200.00, status: 'pending', services: 'Last Mile' },
-    { id: 'INV-2024-0220', date: '2024-02-05', dueDate: '2024-03-05', amount: 2100.00, status: 'paid', services: 'LTL Freight' },
-    { id: 'INV-2024-0221', date: '2024-02-10', dueDate: '2024-03-10', amount: 3500.75, status: 'paid', services: 'FTL Freight' },
-    { id: 'INV-2024-0222', date: '2024-02-15', dueDate: '2024-03-15', amount: 1200.50, status: 'paid', services: 'Warehousing' },
-    { id: 'INV-2024-0180', date: '2024-03-08', dueDate: '2024-04-08', amount: 2800.00, status: 'paid', services: 'Last Mile' },
-    { id: 'INV-2024-0181', date: '2024-03-12', dueDate: '2024-04-12', amount: 1750.25, status: 'paid', services: 'LTL Freight' },
-    { id: 'INV-2024-0182', date: '2024-03-18', dueDate: '2024-04-18', amount: 4200.50, status: 'paid', services: 'FTL Freight' }
-  ];
 
   const allPayments = [
     { id: 'PAY-2024-0112', date: '2024-01-15', amount: 2450.75, method: 'Bank Transfer', invoice: 'INV-2024-0234', status: 'completed' },
