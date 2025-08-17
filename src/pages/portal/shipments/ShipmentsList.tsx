@@ -552,18 +552,18 @@ const ShipmentsList = () => {
                               <SelectTrigger className="bg-background">
                                 <SelectValue placeholder="Choose a consignee" />
                               </SelectTrigger>
-                              <SelectContent className="bg-background border shadow-lg z-50">
-                                {consignees.map((consignee) => (
-                                  <SelectItem key={consignee.id} value={consignee.id} className="bg-background hover:bg-muted">
-                                    <div className="flex flex-col items-start">
-                                      <span className="font-medium">{consignee.name}</span>
-                                      <span className="text-sm text-muted-foreground">
-                                        {consignee.address}, {consignee.city}, {consignee.state} {consignee.zip}
-                                      </span>
-                                    </div>
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
+                               <SelectContent className="bg-background border shadow-lg z-50">
+                                 {consignees.map((consignee) => (
+                                   <SelectItem key={consignee.id} value={consignee.id} className="bg-background hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                     <div className="flex flex-col items-start">
+                                       <span className="font-medium">{consignee.name}</span>
+                                       <span className="text-sm opacity-70 hover:opacity-100">
+                                         {consignee.address}, {consignee.city}, {consignee.state} {consignee.zip}
+                                       </span>
+                                     </div>
+                                   </SelectItem>
+                                 ))}
+                               </SelectContent>
                             </Select>
                           </div>
                           
