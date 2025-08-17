@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Truck, Lock, Mail } from 'lucide-react';
+import fdlLogo from '@/assets/fond-du-lac-logo.png';
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -31,12 +32,16 @@ export default function AdminLogin() {
       <div className="w-full max-w-md space-y-6">
         {/* Logo & Title */}
         <div className="text-center space-y-4">
-          <div className="mx-auto h-12 w-12 bg-primary rounded-xl flex items-center justify-center">
-            <Truck className="h-6 w-6 text-primary-foreground" />
+          <div className="mx-auto h-16 w-16 flex items-center justify-center">
+            <img 
+              src={fdlLogo} 
+              alt="Fond du Lac Cold Storage" 
+              className="h-full w-full object-contain" 
+            />
           </div>
           <div className="space-y-2">
             <h1 className="text-2xl font-bold text-foreground">FDL Admin Portal</h1>
-            <p className="text-muted-foreground">Manage your logistics operations</p>
+            <p className="text-muted-foreground">Manage your cold storage operations</p>
           </div>
         </div>
 
@@ -106,7 +111,7 @@ export default function AdminLogin() {
 
         {/* Footer */}
         <div className="text-center text-sm text-muted-foreground">
-          <p>© 2024 FDL Logistics. All rights reserved.</p>
+          <p>© 2024 FDL Cold Storage. All rights reserved.</p>
         </div>
       </div>
     </div>
