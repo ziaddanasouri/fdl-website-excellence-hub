@@ -129,13 +129,23 @@ const ShipmentsList = () => {
     }
   ];
 
-  // Mock data for consignees and inventory
+  // Mock data for consignees and inventory (expanded list to show handling of many consignees)
   const consignees = [
     { id: 'c1', name: 'LA Retail Store', city: 'Los Angeles', state: 'CA', zip: '90001' },
     { id: 'c2', name: 'NYC Distributor', city: 'New York', state: 'NY', zip: '10001' },
     { id: 'c3', name: 'Miami Outlet', city: 'Miami', state: 'FL', zip: '33101' },
     { id: 'c4', name: 'Chicago Branch', city: 'Chicago', state: 'IL', zip: '60601' },
-    { id: 'c5', name: 'Seattle Office', city: 'Seattle', state: 'WA', zip: '98101' }
+    { id: 'c5', name: 'Seattle Office', city: 'Seattle', state: 'WA', zip: '98101' },
+    { id: 'c6', name: 'Dallas Distribution Center', city: 'Dallas', state: 'TX', zip: '75201' },
+    { id: 'c7', name: 'Phoenix Warehouse', city: 'Phoenix', state: 'AZ', zip: '85001' },
+    { id: 'c8', name: 'Denver Hub', city: 'Denver', state: 'CO', zip: '80201' },
+    { id: 'c9', name: 'Atlanta Regional', city: 'Atlanta', state: 'GA', zip: '30301' },
+    { id: 'c10', name: 'Boston Store', city: 'Boston', state: 'MA', zip: '02101' },
+    { id: 'c11', name: 'Portland Branch', city: 'Portland', state: 'OR', zip: '97201' },
+    { id: 'c12', name: 'Las Vegas Depot', city: 'Las Vegas', state: 'NV', zip: '89101' },
+    { id: 'c13', name: 'Minneapolis Center', city: 'Minneapolis', state: 'MN', zip: '55401' },
+    { id: 'c14', name: 'Nashville Facility', city: 'Nashville', state: 'TN', zip: '37201' },
+    { id: 'c15', name: 'San Diego Location', city: 'San Diego', state: 'CA', zip: '92101' }
   ];
 
   const inventoryItems = [
