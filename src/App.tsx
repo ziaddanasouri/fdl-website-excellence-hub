@@ -26,6 +26,15 @@ import Settings from "./pages/portal/settings/Settings";
 import Billing from "./pages/portal/billing/Billing";
 import Inventory from "./pages/portal/inventory/Inventory";
 
+// Admin Pages
+import { AdminLayout } from "./components/admin/AdminLayout";
+import AdminLogin from "./pages/admin/Login";
+import AdminDashboard from "./pages/admin/Dashboard";
+import AdminWorkload from "./pages/admin/Workload";
+import AdminShipments from "./pages/admin/Shipments";
+import AdminPricing from "./pages/admin/Pricing";
+import AdminAnalytics from "./pages/admin/Analytics";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -55,6 +64,16 @@ const App = () => (
           <Route path="/portal/inventory" element={<Inventory />} />
           <Route path="/portal/support" element={<Support />} />
           <Route path="/portal/settings" element={<Settings />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="workload" element={<AdminWorkload />} />
+            <Route path="shipments" element={<AdminShipments />} />
+            <Route path="pricing" element={<AdminPricing />} />
+            <Route path="analytics" element={<AdminAnalytics />} />
+          </Route>
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
