@@ -1,15 +1,17 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { useForm } from 'react-hook-form';
 import { 
@@ -28,7 +30,11 @@ import {
   DollarSign,
   FileText,
   X,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Upload,
+  Loader2,
+  ShoppingCart,
+  Building2
 } from 'lucide-react';
 import PortalLayout from '@/components/portal/PortalLayout';
 import { Link } from 'react-router-dom';
@@ -123,16 +129,57 @@ const ShipmentsList = () => {
     }
   ];
 
+  // Mock data for consignees and inventory
+  const consignees = [
+    { id: 'c1', name: 'LA Retail Store', city: 'Los Angeles', state: 'CA', zip: '90001' },
+    { id: 'c2', name: 'NYC Distributor', city: 'New York', state: 'NY', zip: '10001' },
+    { id: 'c3', name: 'Miami Outlet', city: 'Miami', state: 'FL', zip: '33101' },
+    { id: 'c4', name: 'Chicago Branch', city: 'Chicago', state: 'IL', zip: '60601' },
+    { id: 'c5', name: 'Seattle Office', city: 'Seattle', state: 'WA', zip: '98101' }
+  ];
+
+  const inventoryItems = [
+    { sku: 'SKU-1001', name: 'Cabernet Sauvignon 750ml', availableQty: 320 },
+    { sku: 'SKU-1002', name: 'Chardonnay 750ml', availableQty: 280 },
+    { sku: 'SKU-1003', name: 'Pinot Noir 750ml', availableQty: 150 },
+    { sku: 'SKU-1004', name: 'Sauvignon Blanc 750ml', availableQty: 200 },
+    { sku: 'SKU-1005', name: 'Merlot 750ml', availableQty: 175 },
+    { sku: 'SKU-2001', name: 'Wine Gift Box Set', availableQty: 45 },
+    { sku: 'SKU-2002', name: 'Premium Decanter', availableQty: 25 },
+    { sku: 'SKU-3001', name: 'Cork Screw Professional', availableQty: 120 }
+  ];
+
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [dateFilter, setDateFilter] = useState('all');
   const [exceptionDialogOpen, setExceptionDialogOpen] = useState(false);
   const [podDialogOpen, setPodDialogOpen] = useState(false);
+  const [newOrderDialogOpen, setNewOrderDialogOpen] = useState(false);
   const [selectedShipment, setSelectedShipment] = useState<any>(null);
-  const [shipmentData, setShipmentData] = useState(initialShipments);
+  const [shipmentData, setShipmentData] = useState(() => {
+    const saved = localStorage.getItem('fdl_portal_shipments');
+    return saved ? JSON.parse(saved) : initialShipments;
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [orderItems, setOrderItems] = useState([{ sku: '', quantity: 1 }]);
+  const [selectedConsignee, setSelectedConsignee] = useState('');
+  const [emailUpdates, setEmailUpdates] = useState(() => {
+    const saved = localStorage.getItem('fdl_portal_email_updates');
+    return saved ? JSON.parse(saved) : false;
+  });
   
   const { toast } = useToast();
   const form = useForm();
+
+  // Save shipments to localStorage whenever data changes
+  useEffect(() => {
+    localStorage.setItem('fdl_portal_shipments', JSON.stringify(shipmentData));
+  }, [shipmentData]);
+
+  // Save email preference whenever it changes
+  useEffect(() => {
+    localStorage.setItem('fdl_portal_email_updates', JSON.stringify(emailUpdates));
+  }, [emailUpdates]);
 
   const shipments = shipmentData;
 
@@ -220,6 +267,89 @@ const ShipmentsList = () => {
     }
   };
 
+  const handleUploadFilesSubmit = async () => {
+    setIsSubmitting(true);
+    
+    // Simulate processing time
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    const newOrder = {
+      id: `ORD-${Date.now()}`,
+      status: 'pending',
+      origin: 'FDL Warehouse, NJ',
+      destination: 'Consignee (From uploaded files)',
+      createdDate: new Date().toISOString().split('T')[0],
+      estimatedDelivery: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      packages: 1,
+      weight: '12.0 lbs',
+      cost: '$75.99',
+      service: 'Standard',
+      trackingNumber: `TRK${Date.now()}`
+    };
+
+    setShipmentData(prev => [newOrder, ...prev]);
+    setIsSubmitting(false);
+    setNewOrderDialogOpen(false);
+
+    toast({
+      title: "Order accepted",
+      description: "Your order was sent to the warehouse. Updates shall follow soon.",
+    });
+  };
+
+  const handleInventoryOrderSubmit = async () => {
+    if (!selectedConsignee || orderItems.length === 0) return;
+    
+    setIsSubmitting(true);
+    
+    // Simulate validation time
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    const consignee = consignees.find(c => c.id === selectedConsignee);
+    const totalItems = orderItems.reduce((sum, item) => sum + item.quantity, 0);
+    
+    const newOrder = {
+      id: `ORD-${Date.now()}`,
+      status: 'pending',
+      origin: 'FDL Warehouse, NJ',
+      destination: `${consignee?.city}, ${consignee?.state}`,
+      createdDate: new Date().toISOString().split('T')[0],
+      estimatedDelivery: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      packages: totalItems,
+      weight: `${totalItems * 2.5} lbs`,
+      cost: `$${(totalItems * 25.99).toFixed(2)}`,
+      service: 'Standard',
+      trackingNumber: `TRK${Date.now()}`
+    };
+
+    setShipmentData(prev => [newOrder, ...prev]);
+    setIsSubmitting(false);
+    setNewOrderDialogOpen(false);
+    setOrderItems([{ sku: '', quantity: 1 }]);
+    setSelectedConsignee('');
+
+    toast({
+      title: "Order submitted",
+      description: "Your order has been submitted and sent to our warehouse.",
+    });
+  };
+
+  const addOrderItem = () => {
+    setOrderItems([...orderItems, { sku: '', quantity: 1 }]);
+  };
+
+  const removeOrderItem = (index: number) => {
+    if (orderItems.length > 1) {
+      setOrderItems(orderItems.filter((_, i) => i !== index));
+    }
+  };
+
+  const updateOrderItem = (index: number, field: string, value: any) => {
+    setOrderItems(orderItems.map((item, i) => 
+      i === index ? { ...item, [field]: value } : item
+    ));
+  };
+
   const getResolutionCost = (option: any, shipment: any) => {
     if (option.id === 'accept_charges') return shipment.additionalCharges || 0;
     if (option.id === 'split_package') return 15.00;
@@ -242,20 +372,199 @@ const ShipmentsList = () => {
         {/* Header */}
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold">Shipments</h1>
-            <p className="text-muted-foreground">Manage and track all your shipments</p>
+            <h1 className="text-3xl font-bold">Orders / Shipments</h1>
+            <p className="text-muted-foreground">Manage and track all your orders and shipments</p>
           </div>
           <div className="flex gap-3">
             <Button variant="outline">
               <Download className="h-4 w-4 mr-2" />
               Export
             </Button>
-            <Link to="/portal/shipments/create">
-              <Button>
-                <Plus className="h-4 w-4 mr-2" />
-                Create Shipment
-              </Button>
-            </Link>
+            <Dialog open={newOrderDialogOpen} onOpenChange={setNewOrderDialogOpen}>
+              <DialogTrigger asChild>
+                <Button>
+                  <Plus className="h-4 w-4 mr-2" />
+                  New Order
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>New Order</DialogTitle>
+                  <DialogDescription>
+                    Choose how you want to place your order
+                  </DialogDescription>
+                </DialogHeader>
+                
+                <Tabs defaultValue="upload" className="w-full">
+                  <TabsList className="grid w-full grid-cols-2">
+                    <TabsTrigger value="upload">Upload Order Files</TabsTrigger>
+                    <TabsTrigger value="inventory">Build from Inventory</TabsTrigger>
+                  </TabsList>
+                  
+                  <TabsContent value="upload" className="space-y-4">
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-1 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="summary-file">Summary File (CSV/XLSX)</Label>
+                          <div className="flex items-center justify-center w-full">
+                            <label htmlFor="summary-file" className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer bg-muted/50 hover:bg-muted">
+                              <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
+                                <p className="mb-2 text-sm text-muted-foreground">Click to upload summary file</p>
+                              </div>
+                              <input id="summary-file" type="file" className="hidden" accept=".csv,.xlsx" />
+                            </label>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <Label htmlFor="order-file">Order File (CSV/XLSX)</Label>
+                          <div className="flex items-center justify-center w-full">
+                            <label htmlFor="order-file" className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer bg-muted/50 hover:bg-muted">
+                              <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
+                                <p className="mb-2 text-sm text-muted-foreground">Click to upload order file</p>
+                              </div>
+                              <input id="order-file" type="file" className="hidden" accept=".csv,.xlsx" />
+                            </label>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <Label htmlFor="invoice-file">PDF Invoice</Label>
+                          <div className="flex items-center justify-center w-full">
+                            <label htmlFor="invoice-file" className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer bg-muted/50 hover:bg-muted">
+                              <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
+                                <p className="mb-2 text-sm text-muted-foreground">Click to upload PDF invoice</p>
+                              </div>
+                              <input id="invoice-file" type="file" className="hidden" accept=".pdf" />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center space-x-2">
+                        <Checkbox 
+                          id="email-updates-upload" 
+                          checked={emailUpdates}
+                          onCheckedChange={setEmailUpdates}
+                        />
+                        <Label htmlFor="email-updates-upload">Email me updates for this order</Label>
+                      </div>
+                      
+                      <Button 
+                        onClick={handleUploadFilesSubmit}
+                        disabled={isSubmitting}
+                        className="w-full"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Processing files...
+                          </>
+                        ) : (
+                          'Submit Files'
+                        )}
+                      </Button>
+                    </div>
+                  </TabsContent>
+                  
+                  <TabsContent value="inventory" className="space-y-4">
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <Label>Select Consignee</Label>
+                        <Select value={selectedConsignee} onValueChange={setSelectedConsignee}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Choose a consignee" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {consignees.map((consignee) => (
+                              <SelectItem key={consignee.id} value={consignee.id}>
+                                {consignee.name} - {consignee.city}, {consignee.state}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <Label>Order Items</Label>
+                        {orderItems.map((item, index) => (
+                          <div key={index} className="flex gap-3 items-end">
+                            <div className="flex-1">
+                              <Label className="text-xs">SKU</Label>
+                              <Select 
+                                value={item.sku} 
+                                onValueChange={(value) => updateOrderItem(index, 'sku', value)}
+                              >
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select SKU" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  {inventoryItems.map((invItem) => (
+                                    <SelectItem key={invItem.sku} value={invItem.sku}>
+                                      {invItem.sku} - {invItem.name} (Available: {invItem.availableQty})
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                            </div>
+                            <div className="w-24">
+                              <Label className="text-xs">Quantity</Label>
+                              <Input
+                                type="number"
+                                min="1"
+                                max={inventoryItems.find(i => i.sku === item.sku)?.availableQty || 999}
+                                value={item.quantity}
+                                onChange={(e) => updateOrderItem(index, 'quantity', parseInt(e.target.value) || 1)}
+                              />
+                            </div>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => removeOrderItem(index)}
+                              disabled={orderItems.length === 1}
+                            >
+                              <X className="h-4 w-4" />
+                            </Button>
+                          </div>
+                        ))}
+                        
+                        <Button variant="outline" onClick={addOrderItem} className="w-full">
+                          <Plus className="h-4 w-4 mr-2" />
+                          Add Item
+                        </Button>
+                      </div>
+                      
+                      <div className="flex items-center space-x-2">
+                        <Checkbox 
+                          id="email-updates-inventory" 
+                          checked={emailUpdates}
+                          onCheckedChange={setEmailUpdates}
+                        />
+                        <Label htmlFor="email-updates-inventory">Email me updates for this order</Label>
+                      </div>
+                      
+                      <Button 
+                        onClick={handleInventoryOrderSubmit}
+                        disabled={isSubmitting || !selectedConsignee || orderItems.some(item => !item.sku)}
+                        className="w-full"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Validating order...
+                          </>
+                        ) : (
+                          'Submit Order'
+                        )}
+                      </Button>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
 
@@ -330,7 +639,7 @@ const ShipmentsList = () => {
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
-                    placeholder="Search by shipment ID, origin, or destination..."
+                    placeholder="Search by order ID, origin, or destination..."
                     className="pl-9"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -377,7 +686,7 @@ const ShipmentsList = () => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Shipment ID</TableHead>
+                  <TableHead>Order/Shipment ID</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead>Route</TableHead>
                   <TableHead>Service</TableHead>
@@ -425,7 +734,11 @@ const ShipmentsList = () => {
                     <TableCell>
                       <div className="flex gap-2">
                         <Link to={`/portal/tracking?id=${shipment.trackingNumber}`}>
-                          <Button variant="outline" size="sm">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            disabled={shipment.status === 'pending'}
+                          >
                             <MapPin className="h-4 w-4 mr-1" />
                             Track
                           </Button>
@@ -448,125 +761,72 @@ const ShipmentsList = () => {
           </CardContent>
         </Card>
 
-        {/* Exception Alert */}
-        {statusStats.exception > 0 && (
-          <Card className="border-red-200 bg-red-50">
-            <CardContent className="p-4">
-              <div className="flex items-center gap-3">
-                <AlertTriangle className="h-5 w-5 text-red-600" />
-                <div>
-                  <h3 className="font-semibold text-red-800">Attention Required</h3>
-                  <p className="text-red-700">
-                    You have {statusStats.exception} shipment(s) requiring attention. 
-                    Please review and take necessary action.
-                  </p>
-                </div>
-                <Button variant="outline" className="ml-auto" onClick={handleReviewExceptions}>
-                  Review Exceptions
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
         {/* Exception Resolution Dialog */}
         <Dialog open={exceptionDialogOpen} onOpenChange={setExceptionDialogOpen}>
-          <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogContent className="max-w-2xl">
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
-                <AlertTriangle className="h-5 w-5 text-red-600" />
-                Exception Resolution - {selectedShipment?.id}
-              </DialogTitle>
+              <DialogTitle>Exception Resolution - {selectedShipment?.id}</DialogTitle>
               <DialogDescription>
-                Review the exception details and select a resolution option for this shipment.
+                Review the exception details and select a resolution option
               </DialogDescription>
             </DialogHeader>
-
+            
             {selectedShipment && (
               <div className="space-y-6">
-                {/* Shipment Details */}
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Shipment Details</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Route</p>
-                        <p className="text-sm">{selectedShipment.origin} → {selectedShipment.destination}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Service</p>
-                        <p className="text-sm">{selectedShipment.service}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Packages</p>
-                        <p className="text-sm">{selectedShipment.packages} package(s) - {selectedShipment.weight}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Original Cost</p>
-                        <p className="text-sm">{selectedShipment.cost}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
                 {/* Exception Details */}
-                <Card className="border-red-200 bg-red-50">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-red-800">Exception Details</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-start gap-3">
-                      <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
-                      <div>
-                        <p className="font-medium text-red-800 capitalize">
-                          {selectedShipment.exceptionType} Issue
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-red-800">
+                        {selectedShipment.exceptionType === 'oversize' ? 'Oversize Package' : 'Address Issue'}
+                      </h4>
+                      <p className="text-sm text-red-700">{selectedShipment.exceptionDetails}</p>
+                      {selectedShipment.additionalCharges > 0 && (
+                        <p className="text-sm font-medium text-red-800 mt-1">
+                          Additional charges may apply: ${selectedShipment.additionalCharges.toFixed(2)}
                         </p>
-                        <p className="text-red-700 text-sm mt-1">
-                          {selectedShipment.exceptionDetails}
-                        </p>
-                      </div>
+                      )}
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
                 {/* Resolution Options */}
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(handleResolutionSubmit)} className="space-y-6">
+                  <form onSubmit={form.handleSubmit(handleResolutionSubmit)} className="space-y-4">
                     <FormField
                       control={form.control}
                       name="resolution"
-                      rules={{ required: "Please select a resolution option" }}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base font-semibold">Resolution Options</FormLabel>
+                          <FormLabel>Choose Resolution</FormLabel>
                           <FormControl>
                             <RadioGroup
                               onValueChange={field.onChange}
                               defaultValue={field.value}
                               className="space-y-3"
                             >
-                              {selectedShipment.resolutionOptions?.map((option: any) => {
-                                const additionalCost = getResolutionCost(option, selectedShipment);
-                                return (
-                                  <div key={option.id} className="flex items-start space-x-3 space-y-0">
-                                    <RadioGroupItem value={option.id} className="mt-1" />
-                                    <div className="flex-1 space-y-1">
-                                      <div className="flex items-center justify-between">
-                                        <p className="font-medium">{option.label}</p>
-                                        {additionalCost > 0 && (
-                                          <Badge variant="outline" className="text-orange-600 border-orange-200">
-                                            <DollarSign className="h-3 w-3 mr-1" />
-                                            +${additionalCost.toFixed(2)}
-                                          </Badge>
-                                        )}
-                                      </div>
-                                      <p className="text-sm text-muted-foreground">{option.description}</p>
-                                    </div>
+                              {selectedShipment.resolutionOptions?.map((option: any) => (
+                                <div key={option.id} className="flex items-start space-x-3 p-3 border rounded-lg">
+                                  <RadioGroupItem value={option.id} id={option.id} className="mt-0.5" />
+                                  <div className="flex-1">
+                                    <label 
+                                      htmlFor={option.id} 
+                                      className="text-sm font-medium cursor-pointer flex items-center justify-between"
+                                    >
+                                      <span>{option.label}</span>
+                                      {getResolutionCost(option, selectedShipment) > 0 && (
+                                        <span className="text-sm text-muted-foreground">
+                                          +${getResolutionCost(option, selectedShipment).toFixed(2)}
+                                        </span>
+                                      )}
+                                    </label>
+                                    <p className="text-xs text-muted-foreground mt-1">
+                                      {option.description}
+                                    </p>
                                   </div>
-                                );
-                              })}
+                                </div>
+                              ))}
                             </RadioGroup>
                           </FormControl>
                           <FormMessage />
@@ -574,7 +834,6 @@ const ShipmentsList = () => {
                       )}
                     />
 
-                    {/* Additional Notes */}
                     <FormField
                       control={form.control}
                       name="notes"
@@ -583,8 +842,7 @@ const ShipmentsList = () => {
                           <FormLabel>Additional Notes (Optional)</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Add any additional information or special instructions..."
-                              className="min-h-[80px]"
+                              placeholder="Provide any additional information or special instructions..."
                               {...field}
                             />
                           </FormControl>
@@ -593,19 +851,17 @@ const ShipmentsList = () => {
                       )}
                     />
 
-                    {/* Action Buttons */}
-                    <div className="flex justify-between pt-4">
+                    <div className="flex gap-3 pt-4">
+                      <Button type="submit" className="flex-1">
+                        <CheckCircle className="h-4 w-4 mr-2" />
+                        Submit Resolution
+                      </Button>
                       <Button 
                         type="button" 
                         variant="outline" 
                         onClick={() => setExceptionDialogOpen(false)}
                       >
-                        <X className="h-4 w-4 mr-2" />
                         Cancel
-                      </Button>
-                      <Button type="submit">
-                        <FileText className="h-4 w-4 mr-2" />
-                        Submit Resolution
                       </Button>
                     </div>
                   </form>
@@ -617,102 +873,83 @@ const ShipmentsList = () => {
 
         {/* POD Dialog */}
         <Dialog open={podDialogOpen} onOpenChange={setPodDialogOpen}>
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogContent className="max-w-4xl">
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
-                <ImageIcon className="h-5 w-5 text-primary" />
-                Proof of Delivery - {selectedShipment?.id}
-              </DialogTitle>
+              <DialogTitle>Proof of Delivery - {selectedShipment?.id}</DialogTitle>
               <DialogDescription>
-                Delivery confirmation for shipment from {selectedShipment?.origin} to {selectedShipment?.destination}
+                Delivery confirmation and details
               </DialogDescription>
             </DialogHeader>
-
+            
             {selectedShipment && (
-              <div className="space-y-6">
-                {/* Delivery Summary */}
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      Delivery Confirmed
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Delivered On</p>
-                        <p className="text-sm font-semibold">{selectedShipment.deliveredDate}</p>
-                        <p className="text-xs text-muted-foreground">{selectedShipment.deliveryTime}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Delivery Agent</p>
-                        <p className="text-sm font-semibold">{selectedShipment.deliveryAgent}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Received By</p>
-                        <p className="text-sm font-semibold">{selectedShipment.recipient}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground">Packages</p>
-                        <p className="text-sm font-semibold">{selectedShipment.packages} package(s)</p>
-                      </div>
-                    </div>
-                    {selectedShipment.deliveryNotes && (
-                      <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md">
-                        <p className="text-sm text-green-800">
-                          <strong>Delivery Notes:</strong> {selectedShipment.deliveryNotes}
-                        </p>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* POD Image */}
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Proof of Delivery Photo</CardTitle>
-                    <CardDescription>
-                      Visual confirmation of wine bottles properly stored in retail location
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="relative">
+                <div className="space-y-4">
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                    {selectedShipment.podImageUrl ? (
                       <img 
                         src={selectedShipment.podImageUrl} 
-                        alt="Proof of Delivery - Wine bottles in retail store"
-                        className="w-full h-auto rounded-lg border shadow-sm"
-                        style={{ maxHeight: '500px', objectFit: 'contain' }}
+                        alt="Proof of Delivery" 
+                        className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-md text-sm">
-                        Delivered: {selectedShipment.deliveredDate} {selectedShipment.deliveryTime}
+                    ) : (
+                      <div className="flex items-center justify-center h-full">
+                        <div className="text-center">
+                          <ImageIcon className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
+                          <p className="text-sm text-muted-foreground">No image available</p>
+                        </div>
                       </div>
-                    </div>
-                    <p className="text-sm text-muted-foreground mt-3 text-center">
-                      Wine bottles delivered and properly stored in retail wine section
-                    </p>
-                  </CardContent>
-                </Card>
+                    )}
+                  </div>
+                  
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="flex-1">
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </Button>
+                    <Button variant="outline" size="sm" className="flex-1">
+                      <Eye className="h-4 w-4 mr-2" />
+                      Full Size
+                    </Button>
+                  </div>
+                </div>
 
-                {/* Action Buttons */}
-                <div className="flex justify-between pt-4 border-t">
-                  <Button 
-                    variant="outline"
-                    onClick={() => {
-                      const link = document.createElement('a');
-                      link.href = selectedShipment.podImageUrl;
-                      link.download = `POD_${selectedShipment.id}_${selectedShipment.deliveredDate}.jpg`;
-                      link.click();
-                    }}
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    Download POD
-                  </Button>
-                  <Button 
-                    onClick={() => setPodDialogOpen(false)}
-                  >
-                    Close
-                  </Button>
+                {/* Delivery Details */}
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="text-sm font-medium text-muted-foreground">Delivery Agent</h4>
+                      <p className="text-sm">{selectedShipment.deliveryAgent || 'N/A'}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-muted-foreground">Recipient</h4>
+                      <p className="text-sm">{selectedShipment.recipient || 'N/A'}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-muted-foreground">Delivery Time</h4>
+                      <p className="text-sm">{selectedShipment.deliveryTime || 'N/A'}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-muted-foreground">Date</h4>
+                      <p className="text-sm">{selectedShipment.deliveredDate}</p>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-sm font-medium text-muted-foreground mb-2">Delivery Notes</h4>
+                    <div className="p-3 bg-muted rounded-lg">
+                      <p className="text-sm">
+                        {selectedShipment.deliveryNotes || 'No additional notes provided.'}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <Button className="w-full">
+                      <FileText className="h-4 w-4 mr-2" />
+                      Generate Delivery Report
+                    </Button>
+                  </div>
                 </div>
               </div>
             )}

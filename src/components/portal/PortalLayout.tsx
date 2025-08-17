@@ -36,9 +36,7 @@ const PortalLayout = ({ children }: PortalLayoutProps) => {
 
   const navigationItems = [
     { name: 'Dashboard', href: '/portal/dashboard', icon: LayoutDashboard },
-    { name: 'Shipments', href: '/portal/shipments', icon: Package, badge: '12' },
-    { name: 'Quotes', href: '/portal/quotes', icon: DollarSign, badge: '3' },
-    { name: 'Tracking', href: '/portal/tracking', icon: MapPin },
+    { name: 'Orders / Shipments', href: '/portal/shipments', icon: Package, badge: '12' },
     { name: 'Billing', href: '/portal/billing', icon: Receipt, badge: '2' },
     { name: 'Inventory', href: '/portal/inventory', icon: Warehouse },
     { name: 'Reports', href: '/portal/reports', icon: BarChart3 },
@@ -97,7 +95,7 @@ const PortalLayout = ({ children }: PortalLayoutProps) => {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input 
-                placeholder="Search shipments, quotes..." 
+                placeholder="Search orders, shipments..." 
                 className="pl-9 w-64"
               />
             </div>

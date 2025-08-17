@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -18,17 +18,24 @@ import {
   Eye,
   Filter,
   CalendarIcon,
-  X
+  X,
+  Loader2
 } from 'lucide-react';
 import { format, addDays, subDays, subMonths, isWithinInterval, parseISO } from 'date-fns';
 import PortalLayout from '@/components/portal/PortalLayout';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
 
 const Billing = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('3m');
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date } | null>(null);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [invoices, setInvoices] = useState(() => {
+    const saved = localStorage.getItem('fdl_portal_invoices');
+    return saved ? JSON.parse(saved) : allInvoices;
+  });
+  const [isPaymentProcessing, setIsPaymentProcessing] = useState<string | null>(null);
 
   // Extended mock data with more history
   const allSpendData = [
@@ -45,6 +52,13 @@ const Billing = () => {
     { month: 'Nov', date: '2024-11-15', amount: 16200, budget: 15000 },
     { month: 'Dec', date: '2024-12-15', amount: 14832, budget: 15000 }
   ];
+
+  const { toast } = useToast();
+
+  // Save invoices to localStorage whenever data changes
+  useEffect(() => {
+    localStorage.setItem('fdl_portal_invoices', JSON.stringify(invoices));
+  }, [invoices]);
 
   const allInvoices = [
     { id: 'INV-2024-0234', date: '2024-01-15', dueDate: '2024-02-14', amount: 2450.75, status: 'paid', services: 'LTL Freight' },
@@ -87,7 +101,7 @@ const Billing = () => {
   };
 
   const calculateFilteredData = () => {
-    const filteredInvoices = filterDataByDateRange(allInvoices, 'date');
+    const filteredInvoices = filterDataByDateRange(invoices, 'date');
     const filteredPayments = filterDataByDateRange(allPayments, 'date');
     const filteredSpendData = filterDataByDateRange(allSpendData, 'date');
 
@@ -150,7 +164,7 @@ const Billing = () => {
       { name: 'Warehousing', value: 15, amount: 13114.88, color: 'hsl(var(--logistics-orange))' },
       { name: 'Last Mile', value: 10, amount: 8743.25, color: 'hsl(var(--logistics-green))' }
     ],
-    recentInvoices: allInvoices.slice(0, 4),
+    recentInvoices: invoices.slice(0, 4),
     payments: allPayments.slice(0, 3)
   };
 
@@ -202,6 +216,34 @@ const Billing = () => {
       pending: 'secondary' as const
     };
     return <Badge variant={variants[status as keyof typeof variants] || 'secondary'}>{status}</Badge>;
+  };
+
+  const handlePayNow = async (invoice: any) => {
+    setIsPaymentProcessing(invoice.id);
+    
+    // Show redirect toast
+    toast({
+      title: "Redirecting to Stripe...",
+      description: "Please wait while we redirect you to the payment portal.",
+    });
+    
+    // Simulate redirect delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Update invoice status to paid
+    setInvoices(prev => prev.map(inv => 
+      inv.id === invoice.id 
+        ? { ...inv, status: 'paid' }
+        : inv
+    ));
+    
+    setIsPaymentProcessing(null);
+    
+    // Show success toast
+    toast({
+      title: "Payment successful",
+      description: `Invoice ${invoice.id} has been marked as paid.`,
+    });
   };
 
   return (
@@ -494,6 +536,26 @@ const Billing = () => {
                           <td className="py-3">{getStatusBadge(invoice.status)}</td>
                           <td className="py-3">
                             <div className="flex gap-2">
+                              {(invoice.status === 'pending' || invoice.status === 'overdue') && (
+                                <Button 
+                                  size="sm"
+                                  onClick={() => handlePayNow(invoice)}
+                                  disabled={isPaymentProcessing === invoice.id}
+                                  className="bg-primary hover:bg-primary/90"
+                                >
+                                  {isPaymentProcessing === invoice.id ? (
+                                    <>
+                                      <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+                                      Processing...
+                                    </>
+                                  ) : (
+                                    <>
+                                      <CreditCard className="h-4 w-4 mr-1" />
+                                      Pay Now
+                                    </>
+                                  )}
+                                </Button>
+                              )}
                               <Button variant="ghost" size="sm">
                                 <Eye className="h-4 w-4" />
                               </Button>
