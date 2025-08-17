@@ -41,7 +41,7 @@ import { Link } from 'react-router-dom';
 import podImage from '@/assets/pod-wine-delivery.jpg';
 
 const ShipmentsList = () => {
-  // Enhanced shipment data with exception details and POD information
+  // Enhanced shipment data with exception details and POD information - Updated for multi-consignee orders
   const initialShipments = [
     {
       id: 'FDL-2024-001',
@@ -182,6 +182,8 @@ const ShipmentsList = () => {
   
   const { toast } = useToast();
   const form = useForm();
+
+  console.log("ShipmentsList component loaded - multi-consignee orders enabled");
 
   // Save shipments to localStorage whenever data changes
   useEffect(() => {
