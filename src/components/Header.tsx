@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Truck, Package, Globe, Phone, User } from 'lucide-react';
-import fdlLogo from '@/assets/fond-du-lac-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,14 +25,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src={fdlLogo} 
-              alt="Fond du Lac Cold Storage" 
-              className="h-12 w-12 object-contain" 
-            />
+            <div className="logistics-gradient p-2 rounded-lg">
+              <Truck className="h-8 w-8 text-white" />
+            </div>
             <div>
               <h1 className="text-2xl font-bold text-primary">FDL</h1>
-              <p className="text-xs text-muted-foreground">Cold Storage</p>
+              <p className="text-xs text-muted-foreground">Fond De Lac Logistics</p>
             </div>
           </div>
 

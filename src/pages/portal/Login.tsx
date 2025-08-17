@@ -7,7 +7,6 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Truck, Eye, EyeOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import fdlLogo from '@/assets/fond-du-lac-logo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -48,11 +47,9 @@ const Login = () => {
         {/* Logo */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-3 mb-4">
-            <img 
-              src={fdlLogo} 
-              alt="Fond du Lac Cold Storage" 
-              className="h-16 w-16 object-contain" 
-            />
+            <div className="logistics-gradient p-3 rounded-lg">
+              <Truck className="h-10 w-10 text-white" />
+            </div>
             <div>
               <h1 className="text-3xl font-bold text-primary">FDL</h1>
               <p className="text-sm text-muted-foreground">Customer Portal</p>
@@ -64,7 +61,7 @@ const Login = () => {
           <CardHeader className="text-center">
             <CardTitle>Welcome Back</CardTitle>
             <CardDescription>
-              Sign in to your FDL Cold Storage account to access your shipments, quotes, and more.
+              Sign in to your FDL Logistics account to access your shipments, quotes, and more.
             </CardDescription>
           </CardHeader>
           <CardContent>
