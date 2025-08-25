@@ -34,6 +34,12 @@ import AdminWorkload from "./pages/admin/Workload";
 import AdminShipments from "./pages/admin/Shipments";
 import AdminPricing from "./pages/admin/Pricing";
 import AdminAnalytics from "./pages/admin/Analytics";
+import AdminCustomers from "./pages/admin/Customers";
+import AdminCarriers from "./pages/admin/Carriers";
+import AdminBilling from "./pages/admin/Billing";
+import AdminUsers from "./pages/admin/Users";
+import AdminAuditLogs from "./pages/admin/AuditLogs";
+import AdminSettings from "./pages/admin/Settings";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +79,12 @@ const App = () => (
             <Route path="shipments" element={<AdminShipments />} />
             <Route path="pricing" element={<AdminPricing />} />
             <Route path="analytics" element={<AdminAnalytics />} />
+            <Route path="customers" element={<AdminCustomers />} />
+            <Route path="carriers" element={<AdminCarriers />} />
+            <Route path="billing" element={<AdminBilling />} />
+            <Route path="users" element={<AdminUsers />} />
+            <Route path="audit-logs" element={<AdminAuditLogs />} />
+            <Route path="settings" element={<AdminSettings />} />
           </Route>
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
