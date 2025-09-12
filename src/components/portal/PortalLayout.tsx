@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
+import fdlLogo from '@/assets/fdl-dnt-logo.png';
 
 interface PortalLayoutProps {
   children: React.ReactNode;
@@ -82,12 +83,7 @@ const PortalLayout = ({ children }: PortalLayoutProps) => {
             </Button>
             
             <Link to="/" className="flex items-center space-x-2">
-              <div className="logistics-gradient p-2 rounded-lg">
-                <Truck className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-primary">FDL Portal</h1>
-              </div>
+              <img src={fdlLogo} alt="FDL DNT Logo" className="h-10 w-auto" />
             </Link>
           </div>
 

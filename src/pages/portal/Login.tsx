@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Truck, Eye, EyeOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import fdlLogo from '@/assets/fdl-dnt-logo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -22,14 +23,14 @@ const Login = () => {
 
     // Demo login - in real app this would call an API
     setTimeout(() => {
-      if (email && password) {
-        localStorage.setItem('fdl_customer_token', 'demo_token_12345');
-        localStorage.setItem('fdl_customer_email', email);
-        toast({
-          title: "Login Successful",
-          description: "Welcome back to your FDL portal!",
-        });
-        navigate('/portal/dashboard');
+        if (email && password) {
+          localStorage.setItem('fdl_customer_token', 'demo_token_12345');
+          localStorage.setItem('fdl_customer_email', email);
+          toast({
+            title: "Login Successful",
+            description: "Welcome back to your FDL DNT portal!",
+          });
+          navigate('/portal/dashboard');
       } else {
         toast({
           title: "Login Failed",
@@ -47,13 +48,7 @@ const Login = () => {
         {/* Logo */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-3 mb-4">
-            <div className="logistics-gradient p-3 rounded-lg">
-              <Truck className="h-10 w-10 text-white" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold text-primary">FDL</h1>
-              <p className="text-sm text-muted-foreground">Customer Portal</p>
-            </div>
+            <img src={fdlLogo} alt="FDL DNT Logo" className="h-16 w-auto" />
           </div>
         </div>
 
@@ -61,7 +56,7 @@ const Login = () => {
           <CardHeader className="text-center">
             <CardTitle>Welcome Back</CardTitle>
             <CardDescription>
-              Sign in to your FDL Logistics account to access your shipments, quotes, and more.
+              Sign in to your FDL DNT account to access your chilled delivery services, tracking, and more.
             </CardDescription>
           </CardHeader>
           <CardContent>

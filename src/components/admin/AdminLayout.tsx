@@ -14,6 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import fdlLogo from '@/assets/fdl-dnt-logo.png';
 
 export function AdminLayout() {
   const location = useLocation();
@@ -21,7 +22,7 @@ export function AdminLayout() {
   
   // Check auth
   const isAuthenticated = localStorage.getItem('fdl_admin_token');
-  const adminEmail = localStorage.getItem('fdl_admin_email') || 'admin@fdl.com';
+  const adminEmail = localStorage.getItem('fdl_admin_email') || 'admin@fdldnt.com';
   
   useEffect(() => {
     if (!isAuthenticated && location.pathname !== '/admin/login') {
@@ -52,10 +53,8 @@ export function AdminLayout() {
           <div className="flex items-center gap-4">
             <SidebarTrigger />
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">F</span>
-              </div>
-              <span className="font-semibold text-lg">FDL Admin</span>
+              <img src={fdlLogo} alt="FDL DNT Logo" className="h-8 w-auto" />
+              <span className="font-semibold text-lg">Admin</span>
             </div>
           </div>
 

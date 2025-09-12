@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Truck, Package, Globe, Phone, User } from 'lucide-react';
+import fdlLogo from '@/assets/fdl-dnt-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,13 +26,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="logistics-gradient p-2 rounded-lg">
-              <Truck className="h-8 w-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-primary">FDL</h1>
-              <p className="text-xs text-muted-foreground">Fond De Lac Logistics</p>
-            </div>
+            <img src={fdlLogo} alt="FDL DNT Logo" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
@@ -55,7 +50,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" size="sm">
               <Phone className="h-4 w-4 mr-2" />
-              1-800-FDL-SHIP
+              1-800-CHILLED
             </Button>
             <Link to="/portal/login">
               <Button variant="outline" size="sm">
@@ -101,7 +96,7 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="outline" size="sm">
                   <Phone className="h-4 w-4 mr-2" />
-                  1-800-FDL-SHIP
+                  1-800-CHILLED
                 </Button>
                 <Link to="/portal/login">
                   <Button variant="outline" size="sm">

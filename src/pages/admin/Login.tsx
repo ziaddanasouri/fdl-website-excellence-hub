@@ -6,10 +6,11 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Truck, Lock, Mail } from 'lucide-react';
+import fdlLogo from '@/assets/fdl-dnt-logo.png';
 
 export default function AdminLogin() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('admin@fdl.com');
+  const [email, setEmail] = useState('admin@fdldnt.com');
   const [password, setPassword] = useState('admin123');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -31,12 +32,12 @@ export default function AdminLogin() {
       <div className="w-full max-w-md space-y-6">
         {/* Logo & Title */}
         <div className="text-center space-y-4">
-          <div className="mx-auto h-12 w-12 bg-primary rounded-xl flex items-center justify-center">
-            <Truck className="h-6 w-6 text-primary-foreground" />
+          <div className="mx-auto">
+            <img src={fdlLogo} alt="FDL DNT Logo" className="h-16 w-auto mx-auto" />
           </div>
           <div className="space-y-2">
-            <h1 className="text-2xl font-bold text-foreground">FDL Admin Portal</h1>
-            <p className="text-muted-foreground">Manage your logistics operations</p>
+            <h1 className="text-2xl font-bold text-foreground">FDL DNT Admin Portal</h1>
+            <p className="text-muted-foreground">Manage your chilled logistics operations</p>
           </div>
         </div>
 
@@ -60,7 +61,7 @@ export default function AdminLogin() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="pl-10"
-                    placeholder="admin@fdl.com"
+                    placeholder="admin@fdldnt.com"
                     required
                   />
                 </div>
@@ -97,7 +98,7 @@ export default function AdminLogin() {
             <div className="p-4 bg-muted/50 rounded-lg space-y-2">
               <h4 className="text-sm font-semibold text-foreground">Demo Credentials</h4>
               <div className="text-sm text-muted-foreground space-y-1">
-                <p><strong>Email:</strong> admin@fdl.com</p>
+                <p><strong>Email:</strong> admin@fdldnt.com</p>
                 <p><strong>Password:</strong> admin123</p>
               </div>
             </div>
@@ -106,7 +107,7 @@ export default function AdminLogin() {
 
         {/* Footer */}
         <div className="text-center text-sm text-muted-foreground">
-          <p>© 2024 FDL Logistics. All rights reserved.</p>
+          <p>© 2024 FDL DNT - Chilled Delivery Logistics. All rights reserved.</p>
         </div>
       </div>
     </div>
