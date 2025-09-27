@@ -362,26 +362,6 @@ const ColdStorageWarehousing = () => {
         </div>
       </section>
 
-      {/* ROI Calculator CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Calculator className="h-16 w-16 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4">Calculate Your Cold Storage Savings</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            See how our temperature-controlled storage can reduce your spoilage costs and improve ROI
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50">
-              Launch ROI Calculator
-              <Calculator className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              Download Cost Analysis
-              <Download className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-20 logistics-gradient text-white">
@@ -398,7 +378,7 @@ const ColdStorageWarehousing = () => {
             </Button>
             <Button variant="hero" size="lg">
               <Phone className="mr-2 h-5 w-5" />
-              Call (555) 123-4567
+              Call (732) 650-9200
             </Button>
           </div>
         </div>

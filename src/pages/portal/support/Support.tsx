@@ -145,28 +145,18 @@ const Support = () => {
           <p className="text-muted-foreground">Get help with your FDL Logistics account</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardContent className="p-6 text-center">
               <Phone className="h-8 w-8 mx-auto mb-3 text-primary" />
               <h3 className="font-semibold mb-2">Call Us</h3>
               <p className="text-sm text-muted-foreground mb-3">Available 24/7 for urgent issues</p>
               <Button variant="outline" className="w-full">
-                1-800-FDL-SHIP
+                (732) 650-9200
               </Button>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="p-6 text-center">
-              <Mail className="h-8 w-8 mx-auto mb-3 text-primary" />
-              <h3 className="font-semibold mb-2">Email Support</h3>
-              <p className="text-sm text-muted-foreground mb-3">Response within 4 hours</p>
-              <Button variant="outline" className="w-full">
-                support@fdllogistics.com
-              </Button>
-            </CardContent>
-          </Card>
 
           <Card>
             <CardContent className="p-6 text-center">

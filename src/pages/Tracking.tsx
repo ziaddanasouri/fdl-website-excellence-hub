@@ -172,11 +172,7 @@ const Tracking = () => {
                     <div className="flex justify-center space-x-4">
                       <span className="flex items-center">
                         <Phone className="h-4 w-4 mr-1" />
-                        1-800-FDL-SHIP
-                      </span>
-                      <span className="flex items-center">
-                        <Mail className="h-4 w-4 mr-1" />
-                        track@fdllogistics.com
+                        (732) 650-9200
                       </span>
                     </div>
                   </div>
@@ -354,11 +350,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="cta-button">
               <Phone className="h-5 w-5 mr-2" />
-              Call 1-800-FDL-SHIP
-            </Button>
-            <Button variant="outline">
-              <Mail className="h-5 w-5 mr-2" />
-              Email Support
+              Call (732) 650-9200
             </Button>
           </div>
         </div>

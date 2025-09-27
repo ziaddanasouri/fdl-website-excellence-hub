@@ -107,7 +107,7 @@ export default function AdminLogin() {
 
         {/* Footer */}
         <div className="text-center text-sm text-muted-foreground">
-          <p>© 2024 FDL DNT - Chilled Delivery Logistics. All rights reserved.</p>
+          <p>© 2025 FDL DNT - Chilled Delivery Logistics. All rights reserved.</p>
         </div>
       </div>
     </div>

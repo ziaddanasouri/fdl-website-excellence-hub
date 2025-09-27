@@ -52,19 +52,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: '24/7 Customer Support',
-      details: ['1-800-FDL-SHIP', '1-800-335-7447'],
+      details: ['(732) 650-9200'],
       description: 'Available around the clock for all your logistics needs'
-    },
-    {
-      icon: Mail,
-      title: 'Email Support',
-      details: ['info@fdllogistics.com', 'sales@fdllogistics.com'],
-      description: 'Get detailed responses within 2 hours'
     },
     {
       icon: MapPin,
       title: 'Headquarters',
-      details: ['123 Logistics Drive', 'Fond Du Lac, WI 54935'],
+      details: ['41 Saw Mill Pond Rd', 'Edison, NJ 08817'],
       description: 'Visit our main campus and distribution center'
     },
     {
@@ -152,7 +146,7 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {contactInfo.map((info, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 text-center">
@@ -200,26 +194,15 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-                        <Input
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => handleInputChange('email', e.target.value)}
-                          placeholder="john@company.com"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                        <Input
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange('phone', e.target.value)}
-                          placeholder="(555) 123-4567"
-                        />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
+                      <Input
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        placeholder="(555) 123-4567"
+                      />
                     </div>
                     
                     <div>
@@ -340,8 +323,8 @@ const Contact = () => {
                       <div className="text-center">
                         <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
                         <p className="text-lg font-semibold text-primary">FDL Headquarters</p>
-                        <p className="text-sm text-muted-foreground">123 Logistics Drive</p>
-                        <p className="text-sm text-muted-foreground">Fond Du Lac, WI 54935</p>
+                        <p className="text-sm text-muted-foreground">41 Saw Mill Pond Rd</p>
+                        <p className="text-sm text-muted-foreground">Edison, NJ 08817</p>
                         <Button variant="outline" size="sm" className="mt-4">
                           View on Google Maps
                         </Button>

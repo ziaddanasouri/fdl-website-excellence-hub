@@ -50,7 +50,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" size="sm">
               <Phone className="h-4 w-4 mr-2" />
-              1-800-CHILLED
+              (732) 650-9200
             </Button>
             <Link to="/portal/login">
               <Button variant="outline" size="sm">
@@ -96,7 +96,7 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="outline" size="sm">
                   <Phone className="h-4 w-4 mr-2" />
-                  1-800-CHILLED
+                  (732) 650-9200
                 </Button>
                 <Link to="/portal/login">
                   <Button variant="outline" size="sm">
