@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Solutions from "./pages/Solutions";
 
-// Individual Service Pages
+// Individual Service Pages - Updated
 import ColdStorageWarehousing from "./pages/services/ColdStorageWarehousing";
 import TemperatureControlledWarehousing from "./pages/services/TemperatureControlledWarehousing";
 import LastMileDelivery from "./pages/services/LastMileDelivery";
