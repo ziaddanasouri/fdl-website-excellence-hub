@@ -238,7 +238,18 @@ const Solutions = () => {
                     <p className="text-sm text-muted-foreground italic">{solution.caseStudy}</p>
                   </div>
                   
-                  <Button className="cta-button">
+                  <Button 
+                    className="cta-button"
+                    onClick={() => {
+                      const routes = {
+                        'Wine & Spirits Solutions': '/solutions/wine-spirits',
+                        'Specialty Cheese & Dairy': '/solutions/specialty-cheese-dairy', 
+                        'Confectionery & Sweets': '/solutions/confectionery-sweets',
+                        'Retail & Foodservice Supply Chain': '/solutions/retail-foodservice'
+                      };
+                      window.location.href = routes[solution.title as keyof typeof routes];
+                    }}
+                  >
                     Learn More About {solution.title}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

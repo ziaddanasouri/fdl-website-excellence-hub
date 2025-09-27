@@ -12,6 +12,10 @@ import Solutions from "./pages/Solutions";
 import ColdStorageWarehousing from "./pages/services/ColdStorageWarehousing";
 import TemperatureControlledWarehousing from "./pages/services/TemperatureControlledWarehousing";
 import LastMileDelivery from "./pages/services/LastMileDelivery";
+import WineSpirits from "./pages/solutions/WineSpirits";
+import SpecialtyCheese from "./pages/solutions/SpecialtyCheese";
+import ConfectionerySweets from "./pages/solutions/ConfectionerySweets";
+import RetailFoodservice from "./pages/solutions/RetailFoodservice";
 import ColdChainTransportation from "./pages/services/ColdChainTransportation";
 import ColdChainCrossDocking from "./pages/services/ColdChainCrossDocking";
 import ColdChainMonitoring from "./pages/services/ColdChainMonitoring";
@@ -66,6 +70,12 @@ const App = () => (
           <Route path="/services/cold-storage-warehousing" element={<ColdStorageWarehousing />} />
           <Route path="/services/temperature-controlled-warehousing" element={<TemperatureControlledWarehousing />} />
           <Route path="/services/last-mile-delivery" element={<LastMileDelivery />} />
+          
+          {/* Solution Pages */}
+          <Route path="/solutions/wine-spirits" element={<WineSpirits />} />
+          <Route path="/solutions/specialty-cheese-dairy" element={<SpecialtyCheese />} />
+          <Route path="/solutions/confectionery-sweets" element={<ConfectionerySweets />} />
+          <Route path="/solutions/retail-foodservice" element={<RetailFoodservice />} />
           <Route path="/services/cold-chain-transportation" element={<ColdChainTransportation />} />
           <Route path="/services/cold-chain-cross-docking" element={<ColdChainCrossDocking />} />
           <Route path="/services/cold-chain-monitoring" element={<ColdChainMonitoring />} />
