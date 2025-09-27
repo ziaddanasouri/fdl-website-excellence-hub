@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Truck, Package, Globe, Phone, User } from 'lucide-react';
-import fdlLogo from '@/assets/fdl-dnt-logo.png';
+import fdlLogo from '@/assets/fdl-dnt-logo-2025.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
