@@ -84,10 +84,16 @@ const DeliverySchedule = () => {
                   Need specific delivery information for your area?
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button className="bg-primary hover:bg-primary/90">
+                  <Button 
+                    className="bg-primary hover:bg-primary/90"
+                    onClick={() => window.location.href = '/contact'}
+                  >
                     Contact Us Today
                   </Button>
-                  <Button variant="outline">
+                  <Button 
+                    variant="outline"
+                    onClick={() => window.location.href = '/quote/cold-storage'}
+                  >
                     Get Custom Quote
                   </Button>
                 </div>
