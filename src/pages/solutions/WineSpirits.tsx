@@ -296,47 +296,6 @@ const WineSpirits = () => {
         </div>
       </section>
 
-      {/* Case Study */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 rounded-2xl p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6">Success Story: Premium Wine Importer</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Managed complete distribution network for a premium wine importer, maintaining perfect temperature 
-                  control across 15 states while ensuring full regulatory compliance.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">$2.5M</div>
-                    <div className="text-sm text-muted-foreground">Protected Inventory Value</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">15</div>
-                    <div className="text-sm text-muted-foreground">States Covered</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">100%</div>
-                    <div className="text-sm text-muted-foreground">Temperature Compliance</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">0</div>
-                    <div className="text-sm text-muted-foreground">Quality Issues</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=500&h=400&fit=crop"
-                  alt="Wine warehouse"
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50">

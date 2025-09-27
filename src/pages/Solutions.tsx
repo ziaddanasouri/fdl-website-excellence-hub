@@ -42,8 +42,7 @@ const Solutions = () => {
         'Full state regulatory compliance',
         '99.8% inventory accuracy'
       ],
-      caseStudy: 'Managed distribution for premium wine importer, maintaining perfect temperature control across 15 states.',
-      image: 'photo-1506377872008-6645e837072d'
+      image: 'bWq6U8CHQY8'
     },
     {
       icon: ChefHat,
@@ -67,7 +66,6 @@ const Solutions = () => {
         '95% reduction in spoilage',
         'Extended shelf life achievement'
       ],
-      caseStudy: 'Transformed specialty cheese distributor operations, reducing spoilage by 95% through precise climate control.',
       image: 'photo-1452195100486-9cc805987862'
     },
     {
@@ -92,7 +90,6 @@ const Solutions = () => {
         '30% extended product life',
         '100% quality preservation'
       ],
-      caseStudy: 'Prevented $500K in chocolate bloom losses for premium confectionery brand during summer months.',
       image: 'photo-1481391319762-47dff72954d9'
     },
     {
@@ -117,7 +114,6 @@ const Solutions = () => {
         '50+ specialty grocer partnerships',
         '24/7 emergency delivery capability'
       ],
-      caseStudy: 'Streamlined foodservice distribution across NYC 5 boroughs, Westchester, and Hamptons with 99% accuracy.',
       image: 'photo-1556909114-f6e7ad7d3136'
     }
   ];
@@ -227,11 +223,6 @@ const Solutions = () => {
                         ))}
                       </ul>
                     </div>
-                  </div>
-                  
-                  <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                    <h4 className="font-semibold text-primary mb-2">Case Study</h4>
-                    <p className="text-sm text-muted-foreground italic">{solution.caseStudy}</p>
                   </div>
                   
                   <Button 

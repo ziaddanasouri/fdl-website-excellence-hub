@@ -389,47 +389,6 @@ const ConfectionerySweets = () => {
         </div>
       </section>
 
-      {/* Case Study */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 rounded-2xl p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6">Success Story: Premium Confectionery Brand</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Prevented $500K in chocolate bloom losses for a premium confectionery brand during critical 
-                  summer months through specialized climate control and bloom prevention protocols.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">$500K</div>
-                    <div className="text-sm text-muted-foreground">Losses Prevented</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">0</div>
-                    <div className="text-sm text-muted-foreground">Bloom Incidents</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">30%</div>
-                    <div className="text-sm text-muted-foreground">Extended Shelf Life</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">99%</div>
-                    <div className="text-sm text-muted-foreground">Package Integrity</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1549666520-e600e6dcce73?w=500&h=400&fit=crop"
-                  alt="Premium chocolate storage"
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50">

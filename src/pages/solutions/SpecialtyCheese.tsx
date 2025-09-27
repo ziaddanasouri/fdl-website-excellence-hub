@@ -340,47 +340,6 @@ const SpecialtyCheese = () => {
         </div>
       </section>
 
-      {/* Case Study */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 rounded-2xl p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6">Success Story: Specialty Cheese Distributor</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Transformed operations for a specialty cheese distributor, reducing spoilage by 95% through 
-                  precise climate control and dedicated aging facilities for artisan cheese varieties.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">95%</div>
-                    <div className="text-sm text-muted-foreground">Spoilage Reduction</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">100%</div>
-                    <div className="text-sm text-muted-foreground">Freshness Maintained</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">35-40°F</div>
-                    <div className="text-sm text-muted-foreground">Precise Control</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">24/7</div>
-                    <div className="text-sm text-muted-foreground">Monitoring</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=500&h=400&fit=crop"
-                  alt="Cheese aging facility"
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20">

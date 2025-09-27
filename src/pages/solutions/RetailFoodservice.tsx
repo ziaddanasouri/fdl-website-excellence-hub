@@ -378,47 +378,6 @@ const RetailFoodservice = () => {
         </div>
       </section>
 
-      {/* Case Study */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 rounded-2xl p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6">Success Story: NYC Foodservice Distribution</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Streamlined foodservice distribution across NYC's 5 boroughs, Westchester, and the Hamptons 
-                  achieving 99% delivery accuracy and 99.2% on-time performance for restaurant clients.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">99.2%</div>
-                    <div className="text-sm text-muted-foreground">On-Time Delivery</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">50+</div>
-                    <div className="text-sm text-muted-foreground">Grocer Partners</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">5</div>
-                    <div className="text-sm text-muted-foreground">NYC Boroughs</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">24/7</div>
-                    <div className="text-sm text-muted-foreground">Emergency Service</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=500&h=400&fit=crop"
-                  alt="NYC restaurant delivery"
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50">
