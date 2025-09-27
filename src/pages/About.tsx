@@ -269,48 +269,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Certifications & Compliance</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                We maintain the highest standards of quality, security, and compliance 
-                across all our operations and facilities.
-              </p>
-              
-              <div className="grid grid-cols-1 gap-4">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500" />
-                    <span className="text-muted-foreground">{cert}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop"
-                alt="Quality certifications" 
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <Award className="h-8 w-8 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-primary">100%</p>
-                    <p className="text-sm text-muted-foreground">Compliance Rate</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-20 logistics-gradient text-white">
