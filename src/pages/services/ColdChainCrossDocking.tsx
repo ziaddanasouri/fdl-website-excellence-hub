@@ -385,48 +385,6 @@ const ColdChainCrossDocking = () => {
       </section>
 
 
-      {/* Cost Calculator CTA */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Calculator className="h-16 w-16 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4">Calculate Cross-Dock Savings</h2>
-          <p className="text-xl text-purple-100 mb-8">
-            See how our cross-docking services can reduce your logistics costs and transfer times
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-purple-50">
-              Launch Savings Calculator
-              <Calculator className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              Download Cross-Dock Guide
-              <Download className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cross-Dock Operations?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Eliminate cold chain breaks and reduce transfer times with our advanced 
-            cross-docking facilities. Contact us to schedule your first transfer.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
-              Schedule Cross-Dock Service
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Operations: (555) 123-4567
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

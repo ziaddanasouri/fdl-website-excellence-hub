@@ -327,26 +327,6 @@ const ColdStorageWarehousing = () => {
 
 
 
-      {/* Final CTA */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cold Storage?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join 500+ businesses who trust us with their temperature-sensitive products. 
-            Get a custom quote today and start saving on spoilage costs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
-              Get Custom Quote
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              <Phone className="mr-2 h-5 w-5" />
-              Call (732) 650-9200
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

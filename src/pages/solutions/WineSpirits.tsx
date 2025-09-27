@@ -318,26 +318,6 @@ const WineSpirits = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Wine Storage?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our wine storage experts design a climate-controlled solution that preserves quality, 
-            ensures compliance, and protects your valuable inventory.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-              <Phone className="mr-2 h-5 w-5" />
-              Call (732) 650-9200
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Download className="mr-2 h-5 w-5" />
-              Download Wine Storage Guide
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

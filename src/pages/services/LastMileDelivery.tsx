@@ -339,47 +339,6 @@ const LastMileDelivery = () => {
         </div>
       </section>
 
-      {/* CTA Calculator */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Calculator className="h-16 w-16 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4">Calculate Your Delivery Costs</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Get instant pricing for last mile delivery routes across the Northeast
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50">
-              Launch Route Calculator
-              <Calculator className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              Download Rate Card
-              <Download className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Deliver with Confidence?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join 300+ businesses who trust our last mile delivery network. 
-            Get guaranteed delivery success from pickup to doorstep.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
-              Schedule First Delivery
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Dispatch: (555) 123-4567
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
