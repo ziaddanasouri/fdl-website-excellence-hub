@@ -325,8 +325,10 @@ const Contact = () => {
                         <p className="text-lg font-semibold text-primary">FDL Headquarters</p>
                         <p className="text-sm text-muted-foreground">41 Saw Mill Pond Rd</p>
                         <p className="text-sm text-muted-foreground">Edison, NJ 08817</p>
-                        <Button variant="outline" size="sm" className="mt-4">
-                          View on Google Maps
+                        <Button variant="outline" size="sm" className="mt-4" asChild>
+                          <a href="https://maps.app.goo.gl/mVHQO5QqCU8IibnNA" target="_blank" rel="noopener noreferrer">
+                            View on Google Maps
+                          </a>
                         </Button>
                       </div>
                     </div>
