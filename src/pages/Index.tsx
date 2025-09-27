@@ -182,7 +182,18 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => {
+                      const serviceRoutes = {
+                        "Cold Storage & Warehousing": "/services/cold-storage-warehousing",
+                        "Last Mile Delivery": "/services/last-mile-delivery", 
+                        "Specialized Handling": "/services/temperature-controlled-warehousing"
+                      };
+                      window.location.href = serviceRoutes[service.title as keyof typeof serviceRoutes];
+                    }}
+                  >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

@@ -129,51 +129,65 @@ const ColdStorageWarehousing = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-24">
+      <section className="hero-gradient text-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <Badge className="bg-white/20 text-white border-white/30 mb-4">
+              <Badge className="bg-white/20 text-white border-white/30 mb-4 text-xs sm:text-sm">
                 Cold Storage Solutions
               </Badge>
-              <h1 className="text-5xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 Multi-Temperature Cold Storage & Warehousing
               </h1>
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
                 Preserve product quality with precision temperature control from -20°F to +60°F. 
                 Our HACCP-certified facilities ensure 99.9% compliance for wine, cheese, confectionery, 
                 and pharmaceutical storage.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-blue-50 font-semibold min-h-[48px] text-base sm:text-lg"
+                  onClick={() => window.location.href = '/quote/cold-storage'}
+                >
                   Get Storage Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="hero" size="lg">
+                <Button 
+                  variant="hero" 
+                  size="lg"
+                  className="min-h-[48px] text-base sm:text-lg"
+                  onClick={() => window.location.href = '/consultation'}
+                >
                   Schedule Facility Tour
                 </Button>
               </div>
             </div>
-            <div className="lg:text-right">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-6">Storage Capacity</h3>
-                <div className="grid grid-cols-2 gap-4 text-center">
+            <div className="lg:text-right mt-8 lg:mt-0">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Storage Capacity</h3>
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-bold">500K+</div>
-                    <div className="text-sm text-blue-100">Sq Ft Available</div>
+                    <div className="text-2xl sm:text-3xl font-bold">500K+</div>
+                    <div className="text-xs sm:text-sm text-blue-100">Sq Ft Available</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">99.9%</div>
-                    <div className="text-sm text-blue-100">Temp Compliance</div>
+                    <div className="text-2xl sm:text-3xl font-bold">99.9%</div>
+                    <div className="text-xs sm:text-sm text-blue-100">Temp Compliance</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">24/7</div>
-                    <div className="text-sm text-blue-100">Monitoring</div>
+                    <div className="text-2xl sm:text-3xl font-bold">24/7</div>
+                    <div className="text-xs sm:text-sm text-blue-100">Monitoring</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">-20°F</div>
-                    <div className="text-sm text-blue-100">Min Temperature</div>
+                    <div className="text-2xl sm:text-3xl font-bold">-20°F</div>
+                    <div className="text-xs sm:text-sm text-blue-100">Min Temperature</div>
                   </div>
+                </div>
+                <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/20">
+                  <Badge className="bg-green-500/20 text-green-100 border-green-300/30 text-xs sm:text-sm">
+                    ✓ Available Space - Contact Now!
+                  </Badge>
                 </div>
               </div>
             </div>
