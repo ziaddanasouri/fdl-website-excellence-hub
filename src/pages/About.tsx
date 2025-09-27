@@ -111,15 +111,12 @@ const About = () => {
                 <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base">
                   Get Cold Storage Quote
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base">
-                  Tour Our Facilities
-                </Button>
               </div>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=600&h=400&fit=crop"
-                alt="FDL DNT cold storage facility" 
+                src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=600&h=400&fit=crop"
+                alt="Wine glass collection" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
