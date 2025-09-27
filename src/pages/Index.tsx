@@ -324,7 +324,7 @@ const Index = () => {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-primary text-primary hover:bg-primary hover:text-white"
               onClick={() => window.location.href = '/consultation'}
             >
               <Phone className="h-4 w-4 mr-2" />
