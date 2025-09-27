@@ -317,7 +317,7 @@ const Solutions = () => {
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
               Schedule Cold Storage Consultation
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-semibold">
               Download Cold Chain Guide
             </Button>
           </div>
