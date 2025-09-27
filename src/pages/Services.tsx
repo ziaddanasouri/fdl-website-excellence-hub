@@ -115,8 +115,7 @@ const Services = () => {
     { name: 'Specialty Cheese', icon: ChefHat, description: 'Artisan cheese and dairy cold storage' },
     { name: 'Confectionery', icon: Candy, description: 'Chocolate and sweets climate control' },
     { name: 'Foodservice', icon: Store, description: 'Restaurant and retail supply chains' },
-    { name: 'Fresh Produce', icon: Snowflake, description: 'Farm-to-table cold chain solutions' },
-    { name: 'Pharmaceuticals', icon: Shield, description: 'Temperature-sensitive medication storage' }
+    { name: 'Fresh Produce', icon: Snowflake, description: 'Farm-to-table cold chain solutions' }
   ];
 
   return (
