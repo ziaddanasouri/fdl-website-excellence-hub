@@ -54,6 +54,7 @@ import AdminUsers from "./pages/admin/Users";
 import AdminAuditLogs from "./pages/admin/AuditLogs";
 import AdminSettings from "./pages/admin/Settings";
 import ColdChainGuide from "./pages/ColdChainGuide";
+import DeliverySchedule from "./pages/DeliverySchedule";
 import ColdStorageQuote from "./pages/quote/ColdStorageQuote";
 import Consultation from "./pages/Consultation";
 
@@ -82,6 +83,7 @@ const App = () => (
           <Route path="/services/cold-chain-cross-docking" element={<ColdChainCrossDocking />} />
           <Route path="/services/cold-chain-monitoring" element={<ColdChainMonitoring />} />
           <Route path="/cold-chain-guide" element={<ColdChainGuide />} />
+          <Route path="/delivery-schedule" element={<DeliverySchedule />} />
           <Route path="/quote/cold-storage" element={<ColdStorageQuote />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/solutions" element={<Solutions />} />
