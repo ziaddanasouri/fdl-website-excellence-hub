@@ -132,11 +132,11 @@ const Services = () => {
             that preserve quality and ensure compliance across the Northeast region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
+            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/quote/cold-storage'}>
               Get Cold Storage Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="hero" onClick={() => window.location.href = '/cold-chain-guide'}>
               Download Cold Chain Guide
             </Button>
           </div>
@@ -265,10 +265,10 @@ const Services = () => {
             ensures compliance, and scales with your perishable goods business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
+            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/consultation'}>
               Schedule Cold Storage Consultation
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="hero" onClick={() => window.location.href = '/quote/cold-storage'}>
               Get Cold Chain Quote
             </Button>
           </div>
