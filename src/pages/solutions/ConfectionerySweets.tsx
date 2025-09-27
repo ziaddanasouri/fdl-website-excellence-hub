@@ -424,10 +424,6 @@ const ConfectionerySweets = () => {
               <Phone className="mr-2 h-5 w-5" />
               Call (732) 650-9200
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Download className="mr-2 h-5 w-5" />
-              Download Confectionery Guide
-            </Button>
           </div>
         </div>
       </section>
