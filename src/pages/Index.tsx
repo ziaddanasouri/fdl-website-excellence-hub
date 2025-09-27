@@ -101,12 +101,12 @@ const Index = () => {
                 logistics solutions across the Northeast. Preserving quality for 25+ years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-4 px-8 text-lg">
+                <Button 
+                  className="bg-white text-primary hover:bg-blue-50 font-semibold py-4 px-8 text-lg"
+                  onClick={() => window.location.href = '/quote/cold-storage'}
+                >
                   Get Cold Storage Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 text-lg">
-                  Watch Demo
                 </Button>
               </div>
             </div>
@@ -311,13 +311,13 @@ const Index = () => {
           </div>
           
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-primary"
+              onClick={() => window.location.href = '/consultation'}
+            >
               <Phone className="h-4 w-4 mr-2" />
               Schedule Cold Storage Consultation
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Mail className="h-4 w-4 mr-2" />
-              Request Demo
             </Button>
           </div>
         </div>

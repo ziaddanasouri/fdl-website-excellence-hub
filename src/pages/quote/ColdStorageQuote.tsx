@@ -44,18 +44,12 @@ interface QuoteFormData {
   temperatureZones: string[];
   specialRequirements: string;
   
-  // Step 4: Location & Timing
-  pickupLocation: string;
-  deliveryLocation: string;
-  timeline: string;
-  frequency: string;
-  
-  // Step 5: Additional Services
+  // Step 4: Additional Services
   additionalServices: string[];
   insurance: boolean;
   reporting: string;
   
-  // Step 6: Notes
+  // Step 5: Notes
   additionalNotes: string;
 }
 
@@ -71,10 +65,6 @@ const ColdStorageQuote = () => {
     volume: '',
     temperatureZones: [],
     specialRequirements: '',
-    pickupLocation: '',
-    deliveryLocation: '',
-    timeline: '',
-    frequency: '',
     additionalServices: [],
     insurance: false,
     reporting: '',
@@ -83,16 +73,16 @@ const ColdStorageQuote = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const totalSteps = 6;
+  const totalSteps = 5;
   const progress = (currentStep / totalSteps) * 100;
 
   const services = [
-    { id: 'cold-storage', name: 'Cold Storage & Warehousing', icon: Snowflake, price: 2.50, description: 'Multi-temperature zone facilities with blast freezing' },
-    { id: 'temp-warehousing', name: 'Temperature-Controlled Warehousing', icon: Warehouse, price: 2.25, description: 'Specialized climate control for perishables' },
-    { id: 'last-mile-delivery', name: 'Last Mile Delivery Solutions', icon: Truck, price: 1.85, description: 'Optimized final-mile delivery service' },
-    { id: 'cold-chain-transport', name: 'Cold Chain Transportation', icon: Thermometer, price: 1.95, description: 'Comprehensive refrigerated trucking' },
-    { id: 'cross-docking', name: 'Cold Chain Cross-Docking', icon: ArrowRightLeft, price: 1.45, description: 'Temperature-controlled transfer facilities' },
-    { id: 'monitoring', name: 'Cold Chain Monitoring & Analytics', icon: BarChart3, price: 0.75, description: 'Real-time temperature tracking and reporting' }
+    { id: 'cold-storage', name: 'Cold Storage & Warehousing', icon: Snowflake, description: 'Multi-temperature zone facilities with blast freezing' },
+    { id: 'temp-warehousing', name: 'Temperature-Controlled Warehousing', icon: Warehouse, description: 'Specialized climate control for perishables' },
+    { id: 'last-mile-delivery', name: 'Last Mile Delivery Solutions', icon: Truck, description: 'Optimized final-mile delivery service' },
+    { id: 'cold-chain-transport', name: 'Cold Chain Transportation', icon: Thermometer, description: 'Comprehensive refrigerated trucking' },
+    { id: 'cross-docking', name: 'Cold Chain Cross-Docking', icon: ArrowRightLeft, description: 'Temperature-controlled transfer facilities' },
+    { id: 'monitoring', name: 'Cold Chain Monitoring & Analytics', icon: BarChart3, description: 'Real-time temperature tracking and reporting' }
   ];
 
   const industries = [
@@ -145,20 +135,9 @@ const ColdStorageQuote = () => {
     }));
   };
 
-  const calculateEstimate = () => {
-    const selectedServices = services.filter(s => formData.services.includes(s.id));
-    const basePrice = selectedServices.reduce((total, service) => total + service.price, 0);
-    const volumeMultiplier = formData.volume === 'small' ? 1 : formData.volume === 'medium' ? 2.5 : 4;
-    const frequencyMultiplier = formData.frequency === 'daily' ? 30 : formData.frequency === 'weekly' ? 8 : 1;
-    const additionalServicesCost = formData.additionalServices.length * 0.25;
-    
-    return Math.round((basePrice * volumeMultiplier * frequencyMultiplier + additionalServicesCost) * 100) / 100;
-  };
-
   const handleSubmit = () => {
     const quoteData = {
       ...formData,
-      estimatedPrice: calculateEstimate(),
       quoteId: `CQ-${Date.now()}`,
       timestamp: new Date().toISOString(),
       status: 'pending'
@@ -192,9 +171,8 @@ const ColdStorageQuote = () => {
       case 1: return formData.services.length > 0;
       case 2: return formData.companyName && formData.contactName && formData.email && formData.phone;
       case 3: return formData.volume && formData.temperatureZones.length > 0;
-      case 4: return formData.pickupLocation && formData.deliveryLocation && formData.timeline;
-      case 5: return true; // Optional step
-      case 6: return true; // Review step
+      case 4: return true; // Optional step
+      case 5: return true; // Review step
       default: return false;
     }
   };
@@ -272,10 +250,7 @@ const ColdStorageQuote = () => {
                           </div>
                           <div className="flex-1">
                             <h3 className="font-semibold text-primary">{service.name}</h3>
-                            <p className="text-sm text-muted-foreground mb-2">{service.description}</p>
-                            <span className="text-sm font-semibold text-green-600">
-                              Starting at ${service.price}/sq ft/month
-                            </span>
+                            <p className="text-sm text-muted-foreground">{service.description}</p>
                           </div>
                         </div>
                       </div>
@@ -409,70 +384,8 @@ const ColdStorageQuote = () => {
                 </div>
               )}
 
-              {/* Step 4: Location & Timing */}
+              {/* Step 4: Additional Services */}
               {currentStep === 4 && (
-                <div>
-                  <CardHeader className="p-0 mb-6">
-                    <CardTitle className="text-2xl text-primary">Location & Timing</CardTitle>
-                    <p className="text-muted-foreground">Where and when do you need services?</p>
-                  </CardHeader>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="pickupLocation">Pickup Location *</Label>
-                      <Input
-                        id="pickupLocation"
-                        value={formData.pickupLocation}
-                        onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
-                        placeholder="City, State or ZIP"
-                      />
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="deliveryLocation">Delivery Location *</Label>
-                      <Input
-                        id="deliveryLocation"
-                        value={formData.deliveryLocation}
-                        onChange={(e) => setFormData({ ...formData, deliveryLocation: e.target.value })}
-                        placeholder="City, State or ZIP"
-                      />
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="timeline">Timeline *</Label>
-                      <Select value={formData.timeline} onValueChange={(value) => setFormData({ ...formData, timeline: value })}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="When do you need this?" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="asap">ASAP (Within 1 week)</SelectItem>
-                          <SelectItem value="month">Within 1 month</SelectItem>
-                          <SelectItem value="quarter">Within 3 months</SelectItem>
-                          <SelectItem value="planning">Just planning ahead</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="frequency">Service Frequency</Label>
-                      <Select value={formData.frequency} onValueChange={(value) => setFormData({ ...formData, frequency: value })}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="How often?" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="one-time">One-time service</SelectItem>
-                          <SelectItem value="weekly">Weekly</SelectItem>
-                          <SelectItem value="daily">Daily</SelectItem>
-                          <SelectItem value="ongoing">Ongoing contract</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Step 5: Additional Services */}
-              {currentStep === 5 && (
                 <div>
                   <CardHeader className="p-0 mb-6">
                     <CardTitle className="text-2xl text-primary">Additional Services</CardTitle>
@@ -524,8 +437,8 @@ const ColdStorageQuote = () => {
                 </div>
               )}
 
-              {/* Step 6: Review & Submit */}
-              {currentStep === 6 && (
+              {/* Step 5: Review & Submit */}
+              {currentStep === 5 && (
                 <div>
                   <CardHeader className="p-0 mb-6">
                     <CardTitle className="text-2xl text-primary">Review Your Quote</CardTitle>
@@ -553,16 +466,14 @@ const ColdStorageQuote = () => {
                           <p className="font-semibold">Volume:</p>
                           <p className="text-muted-foreground">{formData.volume}</p>
                         </div>
-                      </div>
-                      
-                      <div className="mt-4 pt-4 border-t">
-                        <div className="flex items-center justify-between">
-                          <span className="text-lg font-semibold text-primary">Estimated Monthly Cost:</span>
-                          <span className="text-2xl font-bold text-green-600">${calculateEstimate().toLocaleString()}</span>
+                        <div>
+                          <p className="font-semibold">Temperature Zones:</p>
+                          <p className="text-muted-foreground">{formData.temperatureZones.length} zones selected</p>
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          *Estimate based on selected services. Final pricing will be provided in your custom quote.
-                        </p>
+                        <div>
+                          <p className="font-semibold">Additional Services:</p>
+                          <p className="text-muted-foreground">{formData.additionalServices.length} selected</p>
+                        </div>
                       </div>
                     </div>
                     

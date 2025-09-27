@@ -130,12 +130,20 @@ const ColdChainMonitoring = () => {
                 spoilage and regulatory risks.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
-                  Start Free Trial
+                <Button 
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-blue-50 font-semibold"
+                  onClick={() => window.location.href = '/quote/cold-storage'}
+                >
+                  Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="hero" size="lg">
-                  View Live Demo
+                <Button 
+                  variant="hero" 
+                  size="lg"
+                  onClick={() => window.location.href = '/consultation'}
+                >
+                  Schedule Consultation
                 </Button>
               </div>
             </div>
@@ -490,13 +498,20 @@ const ColdChainMonitoring = () => {
             Experience complete cold chain visibility with no setup fees or long-term commitments
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-green-50">
-              Start Free Trial
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-green-50"
+              onClick={() => window.location.href = '/quote/cold-storage'}
+            >
+              Get Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="hero" size="lg">
-              Schedule Live Demo
-              <Eye className="ml-2 h-5 w-5" />
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => window.location.href = '/consultation'}
+            >
+              Schedule Consultation
             </Button>
           </div>
         </div>
@@ -511,13 +526,21 @@ const ColdChainMonitoring = () => {
             ensure compliance, and reduce costs. Get started today with our free trial.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
-              Get Started Now
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-blue-50 font-semibold"
+              onClick={() => window.location.href = '/quote/cold-storage'}
+            >
+              Get Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="hero" size="lg">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => window.location.href = '/consultation'}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              Speak with Expert: (555) 123-4567
+              Schedule Consultation
             </Button>
           </div>
         </div>
