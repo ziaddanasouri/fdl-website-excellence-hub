@@ -325,42 +325,6 @@ const ColdStorageWarehousing = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Transparent Pricing</h2>
-            <p className="text-xl text-muted-foreground">
-              Choose the cold storage solution that fits your business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <Card key={index} className={`${tier.popular ? 'ring-2 ring-primary' : ''} hover:shadow-xl transition-all duration-300`}>
-                <CardContent className="p-8">
-                  {tier.popular && (
-                    <Badge className="mb-4">Most Popular</Badge>
-                  )}
-                  <h3 className="text-2xl font-bold text-primary mb-2">{tier.name}</h3>
-                  <div className="text-3xl font-bold mb-6">{tier.price}</div>
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={tier.popular ? 'default' : 'outline'}>
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
       {/* Final CTA */}
