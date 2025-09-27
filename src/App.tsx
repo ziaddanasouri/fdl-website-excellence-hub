@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Solutions from "./pages/Solutions";
@@ -11,7 +12,7 @@ import Solutions from "./pages/Solutions";
 // Individual Service Pages - Updated
 import ColdStorageWarehousing from "./pages/services/ColdStorageWarehousing";
 import TemperatureControlledWarehousing from "./pages/services/TemperatureControlledWarehousing";
-import LastMileDelivery from "./pages/services/LastMileDelivery";
+const LastMileDelivery = lazy(() => import("./pages/services/LastMileDelivery"));
 import WineSpirits from "./pages/solutions/WineSpirits";
 import SpecialtyCheese from "./pages/solutions/SpecialtyCheese";
 import ConfectionerySweets from "./pages/solutions/ConfectionerySweets";
@@ -64,6 +65,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
@@ -120,6 +122,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
