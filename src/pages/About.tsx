@@ -255,7 +255,7 @@ const About = () => {
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base">
               Get Cold Storage Quote
             </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base">
+            <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base bg-transparent">
               Schedule Consultation
             </Button>
           </div>
