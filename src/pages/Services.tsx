@@ -56,9 +56,15 @@ const Services = () => {
       icon: Truck,
       title: 'Last Mile Delivery',
       description: 'Final mile delivery solutions with optimized routing and flexible scheduling options.',
-      keyFeatures: ['GPS tracking', '2-hour delivery windows', 'Route optimization'],
-      benefits: ['Customer satisfaction', 'First-attempt success', 'Delivery efficiency'],
-      route: '/services/last-mile-delivery'
+      features: [
+        'GPS Tracking & Route Optimization',
+        '2-Hour Delivery Windows', 
+        'Real-Time Delivery Updates',
+        'Northeast Regional Coverage',
+        'Same-Day & Next-Day Options',
+        'Flexible Scheduling Solutions'
+      ],
+      benefits: 'Achieve 95% first-attempt success rate while improving customer satisfaction'
     },
     {
       icon: Thermometer,
