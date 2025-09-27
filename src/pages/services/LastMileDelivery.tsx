@@ -9,7 +9,6 @@ import {
   ArrowRight, 
   BarChart3, 
   Shield, 
-  Thermometer,
   Clock,
   MapPin,
   Phone,
@@ -23,37 +22,37 @@ import {
   Users
 } from 'lucide-react';
 
-const RefrigeratedDelivery = () => {
+const LastMileDelivery = () => {
   const fleetCapabilities = [
     {
       icon: Truck,
       title: "Modern Fleet",
-      description: "50+ refrigerated vehicles from sprinter vans to 53ft trailers"
-    },
-    {
-      icon: Thermometer,
-      title: "Multi-Temperature",
-      description: "Simultaneous delivery of frozen, chilled, and ambient products"
-    },
-    {
-      icon: Eye,
-      title: "Real-Time Tracking",
-      description: "GPS monitoring with live temperature data and delivery updates"
+      description: "50+ delivery vehicles optimized for final mile efficiency"
     },
     {
       icon: Route,
       title: "Route Optimization",
-      description: "AI-powered routing reduces delivery time and maintains cold chain"
+      description: "AI-powered routing for fastest, most efficient last mile delivery"
     },
     {
-      icon: Shield,
-      title: "Compliance Ready",
-      description: "HACCP certified drivers and FDA-compliant documentation"
+      icon: Eye,
+      title: "Real-Time Tracking",
+      description: "GPS monitoring with live delivery updates and ETA notifications"
     },
     {
       icon: Zap,
-      title: "Emergency Response",
-      description: "24/7 dispatch for urgent cold chain deliveries"
+      title: "Speed & Efficiency",
+      description: "Optimized delivery windows with same-day and next-day options"
+    },
+    {
+      icon: Shield,
+      title: "Reliable Service",
+      description: "Trained drivers with 99.5% on-time delivery performance"
+    },
+    {
+      icon: Clock,
+      title: "Flexible Scheduling",
+      description: "24/7 dispatch for urgent and scheduled deliveries"
     }
   ];
 
@@ -68,25 +67,25 @@ const RefrigeratedDelivery = () => {
 
   const deliveryTypes = [
     {
-      title: "Last-Mile Delivery",
-      description: "Direct to consumer cold chain delivery with signature confirmation",
-      features: ["1-2 hour windows", "SMS notifications", "Photo confirmation", "Temperature logs"]
+      title: "Same-Day Delivery",
+      description: "Urgent delivery service with 2-4 hour delivery windows",
+      features: ["1-4 hour windows", "SMS notifications", "Photo confirmation", "Priority handling"]
     },
     {
-      title: "Route Delivery", 
-      description: "Scheduled B2B deliveries to restaurants, retailers, and distributors",
+      title: "Scheduled Delivery", 
+      description: "Planned B2B deliveries to businesses with flexible timing",
       features: ["Multi-stop routes", "Bulk deliveries", "Invoice on delivery", "Recurring schedules"]
     },
     {
-      title: "Emergency Delivery",
-      description: "Urgent cold chain transport with expedited service guarantees", 
-      features: ["2-hour response", "24/7 availability", "Priority routing", "Direct delivery"]
+      title: "Express Delivery",
+      description: "Premium service with guaranteed delivery timeframes", 
+      features: ["1-hour response", "24/7 availability", "Priority routing", "Direct delivery"]
     }
   ];
 
   const performance = [
     { metric: "99.5%", description: "On-time delivery rate" },
-    { metric: "100%", description: "Temperature compliance" },
+    { metric: "95%", description: "First attempt success" },
     { metric: "2.5hrs", description: "Average delivery window" },
     { metric: "50+", description: "Vehicles in fleet" },
     { metric: "24/7", description: "Emergency availability" },
@@ -103,15 +102,15 @@ const RefrigeratedDelivery = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="bg-white/20 text-white border-white/30 mb-4">
-                Refrigerated Delivery Solutions
+                Last Mile Delivery Solutions
               </Badge>
               <h1 className="text-5xl font-bold mb-6">
-                Cold Chain Delivery Across the Northeast
+                Final Mile Delivery Excellence Across the Northeast
               </h1>
               <p className="text-xl text-blue-100 mb-8">
-                Maintain temperature integrity from warehouse to destination with our modern 
-                refrigerated fleet. Real-time tracking, compliance documentation, and 
-                guaranteed on-time delivery across 6 Northeast states.
+                Optimize your final delivery step with our efficient fleet and smart routing. 
+                Real-time tracking, flexible scheduling, and guaranteed on-time delivery 
+                across 6 Northeast states.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
@@ -162,7 +161,7 @@ const RefrigeratedDelivery = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Advanced Fleet Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              State-of-the-art refrigerated vehicles equipped with the latest cold chain technology
+              Modern delivery vehicles equipped with the latest tracking and optimization technology
             </p>
           </div>
           
@@ -188,7 +187,7 @@ const RefrigeratedDelivery = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Northeast Coverage Area</h2>
             <p className="text-xl text-muted-foreground">
-              Comprehensive refrigerated delivery service across major Northeast markets
+              Comprehensive last mile delivery service across major Northeast markets
             </p>
           </div>
           
@@ -213,7 +212,7 @@ const RefrigeratedDelivery = () => {
                 <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-primary mb-4">Need Delivery Outside Our Coverage Area?</h3>
                 <p className="text-muted-foreground mb-6">
-                  We partner with certified carriers to extend our cold chain network nationwide
+                  We partner with certified carriers to extend our delivery network nationwide
                 </p>
                 <Button>
                   Request Custom Coverage
@@ -231,7 +230,7 @@ const RefrigeratedDelivery = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Delivery Service Options</h2>
             <p className="text-xl text-muted-foreground">
-              Flexible solutions for B2B and B2C cold chain delivery requirements
+              Flexible solutions for B2B and B2C last mile delivery requirements
             </p>
           </div>
           
@@ -283,12 +282,12 @@ const RefrigeratedDelivery = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6">
-                Common Cold Chain Delivery Challenges
+                Common Last Mile Delivery Challenges
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
-                  <p><strong>Temperature Breaks:</strong> Standard delivery damages temperature-sensitive products</p>
+                  <p><strong>Missed Deliveries:</strong> Failed delivery attempts lead to customer frustration</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
@@ -300,22 +299,22 @@ const RefrigeratedDelivery = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
-                  <p><strong>Documentation:</strong> Manual processes create compliance gaps</p>
+                  <p><strong>Inefficient Routes:</strong> Poor routing increases costs and delivery times</p>
                 </div>
               </div>
             </div>
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6">
-                Our Cold Chain Delivery Solution
+                Our Last Mile Delivery Solution
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                  <p><strong>Guaranteed Temperature:</strong> Continuous cold chain with real-time monitoring</p>
+                  <p><strong>Guaranteed Delivery:</strong> First attempt success with flexible scheduling</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                  <p><strong>Live Tracking:</strong> GPS and temperature data shared with customers</p>
+                  <p><strong>Live Tracking:</strong> Real-time GPS tracking shared with customers</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
@@ -323,7 +322,7 @@ const RefrigeratedDelivery = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                  <p><strong>Digital Documentation:</strong> Automated compliance reporting and POD</p>
+                  <p><strong>Digital Proof:</strong> Automated delivery confirmation and POD</p>
                 </div>
               </div>
             </div>
@@ -337,7 +336,7 @@ const RefrigeratedDelivery = () => {
           <Calculator className="h-16 w-16 mx-auto mb-6" />
           <h2 className="text-3xl font-bold mb-4">Calculate Your Delivery Costs</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Get instant pricing for cold chain delivery routes across the Northeast
+            Get instant pricing for last mile delivery routes across the Northeast
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-primary hover:bg-blue-50">
@@ -357,8 +356,8 @@ const RefrigeratedDelivery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Deliver with Confidence?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join 300+ businesses who trust our refrigerated delivery network. 
-            Get guaranteed cold chain integrity from pickup to delivery.
+            Join 300+ businesses who trust our last mile delivery network. 
+            Get guaranteed delivery success from pickup to doorstep.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-semibold">
@@ -378,4 +377,4 @@ const RefrigeratedDelivery = () => {
   );
 };
 
-export default RefrigeratedDelivery;
+export default LastMileDelivery;

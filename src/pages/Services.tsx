@@ -54,17 +54,11 @@ const Services = () => {
     },
     {
       icon: Truck,
-      title: 'Refrigerated Delivery Solutions',
-      description: 'Temperature-controlled vehicles with cold chain delivery expertise for the Northeast region.',
-      features: [
-        'Refrigerated Truck Fleet',
-        'GPS Temperature Tracking',
-        'Cold Chain Documentation',
-        'Northeast Regional Coverage',
-        'Emergency Cold Delivery',
-        'Specialized Handling Protocols'
-      ],
-      benefits: 'Maintain cold chain integrity with 100% temperature compliance during transit'
+      title: 'Last Mile Delivery',
+      description: 'Final mile delivery solutions with optimized routing and flexible scheduling options.',
+      keyFeatures: ['GPS tracking', '2-hour delivery windows', 'Route optimization'],
+      benefits: ['Customer satisfaction', 'First-attempt success', 'Delivery efficiency'],
+      route: '/services/last-mile-delivery'
     },
     {
       icon: Thermometer,
@@ -183,7 +177,7 @@ const Services = () => {
                           const serviceRoutes = [
                             '/services/cold-storage-warehousing',
                             '/services/temperature-controlled-warehousing', 
-                            '/services/refrigerated-delivery',
+                            '/services/last-mile-delivery',
                             '/services/cold-chain-transportation',
                             '/services/cold-chain-cross-docking',
                             '/services/cold-chain-monitoring'

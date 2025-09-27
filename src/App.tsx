@@ -11,7 +11,7 @@ import Solutions from "./pages/Solutions";
 // Individual Service Pages
 import ColdStorageWarehousing from "./pages/services/ColdStorageWarehousing";
 import TemperatureControlledWarehousing from "./pages/services/TemperatureControlledWarehousing";
-import RefrigeratedDelivery from "./pages/services/RefrigeratedDelivery";
+import LastMileDelivery from "./pages/services/LastMileDelivery";
 import ColdChainTransportation from "./pages/services/ColdChainTransportation";
 import ColdChainCrossDocking from "./pages/services/ColdChainCrossDocking";
 import ColdChainMonitoring from "./pages/services/ColdChainMonitoring";
@@ -65,7 +65,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/services/cold-storage-warehousing" element={<ColdStorageWarehousing />} />
           <Route path="/services/temperature-controlled-warehousing" element={<TemperatureControlledWarehousing />} />
-          <Route path="/services/refrigerated-delivery" element={<RefrigeratedDelivery />} />
+          <Route path="/services/last-mile-delivery" element={<LastMileDelivery />} />
           <Route path="/services/cold-chain-transportation" element={<ColdChainTransportation />} />
           <Route path="/services/cold-chain-cross-docking" element={<ColdChainCrossDocking />} />
           <Route path="/services/cold-chain-monitoring" element={<ColdChainMonitoring />} />

@@ -47,9 +47,9 @@ const Index = () => {
     },
     {
       icon: Truck,
-      title: 'Refrigerated Delivery',
-      description: 'Temperature-controlled delivery solutions across the Northeast region.',
-      features: ['Cold Chain Integrity', 'GPS Temperature Tracking', 'Northeast Coverage']
+      title: 'Last Mile Delivery',
+      description: 'Final mile delivery solutions with optimized routing across the Northeast region.',
+      features: ['GPS Tracking', 'Route Optimization', 'Northeast Coverage']
     },
     {
       icon: Wine,

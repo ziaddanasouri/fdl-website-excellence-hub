@@ -89,7 +89,7 @@ const ColdStorageQuote = () => {
   const services = [
     { id: 'cold-storage', name: 'Cold Storage & Warehousing', icon: Snowflake, price: 2.50, description: 'Multi-temperature zone facilities with blast freezing' },
     { id: 'temp-warehousing', name: 'Temperature-Controlled Warehousing', icon: Warehouse, price: 2.25, description: 'Specialized climate control for perishables' },
-    { id: 'refrigerated-delivery', name: 'Refrigerated Delivery Solutions', icon: Truck, price: 1.85, description: 'Temperature-controlled vehicle fleet' },
+    { id: 'last-mile-delivery', name: 'Last Mile Delivery Solutions', icon: Truck, price: 1.85, description: 'Optimized final-mile delivery service' },
     { id: 'cold-chain-transport', name: 'Cold Chain Transportation', icon: Thermometer, price: 1.95, description: 'Comprehensive refrigerated trucking' },
     { id: 'cross-docking', name: 'Cold Chain Cross-Docking', icon: ArrowRightLeft, price: 1.45, description: 'Temperature-controlled transfer facilities' },
     { id: 'monitoring', name: 'Cold Chain Monitoring & Analytics', icon: BarChart3, price: 0.75, description: 'Real-time temperature tracking and reporting' }
