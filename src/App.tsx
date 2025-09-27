@@ -12,7 +12,7 @@ import Solutions from "./pages/Solutions";
 // Individual Service Pages - Updated
 import ColdStorageWarehousing from "./pages/services/ColdStorageWarehousing";
 import TemperatureControlledWarehousing from "./pages/services/TemperatureControlledWarehousing";
-const LastMileDelivery = lazy(() => import("./pages/services/LastMileDelivery"));
+const LazyLastMileDelivery = lazy(() => import("./pages/services/LastMileDelivery"));
 import WineSpirits from "./pages/solutions/WineSpirits";
 import SpecialtyCheese from "./pages/solutions/SpecialtyCheese";
 import ConfectionerySweets from "./pages/solutions/ConfectionerySweets";
@@ -71,7 +71,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/services/cold-storage-warehousing" element={<ColdStorageWarehousing />} />
           <Route path="/services/temperature-controlled-warehousing" element={<TemperatureControlledWarehousing />} />
-          <Route path="/services/last-mile-delivery" element={<LastMileDelivery />} />
+          <Route path="/services/last-mile-delivery" element={<LazyLastMileDelivery />} />
           
           {/* Solution Pages */}
           <Route path="/solutions/wine-spirits" element={<WineSpirits />} />
