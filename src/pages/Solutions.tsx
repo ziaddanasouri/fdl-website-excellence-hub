@@ -157,10 +157,6 @@ const Solutions = () => {
             Specialized cold storage and temperature-controlled logistics solutions for wine & spirits, 
             specialty cheese, confectionery, and foodservice supply chains across the Northeast.
           </p>
-          <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-            Find Your Solution
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </section>
 
