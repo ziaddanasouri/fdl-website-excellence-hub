@@ -42,7 +42,7 @@ const Solutions = () => {
         'Full state regulatory compliance',
         '99.8% inventory accuracy'
       ],
-      image: 'bWq6U8CHQY8'
+      image: 'photo-1547595628-c61a29f496f0'
     },
     {
       icon: ChefHat,
