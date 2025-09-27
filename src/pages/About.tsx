@@ -14,6 +14,7 @@ import {
   Target,
   CheckCircle
 } from 'lucide-react';
+import wineWarehouse from '@/assets/wine-warehouse.png';
 
 const About = () => {
   const stats = [
@@ -115,8 +116,8 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=600&h=400&fit=crop"
-                alt="Wine glass collection" 
+                src={wineWarehouse}
+                alt="Wine storage warehouse with wooden crates" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
