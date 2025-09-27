@@ -86,10 +86,10 @@ const ColdChainTransportation = () => {
   ];
 
   const routes = [
-    { origin: "Boston, MA", destination: "New York, NY", time: "4 hours", distance: "215 miles" },
-    { origin: "Albany, NY", destination: "Hartford, CT", time: "2.5 hours", distance: "140 miles" },
-    { origin: "Burlington, VT", destination: "Portland, ME", time: "3 hours", distance: "180 miles" },
-    { origin: "Manchester, NH", destination: "Providence, RI", time: "2 hours", distance: "120 miles" }
+    { origin: "Manhattan, NY", destination: "Brooklyn, NY", time: "45 minutes", distance: "12 miles" },
+    { origin: "Manhattan, NY", destination: "Westchester, NY", time: "1 hour", distance: "25 miles" },
+    { origin: "Brooklyn, NY", destination: "Albany, NY", time: "2.5 hours", distance: "150 miles" },
+    { origin: "Westchester, NY", destination: "Albany, NY", time: "2 hours", distance: "130 miles" }
   ];
 
   return (
@@ -316,22 +316,6 @@ const ColdChainTransportation = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Card className="inline-block border-0 shadow-lg">
-              <CardContent className="p-8">
-                <Calculator className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-primary mb-4">Custom Route Planning</h3>
-                <p className="text-muted-foreground mb-6">
-                  Need transportation outside our standard routes? We create custom solutions.
-                </p>
-                <Button>
-                  Calculate Custom Route
-                  <Calculator className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
