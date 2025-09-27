@@ -52,12 +52,16 @@ const Header = () => {
               <Phone className="h-4 w-4 mr-2" />
               (732) 650-9200
             </Button>
-            <Link to="/portal/login">
+            <a 
+              href="http://fdl.zapto.org/wm/logon.cfm?action=LoginPanel&username=&passto=index%2Ecfm%3Faction%3DDisplayCompanies"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="outline" size="sm">
                 <User className="h-4 w-4 mr-2" />
                 Customer Portal
               </Button>
-            </Link>
+            </a>
             <Button className="cta-button">
               Get Quote
             </Button>
@@ -98,12 +102,16 @@ const Header = () => {
                   <Phone className="h-4 w-4 mr-2" />
                   (732) 650-9200
                 </Button>
-                <Link to="/portal/login">
+                <a 
+                  href="http://fdl.zapto.org/wm/logon.cfm?action=LoginPanel&username=&passto=index%2Ecfm%3Faction%3DDisplayCompanies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button variant="outline" size="sm">
                     <User className="h-4 w-4 mr-2" />
                     Customer Portal
                   </Button>
-                </Link>
+                </a>
                 <Button className="cta-button">
                   Get Quote
                 </Button>
