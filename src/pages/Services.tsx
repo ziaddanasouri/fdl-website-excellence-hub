@@ -229,32 +229,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Process</h2>
-            <p className="text-xl text-muted-foreground">Simple, streamlined, and scalable</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'Analysis', description: 'We analyze your current logistics operations and identify optimization opportunities.' },
-              { step: '02', title: 'Design', description: 'Our experts design a customized logistics solution tailored to your specific needs.' },
-              { step: '03', title: 'Implementation', description: 'We implement the solution with minimal disruption to your existing operations.' },
-              { step: '04', title: 'Optimization', description: 'Continuous monitoring and optimization to ensure peak performance and ROI.' }
-            ].map((phase, index) => (
-              <div key={index} className="text-center">
-                <div className="logistics-gradient text-white text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {phase.step}
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{phase.title}</h3>
-                <p className="text-muted-foreground">{phase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 logistics-gradient text-white">
