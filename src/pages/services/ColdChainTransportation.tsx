@@ -235,7 +235,6 @@ const ColdChainTransportation = () => {
       {/* Monitoring & Compliance */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">Advanced Monitoring Systems</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -252,29 +251,6 @@ const ColdChainTransportation = () => {
                 ))}
               </div>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-8">Regulatory Compliance</h2>
-              <Card className="border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <Shield className="h-8 w-8 text-primary mr-4" />
-                    <div>
-                      <h3 className="text-xl font-bold text-primary">100% Compliant Operations</h3>
-                      <p className="text-muted-foreground">Certified to industry standards</p>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    {compliance.map((item, index) => (
-                      <div key={index} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
         </div>
       </section>
 
