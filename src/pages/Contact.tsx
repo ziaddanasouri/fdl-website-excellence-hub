@@ -338,35 +338,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Regional Offices */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Regional Offices</h2>
-            <p className="text-xl text-muted-foreground">
-              Local presence across the Midwest for personalized service
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {offices.map((office, index) => (
-              <Card key={index} className="border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="logistics-gradient p-3 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
-                    <Building className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-primary mb-3">{office.city}</h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>{office.address}</p>
-                    <p className="font-semibold text-primary">{office.phone}</p>
-                    <p>Manager: {office.manager}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Teaser */}
       <section className="py-20">
