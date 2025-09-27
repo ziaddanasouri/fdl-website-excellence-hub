@@ -85,11 +85,11 @@ const ColdChainTransportation = () => {
     "Chain of Custody Documentation"
   ];
 
-  const routes = [
-    { origin: "Manhattan, NY", destination: "Brooklyn, NY", time: "45 minutes", distance: "12 miles" },
-    { origin: "Manhattan, NY", destination: "Westchester, NY", time: "1 hour", distance: "25 miles" },
-    { origin: "Brooklyn, NY", destination: "Albany, NY", time: "2.5 hours", distance: "150 miles" },
-    { origin: "Westchester, NY", destination: "Albany, NY", time: "2 hours", distance: "130 miles" }
+  const cities = [
+    "Manhattan",
+    "Brooklyn", 
+    "Westchester",
+    "Albany"
   ];
 
   return (
@@ -288,31 +288,12 @@ const ColdChainTransportation = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {routes.map((route, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {cities.map((city, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <MapPin className="h-5 w-5 text-primary mr-2" />
-                      <span className="font-semibold">{route.origin}</span>
-                    </div>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
-                    <div className="flex items-center">
-                      <span className="font-semibold">{route.destination}</span>
-                      <MapPin className="h-5 w-5 text-primary ml-2" />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 text-muted-foreground mr-2" />
-                      <span>{route.time}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Route className="h-4 w-4 text-muted-foreground mr-2" />
-                      <span>{route.distance}</span>
-                    </div>
-                  </div>
+                <CardContent className="p-6 text-center">
+                  <MapPin className="h-8 w-8 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-primary">{city}</h3>
                 </CardContent>
               </Card>
             ))}
