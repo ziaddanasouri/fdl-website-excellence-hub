@@ -17,80 +17,80 @@ import {
 
 const About = () => {
   const stats = [
-    { label: 'Years in Business', value: '25+', icon: Award },
-    { label: 'Countries Served', value: '150+', icon: Globe },
-    { label: 'Team Members', value: '5,000+', icon: Users },
-    { label: 'Annual Revenue', value: '$2.5B', icon: TrendingUp },
+    { label: 'Years in Cold Chain', value: '25+', icon: Award },
+    { label: 'Cubic Feet of Cold Storage', value: '500K+', icon: Globe },
+    { label: 'Temperature Zones', value: '12', icon: Users },
+    { label: 'Northeast Coverage', value: '100%', icon: TrendingUp },
   ];
 
   const values = [
     {
       icon: Shield,
-      title: 'Reliability',
-      description: 'We deliver on our promises with 99.8% on-time performance and unwavering commitment to excellence.'
+      title: 'Temperature Integrity',
+      description: 'Maintaining precise temperature control from pickup to delivery with 99.9% cold chain integrity.'
     },
     {
       icon: Zap,
-      title: 'Innovation',
-      description: 'Leveraging cutting-edge technology and continuous improvement to stay ahead of industry demands.'
+      title: 'Food Safety First',
+      description: 'HACCP-certified processes and FDA-compliant facilities ensuring the highest food safety standards.'
     },
     {
       icon: Heart,
-      title: 'Customer First',
-      description: 'Every decision we make is guided by what\'s best for our customers and their success.'
+      title: 'Specialized Expertise',
+      description: 'Deep knowledge in wine aging, cheese maturation, and specialty food handling requirements.'
     },
     {
       icon: Target,
-      title: 'Precision',
-      description: 'Accuracy and attention to detail in every shipment, every delivery, every interaction.'
+      title: 'Regional Focus',
+      description: 'Dedicated Northeast coverage with local expertise and rapid response capabilities.'
     }
   ];
 
   const leadership = [
     {
-      name: 'Sarah Chen',
+      name: 'Marcus Benedetti',
       role: 'Chief Executive Officer',
-      bio: '15+ years in logistics leadership, former VP at FedEx, MBA from Wharton',
-      image: 'photo-1494790108755-2616b332c3e4'
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'Chief Operating Officer',
-      bio: 'Supply chain optimization expert, 20 years at UPS, Six Sigma Black Belt',
+      bio: '20+ years in cold chain logistics, former VP at Lineage Logistics, Wine Industry Expert',
       image: 'photo-1472099645785-5658abf4ff4e'
     },
     {
-      name: 'Jennifer Kim',
-      role: 'Chief Technology Officer',
-      bio: 'Former Amazon logistics tech lead, MIT Computer Science, AI/ML specialist',
+      name: 'Elena Rodriguez',
+      role: 'VP of Cold Storage Operations',
+      bio: 'Temperature-controlled warehousing specialist, 15 years at Americold, Food Science degree',
+      image: 'photo-1494790108755-2616b332c3e4'
+    },
+    {
+      name: 'David Kim',
+      role: 'Director of Food Safety',
+      bio: 'HACCP expert, former FDA inspector, 18 years in food safety and regulatory compliance',
       image: 'photo-1507003211169-0a1dd7228f2d'
     },
     {
-      name: 'Robert Johnson',
-      role: 'Chief Financial Officer',
-      bio: 'Corporate finance veteran, former Goldman Sachs, CPA and CFA certified',
+      name: 'Sarah Murphy',
+      role: 'Northeast Regional Manager',
+      bio: 'Regional logistics expert, 12 years managing Northeast cold chain operations',
       image: 'photo-1560250097-0b93528c311a'
     }
   ];
 
   const timeline = [
-    { year: '1999', event: 'Founded FDL Logistics in Fond Du Lac, Wisconsin' },
-    { year: '2003', event: 'Expanded to 5 Midwest distribution centers' },
-    { year: '2008', event: 'Acquired regional 3PL competitor, doubled capacity' },
-    { year: '2012', event: 'Launched technology platform and real-time tracking' },
-    { year: '2016', event: 'International expansion to Canada and Mexico' },
-    { year: '2020', event: 'Deployed AI-powered route optimization system' },
-    { year: '2022', event: 'Achieved carbon-neutral shipping operations' },
-    { year: '2024', event: 'Celebrating 25 years of logistics excellence' }
+    { year: '1999', event: 'Founded FDL DNT as specialty cold storage provider in Fond Du Lac, Wisconsin' },
+    { year: '2003', event: 'Opened first Northeast facility with wine-specific storage capabilities' },
+    { year: '2008', event: 'Acquired artisan cheese aging facility, specialized in temperature-controlled maturation' },
+    { year: '2012', event: 'Launched real-time temperature monitoring across all cold storage facilities' },
+    { year: '2016', event: 'Expanded to full Northeast coverage with 8 temperature-controlled facilities' },
+    { year: '2020', event: 'Deployed IoT sensors for 24/7 cold chain monitoring and alerts' },
+    { year: '2022', event: 'Achieved 100% renewable energy in all cold storage operations' },
+    { year: '2024', event: 'Leading Northeast provider of specialty cold chain logistics' }
   ];
 
   const certifications = [
-    'ISO 9001:2015 Quality Management',
-    'ISO 14001:2015 Environmental Management',
-    'C-TPAT (Customs-Trade Partnership)',
-    'TSA Certified Cargo Screening Facility',
-    'FDA Registered Facility',
-    'IATA Dangerous Goods Certified'
+    'HACCP (Hazard Analysis Critical Control Points)',
+    'SQF (Safe Quality Food) Level 2 Certified',
+    'FDA Registered Cold Storage Facility',
+    'USDA Certified for Wine & Spirits Storage',
+    'BRC (British Retail Consortium) Global Standard',
+    'ISO 22000 Food Safety Management'
   ];
 
   return (
@@ -98,29 +98,29 @@ const About = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-20">
+      <section className="hero-gradient text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">25 Years of Logistics Excellence</h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                From a small Wisconsin startup to a global logistics leader, FDL has been 
-                revolutionizing supply chains and connecting businesses worldwide since 1999.
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 Years of Cold Chain Excellence</h1>
+              <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
+                From specialized wine storage to artisan cheese aging, FDL DNT has been the Northeast's 
+                trusted partner for temperature-controlled logistics and cold storage solutions since 1999.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-                  Our Story
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base">
+                  Get Cold Storage Quote
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                  Leadership Team
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base">
+                  Tour Our Facilities
                 </Button>
               </div>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop"
-                alt="FDL headquarters" 
-                className="rounded-2xl shadow-2xl"
+                src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=600&h=400&fit=crop"
+                alt="FDL DNT cold storage facility" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>
@@ -128,16 +128,16 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <stat.icon className="h-8 w-8 text-white" />
+                <div className="logistics-gradient p-3 md:p-4 rounded-2xl w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 flex items-center justify-center">
+                  <stat.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-2">{stat.value}</h3>
-                <p className="text-muted-foreground">{stat.label}</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-1 md:mb-2">{stat.value}</h3>
+                <p className="text-sm md:text-base text-muted-foreground">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -145,46 +145,46 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Our Mission</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                To empower businesses of all sizes with world-class logistics solutions that drive growth, 
-                reduce costs, and exceed customer expectations. We're committed to being the most trusted 
-                logistics partner, delivering reliability, innovation, and excellence in every shipment.
+                To preserve quality and extend shelf life for temperature-sensitive products through 
+                world-class cold storage and specialized handling. We're committed to maintaining the 
+                integrity of fine wines, artisan cheeses, and specialty foods from storage to delivery.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
-                  <span className="text-muted-foreground">Deliver exceptional customer experiences</span>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Maintain perfect temperature control for wine aging and cheese maturation</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
-                  <span className="text-muted-foreground">Drive sustainable growth for our partners</span>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Ensure food safety compliance throughout the cold chain</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
-                  <span className="text-muted-foreground">Pioneer logistics innovation and technology</span>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Provide specialized Northeast regional coverage and expertise</span>
                 </div>
               </div>
             </div>
             
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Our Vision</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Vision</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                To be the global leader in intelligent logistics, connecting every business to unlimited 
-                possibilities through seamless, sustainable, and smart supply chain solutions. We envision 
-                a world where distance is no barrier to commerce and growth.
+                To be the Northeast's premier cold chain logistics provider, setting the standard for 
+                temperature-controlled storage and specialized handling of fine wines, artisan cheeses, 
+                and specialty foods. We envision preserving quality from vineyard to table.
               </p>
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-primary mb-3">2030 Goals</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• 100% carbon-neutral operations</li>
-                  <li>• AI-powered autonomous supply chains</li>
-                  <li>• Same-day delivery in 500+ cities</li>
-                  <li>• $10B+ in annual revenue</li>
+                  <li>• 1M+ cubic feet of specialized cold storage</li>
+                  <li>• 100% renewable energy cold storage operations</li>
+                  <li>• Same-day cold delivery throughout Northeast</li>
+                  <li>• Leading wine storage facility network</li>
                 </ul>
               </div>
             </div>
@@ -316,19 +316,19 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 logistics-gradient text-white">
+      <section className="py-16 md:py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Join the FDL Family</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Whether you're looking for a logistics partner or want to build your career with us, 
-            we'd love to hear from you.
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Partner with the Northeast's Cold Chain Experts</h2>
+          <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Whether you need specialized wine storage, cheese aging facilities, or temperature-controlled distribution, 
+            we're here to preserve your product's quality and integrity.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-              Partner With Us
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base">
+              Get Cold Storage Quote
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              View Careers
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base">
+              Schedule Consultation
             </Button>
           </div>
         </div>
