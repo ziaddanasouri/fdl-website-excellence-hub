@@ -33,7 +33,7 @@ const Index = () => {
 
   const stats = [
     { label: 'Cold Storage Capacity', value: '2M+ ft³', icon: Snowflake },
-    { label: 'Northeast Locations', value: '25+', icon: Globe },
+    { label: '25+ Locations, 40+ Routes Across Northeast', value: '25+/40+', icon: Globe },
     { label: 'Temperature Zones', value: '50+', icon: Thermometer },
     { label: 'Years Cold Chain Experience', value: '25+', icon: Award },
   ];
