@@ -177,7 +177,20 @@ const Services = () => {
                         </p>
                       </div>
                       
-                      <Button className="w-full sm:w-auto">
+                      <Button 
+                        className="w-full sm:w-auto"
+                        onClick={() => {
+                          const serviceRoutes = [
+                            '/services/cold-storage-warehousing',
+                            '/services/temperature-controlled-warehousing', 
+                            '/services/refrigerated-delivery',
+                            '/services/cold-chain-transportation',
+                            '/services/cold-chain-cross-docking',
+                            '/services/cold-chain-monitoring'
+                          ];
+                          window.location.href = serviceRoutes[index];
+                        }}
+                      >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
