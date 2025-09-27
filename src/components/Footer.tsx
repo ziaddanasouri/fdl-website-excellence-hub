@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Truck, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import fdlLogo from '@/assets/fdl-dnt-logo.png';
+import fdlLogo from '@/assets/fdl-dnt-logo-dark.png';
 
 const Footer = () => {
   return (
