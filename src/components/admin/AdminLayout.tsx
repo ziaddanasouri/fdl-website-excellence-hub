@@ -14,7 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import fdlLogo from '@/assets/fdl-dnt-logo.png';
+import fdlLogo from '@/assets/fdl-dnt-logo-chilled.png';
 
 export function AdminLayout() {
   const location = useLocation();

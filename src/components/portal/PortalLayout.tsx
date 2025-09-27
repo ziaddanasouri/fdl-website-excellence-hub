@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import fdlLogo from '@/assets/fdl-dnt-logo.png';
+import fdlLogo from '@/assets/fdl-dnt-logo-chilled.png';
 
 interface PortalLayoutProps {
   children: React.ReactNode;
