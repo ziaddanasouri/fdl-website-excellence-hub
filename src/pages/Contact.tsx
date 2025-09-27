@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -270,47 +271,37 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-6">Quick Actions</h3>
                 <div className="space-y-4">
-                  <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className="bg-blue-100 p-3 rounded-lg">
-                          <MessageSquare className="h-6 w-6 text-primary" />
+                  <Link to="/quote/cold-storage">
+                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                      <CardContent className="p-6">
+                        <div className="flex items-center space-x-4">
+                          <div className="bg-blue-100 p-3 rounded-lg">
+                            <Truck className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-primary">Request Quote</h4>
+                            <p className="text-sm text-muted-foreground">Get pricing in 24 hours</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="font-bold text-primary">Live Chat Support</h4>
-                          <p className="text-sm text-muted-foreground">Chat with our experts now</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
-                  <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className="bg-blue-100 p-3 rounded-lg">
-                          <Truck className="h-6 w-6 text-primary" />
+                  <Link to="/consultation">
+                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                      <CardContent className="p-6">
+                        <div className="flex items-center space-x-4">
+                          <div className="bg-blue-100 p-3 rounded-lg">
+                            <Users className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-primary">Schedule Consultation</h4>
+                            <p className="text-sm text-muted-foreground">Free 30-minute session</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="font-bold text-primary">Request Quote</h4>
-                          <p className="text-sm text-muted-foreground">Get pricing in 24 hours</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className="bg-blue-100 p-3 rounded-lg">
-                          <Users className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-primary">Schedule Consultation</h4>
-                          <p className="text-sm text-muted-foreground">Free 30-minute session</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </div>
               </div>
 
