@@ -4,10 +4,10 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  Package, 
+  Snowflake, 
   Truck, 
   Warehouse, 
-  Globe, 
+  Thermometer, 
   ArrowRightLeft, 
   Clock,
   CheckCircle,
@@ -15,104 +15,108 @@ import {
   BarChart3,
   Shield,
   Zap,
-  Users
+  Users,
+  Wine,
+  ChefHat,
+  Candy,
+  Store
 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Package,
-      title: '3PL Services',
-      description: 'Complete third-party logistics solutions from inventory management to order fulfillment.',
+      icon: Snowflake,
+      title: 'Cold Storage & Warehousing',
+      description: 'Multi-temperature zone facilities with blast freezing capabilities and specialized cold storage.',
       features: [
-        'Inventory Management & Control',
-        'Order Processing & Fulfillment', 
-        'Pick, Pack & Ship Operations',
-        'Returns Management',
-        'Quality Control & Inspection',
-        'Kitting & Assembly Services'
+        'Multi-Temperature Zone Control (-20°F to +60°F)',
+        'Blast Freezing Capabilities', 
+        'Temperature Monitoring Systems',
+        'Cold Storage Inventory Management',
+        'Pharmaceutical-Grade Environments',
+        'HACCP Certified Facilities'
       ],
-      benefits: 'Reduce operational costs by 25-40% while improving accuracy and speed'
+      benefits: 'Maintain 99.9% temperature compliance while reducing spoilage by up to 95%'
     },
     {
       icon: Warehouse,
-      title: 'Warehousing Solutions',
-      description: 'State-of-the-art warehousing facilities with advanced automation and technology.',
+      title: 'Temperature-Controlled Warehousing',
+      description: 'Specialized cold storage facilities with precise climate control for perishable goods.',
       features: [
-        'Climate-Controlled Storage',
-        'Automated Storage Systems',
-        'Real-Time Inventory Tracking',
-        'Security & Surveillance',
-        'Flexible Storage Options',
-        'Hazmat Handling Certified'
+        'Wine Storage (55-60°F Stable)',
+        'Cheese Aging Facilities (35-40°F)',
+        'Confectionery Climate Control',
+        'Real-Time Temperature Monitoring',
+        'Humidity Management Systems',
+        'Separate Zone Capabilities'
       ],
-      benefits: 'Scale storage capacity on-demand without capital investment'
+      benefits: 'Extend product shelf life and maintain quality with specialized storage'
     },
     {
       icon: Truck,
-      title: 'Last Mile Delivery',
-      description: 'Fast, reliable last-mile delivery solutions for e-commerce and retail customers.',
+      title: 'Refrigerated Delivery Solutions',
+      description: 'Temperature-controlled vehicles with cold chain delivery expertise for the Northeast region.',
       features: [
-        'Same-Day & Next-Day Delivery',
-        'White Glove Delivery Service',
-        'Real-Time GPS Tracking',
-        'Proof of Delivery',
-        'Flexible Delivery Windows',
-        'Special Handling Services'
+        'Refrigerated Truck Fleet',
+        'GPS Temperature Tracking',
+        'Cold Chain Documentation',
+        'Northeast Regional Coverage',
+        'Emergency Cold Delivery',
+        'Specialized Handling Protocols'
       ],
-      benefits: 'Improve customer satisfaction with 98.5% on-time delivery rate'
+      benefits: 'Maintain cold chain integrity with 100% temperature compliance during transit'
     },
     {
-      icon: Globe,
-      title: 'Global Transportation',
-      description: 'Comprehensive freight and transportation services across all modes worldwide.',
+      icon: Thermometer,
+      title: 'Cold Chain Transportation',
+      description: 'Comprehensive refrigerated trucking with temperature monitoring and cross-docking services.',
       features: [
-        'Air Freight Services',
-        'Ocean Freight & LCL',
-        'Ground Transportation',
-        'Expedited Shipping',
-        'Customs Clearance',
-        'Trade Documentation'
+        'Refrigerated Trucking Fleet',
+        'Temperature Excursion Alerts',
+        'Cold Chain Cross-Docking',
+        'Multi-Temperature Deliveries',
+        'Compliance Documentation',
+        '24/7 Monitoring Systems'
       ],
-      benefits: 'Access global markets with our extensive transportation network'
+      benefits: 'Ensure product integrity across the entire cold chain network'
     },
     {
       icon: ArrowRightLeft,
-      title: 'Cross-Docking',
-      description: 'Efficient cross-docking operations to minimize storage time and costs.',
+      title: 'Cold Chain Cross-Docking',
+      description: 'Temperature-controlled transfer facilities minimizing cold chain breaks for perishable goods.',
       features: [
-        'Direct Product Transfer',
-        'Consolidation Services',
-        'Sorting & Redistribution',
-        'Reduced Storage Costs',
-        'Faster Transit Times',
+        'Climate-Controlled Transfer',
+        'Minimal Cold Chain Breaks',
+        'Temperature Validation',
+        'Specialized Loading Docks',
+        'Quick Transfer Protocols',
         'Quality Control Checks'
       ],
-      benefits: 'Reduce inventory holding costs and improve cash flow'
+      benefits: 'Reduce handling time while maintaining temperature integrity'
     },
     {
       icon: BarChart3,
-      title: 'Supply Chain Analytics',
-      description: 'Advanced analytics and reporting to optimize your supply chain performance.',
+      title: 'Cold Chain Monitoring & Analytics',
+      description: 'Real-time temperature tracking and cold chain compliance reporting with predictive analytics.',
       features: [
-        'Real-Time Dashboards',
-        'Performance Metrics',
+        'Real-Time Temperature Dashboards',
+        'Cold Chain Compliance Reports',
+        'Temperature Excursion Alerts',
         'Predictive Analytics',
-        'Cost Analysis Reports',
-        'Demand Forecasting',
-        'KPI Tracking'
+        'Regulatory Documentation',
+        'Performance Metrics Tracking'
       ],
-      benefits: 'Make data-driven decisions to optimize operations and reduce costs'
+      benefits: 'Achieve 100% regulatory compliance with data-driven cold chain optimization'
     }
   ];
 
   const industries = [
-    { name: 'E-commerce', icon: Package, description: 'Tailored solutions for online retailers' },
-    { name: 'Retail', icon: Users, description: 'Traditional and omnichannel retail support' },
-    { name: 'Manufacturing', icon: Warehouse, description: 'Industrial logistics and distribution' },
-    { name: 'Healthcare', icon: Shield, description: 'Compliant medical supply chain solutions' },
-    { name: 'Technology', icon: Zap, description: 'High-tech product logistics and fulfillment' },
-    { name: 'Automotive', icon: Truck, description: 'Just-in-time automotive supply chain' }
+    { name: 'Wine & Spirits', icon: Wine, description: 'Temperature-controlled wine and beverage logistics' },
+    { name: 'Specialty Cheese', icon: ChefHat, description: 'Artisan cheese and dairy cold storage' },
+    { name: 'Confectionery', icon: Candy, description: 'Chocolate and sweets climate control' },
+    { name: 'Foodservice', icon: Store, description: 'Restaurant and retail supply chains' },
+    { name: 'Fresh Produce', icon: Snowflake, description: 'Farm-to-table cold chain solutions' },
+    { name: 'Pharmaceuticals', icon: Shield, description: 'Temperature-sensitive medication storage' }
   ];
 
   return (
@@ -122,18 +126,18 @@ const Services = () => {
       {/* Hero Section */}
       <section className="hero-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Comprehensive Logistics Services</h1>
+          <h1 className="text-5xl font-bold mb-6">Temperature-Controlled Logistics Services</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            From 3PL operations to global transportation, we provide end-to-end logistics solutions 
-            that scale with your business and exceed your customers' expectations.
+            From cold storage to refrigerated delivery, we provide specialized temperature-controlled solutions 
+            that preserve quality and ensure compliance across the Northeast region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-              Get Custom Quote
+              Get Cold Storage Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              Download Services Brochure
+              Download Cold Chain Guide
             </Button>
           </div>
         </div>
@@ -190,9 +194,9 @@ const Services = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Industries We Serve</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Cold Storage Industries We Serve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized logistics solutions tailored to the unique requirements of your industry
+              Specialized temperature-controlled solutions for perishable goods across Northeast markets
             </p>
           </div>
           
@@ -242,17 +246,17 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Logistics?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cold Chain?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our logistics experts design a custom solution that reduces costs, improves efficiency, 
-            and scales with your business growth.
+            Let our cold storage experts design a temperature-controlled solution that preserves quality, 
+            ensures compliance, and scales with your perishable goods business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-              Schedule Free Consultation
+              Schedule Cold Storage Consultation
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              Get Quote Now
+              Get Cold Chain Quote
             </Button>
           </div>
         </div>

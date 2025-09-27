@@ -4,194 +4,144 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  ShoppingCart, 
-  Store, 
-  Factory, 
-  Heart, 
-  Car, 
-  Laptop,
+  Wine, 
+  ChefHat, 
+  Candy, 
+  Store,
   CheckCircle,
   ArrowRight,
   TrendingUp,
   Users,
   Clock,
-  DollarSign
+  DollarSign,
+  Thermometer,
+  Snowflake
 } from 'lucide-react';
 
 const Solutions = () => {
   const solutions = [
     {
-      icon: ShoppingCart,
-      title: 'E-commerce Solutions',
-      description: 'Comprehensive fulfillment and delivery solutions designed specifically for online retailers.',
+      icon: Wine,
+      title: 'Wine & Spirits Solutions',
+      description: 'Temperature-controlled storage and distribution for imported and domestic wines, spirits, and craft beverages.',
       challenges: [
-        'Seasonal demand fluctuations',
-        'Fast shipping expectations', 
-        'Returns management complexity',
-        'Inventory optimization'
+        'Precise temperature requirements (55-60°F)',
+        'State compliance for distribution laws',
+        'Quality preservation during transport',
+        'Inventory management for various vintages'
       ],
       ourSolution: [
-        'Scalable fulfillment centers',
-        'Same-day & next-day delivery',
-        'Automated returns processing',
-        'Real-time inventory sync'
+        'Climate-controlled wine storage facilities',
+        'State compliance management',
+        'Specialized handling protocols',
+        'Temperature monitoring systems'
       ],
       results: [
-        '40% reduction in fulfillment costs',
-        '99.2% order accuracy rate',
-        '2-day average delivery time',
-        '95% customer satisfaction'
+        '100% temperature compliance maintained',
+        'Zero quality deterioration incidents',
+        'Full state regulatory compliance',
+        '99.8% inventory accuracy'
       ],
-      caseStudy: 'Helped an online fashion retailer scale from 1K to 100K orders/month during peak season.',
-      image: 'photo-1556742049-0cfed4f6a45d'
+      caseStudy: 'Managed distribution for premium wine importer, maintaining perfect temperature control across 15 states.',
+      image: 'photo-1506377872008-6645e837072d'
+    },
+    {
+      icon: ChefHat,
+      title: 'Specialty Cheese & Dairy',
+      description: 'Artisan cheese expertise with separate cooler locations and precise temperature control for domestic dairy products.',
+      challenges: [
+        'Artisan cheese temperature sensitivity',
+        'Separate storage requirements',
+        'Aging process management',
+        'Specialized handling needs'
+      ],
+      ourSolution: [
+        'Dedicated cheese aging facilities',
+        'Multi-zone temperature control (35-40°F)',
+        'Specialized dairy product handling',
+        'Separate cooler locations'
+      ],
+      results: [
+        '35-40°F precise temperature control',
+        '100% product freshness maintained',
+        '95% reduction in spoilage',
+        'Extended shelf life achievement'
+      ],
+      caseStudy: 'Transformed specialty cheese distributor operations, reducing spoilage by 95% through precise climate control.',
+      image: 'photo-1452195100486-9cc805987862'
+    },
+    {
+      icon: Candy,
+      title: 'Confectionery & Sweets',
+      description: 'Chocolate and confectionery climate control with heat and humidity sensitivity management to prevent bloom.',
+      challenges: [
+        'Heat and humidity sensitivity',
+        'Chocolate bloom prevention',
+        'Seasonal temperature variations',
+        'Package integrity maintenance'
+      ],
+      ourSolution: [
+        'Climate-controlled confectionery storage',
+        'Humidity management systems',
+        'Bloom prevention protocols',
+        'Seasonal handling adjustments'
+      ],
+      results: [
+        'Zero bloom incidents',
+        '99% package integrity maintained',
+        '30% extended product life',
+        '100% quality preservation'
+      ],
+      caseStudy: 'Prevented $500K in chocolate bloom losses for premium confectionery brand during summer months.',
+      image: 'photo-1481391319762-47dff72954d9'
     },
     {
       icon: Store,
-      title: 'Retail Distribution',
-      description: 'Omnichannel retail logistics solutions connecting stores, warehouses, and customers seamlessly.',
+      title: 'Retail & Foodservice Supply Chain',
+      description: 'Restaurant supply chain expertise and specialty grocer distribution with geographic coverage across the Northeast.',
       challenges: [
-        'Store replenishment complexity',
-        'Omnichannel inventory visibility',
-        'Last-mile delivery costs',
-        'Store-to-store transfers'
+        'Multi-location delivery coordination',
+        'Time-sensitive restaurant deliveries',
+        'Specialty grocer requirements',
+        'Geographic coverage demands'
       ],
       ourSolution: [
-        'Automated replenishment systems',
-        'Unified inventory management',
-        'Optimized delivery routes',
-        'Inter-store logistics network'
+        'Northeast regional distribution network',
+        'Restaurant-specific delivery windows',
+        'Specialty grocer partnerships',
+        'NY, PA, CT + 5 boroughs coverage'
       ],
       results: [
-        '30% inventory reduction',
-        '98% stock availability',
-        '25% delivery cost savings',
-        '50% faster store transfers'
+        '99.2% on-time restaurant delivery',
+        'Complete Northeast coverage',
+        '50+ specialty grocer partnerships',
+        '24/7 emergency delivery capability'
       ],
-      caseStudy: 'Transformed a 200-store retail chain\'s distribution network, improving efficiency by 35%.',
-      image: 'photo-1441986300917-64674bd600d8'
-    },
-    {
-      icon: Factory,
-      title: 'Manufacturing Logistics',
-      description: 'Just-in-time manufacturing support with supplier coordination and finished goods distribution.',
-      challenges: [
-        'Just-in-time delivery requirements',
-        'Supplier coordination complexity',
-        'Production line efficiency',
-        'Global supply chain visibility'
-      ],
-      ourSolution: [
-        'Milk-run logistics programs',
-        'Supplier portal integration',
-        'Line-side delivery services',
-        'End-to-end visibility platform'
-      ],
-      results: [
-        '15% production efficiency gain',
-        '99.8% on-time supplier delivery',
-        '20% inventory carrying cost reduction',
-        '24/7 supply chain visibility'
-      ],
-      caseStudy: 'Implemented lean logistics for automotive manufacturer, reducing inventory by $2M.',
-      image: 'photo-1581091226825-a6a2a5aee158'
-    },
-    {
-      icon: Heart,
-      title: 'Healthcare & Pharma',
-      description: 'Temperature-controlled, compliant logistics solutions for healthcare and pharmaceutical products.',
-      challenges: [
-        'Temperature-sensitive products',
-        'Regulatory compliance requirements',
-        'Traceability & serialization',
-        'Emergency delivery needs'
-      ],
-      ourSolution: [
-        'Cold chain management',
-        'GDP/GMP compliant facilities',
-        'Track & trace capabilities',
-        '24/7 emergency services'
-      ],
-      results: [
-        '100% temperature compliance',
-        'Zero regulatory violations',
-        'Complete product traceability',
-        '2-hour emergency response'
-      ],
-      caseStudy: 'Managed cold chain distribution for COVID vaccine rollout across 5 states.',
-      image: 'photo-1559757148-5c350d0d3c56'
-    },
-    {
-      icon: Laptop,
-      title: 'Technology & Electronics',
-      description: 'Specialized handling for high-value technology products with security and precision requirements.',
-      challenges: [
-        'High-value product security',
-        'Complex configuration requirements',
-        'Rapid product lifecycle',
-        'Global distribution needs'
-      ],
-      ourSolution: [
-        'Secure handling protocols',
-        'Kitting & configuration services',
-        'Lifecycle management support',
-        'Global fulfillment network'
-      ],
-      results: [
-        '99.99% security compliance',
-        '48-hour configuration time',
-        '30% faster time-to-market',
-        'Global 2-day delivery'
-      ],
-      caseStudy: 'Launched new smartphone globally with 1M units distributed in first week.',
-      image: 'photo-1531297484001-80022131f5a1'
-    },
-    {
-      icon: Car,
-      title: 'Automotive Aftermarket',
-      description: 'Parts distribution and service logistics for automotive aftermarket and service providers.',
-      challenges: [
-        'Massive SKU complexity',
-        'Emergency part delivery',
-        'Dealer network support',
-        'Returns & core management'
-      ],
-      ourSolution: [
-        'Advanced SKU management',
-        'Same-day parts delivery',
-        'Dealer portal integration',
-        'Core exchange programs'
-      ],
-      results: [
-        '99.5% parts availability',
-        '4-hour emergency delivery',
-        '95% dealer satisfaction',
-        '80% core recovery rate'
-      ],
-      caseStudy: 'Optimized parts distribution for major auto brand, serving 2,000+ dealers.',
-      image: 'photo-1486496572940-2bb2341fdbdf'
+      caseStudy: 'Streamlined foodservice distribution across NYC 5 boroughs, Westchester, and Hamptons with 99% accuracy.',
+      image: 'photo-1556909114-f6e7ad7d3136'
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Scalability',
-      description: 'Grow your business without logistics constraints'
+      icon: Thermometer,
+      title: 'Temperature Control',
+      description: '99.9% compliance within specified temperature ranges'
     },
     {
-      icon: DollarSign,
-      title: 'Cost Reduction',
-      description: 'Reduce logistics costs by 25-40% on average'
+      icon: Snowflake,
+      title: 'Cold Chain Integrity',
+      description: 'Unbroken cold chain from storage to delivery'
     },
     {
       icon: Clock,
-      title: 'Speed',
-      description: 'Faster delivery times and improved customer satisfaction'
+      title: 'Fresh Delivery',
+      description: 'Extended shelf life through optimal cold storage'
     },
     {
       icon: Users,
-      title: 'Expertise',
-      description: 'Industry-specific knowledge and best practices'
+      title: 'Cold Storage Expertise',
+      description: 'Specialized knowledge in temperature-controlled logistics'
     }
   ];
 
@@ -202,10 +152,10 @@ const Solutions = () => {
       {/* Hero Section */}
       <section className="hero-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Industry-Specific Solutions</h1>
+          <h1 className="text-5xl font-bold mb-6">Cold Storage & Temperature-Controlled Solutions</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Tailored logistics solutions designed for the unique challenges and requirements 
-            of your industry, backed by proven results and deep expertise.
+            Specialized cold storage and temperature-controlled logistics solutions for wine & spirits, 
+            specialty cheese, confectionery, and foodservice supply chains across the Northeast.
           </p>
           <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
             Find Your Solution
@@ -311,9 +261,9 @@ const Solutions = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Seamless Integration</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Cold Chain Integration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our solutions integrate with your existing systems and workflows for a smooth transition
+              Our temperature-controlled solutions integrate seamlessly with your cold chain requirements
             </p>
           </div>
           
@@ -321,11 +271,11 @@ const Solutions = () => {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8 text-center">
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Laptop className="h-8 w-8 text-white" />
+                  <Thermometer className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Platform Integration</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">Cold Storage Integration</h3>
                 <p className="text-muted-foreground">
-                  Connect with leading e-commerce platforms, ERPs, and WMS systems
+                  Seamless integration with temperature monitoring and cold chain management systems
                 </p>
               </CardContent>
             </Card>
@@ -335,9 +285,9 @@ const Solutions = () => {
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Real-Time Analytics</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">Temperature Analytics</h3>
                 <p className="text-muted-foreground">
-                  Live dashboards and reporting for complete supply chain visibility
+                  Real-time temperature monitoring and cold chain compliance reporting
                 </p>
               </CardContent>
             </Card>
@@ -347,9 +297,9 @@ const Solutions = () => {
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Dedicated Support</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">Cold Storage Expertise</h3>
                 <p className="text-muted-foreground">
-                  Industry experts and account managers for ongoing optimization
+                  Temperature-controlled logistics specialists and dedicated cold chain support
                 </p>
               </CardContent>
             </Card>
@@ -360,17 +310,17 @@ const Solutions = () => {
       {/* CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Industry Operations?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cold Chain Operations?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our industry experts design a customized solution that addresses your specific 
-            challenges and drives measurable results.
+            Let our cold storage experts design a temperature-controlled solution that preserves quality, 
+            ensures compliance, and drives measurable results for your perishable goods.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-              Schedule Industry Consultation
+              Schedule Cold Storage Consultation
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              Download Industry Guide
+              Download Cold Chain Guide
             </Button>
           </div>
         </div>

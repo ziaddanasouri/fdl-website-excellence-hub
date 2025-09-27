@@ -22,37 +22,40 @@ import {
   Zap,
   Target,
   Mail,
-  Phone
+  Phone,
+  Thermometer,
+  Snowflake,
+  Wine
 } from 'lucide-react';
 
 const Index = () => {
   const [trackingNumber, setTrackingNumber] = useState('');
 
   const stats = [
-    { label: 'Packages Delivered', value: '10M+', icon: Package },
-    { label: 'Global Locations', value: '150+', icon: Globe },
-    { label: 'Happy Customers', value: '50K+', icon: Users },
-    { label: 'Years Experience', value: '25+', icon: Award },
+    { label: 'Cold Storage Capacity', value: '2M+ ft³', icon: Snowflake },
+    { label: 'Northeast Locations', value: '25+', icon: Globe },
+    { label: 'Temperature Zones', value: '50+', icon: Thermometer },
+    { label: 'Years Cold Chain Experience', value: '25+', icon: Award },
   ];
 
   const services = [
     {
-      icon: Package,
-      title: '3PL Services',
-      description: 'Complete third-party logistics solutions tailored to your business needs.',
-      features: ['Inventory Management', 'Order Fulfillment', 'Returns Processing']
+      icon: Snowflake,
+      title: 'Cold Storage & Warehousing',
+      description: 'Multi-temperature zone facilities with specialized cold storage capabilities.',
+      features: ['Temperature Control (-20°F to +60°F)', 'Blast Freezing', 'Real-Time Monitoring']
     },
     {
       icon: Truck,
-      title: 'Last Mile Delivery',
-      description: 'Fast, reliable last-mile delivery solutions for e-commerce and retail.',
-      features: ['Same-Day Delivery', 'White Glove Service', 'Real-Time Tracking']
+      title: 'Refrigerated Delivery',
+      description: 'Temperature-controlled delivery solutions across the Northeast region.',
+      features: ['Cold Chain Integrity', 'GPS Temperature Tracking', 'Northeast Coverage']
     },
     {
-      icon: Globe,
-      title: 'Global Transportation',
-      description: 'Worldwide freight and transportation services across all modes.',
-      features: ['Air Freight', 'Ocean Freight', 'Ground Transportation']
+      icon: Wine,
+      title: 'Specialized Handling',
+      description: 'Expert handling for wine, cheese, confectionery, and foodservice products.',
+      features: ['Wine Storage (55-60°F)', 'Cheese Aging (35-40°F)', 'Climate Control']
     }
   ];
 
@@ -90,16 +93,16 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Logistics Solutions That 
-                <span className="text-blue-300 block">Scale Your Business</span>
+                Cold Storage Solutions That 
+                <span className="text-blue-300 block">Preserve Your Quality</span>
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                From 3PL services to last-mile delivery, FDL provides world-class logistics solutions 
-                that power your growth. Join 50,000+ satisfied customers worldwide.
+                From wine storage to refrigerated delivery, FDL DNT provides specialized temperature-controlled 
+                logistics solutions across the Northeast. Preserving quality for 25+ years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-4 px-8 text-lg">
-                  Get Free Quote
+                  Get Cold Storage Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 text-lg">
@@ -156,9 +159,9 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Core Services</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Our Cold Storage Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive logistics solutions designed to optimize your supply chain and accelerate growth
+              Specialized temperature-controlled solutions designed to preserve quality and ensure compliance
             </p>
           </div>
           
@@ -195,9 +198,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose FDL Logistics?</h2>
+              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose FDL DNT Cold Storage?</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                We combine cutting-edge technology with industry expertise to deliver unmatched logistics solutions.
+                We combine advanced temperature control technology with cold chain expertise to deliver unmatched preservation solutions.
               </p>
               
               <div className="space-y-6">
@@ -206,8 +209,8 @@ const Index = () => {
                     <Zap className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">Lightning Fast</h3>
-                    <p className="text-muted-foreground">Advanced routing algorithms ensure fastest delivery times in the industry.</p>
+                    <h3 className="text-lg font-semibold text-primary mb-2">Temperature Precision</h3>
+                    <p className="text-muted-foreground">Advanced climate control systems ensure precise temperature maintenance 24/7.</p>
                   </div>
                 </div>
                 
@@ -216,8 +219,8 @@ const Index = () => {
                     <Shield className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">100% Secure</h3>
-                    <p className="text-muted-foreground">Military-grade security protocols protect your valuable shipments.</p>
+                    <h3 className="text-lg font-semibold text-primary mb-2">Cold Chain Integrity</h3>
+                    <p className="text-muted-foreground">Unbroken cold chain protocols preserve product quality from storage to delivery.</p>
                   </div>
                 </div>
                 
@@ -226,8 +229,8 @@ const Index = () => {
                     <Target className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">99.9% Accuracy</h3>
-                    <p className="text-muted-foreground">Precision tracking and delivery with real-time visibility.</p>
+                    <h3 className="text-lg font-semibold text-primary mb-2">99.9% Compliance</h3>
+                    <p className="text-muted-foreground">Temperature compliance tracking with real-time monitoring and alerts.</p>
                   </div>
                 </div>
               </div>
@@ -245,8 +248,8 @@ const Index = () => {
                     <TrendingUp className="h-8 w-8 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-primary">98.5%</p>
-                    <p className="text-sm text-muted-foreground">On-Time Delivery</p>
+                    <p className="text-2xl font-bold text-primary">99.9%</p>
+                    <p className="text-sm text-muted-foreground">Temperature Compliance</p>
                   </div>
                 </div>
               </div>
@@ -290,10 +293,10 @@ const Index = () => {
       {/* Lead Magnet CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Logistics?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Cold Chain?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Download our free Supply Chain Optimization Guide and discover how to reduce costs by up to 35% 
-            while improving delivery performance.
+            Download our free Cold Chain Optimization Guide and discover how to maintain 99.9% temperature compliance 
+            while reducing spoilage and improving product quality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
@@ -303,14 +306,14 @@ const Index = () => {
               className="bg-white text-gray-900 border-0"
             />
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold px-8">
-              Get Free Guide
+              Get Cold Chain Guide
             </Button>
           </div>
           
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               <Phone className="h-4 w-4 mr-2" />
-              Schedule Consultation
+              Schedule Cold Storage Consultation
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               <Mail className="h-4 w-4 mr-2" />
