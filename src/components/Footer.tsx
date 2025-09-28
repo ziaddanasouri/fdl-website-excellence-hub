@@ -60,18 +60,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-3">
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white transition-colors">Food & Beverage</Link></li>
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white transition-colors">Pharmaceuticals</Link></li>
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white transition-colors">Fresh Produce</Link></li>
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white transition-colors">Dairy Products</Link></li>
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white transition-colors">Flowers & Plants</Link></li>
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white transition-colors">Biotechnology</Link></li>
-            </ul>
-          </div>
 
           {/* Holiday Schedule */}
           <div>
