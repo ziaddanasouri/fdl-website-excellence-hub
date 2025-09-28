@@ -33,7 +33,7 @@ const About = () => {
     {
       icon: Zap,
       title: 'Food Safety First',
-      description: 'HACCP-certified processes and FDA-compliant facilities ensuring the highest food safety standards.'
+      description: 'Industry-standard processes and quality-assured facilities ensuring the highest food safety practices.'
     },
     {
       icon: Heart,
@@ -63,7 +63,7 @@ const About = () => {
     {
       name: 'David Kim',
       role: 'Director of Food Safety',
-      bio: 'HACCP expert, former FDA inspector, 18 years in food safety and regulatory compliance',
+      bio: 'Quality assurance expert, food safety specialist, 18 years in cold chain operations and quality management',
       image: 'photo-1507003211169-0a1dd7228f2d'
     },
     {
@@ -85,14 +85,6 @@ const About = () => {
     { year: '2024', event: 'Leading Northeast provider of specialty cold chain logistics' }
   ];
 
-  const certifications = [
-    'HACCP (Hazard Analysis Critical Control Points)',
-    'SQF (Safe Quality Food) Level 2 Certified',
-    'FDA Registered Cold Storage Facility',
-    'USDA Certified for Wine & Spirits Storage',
-    'BRC (British Retail Consortium) Global Standard',
-    'ISO 22000 Food Safety Management'
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -160,7 +152,7 @@ const About = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Ensure food safety compliance throughout the cold chain</span>
+                  <span className="text-muted-foreground">Ensure quality standards throughout the cold chain</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />

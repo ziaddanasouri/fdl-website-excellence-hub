@@ -40,8 +40,8 @@ const ColdStorageWarehousing = () => {
     },
     {
       icon: Shield,
-      title: "Pharmaceutical-Grade Standards",
-      description: "FDA and HACCP certified facilities for sensitive products"
+      title: "Quality-Grade Standards",
+      description: "Industry-leading quality facilities for sensitive products"
     },
     {
       icon: Building,
@@ -210,7 +210,7 @@ const ColdStorageWarehousing = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
-                  <p><strong>Compliance Violations:</strong> FDA penalties range from $10K to $500K</p>
+                  <p><strong>Quality Violations:</strong> Industry penalties range from $10K to $500K</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
@@ -233,7 +233,7 @@ const ColdStorageWarehousing = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                  <p><strong>Guaranteed Compliance:</strong> HACCP, FDA, and USDA certified facilities</p>
+                  <p><strong>Guaranteed Quality:</strong> Industry-leading quality facilities and processes</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />

@@ -76,13 +76,13 @@ const ColdChainTransportation = () => {
     }
   ];
 
-  const compliance = [
-    "FDA Food Safety Modernization Act (FSMA)",
-    "USDA Transportation Guidelines", 
-    "HACCP Certified Drivers",
-    "DOT Safety Compliance",
-    "Temperature Excursion Protocols",
-    "Chain of Custody Documentation"
+  const qualityStandards = [
+    "Industry Best Practices",
+    "Quality Management Systems", 
+    "Operational Excellence",
+    "Documentation Standards",
+    "Process Optimization",
+    "Performance Standards"
   ];
 
   const cities = [

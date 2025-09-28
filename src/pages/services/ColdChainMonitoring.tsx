@@ -77,8 +77,8 @@ const ColdChainMonitoring = () => {
     },
     {
       icon: Shield,
-      title: "Regulatory Compliance",
-      description: "FDA, USDA, and HACCP validation ready"
+      title: "Quality Standards",
+      description: "Industry-leading quality management and operational excellence"
     }
   ];
 
@@ -91,13 +91,13 @@ const ColdChainMonitoring = () => {
     { type: "Trend Deviation", response: "15 minutes", channels: "Email, Dashboard" }
   ];
 
-  const complianceFeatures = [
-    "21 CFR Part 11 Compliant",
-    "FDA FSMA Traceability", 
-    "USDA Documentation",
-    "HACCP Validation",
-    "GDP Compliance",
-    "ISO 9001 Standards"
+  const qualityFeatures = [
+    "Industry Best Practices",
+    "Quality Management Systems", 
+    "Operational Excellence",
+    "Performance Standards",
+    "Quality Assurance",
+    "Process Optimization"
   ];
 
   const analytics = [
@@ -106,7 +106,7 @@ const ColdChainMonitoring = () => {
     { metric: "<30sec", description: "Alert response time" },
     { metric: "24/7/365", description: "Monitoring coverage" },
     { metric: "Unlimited", description: "Data retention" },
-    { metric: "100%", description: "Compliance rate" }
+    { metric: "100%", description: "Quality rate" }
   ];
 
   return (
@@ -174,7 +174,7 @@ const ColdChainMonitoring = () => {
                     <span className="font-semibold">&lt;30 seconds</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Compliance Rate:</span>
+                    <span>Quality Rate:</span>
                     <span className="font-semibold">100%</span>
                   </div>
                 </div>
@@ -311,23 +311,23 @@ const ColdChainMonitoring = () => {
         </div>
       </section>
 
-      {/* Compliance & Reporting */}
+      {/* Quality & Reporting */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-bold text-primary mb-8">Automated Compliance Reporting</h2>
+              <h2 className="text-3xl font-bold text-primary mb-8">Automated Quality Reporting</h2>
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <FileText className="h-8 w-8 text-primary mr-4" />
                     <div>
-                      <h3 className="text-xl font-bold text-primary">Regulatory Standards</h3>
-                      <p className="text-muted-foreground">Meet all industry compliance requirements</p>
+                      <h3 className="text-xl font-bold text-primary">Quality Standards</h3>
+                      <p className="text-muted-foreground">Meet all industry quality requirements</p>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    {complianceFeatures.map((feature, index) => (
+                    {qualityFeatures.map((feature, index) => (
                       <div key={index} className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>

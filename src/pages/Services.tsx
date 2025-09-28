@@ -34,9 +34,9 @@ const Services = () => {
         'Temperature Monitoring Systems',
         'Cold Storage Inventory Management',
         'Pharmaceutical-Grade Environments',
-        'HACCP Certified Facilities'
+        'Quality-Assured Facilities'
       ],
-      benefits: 'Maintain 99.9% temperature compliance while reducing spoilage by up to 95%'
+      benefits: 'Maintain 99.9% temperature accuracy while reducing spoilage by up to 95%'
     },
     {
       icon: Warehouse,
@@ -75,7 +75,7 @@ const Services = () => {
         'Temperature Excursion Alerts',
         'Cold Chain Cross-Docking',
         'Multi-Temperature Deliveries',
-        'Compliance Documentation',
+        'Quality Documentation',
         '24/7 Monitoring Systems'
       ],
       benefits: 'Ensure product integrity across the entire cold chain network'
@@ -97,16 +97,16 @@ const Services = () => {
     {
       icon: BarChart3,
       title: 'Cold Chain Monitoring & Analytics',
-      description: 'Real-time temperature tracking and cold chain compliance reporting with predictive analytics.',
+      description: 'Real-time temperature tracking and cold chain performance reporting with predictive analytics.',
       features: [
         'Real-Time Temperature Dashboards',
-        'Cold Chain Compliance Reports',
+        'Cold Chain Performance Reports',
         'Temperature Excursion Alerts',
         'Predictive Analytics',
-        'Regulatory Documentation',
+        'Performance Documentation',
         'Performance Metrics Tracking'
       ],
-      benefits: 'Achieve 100% regulatory compliance with data-driven cold chain optimization'
+      benefits: 'Achieve 100% quality standards with data-driven cold chain optimization'
     }
   ];
 
@@ -128,7 +128,7 @@ const Services = () => {
           <h1 className="text-5xl font-bold mb-6">Temperature-Controlled Logistics Services</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             From cold storage to refrigerated delivery, we provide specialized temperature-controlled solutions 
-            that preserve quality and ensure compliance across the Northeast region.
+            that preserve quality and maintain standards across the Northeast region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/quote/cold-storage'}>
@@ -235,7 +235,7 @@ const Services = () => {
           <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cold Chain?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let our cold storage experts design a temperature-controlled solution that preserves quality, 
-            ensures compliance, and scales with your perishable goods business.
+            maintains quality standards, and scales with your perishable goods business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/consultation'}>

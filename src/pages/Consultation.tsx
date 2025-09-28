@@ -46,9 +46,9 @@ const Consultation = () => {
   ];
 
   const consultationTypes = [
-    'Cold Storage Assessment',
+    'Quality Control Assessment',
     'Supply Chain Optimization',
-    'Compliance & Regulatory',
+    'Operational Excellence',
     'Cost Reduction Analysis',
     'Technology Integration',
     'Expansion Planning',

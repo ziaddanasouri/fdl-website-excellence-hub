@@ -100,7 +100,7 @@ const ColdStorageQuote = () => {
   const additionalServices = [
     'Quality Control Inspections',
     'Packaging & Repackaging',
-    'Labeling & Compliance',
+    'Labeling & Documentation',
     'Inventory Management',
     'Order Fulfillment',
     'Returns Processing',
@@ -377,7 +377,7 @@ const ColdStorageQuote = () => {
                         id="specialRequirements"
                         value={formData.specialRequirements}
                         onChange={(e) => setFormData({ ...formData, specialRequirements: e.target.value })}
-                        placeholder="Any special handling, compliance, or equipment requirements..."
+                        placeholder="Any special handling, quality standards, or equipment requirements..."
                       />
                     </div>
                   </div>

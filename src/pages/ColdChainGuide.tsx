@@ -64,11 +64,11 @@ const ColdChainGuide = () => {
     { zone: 'Controlled', range: '50°F to 70°F', products: 'Baked goods, canned items', color: 'bg-yellow-500' }
   ];
 
-  const complianceStandards = [
-    { standard: 'FDA', description: 'Food and Drug Administration regulations for food safety' },
-    { standard: 'HACCP', description: 'Hazard Analysis Critical Control Points system' },
-    { standard: 'GDP', description: 'Good Distribution Practice for pharmaceuticals' },
-    { standard: 'FSMA', description: 'Food Safety Modernization Act compliance' }
+  const qualityStandards = [
+    { standard: 'Temperature Control', description: 'Precise temperature monitoring and management systems' },
+    { standard: 'Quality Assurance', description: 'Comprehensive quality control and verification processes' },
+    { standard: 'Best Practices', description: 'Industry-leading operational procedures and protocols' },
+    { standard: 'Documentation', description: 'Complete traceability and operational record keeping' }
   ];
 
   const bestPractices = [
@@ -92,7 +92,7 @@ const ColdChainGuide = () => {
           <h1 className="text-5xl font-bold mb-6">Complete Cold Chain Management Guide</h1>
           <p className="text-xl text-blue-100 mb-8">
             Master temperature-controlled logistics with our comprehensive guide covering 
-            compliance, best practices, and optimization strategies.
+            best practices, quality standards, and optimization strategies.
           </p>
           <Button 
             size="lg" 
@@ -118,7 +118,7 @@ const ColdChainGuide = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
               { icon: Thermometer, title: 'Temperature Zones', description: '45+ pages covering optimal temperature ranges' },
-              { icon: Shield, title: 'Compliance Standards', description: 'FDA, HACCP, and industry regulations' },
+              { icon: Shield, title: 'Quality Standards', description: 'Industry best practices and quality protocols' },
               { icon: BarChart3, title: 'Performance Metrics', description: 'KPIs and monitoring best practices' },
               { icon: Users, title: 'Training Materials', description: 'Staff education and certification guides' }
             ].map((item, index) => (
@@ -165,13 +165,13 @@ const ColdChainGuide = () => {
         </div>
       </section>
 
-      {/* Compliance Standards */}
+      {/* Quality Standards */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">Compliance Standards</h2>
+          <h2 className="text-3xl font-bold text-primary text-center mb-12">Quality Standards</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceStandards.map((standard, index) => (
+            {qualityStandards.map((standard, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">

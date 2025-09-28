@@ -161,7 +161,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Our Cold Storage Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized temperature-controlled solutions designed to preserve quality and ensure compliance
+              Specialized temperature-controlled solutions designed to preserve quality and maintain standards
             </p>
           </div>
           
@@ -260,7 +260,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-primary">99.9%</p>
-                    <p className="text-sm text-muted-foreground">Temperature Compliance</p>
+                    <p className="text-sm text-muted-foreground">99.9% Temperature Accuracy</p>
                   </div>
                 </div>
               </div>
@@ -305,10 +305,10 @@ const Index = () => {
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Cold Chain?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Download our free Cold Chain Optimization Guide and discover how to maintain 99.9% temperature compliance 
-            while reducing spoilage and improving product quality.
-          </p>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Download our free Cold Chain Optimization Guide and discover how to maintain 99.9% temperature accuracy 
+              while reducing spoilage and improving product quality.
+            </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
             <Input 

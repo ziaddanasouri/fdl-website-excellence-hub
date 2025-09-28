@@ -29,9 +29,9 @@ const WineSpirits = () => {
     },
     {
       icon: ShieldCheck,
-      title: 'State Compliance Management',
-      description: 'Full compliance with state-specific wine and spirits distribution regulations across all territories.',
-      features: ['TTB license compliance', 'State permit management', 'Tax compliance reporting', 'Documentation handling']
+      title: 'Quality Management',
+      description: 'Complete quality assurance and operational excellence across all distribution territories.',
+      features: ['License management', 'Permit coordination', 'Quality reporting', 'Documentation handling']
     },
     {
       icon: Clock,
@@ -49,19 +49,19 @@ const WineSpirits = () => {
 
   const capabilities = [
     { metric: '55-60°F', description: 'Precise Temperature Control' },
-    { metric: '100%', description: 'Regulatory Compliance' },
+    { metric: '100%', description: 'Quality Standards' },
     { metric: '99.8%', description: 'Inventory Accuracy' },
     { metric: '15+', description: 'States Covered' },
     { metric: '24/7', description: 'Temperature Monitoring' },
     { metric: '0', description: 'Quality Incidents' }
   ];
 
-  const certifications = [
-    'FDA Registered Facility',
-    'SQF Certified',
-    'HACCP Compliant',
-    'TTB Licensed',
-    'State Distribution Permits',
+  const qualityStandards = [
+    'Industry Standards Facility',
+    'Quality Certified',
+    'Operational Excellence',
+    'Licensed Operations',
+    'Distribution Permits',
     'Temperature Validation Certified'
   ];
 
@@ -71,8 +71,8 @@ const WineSpirits = () => {
       answer: 'We maintain precise climate control between 55-60°F (13-15°C) with humidity levels of 60-70% to ensure optimal wine preservation and prevent cork deterioration.'
     },
     {
-      question: 'How do you handle state compliance for wine distribution?',
-      answer: 'We manage all aspects of state compliance including TTB licensing, state permits, tax reporting, and documentation to ensure legal distribution across all covered territories.'
+      question: 'How do you handle quality assurance for wine distribution?',
+      answer: 'We manage all aspects of quality operations including licensing, permits, quality reporting, and documentation to ensure optimal distribution across all covered territories.'
     },
     {
       question: 'Can you handle both imported and domestic wines?',
@@ -80,7 +80,7 @@ const WineSpirits = () => {
     },
     {
       question: 'What monitoring systems do you use?',
-      answer: 'We use 24/7 temperature and humidity monitoring with real-time alerts, data logging, and detailed reporting to ensure continuous climate control and compliance documentation.'
+      answer: 'We use 24/7 temperature and humidity monitoring with real-time alerts, data logging, and detailed reporting to ensure continuous climate control and quality documentation.'
     }
   ];
 
@@ -161,8 +161,8 @@ const WineSpirits = () => {
                     <FileCheck className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-2">Regulatory Complexity</h4>
-                    <p className="text-muted-foreground">Complex state-by-state regulations for wine distribution, licensing, and tax compliance requirements.</p>
+                    <h4 className="font-semibold text-primary mb-2">Quality Operations</h4>
+                    <p className="text-muted-foreground">Complex operational requirements for wine distribution, licensing, and quality management across territories.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -193,8 +193,8 @@ const WineSpirits = () => {
                     <ShieldCheck className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-2">Full Compliance Management</h4>
-                    <p className="text-muted-foreground">Complete handling of TTB licensing, state permits, tax compliance, and regulatory documentation.</p>
+                    <h4 className="font-semibold text-primary mb-2">Complete Quality Management</h4>
+                    <p className="text-muted-foreground">Complete handling of licensing, permits, quality assurance, and operational documentation.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -282,11 +282,11 @@ const WineSpirits = () => {
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Certifications & Compliance</h2>
-            <p className="text-lg text-muted-foreground">Fully certified and compliant wine storage facility</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
+          <h2 className="text-3xl font-bold text-primary mb-4">Quality Standards & Operations</h2>
+          <p className="text-lg text-muted-foreground">Fully certified and quality-assured wine storage facility</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {qualityStandards.map((cert, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow">
                 <ShieldCheck className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="font-medium text-primary">{cert}</span>

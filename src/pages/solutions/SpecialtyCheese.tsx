@@ -64,10 +64,10 @@ const SpecialtyCheese = () => {
     { name: 'Cultured Products', temp: '35-38°F', humidity: '80%', aging: 'Varies' }
   ];
 
-  const certifications = [
-    'FDA Registered Facility',
-    'SQF Certified',
-    'HACCP Compliant',
+  const qualityStandards = [
+    'Industry Standards Facility',
+    'Quality Certified',
+    'Operational Excellence',
     'Organic Certified',
     'Kosher Certified',
     'Dairy Processing License'
@@ -322,15 +322,15 @@ const SpecialtyCheese = () => {
         </div>
       </section>
 
-      {/* Certifications */}
+      {/* Quality Standards */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Certifications & Standards</h2>
-            <p className="text-lg text-muted-foreground">Certified dairy storage facility meeting all industry standards</p>
+            <h2 className="text-3xl font-bold text-primary mb-4">Quality Standards & Operations</h2>
+            <p className="text-lg text-muted-foreground">Quality-assured dairy storage facility meeting all industry standards</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
+            {qualityStandards.map((cert, index) => (
               <div key={index} className="flex items-center space-x-3 bg-slate-50 p-4 rounded-lg shadow">
                 <ShieldCheck className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="font-medium text-primary">{cert}</span>
