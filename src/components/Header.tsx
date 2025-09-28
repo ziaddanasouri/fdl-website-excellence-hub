@@ -63,9 +63,6 @@ const Header = () => {
                 Customer Portal
               </Button>
             </a>
-            <Button className="cta-button">
-              Get Quote
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -113,9 +110,6 @@ const Header = () => {
                     Customer Portal
                   </Button>
                 </a>
-                <Button className="cta-button">
-                  Get Quote
-                </Button>
               </div>
             </nav>
           </div>
