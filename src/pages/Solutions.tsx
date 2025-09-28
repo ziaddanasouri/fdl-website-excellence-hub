@@ -240,7 +240,7 @@ const Solutions = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8 text-center">
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -249,18 +249,6 @@ const Solutions = () => {
                 <h3 className="text-xl font-bold text-primary mb-3">Cold Storage Integration</h3>
                 <p className="text-muted-foreground">
                   Seamless integration with temperature monitoring and cold chain management systems
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Temperature Analytics</h3>
-                <p className="text-muted-foreground">
-                  Real-time temperature monitoring and cold chain compliance reporting
                 </p>
               </CardContent>
             </Card>
