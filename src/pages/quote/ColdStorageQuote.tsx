@@ -80,9 +80,7 @@ const ColdStorageQuote = () => {
     { id: 'cold-storage', name: 'Cold Storage & Warehousing', icon: Snowflake, description: 'Multi-temperature zone facilities with blast freezing' },
     { id: 'temp-warehousing', name: 'Temperature-Controlled Warehousing', icon: Warehouse, description: 'Specialized climate control for perishables' },
     { id: 'last-mile-delivery', name: 'Last Mile Delivery Solutions', icon: Truck, description: 'Optimized final-mile delivery service' },
-    { id: 'cold-chain-transport', name: 'Cold Chain Transportation', icon: Thermometer, description: 'Comprehensive refrigerated trucking' },
-    { id: 'cross-docking', name: 'Cold Chain Cross-Docking', icon: ArrowRightLeft, description: 'Temperature-controlled transfer facilities' },
-    { id: 'monitoring', name: 'Cold Chain Monitoring & Analytics', icon: BarChart3, description: 'Real-time temperature tracking and reporting' }
+    { id: 'cross-docking', name: 'Cold Chain Cross-Docking', icon: ArrowRightLeft, description: 'Temperature-controlled transfer facilities' }
   ];
 
   const industries = [

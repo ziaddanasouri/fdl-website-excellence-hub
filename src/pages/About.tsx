@@ -78,9 +78,9 @@ const About = () => {
     { year: '1999', event: 'Founded FDL DNT as specialty cold storage provider in Fond Du Lac, Wisconsin' },
     { year: '2003', event: 'Opened first Northeast facility with wine-specific storage capabilities' },
     { year: '2008', event: 'Acquired artisan cheese aging facility, specialized in temperature-controlled maturation' },
-    { year: '2012', event: 'Launched real-time temperature monitoring across all cold storage facilities' },
+    { year: '2012', event: 'Enhanced temperature control systems across all cold storage facilities' },
     { year: '2016', event: 'Expanded to full Northeast coverage with 8 temperature-controlled facilities' },
-    { year: '2020', event: 'Deployed IoT sensors for 24/7 cold chain monitoring and alerts' },
+    { year: '2020', event: 'Upgraded facility systems for enhanced temperature control and operations' },
     { year: '2022', event: 'Achieved 100% renewable energy in all cold storage operations' },
     { year: '2024', event: 'Leading Northeast provider of specialty cold chain logistics' }
   ];

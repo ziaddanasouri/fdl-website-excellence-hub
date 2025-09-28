@@ -67,20 +67,6 @@ const Services = () => {
       benefits: 'Achieve 95% first-attempt success rate while improving customer satisfaction'
     },
     {
-      icon: Thermometer,
-      title: 'Cold Chain Transportation',
-      description: 'Comprehensive refrigerated trucking with temperature monitoring and cross-docking services.',
-      features: [
-        'Refrigerated Trucking Fleet',
-        'Temperature Excursion Alerts',
-        'Cold Chain Cross-Docking',
-        'Multi-Temperature Deliveries',
-        'Quality Documentation',
-        '24/7 Monitoring Systems'
-      ],
-      benefits: 'Ensure product integrity across the entire cold chain network'
-    },
-    {
       icon: ArrowRightLeft,
       title: 'Cold Chain Cross-Docking',
       description: 'Temperature-controlled transfer facilities minimizing cold chain breaks for perishable goods.',
@@ -94,20 +80,6 @@ const Services = () => {
       ],
       benefits: 'Reduce handling time while maintaining temperature integrity'
     },
-    {
-      icon: BarChart3,
-      title: 'Cold Chain Monitoring & Analytics',
-      description: 'Real-time temperature tracking and cold chain performance reporting with predictive analytics.',
-      features: [
-        'Real-Time Temperature Dashboards',
-        'Cold Chain Performance Reports',
-        'Temperature Excursion Alerts',
-        'Predictive Analytics',
-        'Performance Documentation',
-        'Performance Metrics Tracking'
-      ],
-      benefits: 'Achieve 100% quality standards with data-driven cold chain optimization'
-    }
   ];
 
   const industries = [
@@ -183,9 +155,7 @@ const Services = () => {
                             '/services/cold-storage-warehousing',
                             '/services/temperature-controlled-warehousing', 
                             '/services/last-mile-delivery',
-                            '/services/cold-chain-transportation',
-                            '/services/cold-chain-cross-docking',
-                            '/services/cold-chain-monitoring'
+                            '/services/cold-chain-cross-docking'
                           ];
                           window.location.href = serviceRoutes[index];
                         }}

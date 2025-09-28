@@ -17,9 +17,7 @@ import WineSpirits from "./pages/solutions/WineSpirits";
 import SpecialtyCheese from "./pages/solutions/SpecialtyCheese";
 import ConfectionerySweets from "./pages/solutions/ConfectionerySweets";
 import RetailFoodservice from "./pages/solutions/RetailFoodservice";
-import ColdChainTransportation from "./pages/services/ColdChainTransportation";
 import ColdChainCrossDocking from "./pages/services/ColdChainCrossDocking";
-import ColdChainMonitoring from "./pages/services/ColdChainMonitoring";
 import Tracking from "./pages/Tracking";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -79,9 +77,7 @@ const App = () => (
           <Route path="/solutions/specialty-cheese-dairy" element={<SpecialtyCheese />} />
           <Route path="/solutions/confectionery-sweets" element={<ConfectionerySweets />} />
           <Route path="/solutions/retail-foodservice" element={<RetailFoodservice />} />
-          <Route path="/services/cold-chain-transportation" element={<ColdChainTransportation />} />
           <Route path="/services/cold-chain-cross-docking" element={<ColdChainCrossDocking />} />
-          <Route path="/services/cold-chain-monitoring" element={<ColdChainMonitoring />} />
           <Route path="/cold-chain-guide" element={<ColdChainGuide />} />
           <Route path="/delivery-schedule" element={<DeliverySchedule />} />
           <Route path="/quote/cold-storage" element={<ColdStorageQuote />} />
