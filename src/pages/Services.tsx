@@ -29,7 +29,7 @@ const Services = () => {
       title: 'Cold Storage & Warehousing',
       description: 'Multi-temperature zone facilities with blast freezing capabilities and specialized cold storage.',
       features: [
-        'Multi-Temperature Zone Control (-20°F to +60°F)',
+        'Precision Temperature Control',
         'Blast Freezing Capabilities', 
         'Temperature Monitoring Systems',
         'Cold Storage Inventory Management',
@@ -43,8 +43,8 @@ const Services = () => {
       title: 'Temperature-Controlled Warehousing',
       description: 'Specialized cold storage facilities with precise climate control for perishable goods.',
       features: [
-        'Wine Storage (55-60°F Stable)',
-        'Cheese Aging Facilities (35-40°F)',
+        'Optimal Wine Storage',
+        'Cheese Aging Facilities',
         'Confectionery Climate Control',
         'Real-Time Temperature Monitoring',
         'Humidity Management Systems',

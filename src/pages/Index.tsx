@@ -43,7 +43,7 @@ const Index = () => {
       icon: Snowflake,
       title: 'Cold Storage & Warehousing',
       description: 'Multi-temperature zone facilities with specialized cold storage capabilities.',
-      features: ['Temperature Control (-20°F to +60°F)', 'Blast Freezing', 'Real-Time Monitoring']
+      features: ['Precise Temperature Control', 'Blast Freezing', 'Real-Time Monitoring']
     },
     {
       icon: Truck,
@@ -55,7 +55,7 @@ const Index = () => {
       icon: Wine,
       title: 'Specialized Handling',
       description: 'Expert handling for wine, cheese, and confectionery products.',
-      features: ['Wine Storage (55-60°F)', 'Cheese Aging (35-40°F)', 'Climate Control']
+      features: ['Optimal Wine Storage', 'Cheese Aging Facilities', 'Climate Control']
     }
   ];
 

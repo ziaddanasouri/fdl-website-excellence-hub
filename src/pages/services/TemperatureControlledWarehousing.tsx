@@ -29,21 +29,21 @@ const TemperatureControlledWarehousing = () => {
     {
       icon: Wine,
       title: "Wine Storage Excellence",
-      temp: "55-60°F",
+      temp: "Cool Storage",
       description: "Maintain perfect wine conditions with humidity control and vibration isolation",
       features: ["Humidity 50-80%", "Vibration-free environment", "UV protection", "Proper ventilation"]
     },
     {
       icon: ChefHat,
       title: "Cheese Aging Facilities", 
-      temp: "35-40°F",
+      temp: "Chilled Storage",
       description: "Specialized aging environments for artisan cheeses with precise humidity",
       features: ["Humidity 80-95%", "Air circulation control", "Separate aging rooms", "Quality monitoring"]
     },
     {
       icon: Candy,
       title: "Confectionery Control",
-      temp: "60-70°F", 
+      temp: "Climate Controlled", 
       description: "Prevent blooming and melting with precise temperature and humidity management",
       features: ["Low humidity control", "Consistent temperature", "Clean environment", "Quick access"]
     }
@@ -133,19 +133,19 @@ const TemperatureControlledWarehousing = () => {
             <div className="lg:text-right">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">Climate Zones</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center"><Wine className="h-4 w-4 mr-2" /> Wine Storage</span>
-                    <Badge variant="secondary">55-60°F</Badge>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center"><ChefHat className="h-4 w-4 mr-2" /> Cheese Aging</span>
-                    <Badge variant="secondary">35-40°F</Badge>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center"><Candy className="h-4 w-4 mr-2" /> Confectionery</span>
-                    <Badge variant="secondary">60-70°F</Badge>
-                  </div>
+                   <div className="space-y-4">
+                     <div className="flex justify-between items-center">
+                       <span className="flex items-center"><Wine className="h-4 w-4 mr-2" /> Wine Storage</span>
+                       <Badge variant="secondary">Cool</Badge>
+                     </div>
+                     <div className="flex justify-between items-center">
+                       <span className="flex items-center"><ChefHat className="h-4 w-4 mr-2" /> Cheese Aging</span>
+                       <Badge variant="secondary">Chilled</Badge>
+                     </div>
+                     <div className="flex justify-between items-center">
+                       <span className="flex items-center"><Candy className="h-4 w-4 mr-2" /> Confectionery</span>
+                       <Badge variant="secondary">Climate Controlled</Badge>
+                     </div>
                   <div className="pt-4 border-t border-white/20">
                     <div className="text-center">
                       <div className="text-2xl font-bold">250K+ sq ft</div>
@@ -178,7 +178,7 @@ const TemperatureControlledWarehousing = () => {
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-primary">{capability.title}</h3>
-                    <Badge className="bg-green-100 text-green-800">{capability.temp}</Badge>
+                     <Badge className="bg-green-100 text-green-800">{capability.temp}</Badge>
                   </div>
                   <p className="text-muted-foreground mb-6">{capability.description}</p>
                   <div className="space-y-2">

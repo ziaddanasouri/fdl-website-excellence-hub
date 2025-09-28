@@ -26,7 +26,7 @@ const ConfectionerySweets = () => {
       icon: Snowflake,
       title: 'Climate-Controlled Storage',
       description: 'Specialized confectionery storage with precise temperature and humidity control to prevent bloom and maintain quality.',
-      features: ['Temperature control (60-68°F)', 'Humidity management (50-60%)', 'Air circulation systems', 'Bloom prevention protocols']
+      features: ['Climate-controlled storage', 'Humidity management (50-60%)', 'Air circulation systems', 'Bloom prevention protocols']
     },
     {
       icon: Droplets,
@@ -49,7 +49,7 @@ const ConfectionerySweets = () => {
   ];
 
   const capabilities = [
-    { metric: '60-68°F', description: 'Optimal Temperature Range' },
+    { metric: 'Optimal', description: 'Temperature Range' },
     { metric: '0', description: 'Bloom Incidents' },
     { metric: '99%', description: 'Package Integrity' },
     { metric: '30%', description: 'Extended Product Life' },
@@ -58,19 +58,19 @@ const ConfectionerySweets = () => {
   ];
 
   const productTypes = [
-    { name: 'Premium Chocolate', temp: '60-65°F', humidity: '50-55%', concern: 'Bloom Prevention' },
-    { name: 'Chocolate Confections', temp: '62-68°F', humidity: '50-60%', concern: 'Shape Retention' },
-    { name: 'Hard Candies', temp: '60-70°F', humidity: '45-55%', concern: 'Moisture Absorption' },
-    { name: 'Gummy Products', temp: '60-68°F', humidity: '45-50%', concern: 'Texture Maintenance' },
-    { name: 'Chocolate Bars', temp: '60-65°F', humidity: '50-55%', concern: 'Bloom & Texture' },
-    { name: 'Seasonal Items', temp: '58-65°F', humidity: '50-55%', concern: 'Holiday Quality' }
+    { name: 'Premium Chocolate', temp: 'Climate Controlled', humidity: '50-55%', concern: 'Bloom Prevention' },
+    { name: 'Chocolate Confections', temp: 'Climate Controlled', humidity: '50-60%', concern: 'Shape Retention' },
+    { name: 'Hard Candies', temp: 'Cool Storage', humidity: '45-55%', concern: 'Moisture Absorption' },
+    { name: 'Gummy Products', temp: 'Climate Controlled', humidity: '45-50%', concern: 'Texture Maintenance' },
+    { name: 'Chocolate Bars', temp: 'Climate Controlled', humidity: '50-55%', concern: 'Bloom & Texture' },
+    { name: 'Seasonal Items', temp: 'Climate Controlled', humidity: '50-55%', concern: 'Holiday Quality' }
   ];
 
   const bloomPrevention = [
     {
       title: 'Fat Bloom Prevention',
       description: 'Temperature stability prevents cocoa butter migration',
-      solution: 'Consistent 60-65°F temperature control'
+      solution: 'Consistent temperature control'
     },
     {
       title: 'Sugar Bloom Prevention',
@@ -96,7 +96,7 @@ const ConfectionerySweets = () => {
   const faqs = [
     {
       question: 'How do you prevent chocolate bloom in storage?',
-      answer: 'We maintain consistent temperatures (60-65°F) and humidity levels (50-60%) with controlled air circulation to prevent both fat bloom and sugar bloom formation, ensuring chocolate maintains its appearance and quality.'
+      answer: 'We maintain consistent temperatures and humidity levels with controlled air circulation to prevent both fat bloom and sugar bloom formation, ensuring chocolate maintains its appearance and quality.'
     },
     {
       question: 'Can you handle seasonal confectionery items?',
@@ -213,7 +213,7 @@ const ConfectionerySweets = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-2">Precision Climate Control</h4>
-                    <p className="text-muted-foreground">Specialized storage environments maintaining optimal 60-68°F temperature and 50-60% humidity for perfect confectionery preservation.</p>
+                    <p className="text-muted-foreground">Specialized storage environments maintaining optimal temperature and humidity for perfect confectionery preservation.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

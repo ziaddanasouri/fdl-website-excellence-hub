@@ -26,7 +26,7 @@ const ColdStorageWarehousing = () => {
     {
       icon: Thermometer,
       title: "Multi-Temperature Zone Control",
-      description: "Precise temperature management from -20°F to +60°F with zone-specific controls"
+      description: "Precision temperature management with zone-specific controls"
     },
     {
       icon: Snowflake,
@@ -56,10 +56,10 @@ const ColdStorageWarehousing = () => {
   ];
 
   const industries = [
-    { name: "Wine & Spirits", temp: "55-60°F", benefit: "Preserve flavor profiles" },
-    { name: "Specialty Cheese", temp: "35-40°F", benefit: "Control aging process" },
-    { name: "Confectionery", temp: "60-70°F", benefit: "Prevent melting/blooming" },
-    { name: "Pharmaceuticals", temp: "36-46°F", benefit: "Maintain potency" }
+    { name: "Wine & Spirits", temp: "Cool Storage", benefit: "Preserve flavor profiles" },
+    { name: "Specialty Cheese", temp: "Chilled Storage", benefit: "Control aging process" },
+    { name: "Confectionery", temp: "Climate Controlled", benefit: "Prevent melting/blooming" },
+    { name: "Pharmaceuticals", temp: "Refrigerated Storage", benefit: "Maintain potency" }
   ];
 
   const process = [
@@ -137,11 +137,11 @@ const ColdStorageWarehousing = () => {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 Multi-Temperature Cold Storage & Warehousing
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
-                Preserve product quality with precision temperature control from -20°F to +60°F. 
-                Our HACCP-certified facilities ensure 99.9% compliance for wine, cheese, confectionery, 
+               <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
+                Preserve product quality with precision temperature control. 
+                Our certified facilities ensure 99.9% compliance for wine, cheese, confectionery, 
                 and pharmaceutical storage.
-              </p>
+               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button 
                   size="lg" 
@@ -177,10 +177,10 @@ const ColdStorageWarehousing = () => {
                     <div className="text-2xl sm:text-3xl font-bold">24/7</div>
                     <div className="text-xs sm:text-sm text-blue-100">Monitoring</div>
                   </div>
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-bold">-20°F</div>
-                    <div className="text-xs sm:text-sm text-blue-100">Min Temperature</div>
-                  </div>
+                   <div>
+                     <div className="text-2xl sm:text-3xl font-bold">Ultra-Low</div>
+                     <div className="text-xs sm:text-sm text-blue-100">Temperature Storage</div>
+                   </div>
                 </div>
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/20">
                   <Badge className="bg-green-500/20 text-green-100 border-green-300/30 text-xs sm:text-sm">
@@ -227,7 +227,7 @@ const ColdStorageWarehousing = () => {
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                  <p><strong>Precision Control:</strong> ±1°F accuracy with zone-specific settings</p>
+                  <p><strong>Precision Control:</strong> Precise accuracy with zone-specific settings</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />

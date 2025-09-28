@@ -51,7 +51,7 @@ const ColdChainCrossDocking = () => {
     {
       title: "Climate-Controlled Docks",
       description: "12 temperature-controlled loading bays with seamless truck-to-truck transfer",
-      specs: ["Temperature range: -20°F to +70°F", "Dock seals prevent air infiltration", "Automated temperature logging", "24/7 monitoring systems"]
+      specs: ["Temperature range: Ultra-low to ambient", "Dock seals prevent air infiltration", "Automated temperature logging", "24/7 monitoring systems"]
     },
     {
       title: "Quick Transfer Protocols",
@@ -71,7 +71,7 @@ const ColdChainCrossDocking = () => {
     { metric: "12", description: "Climate-controlled docks" },
     { metric: "30%", description: "Cost reduction vs storage" },
     { metric: "24/7", description: "Operation hours" },
-    { metric: "±1°F", description: "Temperature accuracy" }
+    { metric: "±0.5°", description: "Temperature precision" }
   ];
 
   const processSteps = [
@@ -166,11 +166,11 @@ const ColdChainCrossDocking = () => {
                     <div className="text-sm text-blue-100">Temp Compliance</div>
                   </div>
                 </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Temperature Range:</span>
-                    <span className="font-semibold">-20°F to +70°F</span>
-                  </div>
+                   <div className="space-y-2 text-sm">
+                     <div className="flex justify-between">
+                       <span>Temperature Range:</span>
+                       <span className="font-semibold">Ultra-low to ambient</span>
+                     </div>
                   <div className="flex justify-between">
                     <span>Max Throughput:</span>
                     <span className="font-semibold">500 pallets/hour</span>

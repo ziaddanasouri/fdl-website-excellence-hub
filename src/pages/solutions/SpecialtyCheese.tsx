@@ -29,8 +29,8 @@ const SpecialtyCheese = () => {
     {
       icon: Thermometer,
       title: 'Multi-Zone Temperature Control',
-      description: 'Precise temperature maintenance (35-40°F) across different storage zones for various dairy products.',
-      features: ['35-40°F precision control', 'Zone-specific settings', 'Real-time monitoring', 'Alarm systems']
+      description: 'Precise temperature maintenance across different storage zones for various dairy products.',
+      features: ['Precision temperature control', 'Zone-specific settings', 'Real-time monitoring', 'Alarm systems']
     },
     {
       icon: Package,
@@ -47,7 +47,7 @@ const SpecialtyCheese = () => {
   ];
 
   const capabilities = [
-    { metric: '35-40°F', description: 'Precise Temperature Range' },
+    { metric: 'Chilled', description: 'Temperature Range' },
     { metric: '95%', description: 'Spoilage Reduction' },
     { metric: '100%', description: 'Freshness Maintained' },
     { metric: '80-85%', description: 'Optimal Humidity' },
@@ -56,12 +56,12 @@ const SpecialtyCheese = () => {
   ];
 
   const cheeseTypes = [
-    { name: 'Artisan Hard Cheeses', temp: '35-38°F', humidity: '80%', aging: '3-24 months' },
-    { name: 'Soft Ripened Cheeses', temp: '38-40°F', humidity: '85%', aging: '2-8 weeks' },
-    { name: 'Blue Cheeses', temp: '35-37°F', humidity: '85%', aging: '2-6 months' },
-    { name: 'Fresh Dairy Products', temp: '35-38°F', humidity: '75%', aging: 'None' },
-    { name: 'Specialty Butter', temp: '35-40°F', humidity: '75%', aging: 'None' },
-    { name: 'Cultured Products', temp: '35-38°F', humidity: '80%', aging: 'Varies' }
+    { name: 'Artisan Hard Cheeses', temp: 'Chilled', humidity: '80%', aging: '3-24 months' },
+    { name: 'Soft Ripened Cheeses', temp: 'Chilled', humidity: '85%', aging: '2-8 weeks' },
+    { name: 'Blue Cheeses', temp: 'Chilled', humidity: '85%', aging: '2-6 months' },
+    { name: 'Fresh Dairy Products', temp: 'Chilled', humidity: '75%', aging: 'None' },
+    { name: 'Specialty Butter', temp: 'Chilled', humidity: '75%', aging: 'None' },
+    { name: 'Cultured Products', temp: 'Chilled', humidity: '80%', aging: 'Varies' }
   ];
 
   const qualityStandards = [
@@ -202,7 +202,7 @@ const SpecialtyCheese = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-2">Multi-Zone Climate Control</h4>
-                    <p className="text-muted-foreground">Precise 35-40°F temperature control with zone-specific settings for different dairy product requirements.</p>
+                    <p className="text-muted-foreground">Multi-zone temperature control with zone-specific settings for different dairy product requirements.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

@@ -24,7 +24,7 @@ const WineSpirits = () => {
     {
       icon: Thermometer,
       title: 'Climate-Controlled Wine Storage',
-      description: 'Precision temperature control (55-60°F) with humidity management for optimal wine preservation.',
+      description: 'Precision temperature control with humidity management for optimal wine preservation.',
       features: ['Multi-zone temperature control', 'Humidity regulation (60-70%)', '24/7 monitoring systems', 'Vibration-free storage']
     },
     {
@@ -48,7 +48,7 @@ const WineSpirits = () => {
   ];
 
   const capabilities = [
-    { metric: '55-60°F', description: 'Precise Temperature Control' },
+    { metric: 'Optimal', description: 'Temperature Control' },
     { metric: '100%', description: 'Quality Standards' },
     { metric: '99.8%', description: 'Inventory Accuracy' },
     { metric: '15+', description: 'States Covered' },
@@ -68,7 +68,7 @@ const WineSpirits = () => {
   const faqs = [
     {
       question: 'What temperature range do you maintain for wine storage?',
-      answer: 'We maintain precise climate control between 55-60°F (13-15°C) with humidity levels of 60-70% to ensure optimal wine preservation and prevent cork deterioration.'
+      answer: 'We maintain precise climate control with optimal humidity levels of 60-70% to ensure optimal wine preservation and prevent cork deterioration.'
     },
     {
       question: 'How do you handle quality assurance for wine distribution?',
@@ -153,7 +153,7 @@ const WineSpirits = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-2">Temperature Sensitivity</h4>
-                    <p className="text-muted-foreground">Wine requires precise temperature control (55-60°F) to prevent premature aging, cork deterioration, and flavor degradation.</p>
+                    <p className="text-muted-foreground">Wine requires precise temperature control to prevent premature aging, cork deterioration, and flavor degradation.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

@@ -25,7 +25,7 @@ const Solutions = () => {
       title: 'Wine & Spirits Solutions',
       description: 'Temperature-controlled storage and distribution for imported and domestic wines, spirits, and craft beverages.',
       challenges: [
-        'Precise temperature requirements (55-60°F)',
+        'Precise temperature requirements for wine',
         'State compliance for distribution laws',
         'Quality preservation during transport',
         'Inventory management for various vintages'
@@ -56,12 +56,12 @@ const Solutions = () => {
       ],
       ourSolution: [
         'Dedicated cheese aging facilities',
-        'Multi-zone temperature control (35-40°F)',
+        'Multi-zone temperature control',
         'Specialized dairy product handling',
         'Separate cooler locations'
       ],
       results: [
-        '35-40°F precise temperature control',
+        'Precise temperature control for cheese',
         '100% product freshness maintained',
         '95% reduction in spoilage',
         'Extended shelf life achievement'
