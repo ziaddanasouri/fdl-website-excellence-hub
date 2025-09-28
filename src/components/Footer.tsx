@@ -51,11 +51,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><Link to="/services" className="text-slate-300 hover:text-white transition-colors">Cold Storage</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white transition-colors">Last Mile Delivery</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white transition-colors">Chilled Delivery</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white transition-colors">Temperature Control</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white transition-colors">Cold Chain</Link></li>
+              <li><Link to="/services/cold-storage-warehousing" className="text-slate-300 hover:text-white transition-colors">Cold Storage & Warehousing</Link></li>
+              <li><Link to="/services/temperature-controlled-warehousing" className="text-slate-300 hover:text-white transition-colors">Temperature-Controlled Warehousing</Link></li>
+              <li><Link to="/services/last-mile-delivery" className="text-slate-300 hover:text-white transition-colors">Last Mile Delivery</Link></li>
+              <li><Link to="/services/cold-chain-cross-docking" className="text-slate-300 hover:text-white transition-colors">Cold Chain Cross-Docking</Link></li>
             </ul>
           </div>
 
