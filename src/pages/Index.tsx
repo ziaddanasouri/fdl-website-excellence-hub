@@ -54,7 +54,7 @@ const Index = () => {
     {
       icon: Wine,
       title: 'Specialized Handling',
-      description: 'Expert handling for wine, cheese, confectionery, and foodservice products.',
+      description: 'Expert handling for wine, cheese, and confectionery products.',
       features: ['Wine Storage (55-60°F)', 'Cheese Aging (35-40°F)', 'Climate Control']
     }
   ];

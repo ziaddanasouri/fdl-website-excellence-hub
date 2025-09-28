@@ -92,30 +92,6 @@ const Solutions = () => {
       ],
       image: 'photo-1481391319762-47dff72954d9'
     },
-    {
-      icon: Store,
-      title: 'Retail & Foodservice Supply Chain',
-      description: 'Restaurant supply chain expertise and specialty grocer distribution with geographic coverage across the Northeast.',
-      challenges: [
-        'Multi-location delivery coordination',
-        'Time-sensitive restaurant deliveries',
-        'Specialty grocer requirements',
-        'Geographic coverage demands'
-      ],
-      ourSolution: [
-        'Northeast regional distribution network',
-        'Restaurant-specific delivery windows',
-        'Specialty grocer partnerships',
-        'NY, PA, CT + 5 boroughs coverage'
-      ],
-      results: [
-        '99.2% on-time restaurant delivery',
-        'Complete Northeast coverage',
-        '50+ specialty grocer partnerships',
-        '24/7 emergency delivery capability'
-      ],
-      image: 'photo-1556909114-f6e7ad7d3136'
-    }
   ];
 
   const benefits = [
@@ -151,7 +127,7 @@ const Solutions = () => {
           <h1 className="text-5xl font-bold mb-6">Cold Storage & Temperature-Controlled Solutions</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Specialized cold storage and temperature-controlled logistics solutions for wine & spirits, 
-            specialty cheese, confectionery, and foodservice supply chains across the Northeast.
+            specialty cheese, and confectionery across the Northeast.
           </p>
         </div>
       </section>
@@ -231,8 +207,7 @@ const Solutions = () => {
                       const routes = {
                         'Wine & Spirits Solutions': '/solutions/wine-spirits',
                         'Specialty Cheese & Dairy': '/solutions/specialty-cheese-dairy', 
-                        'Confectionery & Sweets': '/solutions/confectionery-sweets',
-                        'Retail & Foodservice Supply Chain': '/solutions/retail-foodservice'
+                        'Confectionery & Sweets': '/solutions/confectionery-sweets'
                       };
                       window.location.href = routes[solution.title as keyof typeof routes];
                     }}

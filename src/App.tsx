@@ -16,7 +16,7 @@ const LazyLastMileDelivery = lazy(() => import("./pages/services/LastMileDeliver
 import WineSpirits from "./pages/solutions/WineSpirits";
 import SpecialtyCheese from "./pages/solutions/SpecialtyCheese";
 import ConfectionerySweets from "./pages/solutions/ConfectionerySweets";
-import RetailFoodservice from "./pages/solutions/RetailFoodservice";
+
 import ColdChainCrossDocking from "./pages/services/ColdChainCrossDocking";
 import Tracking from "./pages/Tracking";
 import About from "./pages/About";
@@ -76,7 +76,7 @@ const App = () => (
           <Route path="/solutions/wine-spirits" element={<WineSpirits />} />
           <Route path="/solutions/specialty-cheese-dairy" element={<SpecialtyCheese />} />
           <Route path="/solutions/confectionery-sweets" element={<ConfectionerySweets />} />
-          <Route path="/solutions/retail-foodservice" element={<RetailFoodservice />} />
+          
           <Route path="/services/cold-chain-cross-docking" element={<ColdChainCrossDocking />} />
           <Route path="/cold-chain-guide" element={<ColdChainGuide />} />
           <Route path="/delivery-schedule" element={<DeliverySchedule />} />

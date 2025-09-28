@@ -84,7 +84,7 @@ const ColdStorageQuote = () => {
   ];
 
   const industries = [
-    'Wine & Spirits', 'Specialty Cheese', 'Confectionery', 'Foodservice', 
+    'Wine & Spirits', 'Specialty Cheese', 'Confectionery', 
     'Fresh Produce', 'Pharmaceuticals', 'Retail', 'E-commerce', 'Other'
   ];
 
