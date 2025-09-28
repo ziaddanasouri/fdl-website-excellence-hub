@@ -42,7 +42,7 @@ const Consultation = () => {
 
   const industries = [
     'Wine & Spirits', 'Specialty Cheese', 'Confectionery', 
-    'Fresh Produce', 'Pharmaceuticals', 'Retail', 'E-commerce', 'Other'
+    'Pharmaceuticals', 'Retail', 'E-commerce', 'Other'
   ];
 
   const consultationTypes = [

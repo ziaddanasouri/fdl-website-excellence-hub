@@ -107,7 +107,7 @@ const Solutions = () => {
     },
     {
       icon: Clock,
-      title: 'Fresh Delivery',
+      title: 'Chilled Delivery',
       description: 'Extended shelf life through optimal cold storage'
     },
     {

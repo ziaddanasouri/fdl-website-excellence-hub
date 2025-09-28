@@ -59,8 +59,7 @@ const ColdStorageWarehousing = () => {
     { name: "Wine & Spirits", temp: "55-60°F", benefit: "Preserve flavor profiles" },
     { name: "Specialty Cheese", temp: "35-40°F", benefit: "Control aging process" },
     { name: "Confectionery", temp: "60-70°F", benefit: "Prevent melting/blooming" },
-    { name: "Pharmaceuticals", temp: "36-46°F", benefit: "Maintain potency" },
-    { name: "Fresh Produce", temp: "32-55°F", benefit: "Extend shelf life" }
+    { name: "Pharmaceuticals", temp: "36-46°F", benefit: "Maintain potency" }
   ];
 
   const process = [

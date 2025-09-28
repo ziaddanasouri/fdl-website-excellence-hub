@@ -85,8 +85,7 @@ const Services = () => {
   const industries = [
     { name: 'Wine & Spirits', icon: Wine, description: 'Temperature-controlled wine and beverage logistics' },
     { name: 'Specialty Cheese', icon: ChefHat, description: 'Artisan cheese and dairy cold storage' },
-    { name: 'Confectionery', icon: Candy, description: 'Chocolate and sweets climate control' },
-    { name: 'Fresh Produce', icon: Snowflake, description: 'Farm-to-table cold chain solutions' }
+    { name: 'Confectionery', icon: Candy, description: 'Chocolate and sweets climate control' }
   ];
 
   return (
