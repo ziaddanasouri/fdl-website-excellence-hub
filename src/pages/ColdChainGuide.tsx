@@ -58,7 +58,6 @@ const ColdChainGuide = () => {
   };
 
   const temperatureZones = [
-    { zone: 'Frozen', range: '-10°F to 0°F', products: 'Ice cream, frozen meats, seafood', color: 'bg-blue-500' },
     { zone: 'Cold', range: '32°F to 38°F', products: 'Fresh produce, dairy, beverages', color: 'bg-cyan-500' },
     { zone: 'Cool', range: '38°F to 50°F', products: 'Pharmaceuticals, wine, chocolate', color: 'bg-green-500' },
     { zone: 'Controlled', range: '50°F to 70°F', products: 'Baked goods, canned items', color: 'bg-yellow-500' }

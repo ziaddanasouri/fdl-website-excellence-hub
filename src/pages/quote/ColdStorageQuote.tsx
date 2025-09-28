@@ -89,7 +89,6 @@ const ColdStorageQuote = () => {
   ];
 
   const temperatureZones = [
-    { id: 'frozen', name: 'Frozen (-10°F to 0°F)', description: 'Ice cream, frozen meats, seafood' },
     { id: 'cold', name: 'Cold (32°F to 38°F)', description: 'Fresh produce, dairy, beverages' },
     { id: 'cool', name: 'Cool (38°F to 50°F)', description: 'Pharmaceuticals, wine, chocolate' },
     { id: 'controlled', name: 'Controlled (50°F to 70°F)', description: 'Baked goods, canned items' }
