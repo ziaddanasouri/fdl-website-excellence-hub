@@ -52,7 +52,7 @@ const SpecialtyCheese = () => {
     { metric: '100%', description: 'Freshness Maintained' },
     { metric: '80-85%', description: 'Optimal Humidity' },
     { metric: '24/7', description: 'Climate Monitoring' },
-    { metric: '99.8%', description: 'Quality Accuracy' }
+    { metric: '99%', description: 'Quality Accuracy' }
   ];
 
   const cheeseTypes = [

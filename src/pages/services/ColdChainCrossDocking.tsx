@@ -67,7 +67,7 @@ const ColdChainCrossDocking = () => {
 
   const benefits = [
     { metric: "<2hrs", description: "Maximum transfer time" },
-    { metric: "99.9%", description: "Temperature compliance" },
+    { metric: "99%", description: "Temperature compliance" },
     { metric: "12", description: "Climate-controlled docks" },
     { metric: "30%", description: "Cost reduction vs storage" },
     { metric: "24/7", description: "Operation hours" },
@@ -162,7 +162,7 @@ const ColdChainCrossDocking = () => {
                     <div className="text-sm text-blue-100">Operations</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">99.9%</div>
+                    <div className="text-3xl font-bold">99%</div>
                     <div className="text-sm text-blue-100">Temp Compliance</div>
                   </div>
                 </div>

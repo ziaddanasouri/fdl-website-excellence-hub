@@ -37,7 +37,7 @@ const Services = () => {
         'Cross-Docking Capabilities',
         'Quality-Assured Facilities'
       ],
-      benefits: 'Maintain 99.9% inventory accuracy while reducing storage costs by up to 30%'
+      benefits: 'Maintain 99% inventory accuracy while reducing storage costs by up to 30%'
     },
     {
       icon: Package,
@@ -51,7 +51,7 @@ const Services = () => {
         'Multi-Channel Integration',
         'Same-Day Processing'
       ],
-      benefits: 'Achieve 99.5% order accuracy while reducing fulfillment costs'
+      benefits: 'Achieve 99% order accuracy while reducing fulfillment costs'
     },
     {
       icon: Truck,

@@ -393,7 +393,7 @@ const Inventory = () => {
                     <TrendingUp className="h-5 w-5 text-blue-600" />
                     <div>
                       <p className="text-sm font-medium">Cycle count completed</p>
-                      <p className="text-xs text-muted-foreground">Atlanta DC - 99.8% accuracy across 1,247 items</p>
+                      <p className="text-xs text-muted-foreground">Atlanta DC - 99% accuracy across 1,247 items</p>
                     </div>
                     <span className="text-xs text-muted-foreground ml-auto">1 day ago</span>
                   </div>

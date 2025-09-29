@@ -50,7 +50,7 @@ const WineSpirits = () => {
   const capabilities = [
     { metric: 'Optimal', description: 'Temperature Control' },
     { metric: '100%', description: 'Quality Standards' },
-    { metric: '99.8%', description: 'Inventory Accuracy' },
+    { metric: '99%', description: 'Inventory Accuracy' },
     { metric: '15+', description: 'States Covered' },
     { metric: '24/7', description: 'Temperature Monitoring' },
     { metric: '0', description: 'Quality Incidents' }

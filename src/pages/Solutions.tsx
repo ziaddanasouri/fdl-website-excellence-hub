@@ -38,7 +38,7 @@ const Solutions = () => {
         'Efficient returns processing'
       ],
       results: [
-        '99.5% order accuracy achieved',
+        '99% order accuracy achieved',
         '50% faster fulfillment times',
         '30% reduction in shipping costs',
         '95% customer satisfaction rate'
@@ -62,7 +62,7 @@ const Solutions = () => {
         'Supply chain optimization'
       ],
       results: [
-        '99.9% inventory accuracy',
+        '99% inventory accuracy',
         '40% reduction in carrying costs',
         '100% on-time delivery',
         'Zero quality incidents'
@@ -89,7 +89,7 @@ const Solutions = () => {
         '100% temperature compliance',
         '95% reduction in spoilage',
         'Full regulatory compliance',
-        '99.8% order accuracy'
+        '99% order accuracy'
       ],
       image: 'photo-1547595628-c61a29f496f0'
     },
@@ -99,7 +99,7 @@ const Solutions = () => {
     {
       icon: Package,
       title: 'Operational Excellence',
-      description: '99.9% order accuracy with optimized fulfillment'
+      description: '99% order accuracy with optimized fulfillment'
     },
     {
       icon: TrendingUp,

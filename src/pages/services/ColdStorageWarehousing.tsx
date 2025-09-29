@@ -139,7 +139,7 @@ const ColdStorageWarehousing = () => {
               </h1>
                <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
                 Preserve product quality with precision temperature control. 
-                Our certified facilities ensure 99.9% compliance for wine, cheese, confectionery, 
+                Our certified facilities ensure 99% compliance for wine, cheese, confectionery, 
                 and pharmaceutical storage.
                </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -170,7 +170,7 @@ const ColdStorageWarehousing = () => {
                     <div className="text-xs sm:text-sm text-blue-100">Sq Ft Available</div>
                   </div>
                   <div>
-                    <div className="text-2xl sm:text-3xl font-bold">99.9%</div>
+                    <div className="text-2xl sm:text-3xl font-bold">99%</div>
                     <div className="text-xs sm:text-sm text-blue-100">Temp Compliance</div>
                   </div>
                   <div>

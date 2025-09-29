@@ -28,7 +28,7 @@ const About = () => {
     {
       icon: Shield,
       title: 'Operational Excellence',
-      description: 'Maintaining 99.9% order accuracy and operational efficiency across all 3PL services.'
+      description: 'Maintaining 99% order accuracy and operational efficiency across all 3PL services.'
     },
     {
       icon: Zap,
@@ -148,7 +148,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Deliver exceptional warehousing and fulfillment services with 99.9% accuracy</span>
+                  <span className="text-muted-foreground">Deliver exceptional warehousing and fulfillment services with 99% accuracy</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />

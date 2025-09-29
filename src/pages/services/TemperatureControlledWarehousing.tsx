@@ -83,7 +83,7 @@ const TemperatureControlledWarehousing = () => {
   ];
 
   const benefits = [
-    { metric: "99.8%", description: "Temperature accuracy maintained" },
+    { metric: "99%", description: "Temperature accuracy maintained" },
     { metric: "50%", description: "Reduction in product degradation" },
     { metric: "24/7", description: "Continuous monitoring coverage" },
     { metric: "15min", description: "Maximum response time to alerts" },
