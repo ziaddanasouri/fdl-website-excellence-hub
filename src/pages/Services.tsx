@@ -101,15 +101,6 @@ const Services = () => {
             From warehousing to fulfillment to transportation, we provide comprehensive 3PL solutions 
             that optimize operations and drive efficiency across the Northeast region.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/quote/3pl-services'}>
-              Get 3PL Quote
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="hero" onClick={() => window.location.href = '/3pl-guide'}>
-              Download 3PL Guide
-            </Button>
-          </div>
         </div>
       </section>
 
