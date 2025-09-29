@@ -28,6 +28,7 @@ import {
   Wine
 } from 'lucide-react';
 import ZipCodeChecker from '@/components/ZipCodeChecker';
+import wineBoxesImage from '@/assets/wine-boxes.png';
 
 const Index = () => {
 
@@ -223,8 +224,8 @@ const Index = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55" 
-                alt="Modern warehouse facility" 
+                src={wineBoxesImage} 
+                alt="Wine packaging and delivery boxes" 
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl">
@@ -233,8 +234,8 @@ const Index = () => {
                     <TrendingUp className="h-8 w-8 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-primary">99.9%</p>
-                    <p className="text-sm text-muted-foreground">99.9% Order Accuracy</p>
+                    <p className="text-2xl font-bold text-primary">99%</p>
+                    <p className="text-sm text-muted-foreground">99% Order Accuracy</p>
                   </div>
                 </div>
               </div>
