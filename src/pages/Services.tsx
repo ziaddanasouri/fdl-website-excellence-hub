@@ -149,17 +149,9 @@ const Services = () => {
                       
                       <Button 
                         className="w-full sm:w-auto"
-                        onClick={() => {
-                          const serviceRoutes = [
-                            '/services/warehousing-distribution',
-                            '/services/fulfillment-services', 
-                            '/services/transportation-delivery',
-                            '/services/supply-chain-consulting'
-                          ];
-                          window.location.href = serviceRoutes[index];
-                        }}
+                        onClick={() => window.location.href = '/contact'}
                       >
-                        Learn More
+                        Contact Us to Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </div>
