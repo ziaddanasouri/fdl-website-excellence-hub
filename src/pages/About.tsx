@@ -18,27 +18,27 @@ import wineWarehouse from '@/assets/wine-warehouse.png';
 
 const About = () => {
   const stats = [
-    { label: 'Years in Cold Chain', value: '25+', icon: Award },
-    { label: 'Cubic Feet of Cold Storage', value: '500K+', icon: Globe },
-    { label: 'Cold Storage Facilities', value: '8', icon: Users },
+    { label: 'Years in 3PL', value: '25+', icon: Award },
+    { label: 'Total Warehouse Space', value: '2M+ ft³', icon: Globe },
+    { label: 'Distribution Centers', value: '12', icon: Users },
     { label: 'Northeast Coverage', value: '100%', icon: TrendingUp },
   ];
 
   const values = [
     {
       icon: Shield,
-      title: 'Temperature Integrity',
-      description: 'Maintaining precise temperature control from pickup to delivery with 99.9% cold chain integrity.'
+      title: 'Operational Excellence',
+      description: 'Maintaining 99.9% order accuracy and operational efficiency across all 3PL services.'
     },
     {
       icon: Zap,
-      title: 'Food Safety First',
-      description: 'Industry-standard processes and quality-assured facilities ensuring the highest food safety practices.'
+      title: 'Cost Optimization',
+      description: 'Industry-leading processes that reduce logistics costs by 20-40% while improving service levels.'
     },
     {
       icon: Heart,
-      title: 'Specialized Expertise',
-      description: 'Deep knowledge in wine aging, cheese maturation, and specialty food handling requirements.'
+      title: '3PL Expertise',
+      description: 'Deep knowledge in warehousing, fulfillment, transportation, and supply chain management.'
     },
     {
       icon: Target,
@@ -75,14 +75,14 @@ const About = () => {
   ];
 
   const timeline = [
-    { year: '1999', event: 'Founded FDL DNT as specialty cold storage provider in Fond Du Lac, Wisconsin' },
-    { year: '2003', event: 'Opened first Northeast facility with wine-specific storage capabilities' },
-    { year: '2008', event: 'Acquired artisan cheese aging facility, specialized in temperature-controlled maturation' },
-    { year: '2012', event: 'Enhanced temperature control systems across all cold storage facilities' },
-    { year: '2016', event: 'Expanded to full Northeast coverage with 8 temperature-controlled facilities' },
-    { year: '2020', event: 'Upgraded facility systems for enhanced temperature control and operations' },
-    { year: '2022', event: 'Achieved 100% renewable energy in all cold storage operations' },
-    { year: '2024', event: 'Leading Northeast provider of specialty cold chain logistics' }
+    { year: '1999', event: 'Founded FDL DNT as specialty logistics provider in Fond Du Lac, Wisconsin' },
+    { year: '2003', event: 'Opened first Northeast facility with warehousing and distribution capabilities' },
+    { year: '2008', event: 'Expanded into full-service 3PL with fulfillment and transportation services' },
+    { year: '2012', event: 'Enhanced warehouse management systems across all distribution facilities' },
+    { year: '2016', event: 'Expanded to full Northeast coverage with 12 distribution centers' },
+    { year: '2020', event: 'Upgraded technology infrastructure for advanced supply chain management' },
+    { year: '2022', event: 'Achieved 100% renewable energy in all warehouse operations' },
+    { year: '2024', event: 'Leading Northeast provider of comprehensive 3PL logistics solutions' }
   ];
 
 
@@ -95,14 +95,14 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 Years of Cold Chain Excellence</h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 Years of 3PL Excellence</h1>
               <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
-                From specialized wine storage to artisan cheese aging, FDL DNT has been the Northeast's 
-                trusted partner for temperature-controlled logistics and cold storage solutions since 1999.
+                From warehousing to fulfillment to transportation, FDL DNT has been the Northeast's 
+                trusted partner for comprehensive 3PL logistics solutions since 1999.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base">
-                  Get Cold Storage Quote
+                  Get 3PL Quote
                 </Button>
               </div>
             </div>
@@ -141,22 +141,22 @@ const About = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                To preserve quality and extend shelf life for temperature-sensitive products through 
-                world-class cold storage and specialized handling. We're committed to maintaining the 
-                integrity of fine wines, artisan cheeses, and specialty foods from storage to delivery.
+                To optimize operations and drive efficiency for businesses through world-class 3PL services 
+                and comprehensive logistics solutions. We're committed to enhancing supply chain performance 
+                across warehousing, fulfillment, and transportation services.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Maintain perfect temperature control for wine aging and cheese maturation</span>
+                  <span className="text-muted-foreground">Deliver exceptional warehousing and fulfillment services with 99.9% accuracy</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Ensure quality standards throughout the cold chain</span>
+                  <span className="text-muted-foreground">Maintain operational excellence throughout the supply chain</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Provide specialized Northeast regional coverage and expertise</span>
+                  <span className="text-muted-foreground">Provide comprehensive Northeast regional coverage and 3PL expertise</span>
                 </div>
               </div>
             </div>
@@ -164,17 +164,17 @@ const About = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Vision</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                To be the Northeast's premier cold chain logistics provider, setting the standard for 
-                temperature-controlled storage and specialized handling of fine wines, artisan cheeses, 
-                and specialty foods. We envision preserving quality from vineyard to table.
+                To be the Northeast's premier 3PL provider, setting the standard for comprehensive 
+                logistics solutions across warehousing, fulfillment, and transportation. We envision 
+                optimizing supply chains from manufacturer to consumer.
               </p>
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-primary mb-3">2030 Goals</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• 1M+ cubic feet of specialized cold storage</li>
-                  <li>• 100% renewable energy cold storage operations</li>
-                  <li>• Same-day cold delivery throughout Northeast</li>
-                  <li>• Leading wine storage facility network</li>
+                  <li>• 5M+ cubic feet of total warehouse space</li>
+                  <li>• 100% renewable energy warehouse operations</li>
+                  <li>• Same-day fulfillment throughout Northeast</li>
+                  <li>• Leading multi-industry 3PL network</li>
                 </ul>
               </div>
             </div>
@@ -238,14 +238,14 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-16 md:py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Partner with the Northeast's Cold Chain Experts</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Partner with the Northeast's 3PL Experts</h2>
           <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Whether you need specialized wine storage, cheese aging facilities, or temperature-controlled distribution, 
-            we're here to preserve your product's quality and integrity.
+            Whether you need warehousing, fulfillment, transportation, or complete supply chain management, 
+            we're here to optimize your operations and drive efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base">
-              Get Cold Storage Quote
+              Get 3PL Quote
             </Button>
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base bg-transparent">
               Schedule Consultation

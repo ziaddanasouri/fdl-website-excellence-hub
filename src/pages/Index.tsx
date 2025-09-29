@@ -31,30 +31,30 @@ import {
 const Index = () => {
 
   const stats = [
-    { label: 'Cold Storage Capacity', value: '2M+ ft³', icon: Snowflake },
+    { label: 'Total Warehouse Space', value: '2M+ ft³', icon: Package },
     { label: 'Routes Across Northeast', value: '40+', icon: Globe },
-    { label: 'Cold Storage Facilities', value: '8+', icon: Thermometer },
-    { label: 'Years Cold Chain Experience', value: '25+', icon: Award },
+    { label: 'Distribution Centers', value: '12+', icon: Truck },
+    { label: 'Years 3PL Experience', value: '25+', icon: Award },
   ];
 
   const services = [
     {
-      icon: Snowflake,
-      title: 'Cold Storage & Warehousing',
-      description: 'Specialized cold storage facilities with precise temperature control capabilities.',
-      features: ['Precise Temperature Control', 'Blast Freezing', 'Real-Time Monitoring']
+      icon: Package,
+      title: 'Warehousing & Distribution',
+      description: 'Complete warehousing solutions including general and temperature-controlled facilities.',
+      features: ['General Warehousing', 'Temperature Control', 'Real-Time Monitoring']
     },
     {
       icon: Truck,
-      title: 'Last Mile Delivery',
-      description: 'Final mile delivery solutions with optimized routing across the Northeast region.',
+      title: 'Transportation & Delivery',
+      description: 'Full transportation management including last mile delivery and regional distribution.',
       features: ['GPS Tracking', 'Route Optimization', 'Northeast Coverage']
     },
     {
-      icon: Wine,
-      title: 'Specialized Handling',
-      description: 'Expert handling for wine, cheese, and confectionery products.',
-      features: ['Optimal Wine Storage', 'Cheese Aging Facilities', 'Climate Control']
+      icon: Target,
+      title: 'Fulfillment Services',
+      description: 'Complete order fulfillment from pick and pack to shipping and returns.',
+      features: ['Pick & Pack', 'Inventory Management', 'Returns Processing']
     }
   ];
 
@@ -92,19 +92,19 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Cold Storage Solutions That 
-                <span className="text-blue-300 block">Preserve Your Quality</span>
+                Complete 3PL Solutions That 
+                <span className="text-blue-300 block">Optimize Your Operations</span>
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                From wine storage to refrigerated delivery, FDL DNT provides specialized temperature-controlled 
-                logistics solutions across the Northeast. Preserving quality for 25+ years.
+                From warehousing to fulfillment to transportation, FDL DNT provides comprehensive 3PL 
+                logistics solutions across the Northeast. Optimizing operations for 25+ years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   className="bg-white text-primary hover:bg-blue-50 font-semibold py-4 px-8 text-lg"
-                  onClick={() => window.location.href = '/quote/cold-storage'}
+                  onClick={() => window.location.href = '/quote/3pl-services'}
                 >
-                  Get Cold Storage Quote
+                  Get 3PL Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -113,12 +113,12 @@ const Index = () => {
             <div className="bg-white rounded-2xl p-8 shadow-2xl animate-float">
               <h3 className="text-2xl font-bold text-primary mb-6">Get Your Quote</h3>
               <p className="text-muted-foreground mb-6">
-                Start with a personalized cold storage solution for your business needs.
+                Start with a personalized 3PL solution for your business needs.
               </p>
               <div className="space-y-4">
                 <Button 
                   className="w-full cta-button text-lg py-6"
-                  onClick={() => window.location.href = '/quote/cold-storage'}
+                  onClick={() => window.location.href = '/quote/3pl-services'}
                 >
                   Get Free Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -158,9 +158,9 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Cold Storage Services</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Our 3PL Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized temperature-controlled solutions designed to preserve quality and maintain standards
+              Comprehensive logistics solutions designed to optimize operations and drive efficiency
             </p>
           </div>
           
@@ -186,9 +186,9 @@ const Index = () => {
                     className="w-full"
                     onClick={() => {
                       const serviceRoutes = {
-                        "Cold Storage & Warehousing": "/services/cold-storage-warehousing",
-                        "Last Mile Delivery": "/services/last-mile-delivery", 
-                        "Specialized Handling": "/services/temperature-controlled-warehousing"
+                        "Warehousing & Distribution": "/services/warehousing-distribution",
+                        "Transportation & Delivery": "/services/transportation-delivery", 
+                        "Fulfillment Services": "/services/fulfillment-services"
                       };
                       window.location.href = serviceRoutes[service.title as keyof typeof serviceRoutes];
                     }}
@@ -208,9 +208,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose FDL DNT Cold Storage?</h2>
+              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose FDL DNT 3PL Services?</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                We combine advanced temperature control technology with cold chain expertise to deliver unmatched preservation solutions.
+                We combine advanced logistics technology with 3PL expertise to deliver unmatched operational efficiency solutions.
               </p>
               
               <div className="space-y-6">
@@ -219,8 +219,8 @@ const Index = () => {
                     <Zap className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">Temperature Precision</h3>
-                    <p className="text-muted-foreground">Advanced climate control systems ensure precise temperature maintenance 24/7.</p>
+                    <h3 className="text-lg font-semibold text-primary mb-2">Operational Excellence</h3>
+                    <p className="text-muted-foreground">Advanced warehouse management systems ensure optimal inventory accuracy and efficiency 24/7.</p>
                   </div>
                 </div>
                 
@@ -229,8 +229,8 @@ const Index = () => {
                     <Shield className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">Cold Chain Integrity</h3>
-                    <p className="text-muted-foreground">Unbroken cold chain protocols preserve product quality from storage to delivery.</p>
+                    <h3 className="text-lg font-semibold text-primary mb-2">Supply Chain Excellence</h3>
+                    <p className="text-muted-foreground">Integrated logistics protocols optimize product flow from receiving to delivery.</p>
                   </div>
                 </div>
                 
@@ -239,8 +239,8 @@ const Index = () => {
                     <Target className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary mb-2">99.9% Compliance</h3>
-                    <p className="text-muted-foreground">Temperature compliance tracking with real-time monitoring and alerts.</p>
+                    <h3 className="text-lg font-semibold text-primary mb-2">99.9% Accuracy</h3>
+                    <p className="text-muted-foreground">Inventory accuracy tracking with real-time monitoring and alerts.</p>
                   </div>
                 </div>
               </div>
@@ -259,7 +259,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-primary">99.9%</p>
-                    <p className="text-sm text-muted-foreground">99.9% Temperature Accuracy</p>
+                    <p className="text-sm text-muted-foreground">99.9% Order Accuracy</p>
                   </div>
                 </div>
               </div>
@@ -303,10 +303,10 @@ const Index = () => {
       {/* Lead Magnet CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Cold Chain?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Logistics?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Download our free Cold Chain Optimization Guide and discover how to maintain 99.9% temperature accuracy 
-              while reducing spoilage and improving product quality.
+              Download our free 3PL Optimization Guide and discover how to achieve 99.9% order accuracy 
+              while reducing costs and improving operational efficiency.
             </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
@@ -316,7 +316,7 @@ const Index = () => {
               className="bg-white text-gray-900 border-0"
             />
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold px-8">
-              Get Cold Chain Guide
+              Get 3PL Guide
             </Button>
           </div>
           
@@ -327,7 +327,7 @@ const Index = () => {
               onClick={() => window.location.href = '/consultation'}
             >
               <Phone className="h-4 w-4 mr-2" />
-              Schedule Cold Storage Consultation
+              Schedule 3PL Consultation
             </Button>
           </div>
         </div>

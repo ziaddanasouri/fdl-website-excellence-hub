@@ -15,105 +15,106 @@ import {
   Clock,
   DollarSign,
   Thermometer,
-  Snowflake
+  Snowflake,
+  Package
 } from 'lucide-react';
 
 const Solutions = () => {
   const solutions = [
     {
-      icon: Wine,
-      title: 'Wine & Spirits Solutions',
-      description: 'Temperature-controlled storage and distribution for imported and domestic wines, spirits, and craft beverages.',
+      icon: Store,
+      title: 'E-commerce & Retail Solutions',
+      description: 'Complete fulfillment and distribution services for online retailers and e-commerce businesses.',
       challenges: [
-        'Precise temperature requirements for wine',
-        'State compliance for distribution laws',
-        'Quality preservation during transport',
-        'Inventory management for various vintages'
+        'Fast fulfillment expectations',
+        'Peak season volume spikes',
+        'Multi-channel inventory management',
+        'Returns processing complexity'
       ],
       ourSolution: [
-        'Climate-controlled wine storage facilities',
-        'State compliance management',
-        'Specialized handling protocols',
-        'Temperature monitoring systems'
+        'Advanced order management systems',
+        'Scalable fulfillment operations',
+        'Multi-channel integration',
+        'Efficient returns processing'
       ],
       results: [
-        '100% temperature compliance maintained',
-        'Zero quality deterioration incidents',
-        'Full state regulatory compliance',
-        '99.8% inventory accuracy'
+        '99.5% order accuracy achieved',
+        '50% faster fulfillment times',
+        '30% reduction in shipping costs',
+        '95% customer satisfaction rate'
+      ],
+      image: 'photo-1556742049-0cfed4f6a45d'
+    },
+    {
+      icon: Users,
+      title: 'Manufacturing & Industrial',
+      description: 'Specialized warehousing and distribution for manufacturing components, parts, and finished goods.',
+      challenges: [
+        'Complex inventory requirements',
+        'Just-in-time delivery needs',
+        'Quality control standards',
+        'Supply chain visibility'
+      ],
+      ourSolution: [
+        'Advanced warehouse management',
+        'Real-time inventory tracking',
+        'Quality assurance protocols',
+        'Supply chain optimization'
+      ],
+      results: [
+        '99.9% inventory accuracy',
+        '40% reduction in carrying costs',
+        '100% on-time delivery',
+        'Zero quality incidents'
+      ],
+      image: 'photo-1565967511849-76a60a516170'
+    },
+    {
+      icon: Wine,
+      title: 'Food & Beverage Solutions',
+      description: 'Temperature-controlled storage and distribution for food products, beverages, and perishable goods.',
+      challenges: [
+        'Temperature sensitivity',
+        'Shelf life management',
+        'Food safety compliance',
+        'Traceability requirements'
+      ],
+      ourSolution: [
+        'Climate-controlled facilities',
+        'Cold chain management',
+        'Food safety protocols',
+        'Complete traceability systems'
+      ],
+      results: [
+        '100% temperature compliance',
+        '95% reduction in spoilage',
+        'Full regulatory compliance',
+        '99.8% order accuracy'
       ],
       image: 'photo-1547595628-c61a29f496f0'
-    },
-    {
-      icon: ChefHat,
-      title: 'Specialty Cheese & Dairy',
-      description: 'Artisan cheese expertise with separate cooler locations and precise temperature control for domestic dairy products.',
-      challenges: [
-        'Artisan cheese temperature sensitivity',
-        'Separate storage requirements',
-        'Aging process management',
-        'Specialized handling needs'
-      ],
-      ourSolution: [
-        'Dedicated cheese aging facilities',
-        'Multi-zone temperature control',
-        'Specialized dairy product handling',
-        'Separate cooler locations'
-      ],
-      results: [
-        'Precise temperature control for cheese',
-        '100% product freshness maintained',
-        '95% reduction in spoilage',
-        'Extended shelf life achievement'
-      ],
-      image: 'photo-1452195100486-9cc805987862'
-    },
-    {
-      icon: Candy,
-      title: 'Confectionery & Sweets',
-      description: 'Chocolate and confectionery climate control with heat and humidity sensitivity management to prevent bloom.',
-      challenges: [
-        'Heat and humidity sensitivity',
-        'Chocolate bloom prevention',
-        'Seasonal temperature variations',
-        'Package integrity maintenance'
-      ],
-      ourSolution: [
-        'Climate-controlled confectionery storage',
-        'Humidity management systems',
-        'Bloom prevention protocols',
-        'Seasonal handling adjustments'
-      ],
-      results: [
-        'Zero bloom incidents',
-        '99% package integrity maintained',
-        '30% extended product life',
-        '100% quality preservation'
-      ],
-      image: 'photo-1481391319762-47dff72954d9'
     },
   ];
 
   const benefits = [
     {
-      icon: Thermometer,
-      title: 'Temperature Control',
-      description: '99.9% compliance within specified temperature ranges'
+      icon: Package,
+      title: 'Operational Excellence',
+      description: '99.9% order accuracy with optimized fulfillment'
     },
     {
-      icon: Snowflake,
-      title: 'Cold Chain Integrity',
-      description: 'Unbroken cold chain from storage to delivery'
+      icon: TrendingUp,
+      title: 'Cost Optimization',
+      description: 'Reduce logistics costs by 20-40% through efficiency'
     },
     {
       icon: Clock,
-      title: 'Chilled Delivery',
-      description: 'Extended shelf life through optimal cold storage'
+      title: 'Faster Fulfillment',
+      description: 'Same-day processing with next-day delivery options'
     },
     {
       icon: Users,
-      title: 'Cold Storage Expertise',
-      description: 'Specialized knowledge in temperature-controlled logistics'
+      title: '3PL Expertise',
+      description: 'Specialized knowledge across multiple industries'
     }
   ];
 
@@ -124,10 +125,10 @@ const Solutions = () => {
       {/* Hero Section */}
       <section className="hero-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Cold Storage & Temperature-Controlled Solutions</h1>
+          <h1 className="text-5xl font-bold mb-6">Comprehensive 3PL Solutions by Industry</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Specialized cold storage and temperature-controlled logistics solutions for wine & spirits, 
-            specialty cheese, and confectionery across the Northeast.
+            Specialized 3PL logistics solutions for e-commerce, food & beverage, manufacturing, 
+            healthcare, and other industries across the Northeast.
           </p>
         </div>
       </section>
@@ -205,9 +206,9 @@ const Solutions = () => {
                     className="cta-button"
                     onClick={() => {
                       const routes = {
-                        'Wine & Spirits Solutions': '/solutions/wine-spirits',
-                        'Specialty Cheese & Dairy': '/solutions/specialty-cheese-dairy', 
-                        'Confectionery & Sweets': '/solutions/confectionery-sweets'
+                        'E-commerce & Retail Solutions': '/solutions/ecommerce-retail',
+                        'Manufacturing & Industrial': '/solutions/manufacturing-industrial', 
+                        'Food & Beverage Solutions': '/solutions/food-beverage'
                       };
                       window.location.href = routes[solution.title as keyof typeof routes];
                     }}
@@ -234,9 +235,9 @@ const Solutions = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Cold Chain Integration</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Supply Chain Integration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our temperature-controlled solutions integrate seamlessly with your cold chain requirements
+              Our comprehensive 3PL solutions integrate seamlessly with your existing operations
             </p>
           </div>
           
@@ -246,9 +247,9 @@ const Solutions = () => {
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Thermometer className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Cold Storage Integration</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">Technology Integration</h3>
                 <p className="text-muted-foreground">
-                  Seamless integration with temperature monitoring and cold chain management systems
+                  Seamless integration with WMS, ERP systems, and e-commerce platforms
                 </p>
               </CardContent>
             </Card>
@@ -258,9 +259,9 @@ const Solutions = () => {
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Cold Storage Expertise</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">3PL Expertise</h3>
                 <p className="text-muted-foreground">
-                  Temperature-controlled logistics specialists and dedicated cold chain support
+                  Comprehensive logistics specialists and dedicated account management
                 </p>
               </CardContent>
             </Card>
@@ -271,17 +272,17 @@ const Solutions = () => {
       {/* CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cold Chain Operations?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Supply Chain Operations?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our cold storage experts design a temperature-controlled solution that preserves quality, 
-            ensures compliance, and drives measurable results for your perishable goods.
+            Let our 3PL experts design a comprehensive logistics solution that optimizes operations, 
+            reduces costs, and drives measurable results for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
-              Schedule Cold Storage Consultation
+              Schedule 3PL Consultation
             </Button>
             <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-semibold">
-              Download Cold Chain Guide
+              Download 3PL Guide
             </Button>
           </div>
         </div>

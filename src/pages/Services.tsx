@@ -19,73 +19,77 @@ import {
   Wine,
   ChefHat,
   Candy,
-  Store
+  Store,
+  Package
 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Snowflake,
-      title: 'Cold Storage & Warehousing',
-      description: 'Specialized cold storage facilities with blast freezing capabilities and precise temperature control.',
+      icon: Warehouse,
+      title: 'Warehousing & Distribution',
+      description: 'Complete warehousing solutions including general storage and specialized temperature-controlled facilities.',
       features: [
-        'Precision Temperature Control',
-        'Blast Freezing Capabilities', 
-        'Temperature Monitoring Systems',
-        'Cold Storage Inventory Management',
-        'Pharmaceutical-Grade Environments',
+        'General Warehousing',
+        'Temperature-Controlled Storage', 
+        'Inventory Management Systems',
+        'Distribution Services',
+        'Cross-Docking Capabilities',
         'Quality-Assured Facilities'
       ],
-      benefits: 'Maintain 99.9% temperature accuracy while reducing spoilage by up to 95%'
+      benefits: 'Maintain 99.9% inventory accuracy while reducing storage costs by up to 30%'
     },
     {
-      icon: Warehouse,
-      title: 'Temperature-Controlled Warehousing',
-      description: 'Specialized cold storage facilities with precise climate control for perishable goods.',
+      icon: Package,
+      title: 'Fulfillment Services',
+      description: 'Complete order fulfillment from receiving to shipping with pick, pack, and returns processing.',
       features: [
-        'Optimal Wine Storage',
-        'Cheese Aging Facilities',
-        'Confectionery Climate Control',
-        'Real-Time Temperature Monitoring',
-        'Humidity Management Systems',
-        'Separate Zone Capabilities'
+        'Pick & Pack Operations',
+        'Kitting & Assembly',
+        'Returns Processing',
+        'Order Management Systems',
+        'Multi-Channel Integration',
+        'Same-Day Processing'
       ],
-      benefits: 'Extend product shelf life and maintain quality with specialized storage'
+      benefits: 'Achieve 99.5% order accuracy while reducing fulfillment costs'
     },
     {
       icon: Truck,
-      title: 'Last Mile Delivery',
-      description: 'Final mile delivery solutions with optimized routing and flexible scheduling options.',
+      title: 'Transportation & Delivery',
+      description: 'Comprehensive transportation management including LTL, FTL, and last mile delivery solutions.',
       features: [
         'GPS Tracking & Route Optimization',
-        '2-Hour Delivery Windows', 
-        'Real-Time Delivery Updates',
+        'LTL & FTL Services', 
+        'Last Mile Delivery',
         'Northeast Regional Coverage',
         'Same-Day & Next-Day Options',
-        'Flexible Scheduling Solutions'
+        'Real-Time Visibility'
       ],
-      benefits: 'Achieve 95% first-attempt success rate while improving customer satisfaction'
+      benefits: 'Achieve 95% on-time delivery while reducing transportation costs'
     },
     {
-      icon: ArrowRightLeft,
-      title: 'Cold Chain Cross-Docking',
-      description: 'Temperature-controlled transfer facilities minimizing cold chain breaks for perishable goods.',
+      icon: BarChart3,
+      title: 'Supply Chain Consulting',
+      description: 'Expert supply chain analysis and optimization services to improve efficiency and reduce costs.',
       features: [
-        'Climate-Controlled Transfer',
-        'Minimal Cold Chain Breaks',
-        'Temperature Validation',
-        'Specialized Loading Docks',
-        'Quick Transfer Protocols',
-        'Quality Control Checks'
+        'Supply Chain Analysis',
+        'Process Optimization',
+        'Cost Reduction Strategies',
+        'Technology Integration',
+        'Performance Metrics',
+        'Continuous Improvement'
       ],
-      benefits: 'Reduce handling time while maintaining temperature integrity'
+      benefits: 'Reduce operational costs by 20-40% while improving service levels'
     },
   ];
 
   const industries = [
-    { name: 'Wine & Spirits', icon: Wine, description: 'Temperature-controlled wine and beverage logistics' },
-    { name: 'Specialty Cheese', icon: ChefHat, description: 'Artisan cheese and dairy cold storage' },
-    { name: 'Confectionery', icon: Candy, description: 'Chocolate and sweets climate control' }
+    { name: 'E-commerce & Retail', icon: Store, description: 'Online order fulfillment and retail distribution' },
+    { name: 'Food & Beverage', icon: Wine, description: 'Temperature-controlled food and beverage logistics' },
+    { name: 'Manufacturing', icon: Users, description: 'Industrial parts and components warehousing' },
+    { name: 'Healthcare', icon: Shield, description: 'Medical devices and pharmaceutical logistics' },
+    { name: 'Consumer Goods', icon: Package, description: 'General merchandise warehousing and distribution' },
+    { name: 'Automotive', icon: Truck, description: 'Auto parts storage and distribution services' }
   ];
 
   return (
@@ -95,18 +99,18 @@ const Services = () => {
       {/* Hero Section */}
       <section className="hero-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Temperature-Controlled Logistics Services</h1>
+          <h1 className="text-5xl font-bold mb-6">Complete 3PL Logistics Services</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            From cold storage to refrigerated delivery, we provide specialized temperature-controlled solutions 
-            that preserve quality and maintain standards across the Northeast region.
+            From warehousing to fulfillment to transportation, we provide comprehensive 3PL solutions 
+            that optimize operations and drive efficiency across the Northeast region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/quote/cold-storage'}>
-              Get Cold Storage Quote
+            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/quote/3pl-services'}>
+              Get 3PL Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="hero" onClick={() => window.location.href = '/cold-chain-guide'}>
-              Download Cold Chain Guide
+            <Button variant="hero" onClick={() => window.location.href = '/3pl-guide'}>
+              Download 3PL Guide
             </Button>
           </div>
         </div>
@@ -150,10 +154,10 @@ const Services = () => {
                         className="w-full sm:w-auto"
                         onClick={() => {
                           const serviceRoutes = [
-                            '/services/cold-storage-warehousing',
-                            '/services/temperature-controlled-warehousing', 
-                            '/services/last-mile-delivery',
-                            '/services/cold-chain-cross-docking'
+                            '/services/warehousing-distribution',
+                            '/services/fulfillment-services', 
+                            '/services/transportation-delivery',
+                            '/services/supply-chain-consulting'
                           ];
                           window.location.href = serviceRoutes[index];
                         }}
@@ -174,9 +178,9 @@ const Services = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Cold Storage Industries We Serve</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Industries We Serve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized temperature-controlled solutions for perishable goods across Northeast markets
+              Comprehensive 3PL solutions across diverse industries and markets throughout the Northeast
             </p>
           </div>
           
@@ -200,17 +204,17 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Cold Chain?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Supply Chain?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our cold storage experts design a temperature-controlled solution that preserves quality, 
-            maintains quality standards, and scales with your perishable goods business.
+            Let our 3PL experts design a comprehensive logistics solution that optimizes operations, 
+            reduces costs, and scales with your growing business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/consultation'}>
-              Schedule Cold Storage Consultation
+              Schedule 3PL Consultation
             </Button>
-            <Button variant="hero" onClick={() => window.location.href = '/quote/cold-storage'}>
-              Get Cold Chain Quote
+            <Button variant="hero" onClick={() => window.location.href = '/quote/3pl-services'}>
+              Get 3PL Quote
             </Button>
           </div>
         </div>
