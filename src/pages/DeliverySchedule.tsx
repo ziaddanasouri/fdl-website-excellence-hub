@@ -61,12 +61,9 @@ const DeliverySchedule = () => {
                       Service Areas
                     </h3>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>• New York City (Manhattan & Brooklyn)</li>
-                      <li>• New Jersey (North, Central, South & Southwest)</li>
-                      <li>• Westchester County</li>
-                      <li>• Long Island</li>
-                      <li>• The Hamptons</li>
-                      <li>• Jersey Shore</li>
+                      {Object.values(deliveryData.zones).map((zone) => (
+                        <li key={zone.name}>• {zone.name}</li>
+                      ))}
                     </ul>
                   </div>
                   <div className="space-y-4">
