@@ -143,14 +143,14 @@ const ColdStorageWarehousing = () => {
                 and pharmaceutical storage.
                </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-primary hover:bg-blue-50 font-semibold min-h-[48px] text-base sm:text-lg"
-                  onClick={() => window.location.href = '/quote/cold-storage'}
-                >
-                  Get Storage Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                 <Button 
+                   size="lg" 
+                   className="bg-white text-primary hover:bg-blue-50 font-semibold min-h-[48px] text-base sm:text-lg"
+                   onClick={() => window.location.href = '/contact'}
+                 >
+                   Contact Us
+                   <ArrowRight className="ml-2 h-5 w-5" />
+                 </Button>
                 <Button 
                   variant="hero" 
                   size="lg"

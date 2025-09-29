@@ -133,9 +133,9 @@ const ConfectionerySweets = () => {
                 management to prevent bloom and extend product life by 30%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8">
+                <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/contact'}>
                   <Phone className="mr-2 h-5 w-5" />
-                  Get Confectionery Quote
+                  Contact Us
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                   <Download className="mr-2 h-5 w-5" />

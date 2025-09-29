@@ -97,9 +97,9 @@ const DeliverySchedule = () => {
                     </Button>
                     <Button 
                       variant="outline"
-                      onClick={() => window.location.href = '/quote/cold-storage'}
+                      onClick={() => window.location.href = '/contact'}
                     >
-                      Get Custom Quote
+                      Contact Us
                     </Button>
                   </div>
                 </div>

@@ -121,14 +121,14 @@ const LastMileDelivery = () => {
                   Schedule Delivery
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  className="min-h-[48px] text-base sm:text-lg"
-                  onClick={() => window.location.href = '/quote/cold-storage'}
-                >
-                  Get Delivery Quote
-                </Button>
+                 <Button 
+                   variant="hero" 
+                   size="lg"
+                   className="min-h-[48px] text-base sm:text-lg"
+                   onClick={() => window.location.href = '/contact'}
+                 >
+                   Contact Us
+                 </Button>
               </div>
             </div>
             <div className="lg:text-right">
