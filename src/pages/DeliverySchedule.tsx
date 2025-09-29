@@ -1,5 +1,6 @@
 import React from 'react';
 import { Truck, Calendar, Clock, MapPin } from 'lucide-react';
+import ZipCodeChecker from '@/components/ZipCodeChecker';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -74,12 +75,11 @@ const DeliverySchedule = () => {
                       Delivery Times
                     </h3>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>• Standard delivery hours: 8:00 AM - 5:00 PM</li>
-                      <li>• Order cutoff: 3:00 PM for next business day</li>
+                      <li>• Standard delivery hours: 9:00 AM - 6:00 PM</li>
+                      <li>• Order cutoff: 4:30 PM for next business day</li>
                       <li>• Temperature-controlled vehicles</li>
                       <li>• Real-time tracking available</li>
                       <li>• Holiday schedules may vary</li>
-                      <li>• Emergency delivery options available</li>
                     </ul>
                   </div>
                 </div>
@@ -109,6 +109,11 @@ const DeliverySchedule = () => {
 
           {/* Zone Overview */}
           <div className="max-w-6xl mx-auto">
+            {/* Zip Code Checker */}
+            <div className="max-w-md mx-auto mb-16">
+              <ZipCodeChecker />
+            </div>
+
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 Our Delivery Zones

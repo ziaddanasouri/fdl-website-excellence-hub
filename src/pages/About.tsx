@@ -19,8 +19,8 @@ import wineWarehouse from '@/assets/wine-warehouse.png';
 const About = () => {
   const stats = [
     { label: 'Years in 3PL', value: '25+', icon: Award },
-    { label: 'Total Warehouse Space', value: '2M+ ft³', icon: Globe },
-    { label: 'Distribution Centers', value: '12', icon: Users },
+    { label: 'Total Warehouse Space', value: '1,000,000+ sq ft', icon: Globe },
+    { label: 'Distribution Centers', value: '6', icon: Users },
     { label: 'Northeast Coverage', value: '100%', icon: TrendingUp },
   ];
 
@@ -43,7 +43,7 @@ const About = () => {
     {
       icon: Target,
       title: 'Regional Focus',
-      description: 'Dedicated Northeast coverage with local expertise and rapid response capabilities.'
+      description: 'Dedicated New York & New Jersey coverage with local expertise and rapid response capabilities.'
     }
   ];
 
@@ -208,30 +208,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Journey</h2>
-            <p className="text-xl text-muted-foreground">
-              Key milestones in our 25-year history of growth and innovation
-            </p>
-          </div>
-          
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex items-center space-x-6">
-                <div className="logistics-gradient text-white text-lg font-bold w-20 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                  {item.year}
-                </div>
-                <div className="flex-1 bg-white p-4 rounded-lg shadow-sm border">
-                  <p className="text-muted-foreground">{item.event}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
 

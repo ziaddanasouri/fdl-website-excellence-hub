@@ -3,11 +3,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Solutions from "./pages/Solutions";
+
 
 // Individual Service Pages - Updated
 import ColdStorageWarehousing from "./pages/services/ColdStorageWarehousing";
@@ -81,7 +81,7 @@ const App = () => (
           <Route path="/delivery-schedule" element={<DeliverySchedule />} />
           <Route path="/quote/cold-storage" element={<ColdStorageQuote />} />
           <Route path="/consultation" element={<Consultation />} />
-          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/solutions" element={<Navigate to="/services" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           

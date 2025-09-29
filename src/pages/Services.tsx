@@ -48,8 +48,8 @@ const Services = () => {
         'Kitting & Assembly',
         'Returns Processing',
         'Order Management Systems',
-        'Multi-Channel Integration',
-        'Same-Day Processing'
+        'Real-time Inventory Tracking',
+        'Quality Control'
       ],
       benefits: 'Achieve 99% order accuracy while reducing fulfillment costs'
     },
@@ -62,7 +62,7 @@ const Services = () => {
         'LTL & FTL Services', 
         'Last Mile Delivery',
         'Northeast Regional Coverage',
-        'Same-Day & Next-Day Options',
+        'Next-Day Delivery',
         'Real-Time Visibility'
       ],
       benefits: 'Achieve 95% on-time delivery while reducing transportation costs'
@@ -84,12 +84,9 @@ const Services = () => {
   ];
 
   const industries = [
-    { name: 'E-commerce & Retail', icon: Store, description: 'Online order fulfillment and retail distribution' },
-    { name: 'Food & Beverage', icon: Wine, description: 'Temperature-controlled food and beverage logistics' },
-    { name: 'Manufacturing', icon: Users, description: 'Industrial parts and components warehousing' },
-    { name: 'Healthcare', icon: Shield, description: 'Medical devices and pharmaceutical logistics' },
-    { name: 'Consumer Goods', icon: Package, description: 'General merchandise warehousing and distribution' },
-    { name: 'Automotive', icon: Truck, description: 'Auto parts storage and distribution services' }
+    { name: 'Wine & Spirits', icon: Wine, description: 'Temperature-controlled wine and spirits storage and distribution' },
+    { name: 'Fine Cheeses', icon: ChefHat, description: 'Specialized cold chain logistics for premium cheese products' },
+    { name: 'Chocolate & Confections', icon: Candy, description: 'Climate-controlled storage for chocolate and confectionery items' }
   ];
 
   return (

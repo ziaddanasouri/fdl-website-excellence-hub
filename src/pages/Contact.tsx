@@ -52,21 +52,21 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: '24/7 Customer Support',
+      title: 'Customer Support',
       details: ['(732) 650-9200'],
-      description: 'Available around the clock for all your logistics needs'
+      description: 'Available during business hours for all your logistics needs'
+    },
+    {
+      icon: Mail,
+      title: 'Email Support',
+      details: ['staff@FDLwarehouse.com'],
+      description: 'Send us your inquiries and we\'ll respond promptly'
     },
     {
       icon: MapPin,
       title: 'Headquarters',
       details: ['41 Saw Mill Pond Rd', 'Edison, NJ 08817'],
       description: 'Visit our main campus and distribution center'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: ['Mon-Fri: 6:00 AM - 8:00 PM', 'Sat-Sun: 8:00 AM - 6:00 PM'],
-      description: 'Central Standard Time (CST)'
     }
   ];
 
