@@ -39,12 +39,6 @@ const Footer = () => {
             <p className="text-slate-300">
               Leading 3PL provider with comprehensive warehousing, fulfillment, transportation, and logistics management services across the Northeast.
             </p>
-            <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="h-5 w-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="h-5 w-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
-            </div>
           </div>
 
           {/* Services */}
