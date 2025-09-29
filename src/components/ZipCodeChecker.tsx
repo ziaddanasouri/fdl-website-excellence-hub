@@ -3,39 +3,52 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
-import deliveryData from '@/data/deliverySchedule.json';
+import zipServiceList from '@/data/zipServiceList.json';
+
+interface ZipData {
+  zone: string;
+  city: string;
+  delivery_days: string;
+}
 
 interface DeliveryResult {
   zone: string;
   city: string;
   schedule: string[];
-  description: string;
+  isServiced: boolean;
 }
 
 const ZipCodeChecker = () => {
   const [zipCode, setZipCode] = useState('');
   const [result, setResult] = useState<DeliveryResult | null>(null);
-  const [isServiced, setIsServiced] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
 
   const handleSearch = () => {
     const cleanZip = zipCode.trim();
     setIsSearched(true);
     
-    if (deliveryData.zipCodes[cleanZip]) {
-      const zipData = deliveryData.zipCodes[cleanZip];
-      const zoneData = deliveryData.zones[zipData.zone];
+    const zipData: ZipData | undefined = (zipServiceList as Record<string, ZipData>)[cleanZip];
+    
+    if (zipData) {
+      // Check if delivery service is available (not "DNT")
+      const isServiced = !zipData.delivery_days.includes('DNT');
+      const schedule = isServiced 
+        ? zipData.delivery_days.split(',').filter(day => day !== 'DNT') 
+        : [];
       
       setResult({
-        zone: zoneData.name,
+        zone: zipData.zone,
         city: zipData.city,
-        schedule: zoneData.schedule,
-        description: zoneData.description
+        schedule,
+        isServiced
       });
-      setIsServiced(true);
     } else {
-      setResult(null);
-      setIsServiced(false);
+      setResult({
+        zone: '',
+        city: '',
+        schedule: [],
+        isServiced: false
+      });
     }
   };
 
@@ -79,9 +92,9 @@ const ZipCodeChecker = () => {
             </Button>
           </div>
           
-          {isSearched && (
+          {isSearched && result && (
             <div className="mt-4">
-              {isServiced && result ? (
+              {result.isServiced ? (
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2 text-green-600">
                     <CheckCircle className="h-5 w-5" />
@@ -91,12 +104,18 @@ const ZipCodeChecker = () => {
                   <div className="bg-green-50 p-4 rounded-lg space-y-2">
                     <div className="flex items-center space-x-2">
                       <MapPin className="h-4 w-4 text-green-600" />
-                      <span className="text-sm"><strong>Zone:</strong> {result.zone}</span>
+                      <span className="text-sm"><strong>City:</strong> {result.city}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4 text-green-600" />
-                      <span className="text-sm"><strong>Delivery Days:</strong> {formatDays(result.schedule)}</span>
+                      <MapPin className="h-4 w-4 text-green-600" />
+                      <span className="text-sm"><strong>Zone:</strong> {result.zone}</span>
                     </div>
+                    {result.schedule.length > 0 && (
+                      <div className="flex items-center space-x-2">
+                        <Clock className="h-4 w-4 text-green-600" />
+                        <span className="text-sm"><strong>Delivery Days:</strong> {formatDays(result.schedule)}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               ) : (
@@ -108,7 +127,10 @@ const ZipCodeChecker = () => {
                   
                   <div className="bg-red-50 p-4 rounded-lg">
                     <p className="text-sm text-red-700">
-                      We don't currently service this ZIP code. Please contact us for special arrangements.
+                      {result?.city 
+                        ? `We don't currently service ${result.city}. Please contact us for special arrangements.`
+                        : `We don't currently service this ZIP code. Please contact us for special arrangements.`
+                      }
                     </p>
                   </div>
                 </div>
