@@ -152,16 +152,9 @@ const Index = () => {
                   <Button 
                     variant="outline" 
                     className="w-full"
-                    onClick={() => {
-                      const serviceRoutes = {
-                        "Warehousing & Distribution": "/services/warehousing-distribution",
-                        "Transportation & Delivery": "/services/transportation-delivery", 
-                        "Fulfillment Services": "/services/fulfillment-services"
-                      };
-                      window.location.href = serviceRoutes[service.title as keyof typeof serviceRoutes];
-                    }}
+                    onClick={() => window.location.href = '/contact'}
                   >
-                    Learn More
+                    Contact Us to Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
