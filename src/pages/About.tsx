@@ -218,14 +218,9 @@ const About = () => {
             Whether you need warehousing, fulfillment, transportation, or complete supply chain management, 
             we're here to optimize your operations and drive efficiency.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base" onClick={() => window.location.href = '/contact'}>
-              Contact Us
-            </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary py-3 px-6 md:px-8 text-sm md:text-base bg-transparent">
-              Schedule Consultation
-            </Button>
-          </div>
+          <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-6 md:px-8 text-sm md:text-base" onClick={() => window.location.href = '/contact'}>
+            Contact Us
+          </Button>
         </div>
       </section>
 
