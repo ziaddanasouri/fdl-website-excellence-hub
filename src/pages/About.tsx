@@ -21,7 +21,6 @@ const About = () => {
     { label: 'Years in 3PL', value: '25+', icon: Award },
     { label: 'Total Warehouse Space', value: '1,000,000+ sq ft', icon: Globe },
     { label: 'Distribution Centers', value: '6', icon: Users },
-    { label: 'Northeast Coverage', value: '100%', icon: TrendingUp },
   ];
 
   const values = [
