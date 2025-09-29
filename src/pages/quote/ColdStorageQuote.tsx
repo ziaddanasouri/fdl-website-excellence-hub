@@ -41,7 +41,7 @@ interface QuoteFormData {
   
   // Step 3: Storage Requirements
   volume: string;
-  temperatureZones: string[];
+  storageType: string[];
   specialRequirements: string;
   
   // Step 4: Additional Services
@@ -63,7 +63,7 @@ const ColdStorageQuote = () => {
     phone: '',
     industry: '',
     volume: '',
-    temperatureZones: [],
+    storageType: [],
     specialRequirements: '',
     additionalServices: [],
     insurance: false,
@@ -77,7 +77,7 @@ const ColdStorageQuote = () => {
   const progress = (currentStep / totalSteps) * 100;
 
   const services = [
-    { id: 'cold-storage', name: 'Cold Storage & Warehousing', icon: Snowflake, description: 'Multi-temperature zone facilities with blast freezing' },
+    { id: 'cold-storage', name: 'Cold Storage & Warehousing', icon: Snowflake, description: 'Specialized cold storage facilities with blast freezing' },
     { id: 'temp-warehousing', name: 'Temperature-Controlled Warehousing', icon: Warehouse, description: 'Specialized climate control for perishables' },
     { id: 'last-mile-delivery', name: 'Last Mile Delivery Solutions', icon: Truck, description: 'Optimized final-mile delivery service' },
     { id: 'cross-docking', name: 'Cold Chain Cross-Docking', icon: ArrowRightLeft, description: 'Temperature-controlled transfer facilities' }
@@ -88,8 +88,8 @@ const ColdStorageQuote = () => {
     'Pharmaceuticals', 'Retail', 'E-commerce', 'Other'
   ];
 
-  const temperatureZones = [
-    { id: 'cold', name: 'Chilled Storage', description: 'Dairy, beverages' },
+  const storageTypes = [
+    { id: 'chilled', name: 'Chilled Storage', description: 'Dairy, beverages' },
     { id: 'cool', name: 'Cool Storage', description: 'Pharmaceuticals, wine, chocolate' },
     { id: 'controlled', name: 'Climate Controlled', description: 'Baked goods, canned items' }
   ];
@@ -114,12 +114,12 @@ const ColdStorageQuote = () => {
     }));
   };
 
-  const handleTemperatureZoneToggle = (zoneId: string) => {
+  const handleStorageTypeToggle = (typeId: string) => {
     setFormData(prev => ({
       ...prev,
-      temperatureZones: prev.temperatureZones.includes(zoneId)
-        ? prev.temperatureZones.filter(z => z !== zoneId)
-        : [...prev.temperatureZones, zoneId]
+      storageType: prev.storageType.includes(typeId)
+        ? prev.storageType.filter(t => t !== typeId)
+        : [...prev.storageType, typeId]
     }));
   };
 
@@ -167,7 +167,7 @@ const ColdStorageQuote = () => {
     switch (currentStep) {
       case 1: return formData.services.length > 0;
       case 2: return formData.companyName && formData.contactName && formData.email && formData.phone;
-      case 3: return formData.volume && formData.temperatureZones.length > 0;
+      case 3: return formData.volume && formData.storageType.length > 0;
       case 4: return true; // Optional step
       case 5: return true; // Review step
       default: return false;
@@ -348,21 +348,21 @@ const ColdStorageQuote = () => {
                     </div>
                     
                     <div>
-                      <Label>Temperature Zones Required *</Label>
-                      <p className="text-sm text-muted-foreground mb-3">Select all temperature zones you need</p>
+                      <Label>Storage Types Required *</Label>
+                      <p className="text-sm text-muted-foreground mb-3">Select all storage types you need</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {temperatureZones.map((zone) => (
+                        {storageTypes.map((type) => (
                           <div
-                            key={zone.id}
+                            key={type.id}
                             className={`p-3 border-2 rounded-lg cursor-pointer transition-all ${
-                              formData.temperatureZones.includes(zone.id)
+                              formData.storageType.includes(type.id)
                                 ? 'border-primary bg-blue-50'
                                 : 'border-gray-200 hover:border-primary'
                             }`}
-                            onClick={() => handleTemperatureZoneToggle(zone.id)}
+                            onClick={() => handleStorageTypeToggle(type.id)}
                           >
-                            <h4 className="font-semibold text-primary">{zone.name}</h4>
-                            <p className="text-sm text-muted-foreground">{zone.description}</p>
+                            <h4 className="font-semibold text-primary">{type.name}</h4>
+                            <p className="text-sm text-muted-foreground">{type.description}</p>
                           </div>
                         ))}
                       </div>
@@ -464,8 +464,8 @@ const ColdStorageQuote = () => {
                           <p className="text-muted-foreground">{formData.volume}</p>
                         </div>
                         <div>
-                          <p className="font-semibold">Temperature Zones:</p>
-                          <p className="text-muted-foreground">{formData.temperatureZones.length} zones selected</p>
+                          <p className="font-semibold">Storage Types:</p>
+                          <p className="text-muted-foreground">{formData.storageType.length} types selected</p>
                         </div>
                         <div>
                           <p className="font-semibold">Additional Services:</p>

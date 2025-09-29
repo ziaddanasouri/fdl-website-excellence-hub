@@ -57,10 +57,10 @@ const ColdChainGuide = () => {
     }, 2000);
   };
 
-  const temperatureZones = [
-    { zone: 'Cold', range: 'Chilled Storage', products: 'Dairy, beverages', color: 'bg-cyan-500' },
-    { zone: 'Cool', range: 'Cool Storage', products: 'Pharmaceuticals, wine, chocolate', color: 'bg-green-500' },
-    { zone: 'Controlled', range: 'Climate Controlled', products: 'Baked goods, canned items', color: 'bg-yellow-500' }
+  const storageTypes = [
+    { type: 'Chilled', range: 'Chilled Storage', products: 'Dairy, beverages', color: 'bg-cyan-500' },
+    { type: 'Cool', range: 'Cool Storage', products: 'Pharmaceuticals, wine, chocolate', color: 'bg-green-500' },
+    { type: 'Controlled', range: 'Climate Controlled', products: 'Baked goods, canned items', color: 'bg-yellow-500' }
   ];
 
   const qualityStandards = [
@@ -116,7 +116,7 @@ const ColdChainGuide = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Thermometer, title: 'Temperature Zones', description: '45+ pages covering optimal temperature ranges' },
+              { icon: Thermometer, title: 'Temperature Control', description: '45+ pages covering optimal temperature management' },
               { icon: Shield, title: 'Quality Standards', description: 'Industry best practices and quality protocols' },
               { icon: BarChart3, title: 'Performance Metrics', description: 'KPIs and monitoring best practices' },
               { icon: Users, title: 'Training Materials', description: 'Staff education and certification guides' }
@@ -135,27 +135,27 @@ const ColdChainGuide = () => {
         </div>
       </section>
 
-      {/* Temperature Zones */}
+      {/* Storage Types */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">Critical Temperature Zones</h2>
+          <h2 className="text-3xl font-bold text-primary text-center mb-12">Cold Storage Types</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {temperatureZones.map((zone, index) => (
+            {storageTypes.map((storage, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className={`w-4 h-4 rounded-full ${zone.color}`}></div>
-                    <CardTitle className="text-primary">{zone.zone} Zone</CardTitle>
+                    <div className={`w-4 h-4 rounded-full ${storage.color}`}></div>
+                    <CardTitle className="text-primary">{storage.type} Storage</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex items-center">
                       <Thermometer className="h-5 w-5 text-primary mr-2" />
-                      <span className="font-semibold">{zone.range}</span>
+                      <span className="font-semibold">{storage.range}</span>
                     </div>
-                    <p className="text-muted-foreground">{zone.products}</p>
+                    <p className="text-muted-foreground">{storage.products}</p>
                   </div>
                 </CardContent>
               </Card>

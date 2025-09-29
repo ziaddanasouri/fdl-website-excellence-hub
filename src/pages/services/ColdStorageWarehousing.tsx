@@ -25,8 +25,8 @@ const ColdStorageWarehousing = () => {
   const features = [
     {
       icon: Thermometer,
-      title: "Multi-Temperature Zone Control",
-      description: "Precision temperature management with zone-specific controls"
+      title: "Precision Temperature Control",
+      description: "Advanced temperature management with precise controls"
     },
     {
       icon: Snowflake,
@@ -66,7 +66,7 @@ const ColdStorageWarehousing = () => {
     {
       step: "01",
       title: "Temperature Assessment", 
-      description: "We analyze your product requirements and design custom temperature zones"
+      description: "We analyze your product requirements and design optimal storage conditions"
     },
     {
       step: "02", 
@@ -90,7 +90,7 @@ const ColdStorageWarehousing = () => {
       name: "Basic Cold Storage",
       price: "$2.50/sq ft/month",
       features: [
-        "Single temperature zone",
+        "Standard temperature control",
         "Basic monitoring",
         "Monthly reporting",
         "Standard access hours"
@@ -100,7 +100,7 @@ const ColdStorageWarehousing = () => {
       name: "Professional",
       price: "$3.75/sq ft/month", 
       features: [
-        "Multi-temperature zones",
+        "Precision temperature control",
         "Real-time monitoring",
         "Weekly reporting",
         "Extended access",
@@ -112,7 +112,7 @@ const ColdStorageWarehousing = () => {
       name: "Enterprise",
       price: "Custom pricing",
       features: [
-        "Unlimited temperature zones",
+        "Advanced climate control",
         "Advanced analytics",
         "Daily reporting",
         "24/7 access",
@@ -135,7 +135,7 @@ const ColdStorageWarehousing = () => {
                 Cold Storage Solutions
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-                Multi-Temperature Cold Storage & Warehousing
+                Cold Storage & Warehousing Solutions
               </h1>
                <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
                 Preserve product quality with precision temperature control. 

@@ -27,7 +27,7 @@ const Services = () => {
     {
       icon: Snowflake,
       title: 'Cold Storage & Warehousing',
-      description: 'Multi-temperature zone facilities with blast freezing capabilities and specialized cold storage.',
+      description: 'Specialized cold storage facilities with blast freezing capabilities and precise temperature control.',
       features: [
         'Precision Temperature Control',
         'Blast Freezing Capabilities', 

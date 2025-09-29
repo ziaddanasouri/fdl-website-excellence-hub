@@ -20,7 +20,7 @@ const About = () => {
   const stats = [
     { label: 'Years in Cold Chain', value: '25+', icon: Award },
     { label: 'Cubic Feet of Cold Storage', value: '500K+', icon: Globe },
-    { label: 'Temperature Zones', value: '12', icon: Users },
+    { label: 'Cold Storage Facilities', value: '8', icon: Users },
     { label: 'Northeast Coverage', value: '100%', icon: TrendingUp },
   ];
 

@@ -99,7 +99,7 @@ const ColdChainCrossDocking = () => {
 
   const useCases = [
     {
-      title: "Multi-Temperature LTL",
+      title: "Cold Chain LTL",
       description: "Consolidate chilled and ambient products for efficient delivery",
       benefits: ["40% cost reduction", "Single delivery window", "Simplified logistics"]
     },

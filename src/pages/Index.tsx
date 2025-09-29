@@ -33,7 +33,7 @@ const Index = () => {
   const stats = [
     { label: 'Cold Storage Capacity', value: '2M+ ft³', icon: Snowflake },
     { label: 'Routes Across Northeast', value: '40+', icon: Globe },
-    { label: 'Temperature Zones', value: '50+', icon: Thermometer },
+    { label: 'Cold Storage Facilities', value: '8+', icon: Thermometer },
     { label: 'Years Cold Chain Experience', value: '25+', icon: Award },
   ];
 
@@ -41,7 +41,7 @@ const Index = () => {
     {
       icon: Snowflake,
       title: 'Cold Storage & Warehousing',
-      description: 'Multi-temperature zone facilities with specialized cold storage capabilities.',
+      description: 'Specialized cold storage facilities with precise temperature control capabilities.',
       features: ['Precise Temperature Control', 'Blast Freezing', 'Real-Time Monitoring']
     },
     {
