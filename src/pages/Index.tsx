@@ -98,15 +98,6 @@ const Index = () => {
               <p className="text-lg text-blue-200 leading-relaxed">
                 We use the latest technology to provide efficient, transparent, and 99% accurate 3PL services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  className="bg-white text-primary hover:bg-blue-50 font-semibold py-4 px-8 text-lg"
-                  onClick={() => window.location.href = '/quote/3pl-services'}
-                >
-                  Get 3PL Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
             </div>
             
             <ZipCodeChecker />
