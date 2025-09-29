@@ -181,25 +181,6 @@ const Services = () => {
       </section>
 
 
-      {/* CTA Section */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your Supply Chain?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our 3PL experts design a comprehensive logistics solution that optimizes operations, 
-            reduces costs, and scales with your growing business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold py-3 px-8" onClick={() => window.location.href = '/consultation'}>
-              Schedule 3PL Consultation
-            </Button>
-            <Button variant="hero" onClick={() => window.location.href = '/quote/3pl-services'}>
-              Get 3PL Quote
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
