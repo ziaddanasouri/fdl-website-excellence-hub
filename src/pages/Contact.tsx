@@ -292,7 +292,7 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground">41 Saw Mill Pond Rd</p>
                         <p className="text-sm text-muted-foreground">Edison, NJ 08817</p>
                         <Button variant="outline" size="sm" className="mt-4" asChild>
-                          <a href="https://maps.app.goo.gl/eBgtPVdAqYST9mui8" target="_blank" rel="noopener noreferrer">
+                          <a href="https://www.google.com/maps/place/Fond+Du+Lac+%2341/@40.491634,-74.3724239,17z/data=!3m1!4b1!4m6!3m5!1s0x89c3c96feb132f13:0xac37fadc31d65cd7!8m2!3d40.491634!4d-74.3724239!16s%2Fg%2F11k5sp4c8m?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                             View on Google Maps
                           </a>
                         </Button>
