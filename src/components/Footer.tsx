@@ -8,26 +8,6 @@ import fdlLogo from '@/assets/fdl-dnt-logo-footer.png';
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white">
-      {/* Newsletter Section */}
-      <div className="border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated with FDL DNT</h3>
-            <p className="text-slate-300 mb-6">Get the latest insights on 3PL services, warehousing solutions, and logistics optimization.</p>
-            <div className="max-w-md mx-auto flex gap-4">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="bg-slate-800 border-slate-600 text-white"
-              />
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
