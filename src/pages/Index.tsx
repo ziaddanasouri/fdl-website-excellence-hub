@@ -92,10 +92,10 @@ const Index = () => {
                 Complete 3PL Solutions That 
                 <span className="text-blue-300 block">Power Your Growth</span>
               </h1>
-              <p className="text-xl text-blue-100 leading-relaxed">
+              <p className="text-xl text-blue-50 leading-relaxed">
                 From 3PL services to last-mile delivery, FDL provides world-class temperature-controlled logistics solutions.
               </p>
-              <p className="text-xl text-blue-100 leading-relaxed">
+              <p className="text-xl text-blue-50 leading-relaxed">
                 We use the latest technology to provide efficient, transparent, and 99% accurate 3PL services.
               </p>
             </div>
