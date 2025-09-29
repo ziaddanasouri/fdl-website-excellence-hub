@@ -28,7 +28,7 @@ import {
   Wine
 } from 'lucide-react';
 import ZipCodeChecker from '@/components/ZipCodeChecker';
-import wineBoxesImage from '@/assets/wine-boxes.png';
+import wineBoxesImage from '@/assets/wine-bottle-packaging.jpg';
 import heroHandcartWine from '@/assets/hero-handcart-wine.jpg';
 
 const Index = () => {
