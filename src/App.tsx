@@ -18,7 +18,6 @@ import SpecialtyCheese from "./pages/solutions/SpecialtyCheese";
 import ConfectionerySweets from "./pages/solutions/ConfectionerySweets";
 
 import ColdChainCrossDocking from "./pages/services/ColdChainCrossDocking";
-import Tracking from "./pages/Tracking";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -30,7 +29,7 @@ import NewQuote from "./pages/portal/quotes/NewQuote";
 import QuotesList from "./pages/portal/quotes/QuotesList";
 import ShipmentsList from "./pages/portal/shipments/ShipmentsList";
 import CreateShipment from "./pages/portal/shipments/CreateShipment";
-import PortalTracking from "./pages/portal/tracking/PortalTracking";
+
 import Reports from "./pages/portal/reports/Reports";
 import Support from "./pages/portal/support/Support";
 import Settings from "./pages/portal/settings/Settings";
@@ -83,7 +82,6 @@ const App = () => (
           <Route path="/quote/cold-storage" element={<ColdStorageQuote />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/solutions" element={<Solutions />} />
-          <Route path="/tracking" element={<Tracking />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           
@@ -94,7 +92,6 @@ const App = () => (
           <Route path="/portal/quotes" element={<QuotesList />} />
           <Route path="/portal/shipments" element={<ShipmentsList />} />
           <Route path="/portal/shipments/create" element={<CreateShipment />} />
-          <Route path="/portal/tracking" element={<PortalTracking />} />
           <Route path="/portal/reports" element={<Reports />} />
           <Route path="/portal/billing" element={<Billing />} />
           <Route path="/portal/inventory" element={<Inventory />} />

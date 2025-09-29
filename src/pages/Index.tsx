@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -29,7 +29,6 @@ import {
 } from 'lucide-react';
 
 const Index = () => {
-  const [trackingNumber, setTrackingNumber] = useState('');
 
   const stats = [
     { label: 'Cold Storage Capacity', value: '2M+ ft³', icon: Snowflake },
@@ -111,27 +110,27 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Tracking Widget */}
             <div className="bg-white rounded-2xl p-8 shadow-2xl animate-float">
-              <h3 className="text-2xl font-bold text-primary mb-6">Track Your Shipment</h3>
+              <h3 className="text-2xl font-bold text-primary mb-6">Get Your Quote</h3>
+              <p className="text-muted-foreground mb-6">
+                Start with a personalized cold storage solution for your business needs.
+              </p>
               <div className="space-y-4">
-                <Input
-                  type="text"
-                  placeholder="Enter tracking number"
-                  value={trackingNumber}
-                  onChange={(e) => setTrackingNumber(e.target.value)}
-                  className="text-lg py-6"
-                />
-                <Button className="w-full cta-button text-lg py-6">
-                  Track Package
-                  <Package className="ml-2 h-5 w-5" />
+                <Button 
+                  className="w-full cta-button text-lg py-6"
+                  onClick={() => window.location.href = '/quote/cold-storage'}
+                >
+                  Get Free Quote
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </div>
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-700">
-                  <CheckCircle className="inline h-4 w-4 mr-1" />
-                  Real-time tracking updates available 24/7
-                </p>
+                <Button 
+                  variant="outline" 
+                  className="w-full text-lg py-6"
+                  onClick={() => window.location.href = '/consultation'}
+                >
+                  Schedule Consultation
+                  <Phone className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </div>
           </div>
