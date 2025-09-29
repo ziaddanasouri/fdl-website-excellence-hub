@@ -196,6 +196,17 @@ const Contact = () => {
                     </div>
                     
                     <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                      <Input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                    
+                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
                       <Input
                         type="tel"
@@ -296,19 +307,6 @@ const Contact = () => {
       </section>
 
 
-      {/* FAQ Teaser */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-primary mb-6">Have Questions?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Check out our comprehensive FAQ section for quick answers to common questions 
-            about our services, pricing, and processes.
-          </p>
-          <Button variant="outline" size="lg">
-            View FAQ
-          </Button>
-        </div>
-      </section>
 
       <Footer />
     </div>

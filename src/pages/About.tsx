@@ -94,7 +94,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 Years of 3PL Excellence</h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 years of temperature control 3PL excellence.</h1>
               <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
                 From warehousing to fulfillment to transportation, FDL DNT has been the Northeast's 
                 trusted partner for comprehensive 3PL logistics solutions since 1999.
@@ -133,11 +133,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Mission */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            <div>
+          <div className="grid grid-cols-1 gap-12 lg:gap-16">
+            <div className="lg:col-span-2">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 To optimize operations and drive efficiency for businesses through world-class 3PL services 
@@ -157,24 +157,6 @@ const About = () => {
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">Provide comprehensive Northeast regional coverage and 3PL expertise</span>
                 </div>
-              </div>
-            </div>
-            
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Vision</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                To be the Northeast's premier 3PL provider, setting the standard for comprehensive 
-                logistics solutions across warehousing, fulfillment, and transportation. We envision 
-                optimizing supply chains from manufacturer to consumer.
-              </p>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-primary mb-3">2030 Goals</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• 5M+ cubic feet of total warehouse space</li>
-                  <li>• 100% renewable energy warehouse operations</li>
-                  <li>• Same-day fulfillment throughout Northeast</li>
-                  <li>• Leading multi-industry 3PL network</li>
-                </ul>
               </div>
             </div>
           </div>

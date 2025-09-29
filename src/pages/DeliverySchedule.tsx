@@ -39,7 +39,7 @@ const DeliverySchedule = () => {
               FDL Delivery Schedule
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We provide reliable cold chain delivery across multiple zones in the tri-state area. 
+              We provide reliable temperature-controlled delivery across multiple zones in the New York & New Jersey Area. 
               View our delivery schedules and service areas below.
             </p>
           </div>
@@ -78,7 +78,6 @@ const DeliverySchedule = () => {
                       <li>• Standard delivery hours: 9:00 AM - 6:00 PM</li>
                       <li>• Order cutoff: 4:30 PM for next business day</li>
                       <li>• Temperature-controlled vehicles</li>
-                      <li>• Real-time tracking available</li>
                       <li>• Holiday schedules may vary</li>
                     </ul>
                   </div>
@@ -111,7 +110,7 @@ const DeliverySchedule = () => {
                 Our Delivery Zones
               </h2>
               <p className="text-muted-foreground">
-                FDL serves multiple zones across the tri-state area with reliable cold chain delivery
+                FDL serves multiple zones across the New York & New Jersey Area with reliable temperature-controlled delivery
               </p>
             </div>
 

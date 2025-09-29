@@ -50,8 +50,8 @@ const Index = () => {
     {
       icon: Truck,
       title: 'Last-Mile Delivery',
-      description: 'Reliable chilled delivery services for wine, cheese, and chocolates across the Northeast.',
-      features: ['Next-day delivery', 'Temperature monitoring', 'Northeast coverage']
+      description: 'Reliable temperature-controlled delivery services for wine, cheese, and chocolates across the Northeast.',
+      features: ['Next-day delivery', 'Temperature-controlled', 'Northeast coverage']
     }
   ];
 
@@ -93,9 +93,9 @@ const Index = () => {
                 <span className="text-blue-300 block">Power Your Growth</span>
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                From 3PL services to last-mile delivery. FDL provides world-class chilled delivery logistics solutions that power your growth and delight your customers.
+                From 3PL services to last-mile delivery, FDL provides world-class temperature-controlled logistics solutions.
               </p>
-              <p className="text-lg text-blue-200 leading-relaxed">
+              <p className="text-xl text-blue-100 leading-relaxed">
                 We use the latest technology to provide efficient, transparent, and 99% accurate 3PL services.
               </p>
             </div>
@@ -108,7 +108,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="logistics-gradient p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -213,17 +213,6 @@ const Index = () => {
                 alt="Wine packaging and delivery boxes" 
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <TrendingUp className="h-8 w-8 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-primary">99%</p>
-                    <p className="text-sm text-muted-foreground">99% Order Accuracy</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

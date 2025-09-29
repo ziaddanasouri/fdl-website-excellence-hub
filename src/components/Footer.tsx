@@ -21,18 +21,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-3">
-              <li><Link to="/services/warehousing-distribution" className="text-slate-300 hover:text-white transition-colors">Warehousing & Distribution</Link></li>
-              <li><Link to="/services/fulfillment-services" className="text-slate-300 hover:text-white transition-colors">Fulfillment Services</Link></li>
-              <li><Link to="/services/transportation-delivery" className="text-slate-300 hover:text-white transition-colors">Transportation & Delivery</Link></li>
-              <li><Link to="/services/logistics-consulting" className="text-slate-300 hover:text-white transition-colors">Logistics Consulting</Link></li>
-            </ul>
-          </div>
-
-
           {/* Holiday Schedule */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Holiday Schedule</h3>
@@ -105,19 +93,8 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 text-sm">
-              © 2025 Fond du Lac Logistics (FDL) - 3PL Logistics Services. All rights reserved.
+              © 2025 Fond du Lac Logistics (FDL) - Leading temperature control 3PL. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/careers" className="text-slate-400 hover:text-white text-sm transition-colors">
-                Careers
-              </Link>
-            </div>
           </div>
         </div>
       </div>
