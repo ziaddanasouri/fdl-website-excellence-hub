@@ -17,7 +17,7 @@ const Footer = () => {
               <img src={fdlLogo} alt="FDL DNT Logo" className="h-12 w-auto" />
             </div>
             <p className="text-slate-300">
-              Leading 3PL provider with comprehensive warehousing, fulfillment, transportation, and logistics management services across the Northeast.
+              Leading temperature-controlled 3PL provider with comprehensive warehousing, fulfillment, transportation, and logistics management services across the Northeast.
             </p>
           </div>
 
