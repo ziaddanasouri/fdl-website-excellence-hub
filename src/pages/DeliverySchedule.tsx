@@ -88,20 +88,12 @@ const DeliverySchedule = () => {
                   <p className="text-muted-foreground mb-4">
                     Need specific delivery information for your area?
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                    <Button 
-                      className="bg-primary hover:bg-primary/90"
-                      onClick={() => window.location.href = '/contact'}
-                    >
-                      Contact Us Today
-                    </Button>
-                    <Button 
-                      variant="outline"
-                      onClick={() => window.location.href = '/contact'}
-                    >
-                      Contact Us
-                    </Button>
-                  </div>
+                  <Button 
+                    className="bg-primary hover:bg-primary/90"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Contact Us Today
+                  </Button>
                 </div>
               </CardContent>
             </Card>
