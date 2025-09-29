@@ -292,7 +292,7 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground">41 Saw Mill Pond Rd</p>
                         <p className="text-sm text-muted-foreground">Edison, NJ 08817</p>
                         <Button variant="outline" size="sm" className="mt-4" asChild>
-                          <a href="https://maps.app.goo.gl/mVHQO5QqCU8IibnNA" target="_blank" rel="noopener noreferrer">
+                          <a href="https://maps.app.goo.gl/eBgtPVdAqYST9mui8" target="_blank" rel="noopener noreferrer">
                             View on Google Maps
                           </a>
                         </Button>
