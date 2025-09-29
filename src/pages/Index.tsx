@@ -27,34 +27,29 @@ import {
   Snowflake,
   Wine
 } from 'lucide-react';
+import ZipCodeChecker from '@/components/ZipCodeChecker';
 
 const Index = () => {
 
   const stats = [
-    { label: 'Total Warehouse Space', value: '2M+ ft³', icon: Package },
-    { label: 'Routes Across Northeast', value: '40+', icon: Globe },
-    { label: 'Distribution Centers', value: '12+', icon: Truck },
-    { label: 'Years 3PL Experience', value: '25+', icon: Award },
+    { label: 'Over 1 million cases delivered annually', value: '1M+', icon: Package },
+    { label: '6 warehouse locations', value: '6', icon: Truck },
+    { label: '200+ customers served', value: '200+', icon: Users },
+    { label: '25+ years experience', value: '25+', icon: Award },
   ];
 
   const services = [
     {
       icon: Package,
-      title: 'Warehousing & Distribution',
-      description: 'Complete warehousing solutions including general and temperature-controlled facilities.',
-      features: ['General Warehousing', 'Temperature Control', 'Real-Time Monitoring']
+      title: '3PL Services',
+      description: 'Comprehensive 3PL services including inventory management and order processing.',
+      features: ['Inventory Management', 'Order Fulfillment', 'Returns Processing', 'Pick & Pack', 'Refrigerated Storage', 'Cross-dock', 'Bonded Warehousing', 'Container Unloading', 'Labeling']
     },
     {
       icon: Truck,
-      title: 'Transportation & Delivery',
-      description: 'Full transportation management including last mile delivery and regional distribution.',
-      features: ['GPS Tracking', 'Route Optimization', 'Northeast Coverage']
-    },
-    {
-      icon: Target,
-      title: 'Fulfillment Services',
-      description: 'Complete order fulfillment from pick and pack to shipping and returns.',
-      features: ['Pick & Pack', 'Inventory Management', 'Returns Processing']
+      title: 'Last-Mile Delivery',
+      description: 'Reliable chilled delivery services for wine, cheese, and chocolates across the Northeast.',
+      features: ['Next-day delivery', 'Temperature monitoring', 'Northeast coverage']
     }
   ];
 
@@ -93,11 +88,13 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Complete 3PL Solutions That 
-                <span className="text-blue-300 block">Optimize Your Operations</span>
+                <span className="text-blue-300 block">Power Your Growth</span>
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                From warehousing to fulfillment to transportation, FDL DNT provides comprehensive 3PL 
-                logistics solutions across the Northeast. Optimizing operations for 25+ years.
+                From 3PL services to last-mile delivery. FDL provides world-class chilled delivery logistics solutions that power your growth and delight your customers.
+              </p>
+              <p className="text-lg text-blue-200 leading-relaxed">
+                We use the latest technology to provide efficient, transparent, and 99% accurate 3PL services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -110,29 +107,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 shadow-2xl animate-float">
-              <h3 className="text-2xl font-bold text-primary mb-6">Get Your Quote</h3>
-              <p className="text-muted-foreground mb-6">
-                Start with a personalized 3PL solution for your business needs.
-              </p>
-              <div className="space-y-4">
-                <Button 
-                  className="w-full cta-button text-lg py-6"
-                  onClick={() => window.location.href = '/quote/3pl-services'}
-                >
-                  Get Free Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full text-lg py-6"
-                  onClick={() => window.location.href = '/consultation'}
-                >
-                  Schedule Consultation
-                  <Phone className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
-            </div>
+            <ZipCodeChecker />
           </div>
         </div>
       </section>
@@ -158,13 +133,13 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our 3PL Services</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Our Core Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive logistics solutions designed to optimize operations and drive efficiency
+              We receive, warehouse, and deliver your wine, cheese, and chocolates with 99% accuracy.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="service-card-hover border-0 shadow-lg">
                 <CardContent className="p-8">
@@ -268,45 +243,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-muted-foreground">Trusted by industry leaders worldwide</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="text-muted-foreground mb-6 italic">
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div>
-                    <p className="font-semibold text-primary">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Lead Magnet CTA Section */}
       <section className="py-20 logistics-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Logistics?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to transform your logistics?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Download our free 3PL Optimization Guide and discover how to achieve 99.9% order accuracy 
-              while reducing costs and improving operational efficiency.
+              Discover how to reduce costs while improving delivery performance.
             </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
@@ -316,7 +259,7 @@ const Index = () => {
               className="bg-white text-gray-900 border-0"
             />
             <Button className="bg-white text-primary hover:bg-blue-50 font-semibold px-8">
-              Get 3PL Guide
+              Stay Updated
             </Button>
           </div>
           

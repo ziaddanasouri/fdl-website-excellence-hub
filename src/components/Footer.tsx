@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Stay Updated with FDL DNT</h3>
-            <p className="text-slate-300 mb-6">Get the latest insights on 3PL services, warehousing solutions, and supply chain optimization.</p>
+            <p className="text-slate-300 mb-6">Get the latest insights on 3PL services, warehousing solutions, and logistics optimization.</p>
             <div className="max-w-md mx-auto flex gap-4">
               <Input 
                 type="email" 
@@ -37,7 +37,7 @@ const Footer = () => {
               <img src={fdlLogo} alt="FDL DNT Logo" className="h-12 w-auto" />
             </div>
             <p className="text-slate-300">
-              Leading 3PL provider with comprehensive warehousing, fulfillment, transportation, and supply chain management services across the Northeast.
+              Leading 3PL provider with comprehensive warehousing, fulfillment, transportation, and logistics management services across the Northeast.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-5 w-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
@@ -54,7 +54,7 @@ const Footer = () => {
               <li><Link to="/services/warehousing-distribution" className="text-slate-300 hover:text-white transition-colors">Warehousing & Distribution</Link></li>
               <li><Link to="/services/fulfillment-services" className="text-slate-300 hover:text-white transition-colors">Fulfillment Services</Link></li>
               <li><Link to="/services/transportation-delivery" className="text-slate-300 hover:text-white transition-colors">Transportation & Delivery</Link></li>
-              <li><Link to="/services/supply-chain-consulting" className="text-slate-300 hover:text-white transition-colors">Supply Chain Consulting</Link></li>
+              <li><Link to="/services/logistics-consulting" className="text-slate-300 hover:text-white transition-colors">Logistics Consulting</Link></li>
             </ul>
           </div>
 
@@ -131,7 +131,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 text-sm">
-              © 2025 FDL DNT - 3PL Logistics Solutions. All rights reserved.
+              © 2025 Fond du Lac Logistics (FDL) - 3PL Logistics Services. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">
