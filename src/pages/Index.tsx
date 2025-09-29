@@ -230,38 +230,6 @@ const Index = () => {
       </section>
 
 
-      {/* Lead Magnet CTA Section */}
-      <section className="py-20 logistics-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to transform your logistics?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Discover how to reduce costs while improving delivery performance.
-            </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <Input 
-              type="email" 
-              placeholder="Enter your business email" 
-              className="bg-white text-gray-900 border-0"
-            />
-            <Button className="bg-white text-primary hover:bg-blue-50 font-semibold px-8">
-              Stay Updated
-            </Button>
-          </div>
-          
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="outline" 
-              className="border-primary text-primary hover:bg-primary hover:text-white"
-              onClick={() => window.location.href = '/consultation'}
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              Schedule 3PL Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
