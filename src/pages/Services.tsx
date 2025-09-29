@@ -160,7 +160,7 @@ const Services = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Industries We Serve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive 3PL solutions across diverse industries and markets throughout the Northeast
+              Comprehensive 3PL solutions across diverse industries and markets throughout the Northeast.
             </p>
           </div>
           
