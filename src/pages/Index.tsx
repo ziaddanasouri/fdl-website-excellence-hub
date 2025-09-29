@@ -84,12 +84,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section 
-        className="relative text-white py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroHandcartWine})`
-        }}
-      >
+      <section className="hero-gradient text-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
