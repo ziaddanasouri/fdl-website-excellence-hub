@@ -157,7 +157,13 @@ const Contact = () => {
                   <h3 className="text-lg font-bold text-primary mb-3">{info.title}</h3>
                   <div className="space-y-1 mb-3">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="font-semibold text-gray-700">{detail}</p>
+                      info.icon === Mail ? (
+                        <a key={detailIndex} href={`mailto:${detail}`} className="font-semibold text-gray-700 hover:text-primary transition-colors">
+                          {detail}
+                        </a>
+                      ) : (
+                        <p key={detailIndex} className="font-semibold text-gray-700">{detail}</p>
+                      )
                     ))}
                   </div>
                   <p className="text-sm text-muted-foreground">{info.description}</p>
