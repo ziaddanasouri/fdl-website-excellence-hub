@@ -148,8 +148,6 @@ const handler = async (req: Request): Promise<Response> => {
                     <li><strong>Company:</strong> ${submission.company || 'Not provided'}</li>
                   </ul>
                   
-                  <p>If you have an urgent matter, please call us at <strong>(555) 123-4567</strong>.</p>
-                  
                   <p>Best regards,<br>
                   The FDL D&T Express Team</p>
                 </div>
