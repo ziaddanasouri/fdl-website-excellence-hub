@@ -14,13 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          inquiry_type: string
+          last_name: string
+          message: string
+          phone: string
+          reference_id: string
+          status: string
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          inquiry_type: string
+          last_name: string
+          message: string
+          phone: string
+          reference_id: string
+          status?: string
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          inquiry_type?: string
+          last_name?: string
+          message?: string
+          phone?: string
+          reference_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      generate_reference_id: {
+        Args: Record<PropertyKey, never>
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
