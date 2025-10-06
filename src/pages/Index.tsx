@@ -89,7 +89,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Complete 3PL Solutions That 
+                Complete 3PL Solutions that
                 <span className="text-blue-300 block">Power Your Growth</span>
               </h1>
               <p className="text-xl text-blue-50 leading-relaxed">
