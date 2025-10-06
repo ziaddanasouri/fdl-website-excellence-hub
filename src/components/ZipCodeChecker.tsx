@@ -1,68 +1,128 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
-import zipServiceList from '@/data/zipServiceList.json';
+import Papa from 'papaparse';
 
 interface ZipData {
-  zone: string;
-  city: string;
-  delivery_days: string;
+  zip: string;
+  carrier: string;
+  county: string;
+  days_of_service: string;
 }
 
 interface DeliveryResult {
-  zone: string;
-  city: string;
+  carrier: string;
+  county: string;
   schedule: string[];
   isServiced: boolean;
+  specialNote?: string;
 }
 
 const ZipCodeChecker = () => {
   const [zipCode, setZipCode] = useState('');
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
+  const [zipData, setZipData] = useState<Map<string, ZipData>>(new Map());
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadCSV = async () => {
+      try {
+        const response = await fetch('/src/data/dnt-zip-codes.csv');
+        const csvText = await response.text();
+        
+        Papa.parse<ZipData>(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            const dataMap = new Map<string, ZipData>();
+            results.data.forEach((row) => {
+              if (row.zip) {
+                dataMap.set(row.zip.trim(), row);
+              }
+            });
+            setZipData(dataMap);
+            setIsLoading(false);
+          },
+          error: (error) => {
+            console.error('Error parsing CSV:', error);
+            setIsLoading(false);
+          }
+        });
+      } catch (error) {
+        console.error('Error loading CSV:', error);
+        setIsLoading(false);
+      }
+    };
+
+    loadCSV();
+  }, []);
+
+  const parseDays = (daysString: string): string[] => {
+    // Handle special cases
+    if (daysString.includes('CALL') || daysString.includes('DNT')) {
+      return [];
+    }
+
+    // Map single letter abbreviations to full day names
+    const dayMap: { [key: string]: string } = {
+      'M': 'Monday',
+      'T': 'Tuesday',
+      'W': 'Wednesday',
+      'R': 'Thursday',
+      'F': 'Friday'
+    };
+
+    // Split by comma and parse each day
+    return daysString
+      .split(',')
+      .map(day => day.trim())
+      .filter(day => day.length > 0)
+      .map(day => dayMap[day] || day)
+      .filter(Boolean);
+  };
 
   const handleSearch = () => {
     const cleanZip = zipCode.trim();
     setIsSearched(true);
     
-    const zipData: ZipData | undefined = (zipServiceList as Record<string, ZipData>)[cleanZip];
+    const data = zipData.get(cleanZip);
     
-    if (zipData) {
-      // Check if delivery service is available (not "DNT")
-      const isServiced = !zipData.delivery_days.includes('DNT');
-      const schedule = isServiced 
-        ? zipData.delivery_days.split(',').filter(day => day !== 'DNT') 
-        : [];
+    if (data) {
+      const daysOfService = data.days_of_service || '';
+      const isSpecialCase = daysOfService.includes('CALL') || daysOfService.includes('DNT');
+      const schedule = parseDays(daysOfService);
       
       setResult({
-        zone: zipData.zone,
-        city: zipData.city,
+        carrier: data.carrier,
+        county: data.county,
         schedule,
-        isServiced
+        isServiced: schedule.length > 0 || isSpecialCase,
+        specialNote: isSpecialCase ? daysOfService : undefined
       });
     } else {
       setResult({
-        zone: '',
-        city: '',
+        carrier: '',
+        county: '',
         schedule: [],
         isServiced: false
       });
     }
   };
 
-  const formatDays = (days: string[]) => {
-    const dayMap: { [key: string]: string } = {
-      'MON': 'Monday',
-      'TUE': 'Tuesday', 
-      'WED': 'Wednesday',
-      'THU': 'Thursday',
-      'FRI': 'Friday'
-    };
-    
-    return days.map(day => dayMap[day]).join(', ');
-  };
+  if (isLoading) {
+    return (
+      <Card className="w-full max-w-md mx-auto bg-white shadow-xl">
+        <CardContent className="p-6">
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground">Loading zip code data...</p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="w-full max-w-md mx-auto bg-white shadow-xl">
@@ -79,13 +139,13 @@ const ZipCodeChecker = () => {
               type="text"
               placeholder="Enter ZIP code"
               value={zipCode}
-              onChange={(e) => setZipCode(e.target.value)}
+              onChange={(e) => setZipCode(e.target.value.replace(/\D/g, ''))}
               maxLength={5}
               className="flex-1"
             />
             <Button 
               onClick={handleSearch}
-              disabled={!zipCode.trim()}
+              disabled={!zipCode.trim() || zipCode.length !== 5}
               className="px-6"
             >
               <Search className="h-4 w-4" />
@@ -102,18 +162,27 @@ const ZipCodeChecker = () => {
                   </div>
                   
                   <div className="bg-green-50 p-4 rounded-lg space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="h-4 w-4 text-green-600" />
-                      <span className="text-sm"><strong>City:</strong> {result.city}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="h-4 w-4 text-green-600" />
-                      <span className="text-sm"><strong>Zone:</strong> {result.zone}</span>
-                    </div>
-                    {result.schedule.length > 0 && (
+                    {result.county && (
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-4 w-4 text-green-600" />
+                        <span className="text-sm"><strong>County:</strong> {result.county}</span>
+                      </div>
+                    )}
+                    {result.carrier && (
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-4 w-4 text-green-600" />
+                        <span className="text-sm"><strong>Carrier:</strong> {result.carrier}</span>
+                      </div>
+                    )}
+                    {result.specialNote ? (
+                      <div className="flex items-start space-x-2">
+                        <Clock className="h-4 w-4 text-green-600 mt-0.5" />
+                        <span className="text-sm"><strong>Note:</strong> {result.specialNote}</span>
+                      </div>
+                    ) : result.schedule.length > 0 && (
                       <div className="flex items-center space-x-2">
                         <Clock className="h-4 w-4 text-green-600" />
-                        <span className="text-sm"><strong>Delivery Days:</strong> {formatDays(result.schedule)}</span>
+                        <span className="text-sm"><strong>Delivery Days:</strong> {result.schedule.join(', ')}</span>
                       </div>
                     )}
                   </div>
@@ -127,10 +196,7 @@ const ZipCodeChecker = () => {
                   
                   <div className="bg-red-50 p-4 rounded-lg">
                     <p className="text-sm text-red-700">
-                      {result?.city 
-                        ? `We don't currently service ${result.city}. Please contact us for special arrangements.`
-                        : `We don't currently service this ZIP code. Please contact us for special arrangements.`
-                      }
+                      We don't currently service this ZIP code. Please contact us for special arrangements.
                     </p>
                   </div>
                 </div>
