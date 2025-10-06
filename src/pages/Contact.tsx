@@ -59,7 +59,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Support',
-      details: ['staff@FDLwarehouse.com'],
+      details: ['info@fdlwarehouse.com'],
       description: 'Send us your inquiries and we\'ll respond promptly'
     },
     {
