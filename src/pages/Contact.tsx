@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { supabase } from '@/integrations/supabase/client';
 import { 
   Phone, 
   Mail, 
@@ -33,16 +34,39 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [referenceId, setReferenceId] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-contact-form', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      if (data.success) {
+        setReferenceId(data.referenceId);
+        setIsSubmitted(true);
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          inquiryType: '',
+          message: '',
+        });
+      }
+    } catch (error: any) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again or call us at (732) 650-9200.');
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 2000);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -110,11 +134,16 @@ const Contact = () => {
                 </div>
                 <h1 className="text-3xl font-bold text-primary mb-4">Thank You!</h1>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Your message has been received. Our team will get back to you within 2 hours during business hours.
+                  Your message has been received. Our team will get back to you within 2 business hours.
                 </p>
                 <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground">
-                    Reference ID: <span className="font-mono">FDL-{Date.now().toString().slice(-6)}</span>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                    <p className="text-sm text-muted-foreground mb-1">Your Reference ID</p>
+                    <p className="text-2xl font-bold text-primary font-mono">{referenceId}</p>
+                    <p className="text-xs text-muted-foreground mt-1">Please save this for your records</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    You'll also receive a confirmation email shortly with this reference number.
                   </p>
                   <Button onClick={() => {setIsSubmitted(false); setFormData({ firstName: '', lastName: '', email: '', phone: '', company: '', inquiryType: '', message: '' })}}>
                     Send Another Message
