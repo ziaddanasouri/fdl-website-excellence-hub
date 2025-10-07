@@ -66,8 +66,16 @@ const ZipCodeChecker = () => {
       return [];
     }
 
-    // Map single letter abbreviations to full day names
+    // Map 3-letter abbreviations to full day names
     const dayMap: { [key: string]: string } = {
+      'MON': 'Monday',
+      'TUE': 'Tuesday',
+      'WED': 'Wednesday',
+      'THU': 'Thursday',
+      'FRI': 'Friday',
+      'SAT': 'Saturday',
+      'SUN': 'Sunday',
+      // Legacy support for single letter abbreviations
       'M': 'Monday',
       'T': 'Tuesday',
       'W': 'Wednesday',
@@ -80,7 +88,7 @@ const ZipCodeChecker = () => {
       .split(',')
       .map(day => day.trim())
       .filter(day => day.length > 0)
-      .map(day => dayMap[day] || day)
+      .map(day => dayMap[day.toUpperCase()] || day)
       .filter(Boolean);
   };
 
