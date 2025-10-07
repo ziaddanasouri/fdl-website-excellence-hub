@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { supabase } from '@/integrations/supabase/client';
 import { 
   Phone, 
   Mail, 
@@ -34,39 +33,16 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [referenceId, setReferenceId] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    try {
-      const { data, error } = await supabase.functions.invoke('submit-contact-form', {
-        body: formData,
-      });
-
-      if (error) throw error;
-
-      if (data.success) {
-        setReferenceId(data.referenceId);
-        setIsSubmitted(true);
-        // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          company: '',
-          inquiryType: '',
-          message: '',
-        });
-      }
-    } catch (error: any) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again or call us at (732) 650-9200.');
-    } finally {
+    
+    // Simulate form submission
+    setTimeout(() => {
       setIsSubmitting(false);
-    }
+      setIsSubmitted(true);
+    }, 2000);
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -83,7 +59,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Support',
-      details: ['info@fdlwarehouse.com'],
+      details: ['staff@FDLwarehouse.com'],
       description: 'Send us your inquiries and we\'ll respond promptly'
     },
     {
@@ -134,16 +110,11 @@ const Contact = () => {
                 </div>
                 <h1 className="text-3xl font-bold text-primary mb-4">Thank You!</h1>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Your message has been received. Our team will get back to you within 2 business hours.
+                  Your message has been received. Our team will get back to you within 2 hours during business hours.
                 </p>
                 <div className="space-y-4">
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-                    <p className="text-sm text-muted-foreground mb-1">Your Reference ID</p>
-                    <p className="text-2xl font-bold text-primary font-mono">{referenceId}</p>
-                    <p className="text-xs text-muted-foreground mt-1">Please save this for your records</p>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    You'll also receive a confirmation email shortly with this reference number.
+                  <p className="text-sm text-muted-foreground">
+                    Reference ID: <span className="font-mono">FDL-{Date.now().toString().slice(-6)}</span>
                   </p>
                   <Button onClick={() => {setIsSubmitted(false); setFormData({ firstName: '', lastName: '', email: '', phone: '', company: '', inquiryType: '', message: '' })}}>
                     Send Another Message
@@ -186,13 +157,7 @@ const Contact = () => {
                   <h3 className="text-lg font-bold text-primary mb-3">{info.title}</h3>
                   <div className="space-y-1 mb-3">
                     {info.details.map((detail, detailIndex) => (
-                      info.icon === Mail ? (
-                        <a key={detailIndex} href={`mailto:${detail}`} className="font-semibold text-gray-700 hover:text-primary transition-colors">
-                          {detail}
-                        </a>
-                      ) : (
-                        <p key={detailIndex} className="font-semibold text-gray-700">{detail}</p>
-                      )
+                      <p key={detailIndex} className="font-semibold text-gray-700">{detail}</p>
                     ))}
                   </div>
                   <p className="text-sm text-muted-foreground">{info.description}</p>
@@ -327,7 +292,7 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground">41 Saw Mill Pond Rd</p>
                         <p className="text-sm text-muted-foreground">Edison, NJ 08817</p>
                         <Button variant="outline" size="sm" className="mt-4" asChild>
-                          <a href="https://www.google.com/maps/place/Fond+Du+Lac+%2341/@40.491634,-74.3724239,17z/data=!3m1!4b1!4m6!3m5!1s0x89c3c96feb132f13:0xac37fadc31d65cd7!8m2!3d40.491634!4d-74.3724239!16s%2Fg%2F11k5sp4c8m?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                          <a href="https://maps.app.goo.gl/mVHQO5QqCU8IibnNA" target="_blank" rel="noopener noreferrer">
                             View on Google Maps
                           </a>
                         </Button>

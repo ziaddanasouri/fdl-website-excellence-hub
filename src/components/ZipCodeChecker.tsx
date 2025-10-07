@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
-import zipServiceData from '@/data/fdl_service_zips.json';
+import zipServiceList from '@/data/zipServiceList.json';
 
-interface ZipInfo {
-  days: string[];
-  city?: string;
-  zone?: string;
-  state?: string;
+interface ZipData {
+  zone: string;
+  city: string;
+  delivery_days: string;
 }
 
 interface DeliveryResult {
@@ -17,109 +16,31 @@ interface DeliveryResult {
   city: string;
   schedule: string[];
   isServiced: boolean;
-  specialNote?: string;
 }
 
 const ZipCodeChecker = () => {
   const [zipCode, setZipCode] = useState('');
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
-  const [zipData, setZipData] = useState<Map<string, ZipInfo>>(new Map());
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const loadZipData = () => {
-      try {
-        const dataMap = new Map<string, ZipInfo>();
-        
-        // Process the JSON data structure
-        const data = zipServiceData as any;
-        
-        // Handle by_zip structure if it exists
-        if (data.by_zip) {
-          Object.entries(data.by_zip).forEach(([zip, info]: [string, any]) => {
-            if (zip && info) {
-              dataMap.set(zip, {
-                days: info.days || [],
-                city: info.city,
-                zone: info.zone,
-                state: info.state
-              });
-            }
-          });
-        }
-        
-        // Handle records array structure if it exists
-        if (data.records && Array.isArray(data.records)) {
-          data.records.forEach((record: any) => {
-            if (record.zip) {
-              dataMap.set(record.zip, {
-                days: record.days || record.delivery_days || [],
-                city: record.city,
-                zone: record.zone,
-                state: record.state
-              });
-            }
-          });
-        }
-        
-        console.log(`✅ Loaded ${dataMap.size} zip codes`);
-        setZipData(dataMap);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error loading zip data:', error);
-        setIsLoading(false);
-      }
-    };
-
-    loadZipData();
-  }, []);
-
-  const normalizeDayName = (day: string): string => {
-    const dayMap: { [key: string]: string } = {
-      'MON': 'Monday',
-      'TUE': 'Tuesday',
-      'WED': 'Wednesday',
-      'THU': 'Thursday',
-      'FRI': 'Friday',
-      'SAT': 'Saturday',
-      'SUN': 'Sunday',
-      'MONDAY': 'Monday',
-      'TUESDAY': 'Tuesday',
-      'WEDNESDAY': 'Wednesday',
-      'THURSDAY': 'Thursday',
-      'FRIDAY': 'Friday',
-      'SATURDAY': 'Saturday',
-      'SUNDAY': 'Sunday',
-      // Legacy single letter support
-      'M': 'Monday',
-      'T': 'Tuesday',
-      'W': 'Wednesday',
-      'R': 'Thursday',
-      'F': 'Friday'
-    };
-    
-    const normalized = dayMap[day.toUpperCase()];
-    return normalized || day;
-  };
 
   const handleSearch = () => {
     const cleanZip = zipCode.trim();
     setIsSearched(true);
     
-    const data = zipData.get(cleanZip);
+    const zipData: ZipData | undefined = (zipServiceList as Record<string, ZipData>)[cleanZip];
     
-    if (data) {
-      // Normalize day names
-      const schedule = data.days
-        .map(day => normalizeDayName(day))
-        .filter(Boolean);
+    if (zipData) {
+      // Check if delivery service is available (not "DNT")
+      const isServiced = !zipData.delivery_days.includes('DNT');
+      const schedule = isServiced 
+        ? zipData.delivery_days.split(',').filter(day => day !== 'DNT') 
+        : [];
       
       setResult({
-        zone: data.zone || 'N/A',
-        city: data.city || 'N/A',
+        zone: zipData.zone,
+        city: zipData.city,
         schedule,
-        isServiced: schedule.length > 0
+        isServiced
       });
     } else {
       setResult({
@@ -131,30 +52,24 @@ const ZipCodeChecker = () => {
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && zipCode.trim().length === 5) {
-      handleSearch();
-    }
+  const formatDays = (days: string[]) => {
+    const dayMap: { [key: string]: string } = {
+      'MON': 'Monday',
+      'TUE': 'Tuesday', 
+      'WED': 'Wednesday',
+      'THU': 'Thursday',
+      'FRI': 'Friday'
+    };
+    
+    return days.map(day => dayMap[day]).join(', ');
   };
 
-  if (isLoading) {
-    return (
-      <Card className="w-full max-w-md mx-auto bg-card shadow-xl">
-        <CardContent className="p-6">
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground">Loading zip code data...</p>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
-
   return (
-    <Card className="w-full max-w-md mx-auto bg-card shadow-xl">
+    <Card className="w-full max-w-md mx-auto bg-white shadow-xl">
       <CardContent className="p-6">
         <div className="text-center mb-4">
           <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-          <h3 className="text-xl font-bold text-foreground">Check Service Area</h3>
+          <h3 className="text-xl font-bold text-primary">Check Service Area</h3>
           <p className="text-sm text-muted-foreground">Enter your ZIP code to see delivery days</p>
         </div>
         
@@ -164,14 +79,13 @@ const ZipCodeChecker = () => {
               type="text"
               placeholder="Enter ZIP code"
               value={zipCode}
-              onChange={(e) => setZipCode(e.target.value.replace(/\D/g, ''))}
-              onKeyPress={handleKeyPress}
+              onChange={(e) => setZipCode(e.target.value)}
               maxLength={5}
               className="flex-1"
             />
             <Button 
               onClick={handleSearch}
-              disabled={!zipCode.trim() || zipCode.length !== 5}
+              disabled={!zipCode.trim()}
               className="px-6"
             >
               <Search className="h-4 w-4" />
@@ -182,42 +96,41 @@ const ZipCodeChecker = () => {
             <div className="mt-4">
               {result.isServiced ? (
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-green-600 dark:text-green-500">
+                  <div className="flex items-center space-x-2 text-green-600">
                     <CheckCircle className="h-5 w-5" />
                     <span className="font-semibold">Service Available!</span>
                   </div>
                   
-                  <div className="bg-green-50 dark:bg-green-950/30 p-4 rounded-lg space-y-2">
-                    {result.city && result.city !== 'N/A' && (
-                      <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4 text-green-600 dark:text-green-500" />
-                        <span className="text-sm text-foreground"><strong>City:</strong> {result.city}</span>
-                      </div>
-                    )}
-                    {result.zone && result.zone !== 'N/A' && (
-                      <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4 text-green-600 dark:text-green-500" />
-                        <span className="text-sm text-foreground"><strong>Zone:</strong> {result.zone}</span>
-                      </div>
-                    )}
+                  <div className="bg-green-50 p-4 rounded-lg space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="h-4 w-4 text-green-600" />
+                      <span className="text-sm"><strong>City:</strong> {result.city}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="h-4 w-4 text-green-600" />
+                      <span className="text-sm"><strong>Zone:</strong> {result.zone}</span>
+                    </div>
                     {result.schedule.length > 0 && (
                       <div className="flex items-center space-x-2">
-                        <Clock className="h-4 w-4 text-green-600 dark:text-green-500" />
-                        <span className="text-sm text-foreground"><strong>Delivery Days:</strong> {result.schedule.join(', ')}</span>
+                        <Clock className="h-4 w-4 text-green-600" />
+                        <span className="text-sm"><strong>Delivery Days:</strong> {formatDays(result.schedule)}</span>
                       </div>
                     )}
                   </div>
                 </div>
               ) : (
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-red-600 dark:text-red-500">
+                  <div className="flex items-center space-x-2 text-red-600">
                     <XCircle className="h-5 w-5" />
                     <span className="font-semibold">Service Not Available</span>
                   </div>
                   
-                  <div className="bg-red-50 dark:bg-red-950/30 p-4 rounded-lg">
-                    <p className="text-sm text-red-700 dark:text-red-400">
-                      We don't currently service this ZIP code. Please contact us for special arrangements.
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <p className="text-sm text-red-700">
+                      {result?.city 
+                        ? `We don't currently service ${result.city}. Please contact us for special arrangements.`
+                        : `We don't currently service this ZIP code. Please contact us for special arrangements.`
+                      }
                     </p>
                   </div>
                 </div>

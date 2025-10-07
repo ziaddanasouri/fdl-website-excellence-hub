@@ -1,8 +1,0 @@
-{
-  "10501": {"zone": "NEW JERSEY WAREHOUSE", "city": "Westchester", "delivery_days": "CALL YOUR NEW JERSEY WAREHOUSE"},
-  "10509": {"zone": "DNT EXPRESS - Albany, NY", "city": "Putnam", "delivery_days": "T, R"},
-  "10901": {"zone": "DNT EXPRESS - Albany, NY", "city": "Rockland", "delivery_days": "Friday only"},
-  "12009": {"zone": "DNT EXPRESS - Albany, NY", "city": "Albany", "delivery_days": "T, W, R, F"},
-  "13021": {"zone": "DNT - CLYDE, NY", "city": "Cayuga", "delivery_days": "W, F"},
-  "14001": {"zone": "DNT - CLYDE, NY", "city": "Erie", "delivery_days": "T, W, R, F"}
-}

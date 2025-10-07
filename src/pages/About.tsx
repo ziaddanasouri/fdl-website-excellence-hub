@@ -14,7 +14,7 @@ import {
   Target,
   CheckCircle
 } from 'lucide-react';
-import warehouseInterior from '@/assets/warehouse-interior.jpg';
+import wineWarehouse from '@/assets/wine-warehouse.png';
 
 const About = () => {
   const stats = [
@@ -94,7 +94,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 years of temperature-controlled 3PL excellence.</h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">25 years of temperature control 3PL excellence.</h1>
               <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
                 From warehousing to fulfillment to transportation, FDL DNT has been the Northeast's 
                 trusted partner for comprehensive 3PL logistics solutions since 1999.
@@ -107,8 +107,8 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src={warehouseInterior}
-                alt="Modern temperature-controlled warehouse interior with palletized inventory" 
+                src={wineWarehouse}
+                alt="Wine storage warehouse with wooden crates" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

@@ -28,7 +28,7 @@ import {
   Wine
 } from 'lucide-react';
 import ZipCodeChecker from '@/components/ZipCodeChecker';
-import wineBoxesImage from '@/assets/wine-bottle-packaging.jpg';
+import wineBoxesImage from '@/assets/wine-boxes.png';
 import heroHandcartWine from '@/assets/hero-handcart-wine.jpg';
 
 const Index = () => {
@@ -89,13 +89,13 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Complete 3PL Solutions that
+                Complete 3PL Solutions That 
                 <span className="text-blue-300 block">Power Your Growth</span>
               </h1>
-              <p className="text-xl text-blue-50 leading-relaxed">
+              <p className="text-xl text-blue-100 leading-relaxed">
                 From 3PL services to last-mile delivery, FDL provides world-class temperature-controlled logistics solutions.
               </p>
-              <p className="text-xl text-blue-50 leading-relaxed">
+              <p className="text-xl text-blue-100 leading-relaxed">
                 We use the latest technology to provide efficient, transparent, and 99% accurate 3PL services.
               </p>
             </div>

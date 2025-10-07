@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Truck, Package, Globe, Phone, User } from 'lucide-react';
-import fdlLogo from '@/assets/fdl-dnt-logo-chilled-full.png';
+import fdlLogo from '@/assets/fdl-dnt-logo-chilled.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={fdlLogo} alt="FDL DNT Logo" className="h-16 w-auto" />
+            <img src={fdlLogo} alt="FDL DNT Logo" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
