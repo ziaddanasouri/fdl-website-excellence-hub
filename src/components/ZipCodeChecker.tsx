@@ -3,18 +3,18 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
-import Papa from 'papaparse';
+import zipServiceData from '@/data/fdl_service_zips.json';
 
-interface ZipData {
-  zip: string;
-  carrier: string;
-  county: string;
-  days_of_service: string;
+interface ZipInfo {
+  days: string[];
+  city?: string;
+  zone?: string;
+  state?: string;
 }
 
 interface DeliveryResult {
-  carrier: string;
-  county: string;
+  zone: string;
+  city: string;
   schedule: string[];
   isServiced: boolean;
   specialNote?: string;
@@ -24,49 +24,58 @@ const ZipCodeChecker = () => {
   const [zipCode, setZipCode] = useState('');
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
-  const [zipData, setZipData] = useState<Map<string, ZipData>>(new Map());
+  const [zipData, setZipData] = useState<Map<string, ZipInfo>>(new Map());
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loadCSV = async () => {
+    const loadZipData = () => {
       try {
-        const response = await fetch('/src/data/dnt-zip-codes.csv');
-        const csvText = await response.text();
+        const dataMap = new Map<string, ZipInfo>();
         
-        Papa.parse<ZipData>(csvText, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            const dataMap = new Map<string, ZipData>();
-            results.data.forEach((row) => {
-              if (row.zip) {
-                dataMap.set(row.zip.trim(), row);
-              }
-            });
-            setZipData(dataMap);
-            setIsLoading(false);
-          },
-          error: (error) => {
-            console.error('Error parsing CSV:', error);
-            setIsLoading(false);
-          }
-        });
+        // Process the JSON data structure
+        const data = zipServiceData as any;
+        
+        // Handle by_zip structure if it exists
+        if (data.by_zip) {
+          Object.entries(data.by_zip).forEach(([zip, info]: [string, any]) => {
+            if (zip && info) {
+              dataMap.set(zip, {
+                days: info.days || [],
+                city: info.city,
+                zone: info.zone,
+                state: info.state
+              });
+            }
+          });
+        }
+        
+        // Handle records array structure if it exists
+        if (data.records && Array.isArray(data.records)) {
+          data.records.forEach((record: any) => {
+            if (record.zip) {
+              dataMap.set(record.zip, {
+                days: record.days || record.delivery_days || [],
+                city: record.city,
+                zone: record.zone,
+                state: record.state
+              });
+            }
+          });
+        }
+        
+        console.log(`✅ Loaded ${dataMap.size} zip codes`);
+        setZipData(dataMap);
+        setIsLoading(false);
       } catch (error) {
-        console.error('Error loading CSV:', error);
+        console.error('Error loading zip data:', error);
         setIsLoading(false);
       }
     };
 
-    loadCSV();
+    loadZipData();
   }, []);
 
-  const parseDays = (daysString: string): string[] => {
-    // Handle special cases
-    if (daysString.includes('CALL') || daysString.includes('DNT')) {
-      return [];
-    }
-
-    // Map 3-letter abbreviations to full day names
+  const normalizeDayName = (day: string): string => {
     const dayMap: { [key: string]: string } = {
       'MON': 'Monday',
       'TUE': 'Tuesday',
@@ -75,21 +84,23 @@ const ZipCodeChecker = () => {
       'FRI': 'Friday',
       'SAT': 'Saturday',
       'SUN': 'Sunday',
-      // Legacy support for single letter abbreviations
+      'MONDAY': 'Monday',
+      'TUESDAY': 'Tuesday',
+      'WEDNESDAY': 'Wednesday',
+      'THURSDAY': 'Thursday',
+      'FRIDAY': 'Friday',
+      'SATURDAY': 'Saturday',
+      'SUNDAY': 'Sunday',
+      // Legacy single letter support
       'M': 'Monday',
       'T': 'Tuesday',
       'W': 'Wednesday',
       'R': 'Thursday',
       'F': 'Friday'
     };
-
-    // Split by comma and parse each day
-    return daysString
-      .split(',')
-      .map(day => day.trim())
-      .filter(day => day.length > 0)
-      .map(day => dayMap[day.toUpperCase()] || day)
-      .filter(Boolean);
+    
+    const normalized = dayMap[day.toUpperCase()];
+    return normalized || day;
   };
 
   const handleSearch = () => {
@@ -99,30 +110,36 @@ const ZipCodeChecker = () => {
     const data = zipData.get(cleanZip);
     
     if (data) {
-      const daysOfService = data.days_of_service || '';
-      const isSpecialCase = daysOfService.includes('CALL') || daysOfService.includes('DNT');
-      const schedule = parseDays(daysOfService);
+      // Normalize day names
+      const schedule = data.days
+        .map(day => normalizeDayName(day))
+        .filter(Boolean);
       
       setResult({
-        carrier: data.carrier,
-        county: data.county,
+        zone: data.zone || 'N/A',
+        city: data.city || 'N/A',
         schedule,
-        isServiced: schedule.length > 0 || isSpecialCase,
-        specialNote: isSpecialCase ? daysOfService : undefined
+        isServiced: schedule.length > 0
       });
     } else {
       setResult({
-        carrier: '',
-        county: '',
+        zone: '',
+        city: '',
         schedule: [],
         isServiced: false
       });
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && zipCode.trim().length === 5) {
+      handleSearch();
+    }
+  };
+
   if (isLoading) {
     return (
-      <Card className="w-full max-w-md mx-auto bg-white shadow-xl">
+      <Card className="w-full max-w-md mx-auto bg-card shadow-xl">
         <CardContent className="p-6">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Loading zip code data...</p>
@@ -133,11 +150,11 @@ const ZipCodeChecker = () => {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto bg-white shadow-xl">
+    <Card className="w-full max-w-md mx-auto bg-card shadow-xl">
       <CardContent className="p-6">
         <div className="text-center mb-4">
           <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-          <h3 className="text-xl font-bold text-primary">Check Service Area</h3>
+          <h3 className="text-xl font-bold text-foreground">Check Service Area</h3>
           <p className="text-sm text-muted-foreground">Enter your ZIP code to see delivery days</p>
         </div>
         
@@ -148,6 +165,7 @@ const ZipCodeChecker = () => {
               placeholder="Enter ZIP code"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value.replace(/\D/g, ''))}
+              onKeyPress={handleKeyPress}
               maxLength={5}
               className="flex-1"
             />
@@ -164,46 +182,41 @@ const ZipCodeChecker = () => {
             <div className="mt-4">
               {result.isServiced ? (
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-green-600">
+                  <div className="flex items-center space-x-2 text-green-600 dark:text-green-500">
                     <CheckCircle className="h-5 w-5" />
                     <span className="font-semibold">Service Available!</span>
                   </div>
                   
-                  <div className="bg-green-50 p-4 rounded-lg space-y-2">
-                    {result.county && (
+                  <div className="bg-green-50 dark:bg-green-950/30 p-4 rounded-lg space-y-2">
+                    {result.city && result.city !== 'N/A' && (
                       <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4 text-green-600" />
-                        <span className="text-sm"><strong>County:</strong> {result.county}</span>
+                        <MapPin className="h-4 w-4 text-green-600 dark:text-green-500" />
+                        <span className="text-sm text-foreground"><strong>City:</strong> {result.city}</span>
                       </div>
                     )}
-                    {result.carrier && (
+                    {result.zone && result.zone !== 'N/A' && (
                       <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4 text-green-600" />
-                        <span className="text-sm"><strong>Carrier:</strong> {result.carrier}</span>
+                        <MapPin className="h-4 w-4 text-green-600 dark:text-green-500" />
+                        <span className="text-sm text-foreground"><strong>Zone:</strong> {result.zone}</span>
                       </div>
                     )}
-                    {result.specialNote ? (
-                      <div className="flex items-start space-x-2">
-                        <Clock className="h-4 w-4 text-green-600 mt-0.5" />
-                        <span className="text-sm"><strong>Note:</strong> {result.specialNote}</span>
-                      </div>
-                    ) : result.schedule.length > 0 && (
+                    {result.schedule.length > 0 && (
                       <div className="flex items-center space-x-2">
-                        <Clock className="h-4 w-4 text-green-600" />
-                        <span className="text-sm"><strong>Delivery Days:</strong> {result.schedule.join(', ')}</span>
+                        <Clock className="h-4 w-4 text-green-600 dark:text-green-500" />
+                        <span className="text-sm text-foreground"><strong>Delivery Days:</strong> {result.schedule.join(', ')}</span>
                       </div>
                     )}
                   </div>
                 </div>
               ) : (
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-red-600">
+                  <div className="flex items-center space-x-2 text-red-600 dark:text-red-500">
                     <XCircle className="h-5 w-5" />
                     <span className="font-semibold">Service Not Available</span>
                   </div>
                   
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <p className="text-sm text-red-700">
+                  <div className="bg-red-50 dark:bg-red-950/30 p-4 rounded-lg">
+                    <p className="text-sm text-red-700 dark:text-red-400">
                       We don't currently service this ZIP code. Please contact us for special arrangements.
                     </p>
                   </div>
