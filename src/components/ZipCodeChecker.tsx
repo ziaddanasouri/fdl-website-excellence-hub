@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
 import zipServiceList from '@/data/zipServiceList.json';
+import newZips from '@/data/new-zips-temp.json';
 
 interface ZipData {
   zone: string;
@@ -23,11 +24,18 @@ const ZipCodeChecker = () => {
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
 
+  // Merge both ZIP datasets at runtime - new data overwrites existing
+  const allZips: Record<string, ZipData> = {
+    ...(zipServiceList as Record<string, ZipData>),
+    ...(newZips as Record<string, ZipData>),
+  };
+
   const handleSearch = () => {
-    const cleanZip = zipCode.trim();
+    // Normalize input: digits only, max 5 characters
+    const cleanZip = zipCode.replace(/\D/g, '').slice(0, 5);
     setIsSearched(true);
     
-    const zipData: ZipData | undefined = (zipServiceList as Record<string, ZipData>)[cleanZip];
+    const zipData: ZipData | undefined = allZips[cleanZip];
     
     if (zipData) {
       // Check if delivery service is available (not "DNT")
