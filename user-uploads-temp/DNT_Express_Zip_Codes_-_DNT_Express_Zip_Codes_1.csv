@@ -1,0 +1,715 @@
+ZONE,ZIP,CITY,DELIVERY DAYS
+Clyde,13732,Tioga,Fri
+Clyde,13811,Tioga,Fri
+Clyde,13827,Tioga,Fri
+Clyde,14009,Wyoming,Fri
+Clyde,14070,Cattaraugus,Fri
+Clyde,14080,Erie,Fri
+Clyde,14173,Cattaraugus,Fri
+Clyde,14892,Tioga,Fri
+Clyde,14103,Orleans,Tue
+Clyde,14105,Niagra,Tue
+Clyde,14108,Niagra,Tue
+Clyde,14172,Niagra,Tue
+Clyde,14174,Niagra,Tue
+Clyde,14411,Orleans,Tue
+Clyde,14464,Monroe,Tue
+Clyde,13029,Onondaga,"Tue, Thu"
+Clyde,13036,Oswego,"Tue, Thu"
+Clyde,13131,Oswego,"Tue, Thu"
+Clyde,13142,Oswego,"Tue, Thu"
+Clyde,13778,Chenango,"Tue, Thu"
+Clyde,13830,CHENANGO,"Tue, Thu"
+Clyde,14003,Genesee,"Tue, Thu"
+Clyde,14020,Genesee,"Tue, Thu"
+Clyde,14021,Genesee,"Tue, Thu"
+Clyde,14036,Genesee,"Tue, Thu"
+Clyde,14143,Genesee,"Tue, Thu"
+Clyde,14174,Niagara,"Tue, Thu"
+Clyde,14418,Yates,"Tue, Thu"
+Clyde,14433,Wayne,"Tue, Thu"
+Clyde,14441,Yates,"Tue, Thu"
+Clyde,14478,Yates,"Tue, Thu"
+Clyde,14482,Leroy,"Tue, Thu"
+Clyde,14489,Wayne,"Tue, Thu"
+Clyde,14502,Wayne,"Tue, Thu"
+Clyde,14513,Wayne,"Tue, Thu"
+Clyde,14519,Wayne,"Tue, Thu"
+Clyde,14522,Wayne,"Tue, Thu"
+Clyde,14527,Yates,"Tue, Thu"
+Clyde,14538,Wayne,"Tue, Thu"
+Clyde,14551,Wayne,"Tue, Thu"
+Clyde,14555,Wayne,"Tue, Thu"
+Clyde,14801,Steuben,"Tue, Thu"
+Clyde,14805,Schuyler,"Tue, Thu"
+Clyde,14810,Steuben,"Tue, Thu"
+Clyde,14814,CHEMUNG,"Tue, Thu"
+Clyde,14814,CHEMUNG,"Tue, Thu"
+Clyde,14815,Schuyler,"Tue, Thu"
+Clyde,14821,Steuben,"Tue, Thu"
+Clyde,14830,Steuben,"Tue, Thu"
+Clyde,14837,Steuben,"Tue, Thu"
+Clyde,14837,Yates,"Tue, Thu"
+Clyde,14840,Steuben,"Tue, Thu"
+Clyde,14841,Schuyler,"Tue, Thu"
+Clyde,14842,Yates,"Tue, Thu"
+Clyde,14845,CHEMUNG,"Tue, Thu"
+Clyde,14845,CHEMUNG,"Tue, Thu"
+Clyde,14865,Schuyler,"Tue, Thu"
+Clyde,14870,Steuben,"Tue, Thu"
+Clyde,14871,CHEMUNG,"Tue, Thu"
+Clyde,14871,CHEMUNG,"Tue, Thu"
+Clyde,14889,CHEMUNG,"Tue, Thu"
+Clyde,14889,CHEMUNG,"Tue, Thu"
+Clyde,14891,Schuyler,"Tue, Thu"
+Clyde,14901,CHEMUNG,"Tue, Thu"
+Clyde,14901,CHEMUNG,"Tue, Thu"
+Clyde,14902,CHEMUNG,"Tue, Thu"
+Clyde,14902,CHEMUNG,"Tue, Thu"
+Clyde,14903,CHEMUNG,"Tue, Thu"
+Clyde,14903,CHEMUNG,"Tue, Thu"
+Clyde,14904,CHEMUNG,"Tue, Thu"
+Clyde,14904,CHEMUNG,"Tue, Thu"
+Clyde,14905,CHEMUNG,"Tue, Thu"
+Clyde,14905,CHEMUNG,"Tue, Thu"
+Clyde,13027,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13031,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13039,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13041,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13057,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13060,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13066,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13088,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13090,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13108,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13116,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13152,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13153,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13202,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13203,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13204,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13206,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13207,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13208,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13209,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13210,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13211,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13212,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13214,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13215,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13219,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13224,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,13290,Onondaga,"Tue, Wed, Thu, Fri"
+Clyde,14001,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14004,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14023,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14026,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14030,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14031,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14034,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14043,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14047,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14051,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14052,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14057,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14059,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14068,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14072,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14075,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14085,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14086,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14092,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14094,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14110,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14120,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14127,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14132,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14150,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14201,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14202,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14203,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14204,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14206,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14207,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14208,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14209,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14210,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14211,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14212,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14213,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14214,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14215,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14216,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14217,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14218,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14219,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14220,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14221,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14222,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14223,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14224,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14225,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14226,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14227,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14228,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14230,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14301,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14302,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14303,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14304,Erie,"Tue, Wed, Thu, Fri"
+Clyde,14304,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14305,Niagra,"Tue, Wed, Thu, Fri"
+Clyde,14420,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14428,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14445,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14450,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14467,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14514,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14526,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14534,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14559,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14580,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14589,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14602,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14603,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14604,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14605,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14606,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14607,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14608,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14609,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14610,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14611,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14612,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14613,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14614,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14615,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14616,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14617,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14618,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14619,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14620,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14621,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14622,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14623,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14624,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14625,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14626,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14627,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14638,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14639,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14642,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14643,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14644,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14646,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14647,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14649,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14650,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14651,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14652,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,14694,Monroe,"Tue, Wed, Thu, Fri"
+Clyde,13602,Jefferson,"Tue,Thu"
+Clyde,13605,Jefferson,"Tue,Thu"
+Clyde,13685,Jefferson,"Tue,Thu"
+Clyde,13030,Madison,Thu
+Clyde,13032,Madison,Thu
+Clyde,13037,Madison,Thu
+Clyde,13325,Lewis,Thu
+Clyde,13327,Lewis,Thu
+Clyde,13420,Herkimer,Thu
+Clyde,13612,Jefferson,Thu
+Clyde,13669,St. Lawrence,Thu
+Clyde,13694,St. Lawrence,Thu
+Clyde,14521,Seneca,Thu
+Clyde,14533,Livingston,Thu
+Clyde,14546,Monroe,Thu
+Clyde,14709,Allegany,Thu
+Clyde,14727,Allegany,Thu
+Clyde,14802,Allegany,Thu
+Clyde,14860,Seneca,Thu
+Clyde,12108,Hamilton,Thu 
+Clyde,12139,Hamilton,Thu 
+Clyde,12164,Hamilton,Thu 
+Clyde,13309,Oneida,Thu 
+Clyde,13331,Herkimer,Thu 
+Clyde,13360,Hamilton,Thu 
+Clyde,13367,Lewis,Thu 
+Clyde,13368,Lewis,Thu 
+Clyde,13436,Hamilton,Thu 
+Clyde,13472,Herkimer,Thu 
+Clyde,13601,Jefferson,Thu 
+Clyde,13607,Jefferson,Thu 
+Clyde,13618,Jefferson,Thu 
+Clyde,13619,Jefferson,Thu 
+Clyde,13621,St. Lawrence,Thu 
+Clyde,13622,Jefferson,Thu 
+Clyde,13624,Jefferson,Thu 
+Clyde,13632,Jefferson,Thu 
+Clyde,13640,Jefferson,Thu 
+Clyde,13641,Jefferson,Thu 
+Clyde,13642,St. Lawrence,Thu 
+Clyde,13646,St. Lawrence,Thu 
+Clyde,13648,Lewis,Thu 
+Clyde,13656,Jefferson,Thu 
+Clyde,13658,St. Lawrence,Thu 
+Clyde,13669,Lewis,Thu 
+Clyde,13680,Jefferson,Thu 
+Clyde,13338,Oneida,Thu
+Clyde,14037,Wyoming,Thu
+Clyde,14011,Wyoming,Tue
+Clyde,14067,Niagara,Tue
+Clyde,14125,Wyoming,Tue
+Clyde,14414,Livingston,Tue
+Clyde,14423,Livingston,Tue
+Clyde,14435,Livingston,Tue
+Clyde,14437,Livingston,Tue
+Clyde,14454,Livingston,Tue
+Clyde,14469,Ontario,Tue
+Clyde,14471,Ontario,Tue
+Clyde,14472,Monroe,Tue
+Clyde,14480,Livingston,Tue
+Clyde,14485,Livingston,Tue
+Clyde,14487,Livingston,Tue
+Clyde,14506,Monroe,Tue
+Clyde,14510,Livingston,Tue
+Clyde,14512,Ontario,Tue
+Clyde,14517,Livingston,Tue
+Clyde,14530,Wyoming,Tue
+Clyde,14550,Wyoming,Tue
+Clyde,14569,Wyoming,Tue
+Clyde,14572,Steuben,Tue
+Clyde,14807,Steuben,Tue
+Clyde,14823,Steuben,Tue
+Clyde,14826,Steuben,Tue
+Clyde,14843,Steuben,Tue
+Clyde,14895,Allegany,Tue
+Clyde,14897,Allegany,Tue
+Clyde,13035,Madison,W
+Clyde,13346,Madison,W
+Clyde,13072,Madison,W
+Clyde,13021,Cayuga,"Wed, Fri"
+Clyde,13026,Cayuga,"Wed, Fri"
+Clyde,13045,Cortland,"Wed, Fri"
+Clyde,13053,Tompkins,"Wed, Fri"
+Clyde,13064,Cayuga,"Wed, Fri"
+Clyde,13069,Oswego,"Wed, Fri"
+Clyde,13073,Tompkins,"Wed, Fri"
+Clyde,13104,Onondaga,"Wed, Fri"
+Clyde,13114,Oswego,"Wed, Fri"
+Clyde,13118,Cayuga,"Wed, Fri"
+Clyde,13126,Oswego,"Wed, Fri"
+Clyde,13135,Oswego,"Wed, Fri"
+Clyde,13148,Seneca,"Wed, Fri"
+Clyde,13159,Onondaga,"Wed, Fri"
+Clyde,13160,Cayuga,"Wed, Fri"
+Clyde,13165,Seneca,"Wed, Fri"
+Clyde,13166,Cayuga,"Wed, Fri"
+Clyde,13328,Oneida,"Wed, Fri"
+Clyde,13332,Madison,"Wed, Fri"
+Clyde,13748,Broome,"Wed, Fri"
+Clyde,13760,Broome,"Wed, Fri"
+Clyde,13790,Broome,"Wed, Fri"
+Clyde,13833,Broome,"Wed, Fri"
+Clyde,13850,Broome,"Wed, Fri"
+Clyde,13862,Broome,"Wed, Fri"
+Clyde,13865,Broome,"Wed, Fri"
+Clyde,13901,Broome,"Wed, Fri"
+Clyde,13903,Broome,"Wed, Fri"
+Clyde,13904,Broome,"Wed, Fri"
+Clyde,13905,Broome,"Wed, Fri"
+Clyde,14006,Erie,"Wed, Fri"
+Clyde,14048,Chautauqua,"Wed, Fri"
+Clyde,14063,Chautauqua,"Wed, Fri"
+Clyde,14136,Chautauqua,"Wed, Fri"
+Clyde,14138,Cattaraugus,"Wed, Fri"
+Clyde,14141,Erie,"Wed, Fri"
+Clyde,14424,Ontario,"Wed, Fri"
+Clyde,14425,Ontario,"Wed, Fri"
+Clyde,14432,Ontario,"Wed, Fri"
+Clyde,14443,Ontario,"Wed, Fri"
+Clyde,14456,Ontario,"Wed, Fri"
+Clyde,14504,Ontario,"Wed, Fri"
+Clyde,14532,Ontario,"Wed, Fri"
+Clyde,14541,Seneca,"Wed, Fri"
+Clyde,14548,Ontario,"Wed, Fri"
+Clyde,14564,Ontario,"Wed, Fri"
+Clyde,14580,Tompkins,"Wed, Fri"
+Clyde,14590,Wayne,"Wed, Fri"
+Clyde,14701,Chautauqua,"Wed, Fri"
+Clyde,14702,Chautauqua,"Wed, Fri"
+Clyde,14706,Cattaraugus,"Wed, Fri"
+Clyde,14712,Chautauqua,"Wed, Fri"
+Clyde,14718,Chautauqua,"Wed, Fri"
+Clyde,14720,Chautauqua,"Wed, Fri"
+Clyde,14723,Chautauqua,"Wed, Fri"
+Clyde,14724,Chautauqua,"Wed, Fri"
+Clyde,14728,Chautauqua,"Wed, Fri"
+Clyde,14731,Ellicottville,"Wed, Fri"
+Clyde,14733,Chautauqua,"Wed, Fri"
+Clyde,14737,Cattaraugus,"Wed, Fri"
+Clyde,14738,Chautauqua,"Wed, Fri"
+Clyde,14743,Hinsdale,"Wed, Fri"
+Clyde,14750,Chautauqua,"Wed, Fri"
+Clyde,14755,Cattaraugus,"Wed, Fri"
+Clyde,14757,Chautauqua,"Wed, Fri"
+Clyde,14760,Cattaraugus,"Wed, Fri"
+Clyde,14769,Chautauqua,"Wed, Fri"
+Clyde,14770,Cattaraugus,"Wed, Fri"
+Clyde,14772,Cattaraugus,"Wed, Fri"
+Clyde,14779,Cattaraugus,"Wed, Fri"
+Clyde,14784,Chautauqua,"Wed, Fri"
+Clyde,14787,Chautauqua,"Wed, Fri"
+Clyde,14847,Seneca,"Wed, Fri"
+Clyde,14850,Tompkins,"Wed, Fri"
+Clyde,14853,Tompkins,"Wed, Fri"
+Clyde,14882,Tompkins,"Wed, Fri"
+Clyde,14886,Tompkins,"Wed, Fri"
+Clyde,13157,Oneida,"Wed, Thu, Fri"
+Clyde,13162,Oneida,"Wed, Thu, Fri"
+Clyde,13304,Oneida,"Wed, Thu, Fri"
+Clyde,13313,Oneida,"Wed, Thu, Fri"
+Clyde,13316,Oneida,"Wed, Thu, Fri"
+Clyde,13321,Oneida,"Wed, Thu, Fri"
+Clyde,13323,Oneida,"Wed, Thu, Fri"
+Clyde,13413,Oneida,"Wed, Thu, Fri"
+Clyde,13421,Madison,"Wed, Thu, Fri"
+Clyde,13440,Oneida,"Wed, Thu, Fri"
+Clyde,13441,Oneida,"Wed, Thu, Fri"
+Clyde,13476,Oneida,"Wed, Thu, Fri"
+Clyde,13478,Oneida,"Wed, Thu, Fri"
+Clyde,13479,Oneida,"Wed, Thu, Fri"
+Clyde,13480,Oneida,"Wed, Thu, Fri"
+Clyde,13492,Oneida,"Wed, Thu, Fri"
+Clyde,13495,Oneida,"Wed, Thu, Fri"
+Clyde,13501,Oneida,"Wed, Thu, Fri"
+Clyde,13502,Oneida,"Wed, Thu, Fri"
+Clyde,13084,Onondaga,Wed
+Clyde,13411,CHENANGO,Wed
+Clyde,13460,CHENANGO,Wed
+Clyde,13815,CHENANGO,Wed
+Clyde,14468,Monroe,Wed
+Albany,12932,Essex,Tue
+Albany,12936,Essex,Tue
+Albany,12953,Clinton,Tue
+Albany,12958,Clinton,Tue
+Albany,12974,Essex,Tue
+Albany,12986,Franklin,Tue
+Albany,12993,Essex,Tue
+Albany,12996,Essex,Tue
+Albany,12847,Hamilton,Fri 
+Albany,12154,Rensselaer,Fri
+Albany,12804,Warren,Fri
+Albany,12809,Washington,Fri
+Albany,12814,Warren,Fri
+Albany,12815,Warren,Fri
+Albany,12816,Washington,Fri
+Albany,12817,Warren,Fri
+Albany,12820,Warren,Fri
+Albany,12823,Washington,Fri
+Albany,12824,Warren,Fri
+Albany,12832,Washington,Fri
+Albany,12834,Saratoga,Fri
+Albany,12844,Warren,Fri
+Albany,12845,Warren,Fri
+Albany,12848,Washington,Fri
+Albany,12853,Warren,Fri
+Albany,12856,Warren,Fri
+Albany,12857,Warren,Fri
+Albany,12865,Washington,Fri
+Albany,12871,Saratoga,Fri
+Albany,12885,Warren,Fri
+Albany,12887,Washington,Fri
+Albany,12842,Hamilton,Fri 
+Albany,10901,Rockland,Fri
+Albany,10952,Rockland,Fri
+Albany,10965,Rockland,Fri
+Albany,10968,Rockland,Fri
+Albany,10976,Rockland,Fri
+Albany,10977,Rockland,Fri
+Albany,12018,Rensselaer,Fri
+Albany,12022,Albany,Fri
+Albany,12052,Rensselaer,Fri
+Albany,12056,Schoharie,Fri
+Albany,12074,Saratoga,Fri
+Albany,12090,Rensselaer,Fri
+Albany,12123,Rensselaer,Fri
+Albany,12168,Rensselaer,Fri
+Albany,12196,Rensselaer,Fri
+Albany,12404,Ulster,Fri
+Albany,12428,Ulster,Fri
+Albany,12440,Ulster,Fri
+Albany,12446,Ulster,Fri
+Albany,12458,Ulster,Fri
+Albany,12484,Ulster,Fri
+Albany,12566,Orange,Fri
+Albany,12850,Saratoga,Fri
+Albany,12836,Warren,"Tue, Thu , Fri "
+Albany,13613,St. Lawrence,"Tue, Thu , Fri "
+Albany,13617,St. Lawrence,"Tue, Thu , Fri "
+Albany,13647,St. Lawrence,"Tue, Thu , Fri "
+Albany,13660,Hamilton,"Tue, Thu , Fri "
+Albany,13662,St. Lawrence,"Tue, Thu , Fri "
+Albany,13667,St. Lawrence,"Tue, Thu , Fri "
+Albany,13676,St. Lawrence,"Tue, Thu , Fri "
+Albany,13687,St. Lawrence,"Tue, Thu , Fri "
+Albany,12701,Sullivan,Tue
+Albany,12719,Sullivan,Tue
+Albany,12720,Sullivan,Tue
+Albany,12721,Sullivan,Tue
+Albany,12722,Sullivan,Tue
+Albany,12723,Sullivan,Tue
+Albany,12727,Sullivan,Tue
+Albany,12735,Sullivan,Tue
+Albany,12748,Sullivan,Tue
+Albany,12754,Sullivan,Tue
+Albany,12758,Sullivan,Tue
+Albany,12764,Sullivan,Tue
+Albany,12766,Sullivan,Tue
+Albany,12768,Sullivan,Tue
+Albany,12775,Sullivan,Tue
+Albany,12786,Sullivan,Tue
+Albany,12789,Sullivan,Tue
+Albany,12790,Sullivan,Tue
+Albany,12586,Orange,"Tue, Fri"
+Albany,12589,Orange,"Tue, Fri"
+Albany,10509,Putnam,"Tue, Thu"
+Albany,10512,Putnam,"Tue, Thu"
+Albany,10516,Putnam,"Tue, Thu"
+Albany,10524,Putnam,"Tue, Thu"
+Albany,10541,Putnam,"Tue, Thu"
+Albany,10579,Putnam,"Tue, Thu"
+Albany,12522,Dutchess,"Tue, Thu"
+Albany,12549,Orange,"Tue, Thu"
+Albany,12563,Putnum,"Tue, Thu"
+Albany,12564,Dutchess,"Tue, Thu"
+Albany,12592,Dutchess,"Tue, Thu"
+Albany,12594,Dutchess,"Tue, Thu"
+Albany,12501,Dutchess,"Tue, Thu, Fri"
+Albany,12546,Dutchess,"Tue, Thu, Fri"
+Albany,12870,Essex,"Tue, Thu, Fri"
+Albany,12896,Franklin,"Tue, Thu, Fri"
+Albany,12901,Clinton,"Tue, Thu, Fri"
+Albany,12912,Clinton,"Tue, Thu, Fri"
+Albany,12919,Clinton,"Tue, Thu, Fri"
+Albany,12942,Essex,"Tue, Thu, Fri"
+Albany,12943,Essex,"Tue, Thu, Fri"
+Albany,12944,Essex,"Tue, Thu, Fri"
+Albany,12946,Essex,"Tue, Thu, Fri"
+Albany,12972,Clinton,"Tue, Thu, Fri"
+Albany,12979,Clinton,"Tue, Thu, Fri"
+Albany,12983,Essex,"Tue, Thu, Fri"
+Albany,10914,Orange,"Tue, Wed, Fri"
+Albany,10992,Orange,"Tue, Wed, Fri"
+Albany,10923,Rockland,"Tue, Wed, Thu"
+Albany,10927,Rockland,"Tue, Wed, Thu"
+Albany,10970,Rockland,"Tue, Wed, Thu"
+Albany,10980,Rockland,"Tue, Wed, Thu"
+Albany,10986,Rockland,"Tue, Wed, Thu"
+Albany,10913,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10917,Orange,"Tue, Wed, Thu, Fri"
+Albany,10920,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10924,Orange,"Tue, Wed, Thu, Fri"
+Albany,10926,Orange,"Tue, Wed, Thu, Fri"
+Albany,10940,Orange,"Tue, Wed, Thu, Fri"
+Albany,10941,Orange,"Tue, Wed, Thu, Fri"
+Albany,10950,Orange,"Tue, Wed, Thu, Fri"
+Albany,10954,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10956,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10960,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10962,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10969,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10981,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10983,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10989,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10993,Rockland,"Tue, Wed, Thu, Fri"
+Albany,10994,Rockland,"Tue, Wed, Thu, Fri"
+Albany,12009,Albany,"Tue, Wed, Thu, Fri"
+Albany,12015,Greene,"Tue, Wed, Thu, Fri"
+Albany,12020,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12025,Fulton,"Tue, Wed, Thu, Fri"
+Albany,12027,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12033,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12037,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12047,Albany,"Tue, Wed, Thu, Fri"
+Albany,12051,Greene,"Tue, Wed, Thu, Fri"
+Albany,12054,Albany,"Tue, Wed, Thu, Fri"
+Albany,12058,Greene,"Tue, Wed, Thu, Fri"
+Albany,12060,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12061,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12065,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12075,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12077,Albany,"Tue, Wed, Thu, Fri"
+Albany,12084,Albany,"Tue, Wed, Thu, Fri"
+Albany,12110,Albany,"Tue, Wed, Thu, Fri"
+Albany,12118,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12143,Albany,"Tue, Wed, Thu, Fri"
+Albany,12144,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12151,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12159,Albany,"Tue, Wed, Thu, Fri"
+Albany,12180,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12181,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12182,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12184,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12186,Albany,"Tue, Wed, Thu, Fri"
+Albany,12188,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12189,Albany,"Tue, Wed, Thu, Fri"
+Albany,12192,Greene,"Tue, Wed, Thu, Fri"
+Albany,12198,Rensselaer,"Tue, Wed, Thu, Fri"
+Albany,12202,Albany,"Tue, Wed, Thu, Fri"
+Albany,12203,Albany,"Tue, Wed, Thu, Fri"
+Albany,12204,Albany,"Tue, Wed, Thu, Fri"
+Albany,12205,Albany,"Tue, Wed, Thu, Fri"
+Albany,12206,Albany,"Tue, Wed, Thu, Fri"
+Albany,12207,Albany,"Tue, Wed, Thu, Fri"
+Albany,12208,Albany,"Tue, Wed, Thu, Fri"
+Albany,12209,Albany,"Tue, Wed, Thu, Fri"
+Albany,12210,Albany,"Tue, Wed, Thu, Fri"
+Albany,12211,Albany,"Tue, Wed, Thu, Fri"
+Albany,12250,Albany,"Tue, Wed, Thu, Fri"
+Albany,12301,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12302,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12303,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12304,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12305,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12306,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12308,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12309,Schenectady,"Tue, Wed, Thu, Fri"
+Albany,12401,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12413,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12414,Greene,"Tue, Wed, Thu, Fri"
+Albany,12453,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12466,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12472,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12477,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12491,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12493,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12498,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12506,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12508,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12509,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12518,Orange,"Tue, Wed, Thu, Fri"
+Albany,12520,Orange,"Tue, Wed, Thu, Fri"
+Albany,12524,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12526,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12533,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12534,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12538,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12540,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12545,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12550,Orange,"Tue, Wed, Thu, Fri"
+Albany,12553,Orange,"Tue, Wed, Thu, Fri"
+Albany,12569,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12570,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12571,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12572,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12574,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12577,Orange,"Tue, Wed, Thu, Fri"
+Albany,12578,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12580,Columbia,"Tue, Wed, Thu, Fri"
+Albany,12582,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12583,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12584,Orange,"Tue, Wed, Thu, Fri"
+Albany,12590,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12601,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12602,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12603,Dutchess,"Tue, Wed, Thu, Fri"
+Albany,12744,Ulster,"Tue, Wed, Thu, Fri"
+Albany,12822,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12833,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12863,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12866,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,12866,Saratoga,"Tue, Wed, Thu, Fri"
+Albany,10928,Orange,Thu
+Albany,10963,Orange,Thu
+Albany,10996,Orange,Thu
+Albany,10997,Orange,Thu
+Albany,12010,Montgomery,Thu
+Albany,12068,Montgomery,Thu
+Albany,12078,Fulton,Thu
+Albany,12083,Greene,Thu
+Albany,12095,Fulton,Thu
+Albany,12117,Fulton,Thu
+Albany,12134,Fulton,Thu
+Albany,12147,Albany,Thu
+Albany,12177,Montgomery,Thu
+Albany,12409,Ulster,Thu
+Albany,12410,Ulster,Thu
+Albany,12412,Ulster,Thu
+Albany,12430,Ulster,Thu
+Albany,12439,Greene,Thu
+Albany,12442,Greene,Thu
+Albany,12450,Ulster,Thu
+Albany,12457,Ulster,Thu
+Albany,12464,Greene,Thu
+Albany,12465,Ulster,Thu
+Albany,12468,Greene,Thu
+Albany,12480,Ulster,Thu
+Albany,12481,Ulster,Thu
+Albany,12485,Ulster,Thu
+Albany,12492,Greene,Thu
+Albany,12494,Ulster,Thu
+Albany,12496,Greene,Thu
+Albany,12771,Orange,Thu
+Albany,12846,Warren,Thu
+Albany,13317,Montgomery,Thu
+Albany,13329,Herkimer,Thu
+Albany,13339,Herkimer,Thu
+Albany,13350,Herkimer,Thu
+Albany,13357,Herkimer,Thu
+Albany,13365,Herkimer,Thu
+Albany,13406,Herkimer,Thu
+Albany,13416,Herkimer,Thu
+Albany,13428,Montgomery,Thu
+Albany,13491,Herkimer,Thu
+Albany,12167,DELAWARE,Tue
+Albany,12406,DELAWARE,Tue
+Albany,12434,DELAWARE,Tue
+Albany,12455,DELAWARE,Tue
+Albany,12474,DELAWARE,Tue
+Albany,13730,CHENANGO,Tue
+Albany,13731,DELAWARE,Tue
+Albany,13733,CHENANGO,Tue
+Albany,13739,DELAWARE,Tue
+Albany,13753,DELAWARE,Tue
+Albany,13754,DELAWARE,Tue
+Albany,13755,DELAWARE,Tue
+Albany,13757,DELAWARE,Tue
+Albany,13783,DELAWARE,Tue
+Albany,13788,DELAWARE,Tue
+Albany,13838,DELAWARE,Tue
+Albany,13856,DELAWARE,Tue
+Albany,10918,Orange,"Wed, Fri"
+Albany,10921,Orange,"Wed, Fri"
+Albany,10925,Orange,"Wed, Fri"
+Albany,10987,Orange,"Wed, Fri"
+Albany,10990,Orange,"Wed, Fri"
+Albany,12043,Schoharie,"Wed, Fri"
+Albany,12053,Schoharie,"Wed, Fri"
+Albany,12064,Otsego,"Wed, Fri"
+Albany,12122,Schoharie,"Wed, Fri"
+Albany,12149,Schoharie,"Wed, Fri"
+Albany,12157,Schoharie,"Wed, Fri"
+Albany,13326,Schoharie,"Wed, Fri"
+Albany,13337,Otsego,"Wed, Fri"
+Albany,13439,Schoharie,"Wed, Fri"
+Albany,13450,Otsego,"Wed, Fri"
+Albany,13459,Schoharie,"Wed, Fri"
+Albany,13820,Otsego,"Wed, Fri"
+Albany,12029,Columbia,"Wed, Thu, Fri"
+Albany,12125,Columbia,"Wed, Thu, Fri"
+Albany,12502,Columbia,"Wed, Thu, Fri"
+Albany,12513,Columbia,"Wed, Thu, Fri"
+Albany,12525,Ulster,"Wed, Thu, Fri"
+Albany,12528,Ulster,"Wed, Thu, Fri"
+Albany,12529,Columbia,"Wed, Thu, Fri"
+Albany,12542,Ulster,"Wed, Thu, Fri"
+Albany,12547,Ulster,"Wed, Thu, Fri"
+Albany,12561,Ulster,"Wed, Thu, Fri"
+Albany,12565,Columbia,"Wed, Thu, Fri"
+Albany,12567,Dutchess,"Wed, Thu, Fri"
+Albany,12801,Warren,"Wed, Thu, Fri"
+Albany,12803,Warren,"Wed, Thu, Fri"
+Albany,12828,Warren,"Wed, Thu, Fri"
+Albany,12831,Saratoga,"Wed, Thu, Fri"
+Albany,12835,Saratoga,"Wed, Thu, Fri"
+Albany,12839,Washington,"Wed, Thu, Fri"
