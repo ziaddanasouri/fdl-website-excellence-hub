@@ -58,18 +58,10 @@ const ZipCodeChecker = () => {
       'TUE': 'Tuesday', 
       'WED': 'Wednesday',
       'THU': 'Thursday',
-      'FRI': 'Friday',
-      'SAT': 'Saturday',
-      'SUN': 'Sunday'
+      'FRI': 'Friday'
     };
     
-    return days.map(day => dayMap[day] || day).join(', ');
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && zipCode.trim()) {
-      handleSearch();
-    }
+    return days.map(day => dayMap[day]).join(', ');
   };
 
   return (
@@ -88,7 +80,6 @@ const ZipCodeChecker = () => {
               placeholder="Enter ZIP code"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
-              onKeyPress={handleKeyPress}
               maxLength={5}
               className="flex-1"
             />
