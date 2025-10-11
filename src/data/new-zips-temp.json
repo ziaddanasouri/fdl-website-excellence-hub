@@ -1,0 +1,3497 @@
+{
+  "10509": {
+    "zone": "Albany",
+    "city": "Putnam",
+    "delivery_days": "TUE,THU"
+  },
+  "10512": {
+    "zone": "Albany",
+    "city": "Putnam",
+    "delivery_days": "TUE,THU"
+  },
+  "10516": {
+    "zone": "Albany",
+    "city": "Putnam",
+    "delivery_days": "TUE,THU"
+  },
+  "10524": {
+    "zone": "Albany",
+    "city": "Putnam",
+    "delivery_days": "TUE,THU"
+  },
+  "10541": {
+    "zone": "Albany",
+    "city": "Putnam",
+    "delivery_days": "TUE,THU"
+  },
+  "10579": {
+    "zone": "Albany",
+    "city": "Putnam",
+    "delivery_days": "TUE,THU"
+  },
+  "10901": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "FRI"
+  },
+  "10913": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10914": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,FRI"
+  },
+  "10917": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10918": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "WED,FRI"
+  },
+  "10920": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10921": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "WED,FRI"
+  },
+  "10923": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU"
+  },
+  "10924": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10925": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "WED,FRI"
+  },
+  "10926": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10927": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU"
+  },
+  "10928": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "THU"
+  },
+  "10940": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10941": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10950": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10952": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "FRI"
+  },
+  "10954": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10956": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10960": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10962": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10963": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "THU"
+  },
+  "10965": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "FRI"
+  },
+  "10968": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "FRI"
+  },
+  "10969": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10970": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU"
+  },
+  "10976": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "FRI"
+  },
+  "10977": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "FRI"
+  },
+  "10980": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU"
+  },
+  "10981": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10983": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10986": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU"
+  },
+  "10987": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "WED,FRI"
+  },
+  "10989": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10990": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "WED,FRI"
+  },
+  "10992": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,FRI"
+  },
+  "10993": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10994": {
+    "zone": "Albany",
+    "city": "Rockland",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "10996": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "THU"
+  },
+  "10997": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "THU"
+  },
+  "12009": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12010": {
+    "zone": "Albany",
+    "city": "Montgomery",
+    "delivery_days": "THU"
+  },
+  "12015": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12018": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12020": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12022": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "FRI"
+  },
+  "12025": {
+    "zone": "Albany",
+    "city": "Fulton",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12027": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12029": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12033": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12037": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12043": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "12047": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12051": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12052": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12053": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "12054": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12056": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "FRI"
+  },
+  "12058": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12060": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12061": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12064": {
+    "zone": "Albany",
+    "city": "Otsego",
+    "delivery_days": "WED,FRI"
+  },
+  "12065": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12068": {
+    "zone": "Albany",
+    "city": "Montgomery",
+    "delivery_days": "THU"
+  },
+  "12074": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "FRI"
+  },
+  "12075": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12077": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12078": {
+    "zone": "Albany",
+    "city": "Fulton",
+    "delivery_days": "THU"
+  },
+  "12083": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12084": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12090": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12095": {
+    "zone": "Albany",
+    "city": "Fulton",
+    "delivery_days": "THU"
+  },
+  "12108": {
+    "zone": "Clyde",
+    "city": "Hamilton",
+    "delivery_days": "THU"
+  },
+  "12110": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12117": {
+    "zone": "Albany",
+    "city": "Fulton",
+    "delivery_days": "THU"
+  },
+  "12118": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12122": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "12123": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12125": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12134": {
+    "zone": "Albany",
+    "city": "Fulton",
+    "delivery_days": "THU"
+  },
+  "12139": {
+    "zone": "Clyde",
+    "city": "Hamilton",
+    "delivery_days": "THU"
+  },
+  "12143": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12144": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12147": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "THU"
+  },
+  "12149": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "12151": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12154": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12157": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "12159": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12164": {
+    "zone": "Clyde",
+    "city": "Hamilton",
+    "delivery_days": "THU"
+  },
+  "12167": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "12168": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12177": {
+    "zone": "Albany",
+    "city": "Montgomery",
+    "delivery_days": "THU"
+  },
+  "12180": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12181": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12182": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12184": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12186": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12188": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12189": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12192": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12196": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "FRI"
+  },
+  "12198": {
+    "zone": "Albany",
+    "city": "Rensselaer",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12202": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12203": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12204": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12205": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12206": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12207": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12208": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12209": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12210": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12211": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12250": {
+    "zone": "Albany",
+    "city": "Albany",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12301": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12302": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12303": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12304": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12305": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12306": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12308": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12309": {
+    "zone": "Albany",
+    "city": "Schenectady",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12401": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12404": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "FRI"
+  },
+  "12406": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "12409": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12410": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12412": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12413": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12414": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12428": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "FRI"
+  },
+  "12430": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12434": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "12439": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12440": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "FRI"
+  },
+  "12442": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12446": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "FRI"
+  },
+  "12450": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12453": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12455": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "12457": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12458": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "FRI"
+  },
+  "12464": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12465": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12466": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12468": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12472": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12474": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "12477": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12480": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12481": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12484": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "FRI"
+  },
+  "12485": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12491": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12492": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12493": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12494": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "THU"
+  },
+  "12496": {
+    "zone": "Albany",
+    "city": "Greene",
+    "delivery_days": "THU"
+  },
+  "12498": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12501": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12502": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12506": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12508": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12509": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12513": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12518": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12520": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12522": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,THU"
+  },
+  "12524": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12525": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12526": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12528": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12529": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12533": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12534": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12538": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12540": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12542": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12545": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12546": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12547": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12549": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,THU"
+  },
+  "12550": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12553": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12561": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12563": {
+    "zone": "Albany",
+    "city": "Putnum",
+    "delivery_days": "TUE,THU"
+  },
+  "12564": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,THU"
+  },
+  "12565": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12566": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "FRI"
+  },
+  "12567": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12569": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12570": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12571": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12572": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12574": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12577": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12578": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12580": {
+    "zone": "Albany",
+    "city": "Columbia",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12582": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12583": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12584": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12586": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,FRI"
+  },
+  "12589": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "TUE,FRI"
+  },
+  "12590": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12592": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,THU"
+  },
+  "12594": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,THU"
+  },
+  "12601": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12602": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12603": {
+    "zone": "Albany",
+    "city": "Dutchess",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12701": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12719": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12720": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12721": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12722": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12723": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12727": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12735": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12744": {
+    "zone": "Albany",
+    "city": "Ulster",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12748": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12754": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12758": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12764": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12766": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12768": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12771": {
+    "zone": "Albany",
+    "city": "Orange",
+    "delivery_days": "THU"
+  },
+  "12775": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12786": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12789": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12790": {
+    "zone": "Albany",
+    "city": "Sullivan",
+    "delivery_days": "TUE"
+  },
+  "12801": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12803": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12804": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12809": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12814": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12815": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12816": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12817": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12820": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12822": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12823": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12824": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12828": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12831": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12832": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12833": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12834": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "FRI"
+  },
+  "12835": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12836": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12839": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "12842": {
+    "zone": "Albany",
+    "city": "Hamilton",
+    "delivery_days": "FRI"
+  },
+  "12844": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12845": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12846": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "THU"
+  },
+  "12847": {
+    "zone": "Albany",
+    "city": "Hamilton",
+    "delivery_days": "FRI"
+  },
+  "12848": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12850": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "FRI"
+  },
+  "12853": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12856": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12857": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12863": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12865": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12866": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "12870": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12871": {
+    "zone": "Albany",
+    "city": "Saratoga",
+    "delivery_days": "FRI"
+  },
+  "12885": {
+    "zone": "Albany",
+    "city": "Warren",
+    "delivery_days": "FRI"
+  },
+  "12887": {
+    "zone": "Albany",
+    "city": "Washington",
+    "delivery_days": "FRI"
+  },
+  "12896": {
+    "zone": "Albany",
+    "city": "Franklin",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12901": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12912": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12919": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12932": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE"
+  },
+  "12936": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE"
+  },
+  "12942": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12943": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12944": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12946": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12953": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE"
+  },
+  "12958": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE"
+  },
+  "12972": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12974": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE"
+  },
+  "12979": {
+    "zone": "Albany",
+    "city": "Clinton",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12983": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "12986": {
+    "zone": "Albany",
+    "city": "Franklin",
+    "delivery_days": "TUE"
+  },
+  "12993": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE"
+  },
+  "12996": {
+    "zone": "Albany",
+    "city": "Essex",
+    "delivery_days": "TUE"
+  },
+  "13021": {
+    "zone": "Clyde",
+    "city": "Cayuga",
+    "delivery_days": "WED,FRI"
+  },
+  "13026": {
+    "zone": "Clyde",
+    "city": "Cayuga",
+    "delivery_days": "WED,FRI"
+  },
+  "13027": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13029": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,THU"
+  },
+  "13030": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": "THU"
+  },
+  "13031": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13032": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": "THU"
+  },
+  "13035": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": ""
+  },
+  "13036": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "TUE,THU"
+  },
+  "13037": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": "THU"
+  },
+  "13039": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13041": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13045": {
+    "zone": "Clyde",
+    "city": "Cortland",
+    "delivery_days": "WED,FRI"
+  },
+  "13053": {
+    "zone": "Clyde",
+    "city": "Tompkins",
+    "delivery_days": "WED,FRI"
+  },
+  "13057": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13060": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13064": {
+    "zone": "Clyde",
+    "city": "Cayuga",
+    "delivery_days": "WED,FRI"
+  },
+  "13066": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13069": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "WED,FRI"
+  },
+  "13072": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": ""
+  },
+  "13073": {
+    "zone": "Clyde",
+    "city": "Tompkins",
+    "delivery_days": "WED,FRI"
+  },
+  "13084": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "WED"
+  },
+  "13088": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13090": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13104": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "WED,FRI"
+  },
+  "13108": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13114": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "WED,FRI"
+  },
+  "13116": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13118": {
+    "zone": "Clyde",
+    "city": "Cayuga",
+    "delivery_days": "WED,FRI"
+  },
+  "13126": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "WED,FRI"
+  },
+  "13131": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "TUE,THU"
+  },
+  "13135": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "WED,FRI"
+  },
+  "13142": {
+    "zone": "Clyde",
+    "city": "Oswego",
+    "delivery_days": "TUE,THU"
+  },
+  "13148": {
+    "zone": "Clyde",
+    "city": "Seneca",
+    "delivery_days": "WED,FRI"
+  },
+  "13152": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13153": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13157": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13159": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "WED,FRI"
+  },
+  "13160": {
+    "zone": "Clyde",
+    "city": "Cayuga",
+    "delivery_days": "WED,FRI"
+  },
+  "13162": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13165": {
+    "zone": "Clyde",
+    "city": "Seneca",
+    "delivery_days": "WED,FRI"
+  },
+  "13166": {
+    "zone": "Clyde",
+    "city": "Cayuga",
+    "delivery_days": "WED,FRI"
+  },
+  "13202": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13203": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13204": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13206": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13207": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13208": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13209": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13210": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13211": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13212": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13214": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13215": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13219": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13224": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13290": {
+    "zone": "Clyde",
+    "city": "Onondaga",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "13304": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13309": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "THU"
+  },
+  "13313": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13316": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13317": {
+    "zone": "Albany",
+    "city": "Montgomery",
+    "delivery_days": "THU"
+  },
+  "13321": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13323": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13325": {
+    "zone": "Clyde",
+    "city": "Lewis",
+    "delivery_days": "THU"
+  },
+  "13326": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "13327": {
+    "zone": "Clyde",
+    "city": "Lewis",
+    "delivery_days": "THU"
+  },
+  "13328": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,FRI"
+  },
+  "13329": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13331": {
+    "zone": "Clyde",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13332": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": "WED,FRI"
+  },
+  "13337": {
+    "zone": "Albany",
+    "city": "Otsego",
+    "delivery_days": "WED,FRI"
+  },
+  "13338": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "THU"
+  },
+  "13339": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13346": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": ""
+  },
+  "13350": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13357": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13360": {
+    "zone": "Clyde",
+    "city": "Hamilton",
+    "delivery_days": "THU"
+  },
+  "13365": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13367": {
+    "zone": "Clyde",
+    "city": "Lewis",
+    "delivery_days": "THU"
+  },
+  "13368": {
+    "zone": "Clyde",
+    "city": "Lewis",
+    "delivery_days": "THU"
+  },
+  "13406": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13411": {
+    "zone": "Clyde",
+    "city": "CHENANGO",
+    "delivery_days": "WED"
+  },
+  "13413": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13416": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13420": {
+    "zone": "Clyde",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13421": {
+    "zone": "Clyde",
+    "city": "Madison",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13428": {
+    "zone": "Albany",
+    "city": "Montgomery",
+    "delivery_days": "THU"
+  },
+  "13436": {
+    "zone": "Clyde",
+    "city": "Hamilton",
+    "delivery_days": "THU"
+  },
+  "13439": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "13440": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13441": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13450": {
+    "zone": "Albany",
+    "city": "Otsego",
+    "delivery_days": "WED,FRI"
+  },
+  "13459": {
+    "zone": "Albany",
+    "city": "Schoharie",
+    "delivery_days": "WED,FRI"
+  },
+  "13460": {
+    "zone": "Clyde",
+    "city": "CHENANGO",
+    "delivery_days": "WED"
+  },
+  "13472": {
+    "zone": "Clyde",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13476": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13478": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13479": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13480": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13491": {
+    "zone": "Albany",
+    "city": "Herkimer",
+    "delivery_days": "THU"
+  },
+  "13492": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13495": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13501": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13502": {
+    "zone": "Clyde",
+    "city": "Oneida",
+    "delivery_days": "WED,THU,FRI"
+  },
+  "13601": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13602": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "TUE,THU"
+  },
+  "13605": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "TUE,THU"
+  },
+  "13607": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13612": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13613": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13617": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13618": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13619": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13621": {
+    "zone": "Clyde",
+    "city": "St. Lawrence",
+    "delivery_days": "THU"
+  },
+  "13622": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13624": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13632": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13640": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13641": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13642": {
+    "zone": "Clyde",
+    "city": "St. Lawrence",
+    "delivery_days": "THU"
+  },
+  "13646": {
+    "zone": "Clyde",
+    "city": "St. Lawrence",
+    "delivery_days": "THU"
+  },
+  "13647": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13648": {
+    "zone": "Clyde",
+    "city": "Lewis",
+    "delivery_days": "THU"
+  },
+  "13656": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13658": {
+    "zone": "Clyde",
+    "city": "St. Lawrence",
+    "delivery_days": "THU"
+  },
+  "13660": {
+    "zone": "Albany",
+    "city": "Hamilton",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13662": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13667": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13669": {
+    "zone": "Clyde",
+    "city": "St. Lawrence",
+    "delivery_days": "THU"
+  },
+  "13676": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13680": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "THU"
+  },
+  "13685": {
+    "zone": "Clyde",
+    "city": "Jefferson",
+    "delivery_days": "TUE,THU"
+  },
+  "13687": {
+    "zone": "Albany",
+    "city": "St. Lawrence",
+    "delivery_days": "TUE,THU,FRI"
+  },
+  "13694": {
+    "zone": "Clyde",
+    "city": "St. Lawrence",
+    "delivery_days": "THU"
+  },
+  "13730": {
+    "zone": "Albany",
+    "city": "CHENANGO",
+    "delivery_days": "TUE"
+  },
+  "13731": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13732": {
+    "zone": "Clyde",
+    "city": "Tioga",
+    "delivery_days": "FRI"
+  },
+  "13733": {
+    "zone": "Albany",
+    "city": "CHENANGO",
+    "delivery_days": "TUE"
+  },
+  "13739": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13748": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13753": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13754": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13755": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13757": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13760": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13778": {
+    "zone": "Clyde",
+    "city": "Chenango",
+    "delivery_days": "TUE,THU"
+  },
+  "13783": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13788": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13790": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13811": {
+    "zone": "Clyde",
+    "city": "Tioga",
+    "delivery_days": "FRI"
+  },
+  "13815": {
+    "zone": "Clyde",
+    "city": "CHENANGO",
+    "delivery_days": "WED"
+  },
+  "13820": {
+    "zone": "Albany",
+    "city": "Otsego",
+    "delivery_days": "WED,FRI"
+  },
+  "13827": {
+    "zone": "Clyde",
+    "city": "Tioga",
+    "delivery_days": "FRI"
+  },
+  "13830": {
+    "zone": "Clyde",
+    "city": "CHENANGO",
+    "delivery_days": "TUE,THU"
+  },
+  "13833": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13838": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13850": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13856": {
+    "zone": "Albany",
+    "city": "DELAWARE",
+    "delivery_days": "TUE"
+  },
+  "13862": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13865": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13901": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13903": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13904": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "13905": {
+    "zone": "Clyde",
+    "city": "Broome",
+    "delivery_days": "WED,FRI"
+  },
+  "14001": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14003": {
+    "zone": "Clyde",
+    "city": "Genesee",
+    "delivery_days": "TUE,THU"
+  },
+  "14004": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14006": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "WED,FRI"
+  },
+  "14009": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "FRI"
+  },
+  "14011": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "TUE"
+  },
+  "14020": {
+    "zone": "Clyde",
+    "city": "Genesee",
+    "delivery_days": "TUE,THU"
+  },
+  "14021": {
+    "zone": "Clyde",
+    "city": "Genesee",
+    "delivery_days": "TUE,THU"
+  },
+  "14023": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14026": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14030": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14031": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14034": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14036": {
+    "zone": "Clyde",
+    "city": "Genesee",
+    "delivery_days": "TUE,THU"
+  },
+  "14037": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "THU"
+  },
+  "14043": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14047": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14048": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14051": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14052": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14057": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14059": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14063": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14067": {
+    "zone": "Clyde",
+    "city": "Niagara",
+    "delivery_days": "TUE"
+  },
+  "14068": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14070": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "FRI"
+  },
+  "14072": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14075": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14080": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "FRI"
+  },
+  "14085": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14086": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14092": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14094": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14103": {
+    "zone": "Clyde",
+    "city": "Orleans",
+    "delivery_days": "TUE"
+  },
+  "14105": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE"
+  },
+  "14108": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE"
+  },
+  "14110": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14120": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14125": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "TUE"
+  },
+  "14127": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14132": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14136": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14138": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14141": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "WED,FRI"
+  },
+  "14143": {
+    "zone": "Clyde",
+    "city": "Genesee",
+    "delivery_days": "TUE,THU"
+  },
+  "14150": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14172": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE"
+  },
+  "14173": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "FRI"
+  },
+  "14174": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,THU"
+  },
+  "14201": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14202": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14203": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14204": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14206": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14207": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14208": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14209": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14210": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14211": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14212": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14213": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14214": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14215": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14216": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14217": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14218": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14219": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14220": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14221": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14222": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14223": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14224": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14225": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14226": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14227": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14228": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14230": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14301": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14302": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14303": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14304": {
+    "zone": "Clyde",
+    "city": "Erie",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14305": {
+    "zone": "Clyde",
+    "city": "Niagra",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14411": {
+    "zone": "Clyde",
+    "city": "Orleans",
+    "delivery_days": "TUE"
+  },
+  "14414": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14418": {
+    "zone": "Clyde",
+    "city": "Yates",
+    "delivery_days": "TUE,THU"
+  },
+  "14420": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14423": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14424": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14425": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14428": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14432": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14433": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14435": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14437": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14441": {
+    "zone": "Clyde",
+    "city": "Yates",
+    "delivery_days": "TUE,THU"
+  },
+  "14443": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14445": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14450": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14454": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14456": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14464": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE"
+  },
+  "14467": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14468": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "WED"
+  },
+  "14469": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "TUE"
+  },
+  "14471": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "TUE"
+  },
+  "14472": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE"
+  },
+  "14478": {
+    "zone": "Clyde",
+    "city": "Yates",
+    "delivery_days": "TUE,THU"
+  },
+  "14480": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14482": {
+    "zone": "Clyde",
+    "city": "Leroy",
+    "delivery_days": "TUE,THU"
+  },
+  "14485": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14487": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14489": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14502": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14504": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14506": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE"
+  },
+  "14510": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14512": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "TUE"
+  },
+  "14513": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14514": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14517": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "TUE"
+  },
+  "14519": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14521": {
+    "zone": "Clyde",
+    "city": "Seneca",
+    "delivery_days": "THU"
+  },
+  "14522": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14526": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14527": {
+    "zone": "Clyde",
+    "city": "Yates",
+    "delivery_days": "TUE,THU"
+  },
+  "14530": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "TUE"
+  },
+  "14532": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14533": {
+    "zone": "Clyde",
+    "city": "Livingston",
+    "delivery_days": "THU"
+  },
+  "14534": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14538": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14541": {
+    "zone": "Clyde",
+    "city": "Seneca",
+    "delivery_days": "WED,FRI"
+  },
+  "14546": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "THU"
+  },
+  "14548": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14550": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "TUE"
+  },
+  "14551": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14555": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "TUE,THU"
+  },
+  "14559": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14564": {
+    "zone": "Clyde",
+    "city": "Ontario",
+    "delivery_days": "WED,FRI"
+  },
+  "14569": {
+    "zone": "Clyde",
+    "city": "Wyoming",
+    "delivery_days": "TUE"
+  },
+  "14572": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE"
+  },
+  "14580": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14589": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14590": {
+    "zone": "Clyde",
+    "city": "Wayne",
+    "delivery_days": "WED,FRI"
+  },
+  "14602": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14603": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14604": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14605": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14606": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14607": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14608": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14609": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14610": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14611": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14612": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14613": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14614": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14615": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14616": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14617": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14618": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14619": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14620": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14621": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14622": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14623": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14624": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14625": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14626": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14627": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14638": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14639": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14642": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14643": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14644": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14646": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14647": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14649": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14650": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14651": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14652": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14694": {
+    "zone": "Clyde",
+    "city": "Monroe",
+    "delivery_days": "TUE,WED,THU,FRI"
+  },
+  "14701": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14702": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14706": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14709": {
+    "zone": "Clyde",
+    "city": "Allegany",
+    "delivery_days": "THU"
+  },
+  "14712": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14718": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14720": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14723": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14724": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14727": {
+    "zone": "Clyde",
+    "city": "Allegany",
+    "delivery_days": "THU"
+  },
+  "14728": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14731": {
+    "zone": "Clyde",
+    "city": "Ellicottville",
+    "delivery_days": "WED,FRI"
+  },
+  "14733": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14737": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14738": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14743": {
+    "zone": "Clyde",
+    "city": "Hinsdale",
+    "delivery_days": "WED,FRI"
+  },
+  "14750": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14755": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14757": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14760": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14769": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14770": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14772": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14779": {
+    "zone": "Clyde",
+    "city": "Cattaraugus",
+    "delivery_days": "WED,FRI"
+  },
+  "14784": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14787": {
+    "zone": "Clyde",
+    "city": "Chautauqua",
+    "delivery_days": "WED,FRI"
+  },
+  "14801": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14802": {
+    "zone": "Clyde",
+    "city": "Allegany",
+    "delivery_days": "THU"
+  },
+  "14805": {
+    "zone": "Clyde",
+    "city": "Schuyler",
+    "delivery_days": "TUE,THU"
+  },
+  "14807": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE"
+  },
+  "14810": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14814": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14815": {
+    "zone": "Clyde",
+    "city": "Schuyler",
+    "delivery_days": "TUE,THU"
+  },
+  "14821": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14823": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE"
+  },
+  "14826": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE"
+  },
+  "14830": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14837": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14840": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14841": {
+    "zone": "Clyde",
+    "city": "Schuyler",
+    "delivery_days": "TUE,THU"
+  },
+  "14842": {
+    "zone": "Clyde",
+    "city": "Yates",
+    "delivery_days": "TUE,THU"
+  },
+  "14843": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE"
+  },
+  "14845": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14847": {
+    "zone": "Clyde",
+    "city": "Seneca",
+    "delivery_days": "WED,FRI"
+  },
+  "14850": {
+    "zone": "Clyde",
+    "city": "Tompkins",
+    "delivery_days": "WED,FRI"
+  },
+  "14853": {
+    "zone": "Clyde",
+    "city": "Tompkins",
+    "delivery_days": "WED,FRI"
+  },
+  "14860": {
+    "zone": "Clyde",
+    "city": "Seneca",
+    "delivery_days": "THU"
+  },
+  "14865": {
+    "zone": "Clyde",
+    "city": "Schuyler",
+    "delivery_days": "TUE,THU"
+  },
+  "14870": {
+    "zone": "Clyde",
+    "city": "Steuben",
+    "delivery_days": "TUE,THU"
+  },
+  "14871": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14882": {
+    "zone": "Clyde",
+    "city": "Tompkins",
+    "delivery_days": "WED,FRI"
+  },
+  "14886": {
+    "zone": "Clyde",
+    "city": "Tompkins",
+    "delivery_days": "WED,FRI"
+  },
+  "14889": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14891": {
+    "zone": "Clyde",
+    "city": "Schuyler",
+    "delivery_days": "TUE,THU"
+  },
+  "14892": {
+    "zone": "Clyde",
+    "city": "Tioga",
+    "delivery_days": "FRI"
+  },
+  "14895": {
+    "zone": "Clyde",
+    "city": "Allegany",
+    "delivery_days": "TUE"
+  },
+  "14897": {
+    "zone": "Clyde",
+    "city": "Allegany",
+    "delivery_days": "TUE"
+  },
+  "14901": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14902": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14903": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14904": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  },
+  "14905": {
+    "zone": "Clyde",
+    "city": "CHEMUNG",
+    "delivery_days": "TUE,THU"
+  }
+}
