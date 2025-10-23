@@ -100,7 +100,16 @@ const Index = () => {
               </p>
             </div>
             
-            <ZipCodeChecker />
+            <div className="relative">
+              <div className="pointer-events-none opacity-50">
+                <ZipCodeChecker />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-primary/10 backdrop-blur-sm rounded-lg">
+                <div className="bg-primary text-primary-foreground px-8 py-4 rounded-lg shadow-lg">
+                  <h3 className="text-2xl font-bold text-center">Coming Soon</h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
