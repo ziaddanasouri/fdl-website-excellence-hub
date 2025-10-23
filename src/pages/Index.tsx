@@ -102,25 +102,12 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="pointer-events-none opacity-65">
+              <div className="pointer-events-none">
                 <ZipCodeChecker />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-background/95 via-background/90 to-background/95 backdrop-blur-md rounded-lg border border-primary/20">
-                <div className="text-center px-8 py-6 max-w-md">
-                  <div className="mb-4 flex justify-center">
-                    <div className="bg-primary/10 p-4 rounded-full">
-                      <MapPin className="w-8 h-8 text-primary" />
-                    </div>
-                  </div>
-                  <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                    Instant Service Area Lookup
-                  </h3>
-                  <p className="text-muted-foreground mb-4 text-lg">
-                    Check if we deliver to your ZIP code and see your exact delivery schedule
-                  </p>
-                  <div className="inline-block bg-primary text-primary-foreground px-6 py-2 rounded-full font-semibold shadow-lg animate-pulse">
-                    Launching Soon
-                  </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-lg">
+                <div className="bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg font-semibold text-lg">
+                  Coming Soon
                 </div>
               </div>
             </div>
