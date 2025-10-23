@@ -106,7 +106,7 @@ const Index = () => {
                 <ZipCodeChecker />
               </div>
               <div className="absolute inset-0 flex items-center justify-center rounded-lg">
-                <div className="bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg font-semibold text-lg backdrop-blur-[1px]">
+                <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg font-semibold text-base backdrop-blur-[1px]">
                   Coming Soon
                 </div>
               </div>
