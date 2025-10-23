@@ -105,7 +105,7 @@ const Index = () => {
               <div className="pointer-events-none">
                 <ZipCodeChecker />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-lg">
+              <div className="absolute inset-0 flex items-center justify-center bg-background/50 backdrop-blur-[2px] rounded-lg">
                 <div className="bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg font-semibold text-lg">
                   Coming Soon
                 </div>
