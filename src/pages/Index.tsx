@@ -102,7 +102,7 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="pointer-events-none">
+              <div className="pointer-events-none blur-[0.5px]">
                 <ZipCodeChecker />
               </div>
               <div className="absolute inset-0 flex items-center justify-center rounded-lg pt-20">
