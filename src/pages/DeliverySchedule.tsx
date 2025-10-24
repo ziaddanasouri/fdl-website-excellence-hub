@@ -105,7 +105,7 @@ const DeliverySchedule = () => {
               <ZipCodeChecker />
             </div>
 
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 blur-[1px]">
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 Our Delivery Zones
               </h2>
