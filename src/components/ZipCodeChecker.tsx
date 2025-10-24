@@ -158,7 +158,7 @@ const ZipCodeChecker = () => {
           </div>
         </CardContent>
       </Card>
-      <div className="absolute inset-0 flex items-center justify-center pt-16">
+      <div className="absolute inset-0 flex items-center justify-center pt-24">
         <Button 
           size="lg"
           className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg"
