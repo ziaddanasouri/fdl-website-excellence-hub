@@ -81,82 +81,92 @@ const ZipCodeChecker = () => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto bg-white shadow-xl">
-      <CardContent className="p-6">
-        <div className="text-center mb-4">
-          <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-          <h3 className="text-xl font-bold text-primary">Check Service Area</h3>
-          <p className="text-sm text-muted-foreground">Enter your ZIP code to see delivery days</p>
-        </div>
-        
-        <div className="space-y-4">
-          <div className="flex gap-2">
-            <Input
-              type="text"
-              placeholder="Enter ZIP code"
-              value={zipCode}
-              onChange={(e) => setZipCode(e.target.value)}
-              onKeyPress={handleKeyPress}
-              maxLength={5}
-              className="flex-1"
-            />
-            <Button 
-              onClick={handleSearch}
-              disabled={!zipCode.trim()}
-              className="px-6"
-            >
-              <Search className="h-4 w-4" />
-            </Button>
+    <div className="relative w-full max-w-md mx-auto">
+      <Card className="w-full bg-white shadow-xl blur-[1px]">
+        <CardContent className="p-6">
+          <div className="text-center mb-4">
+            <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+            <h3 className="text-xl font-bold text-primary">Check Service Area</h3>
+            <p className="text-sm text-muted-foreground">Enter your ZIP code to see delivery days</p>
           </div>
           
-          {isSearched && result && (
-            <div className="mt-4">
-              {result.isServiced ? (
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-green-600">
-                    <CheckCircle className="h-5 w-5" />
-                    <span className="font-semibold">Service Available!</span>
-                  </div>
-                  
-                  <div className="bg-green-50 p-4 rounded-lg space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="h-4 w-4 text-green-600" />
-                      <span className="text-sm"><strong>City:</strong> {result.city}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="h-4 w-4 text-green-600" />
-                      <span className="text-sm"><strong>Zone:</strong> {result.zone}</span>
-                    </div>
-                    {result.schedule.length > 0 && (
-                      <div className="flex items-center space-x-2">
-                        <Clock className="h-4 w-4 text-green-600" />
-                        <span className="text-sm"><strong>Delivery Days:</strong> {formatDays(result.schedule)}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-red-600">
-                    <XCircle className="h-5 w-5" />
-                    <span className="font-semibold">Service Not Available</span>
-                  </div>
-                  
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <p className="text-sm text-red-700">
-                      {result?.city 
-                        ? `We don't currently service ${result.city}. Please contact us for special arrangements.`
-                        : `We don't currently service this ZIP code. Please contact us for special arrangements.`
-                      }
-                    </p>
-                  </div>
-                </div>
-              )}
+          <div className="space-y-4">
+            <div className="flex gap-2">
+              <Input
+                type="text"
+                placeholder="Enter ZIP code"
+                value={zipCode}
+                onChange={(e) => setZipCode(e.target.value)}
+                onKeyPress={handleKeyPress}
+                maxLength={5}
+                className="flex-1"
+              />
+              <Button 
+                onClick={handleSearch}
+                disabled={!zipCode.trim()}
+                className="px-6"
+              >
+                <Search className="h-4 w-4" />
+              </Button>
             </div>
-          )}
-        </div>
-      </CardContent>
-    </Card>
+            
+            {isSearched && result && (
+              <div className="mt-4">
+                {result.isServiced ? (
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2 text-green-600">
+                      <CheckCircle className="h-5 w-5" />
+                      <span className="font-semibold">Service Available!</span>
+                    </div>
+                    
+                    <div className="bg-green-50 p-4 rounded-lg space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-4 w-4 text-green-600" />
+                        <span className="text-sm"><strong>City:</strong> {result.city}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-4 w-4 text-green-600" />
+                        <span className="text-sm"><strong>Zone:</strong> {result.zone}</span>
+                      </div>
+                      {result.schedule.length > 0 && (
+                        <div className="flex items-center space-x-2">
+                          <Clock className="h-4 w-4 text-green-600" />
+                          <span className="text-sm"><strong>Delivery Days:</strong> {formatDays(result.schedule)}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2 text-red-600">
+                      <XCircle className="h-5 w-5" />
+                      <span className="font-semibold">Service Not Available</span>
+                    </div>
+                    
+                    <div className="bg-red-50 p-4 rounded-lg">
+                      <p className="text-sm text-red-700">
+                        {result?.city 
+                          ? `We don't currently service ${result.city}. Please contact us for special arrangements.`
+                          : `We don't currently service this ZIP code. Please contact us for special arrangements.`
+                        }
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </CardContent>
+      </Card>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <Button 
+          size="lg"
+          className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg"
+        >
+          Coming Soon
+        </Button>
+      </div>
+    </div>
   );
 };
 
