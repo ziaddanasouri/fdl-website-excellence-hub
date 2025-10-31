@@ -129,15 +129,29 @@ const ZipCodeChecker = () => {
               <div className="mt-4">
                 {result.isServiced ? (
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2 text-green-600">
-                        <CheckCircle className="h-5 w-5" />
-                        <span className="font-semibold">Service Available!</span>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2 text-green-600">
+                          <CheckCircle className="h-5 w-5" />
+                          <span className="font-semibold">Service Available!</span>
+                        </div>
+                        {result.source === 'new' && (
+                          <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
+                            Serviced by DNT
+                          </Badge>
+                        )}
                       </div>
                       {result.source === 'new' && (
-                        <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
-                          Serviced by DNT
-                        </Badge>
+                        <p className="text-sm text-muted-foreground">
+                          <a 
+                            href="https://dntexpress.com/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 underline"
+                          >
+                            Contact DNT Express here
+                          </a>
+                        </p>
                       )}
                     </div>
                     
