@@ -101,15 +101,8 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="relative">
-              <div className="pointer-events-none blur-[1px]">
-                <ZipCodeChecker />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center rounded-lg pt-20">
-                <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg font-semibold text-base backdrop-blur-[1px]">
-                  Coming Soon
-                </div>
-              </div>
+            <div>
+              <ZipCodeChecker />
             </div>
           </div>
         </div>
