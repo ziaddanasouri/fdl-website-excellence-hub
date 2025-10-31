@@ -96,8 +96,8 @@ const ZipCodeChecker = () => {
   };
 
   return (
-    <div className="relative w-full max-w-md mx-auto">
-      <Card className="w-full bg-white shadow-xl blur-[1px]">
+    <div className="w-full max-w-md mx-auto">
+      <Card className="w-full bg-white shadow-xl">
         <CardContent className="p-6">
           <div className="text-center mb-4">
             <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
@@ -180,14 +180,6 @@ const ZipCodeChecker = () => {
           </div>
         </CardContent>
       </Card>
-      <div className="absolute inset-0 flex items-center justify-center pt-24">
-        <Button 
-          size="lg"
-          className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg"
-        >
-          Coming Soon
-        </Button>
-      </div>
     </div>
   );
 };
