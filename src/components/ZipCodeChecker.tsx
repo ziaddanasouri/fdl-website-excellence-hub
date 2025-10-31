@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
 import zipServiceList from '@/data/zipServiceList.json';
 import newZips from '@/data/new-zips-temp.json';
@@ -12,11 +13,16 @@ interface ZipData {
   delivery_days: string;
 }
 
+interface EnhancedZipData extends ZipData {
+  source: 'original' | 'new';
+}
+
 interface DeliveryResult {
   zone: string;
   city: string;
   schedule: string[];
   isServiced: boolean;
+  source: 'original' | 'new';
 }
 
 const ZipCodeChecker = () => {
@@ -24,18 +30,25 @@ const ZipCodeChecker = () => {
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
 
-  // Merge both ZIP datasets at runtime - new data overwrites existing
-  const allZips: Record<string, ZipData> = {
-    ...(zipServiceList as Record<string, ZipData>),
-    ...(newZips as Record<string, ZipData>),
-  };
+  // Merge both ZIP datasets at runtime - track source for each ZIP
+  const allZips: Record<string, EnhancedZipData> = {};
+  
+  // Add original ZIPs with source tag
+  Object.entries(zipServiceList as Record<string, ZipData>).forEach(([zip, data]) => {
+    allZips[zip] = { ...data, source: 'original' };
+  });
+  
+  // Add new ZIPs with source tag (overwrites if exists)
+  Object.entries(newZips as Record<string, ZipData>).forEach(([zip, data]) => {
+    allZips[zip] = { ...data, source: 'new' };
+  });
 
   const handleSearch = () => {
     // Normalize input: digits only, max 5 characters
     const cleanZip = zipCode.replace(/\D/g, '').slice(0, 5);
     setIsSearched(true);
     
-    const zipData: ZipData | undefined = allZips[cleanZip];
+    const zipData: EnhancedZipData | undefined = allZips[cleanZip];
     
     if (zipData) {
       // Check if delivery service is available (not "DNT")
@@ -48,14 +61,16 @@ const ZipCodeChecker = () => {
         zone: zipData.zone,
         city: zipData.city,
         schedule,
-        isServiced
+        isServiced,
+        source: zipData.source
       });
     } else {
       setResult({
         zone: '',
         city: '',
         schedule: [],
-        isServiced: false
+        isServiced: false,
+        source: 'original'
       });
     }
   };
@@ -114,9 +129,16 @@ const ZipCodeChecker = () => {
               <div className="mt-4">
                 {result.isServiced ? (
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-2 text-green-600">
-                      <CheckCircle className="h-5 w-5" />
-                      <span className="font-semibold">Service Available!</span>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2 text-green-600">
+                        <CheckCircle className="h-5 w-5" />
+                        <span className="font-semibold">Service Available!</span>
+                      </div>
+                      {result.source === 'new' && (
+                        <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
+                          Serviced by DNT
+                        </Badge>
+                      )}
                     </div>
                     
                     <div className="bg-green-50 p-4 rounded-lg space-y-2">
