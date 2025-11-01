@@ -135,13 +135,17 @@ const ZipCodeChecker = () => {
                           <CheckCircle className="h-5 w-5" />
                           <span className="font-semibold">Service Available!</span>
                         </div>
-                        {result.source === 'new' && (
+                        {result.source === 'new' ? (
                           <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
                             Serviced by DNT
                           </Badge>
+                        ) : (
+                          <Badge className="bg-green-600 hover:bg-green-700 text-white">
+                            Serviced by FDL
+                          </Badge>
                         )}
                       </div>
-                      {result.source === 'new' && (
+                      {result.source === 'new' ? (
                         <p className="text-sm text-muted-foreground">
                           <a 
                             href="https://dntexpress.com/" 
@@ -150,6 +154,15 @@ const ZipCodeChecker = () => {
                             className="text-blue-600 hover:text-blue-800 underline"
                           >
                             Contact DNT Express here
+                          </a>
+                        </p>
+                      ) : (
+                        <p className="text-sm text-muted-foreground">
+                          <a 
+                            href="/contact"
+                            className="text-green-600 hover:text-green-800 underline"
+                          >
+                            Contact us here
                           </a>
                         </p>
                       )}
