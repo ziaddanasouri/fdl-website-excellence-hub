@@ -17,8 +17,8 @@
     },
     "NORTH JERSEY": {
       "name": "North Jersey",
-      "schedule": ["TUE", "WED", "THU", "FRI"],
-      "description": "Tuesday through Friday delivery"
+      "schedule": ["TUE", "WED", "FRI"],
+      "description": "Tuesday, Wednesday, and Friday only"
     },
     "SOUTH JERSEY": {
       "name": "South Jersey",
@@ -27,8 +27,8 @@
     },
     "WESTCHESTER": {
       "name": "Westchester",
-      "schedule": ["TUE", "WED", "THU", "FRI"],
-      "description": "Tuesday through Friday delivery"
+      "schedule": ["TUE", "THU", "FRI"],
+      "description": "Tuesday, Thursday, and Friday only"
     },
     "LONG ISLAND TO 112": {
       "name": "Long Island",
@@ -49,6 +49,11 @@
       "name": "Jersey Shore",
       "schedule": ["TUE", "THU"],
       "description": "Tuesday and Thursday only"
+    },
+    "MID-HUDSON": {
+      "name": "Mid-Hudson (Putnam County)",
+      "schedule": ["TUE", "FRI"],
+      "description": "Tuesday and Friday only"
     }
   },
   "zipCodes": {

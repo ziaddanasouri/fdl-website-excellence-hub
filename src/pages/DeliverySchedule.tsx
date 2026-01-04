@@ -64,6 +64,7 @@ const DeliverySchedule = () => {
                       <li>• New York City (Manhattan & Brooklyn)</li>
                       <li>• New Jersey (North, Central, South & Southwest)</li>
                       <li>• Westchester County</li>
+                      <li>• Mid-Hudson (Putnam County)</li>
                       <li>• Long Island</li>
                       <li>• The Hamptons</li>
                       <li>• Jersey Shore</li>
