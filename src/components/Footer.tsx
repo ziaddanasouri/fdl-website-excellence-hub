@@ -24,44 +24,44 @@ const Footer = () => {
           {/* Holiday Schedule */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Holiday Schedule</h3>
-            <p className="text-slate-300 mb-3 text-sm font-medium">2025 Holiday Schedule</p>
+            <p className="text-slate-300 mb-3 text-sm font-medium">2026 Holiday Schedule</p>
             <p className="text-slate-400 text-xs mb-4">FDL will be closed on the following holidays</p>
             <div className="space-y-2 text-xs text-slate-400">
               <div className="flex justify-between">
                 <span>New Year's Day</span>
-                <span>Jan 1st, 2025</span>
+                <span>Thu, Jan 1st</span>
               </div>
               <div className="flex justify-between">
                 <span>President's Day</span>
-                <span>Feb 17th</span>
+                <span>Mon, Feb 16th</span>
               </div>
               <div className="flex justify-between">
                 <span>Memorial Day</span>
-                <span>May 26th</span>
+                <span>Mon, May 25th</span>
               </div>
               <div className="flex justify-between">
                 <span>Independence Day</span>
-                <span>Jul 4th</span>
+                <span>Mon, Jul 6th</span>
               </div>
               <div className="flex justify-between">
                 <span>Labor Day</span>
-                <span>Sep 1st</span>
+                <span>Mon, Sep 7th</span>
               </div>
               <div className="flex justify-between">
                 <span>Thanksgiving</span>
-                <span>Nov 27th</span>
+                <span>Thu, Nov 26th</span>
               </div>
               <div className="flex justify-between">
                 <span>Day after Thanksgiving</span>
-                <span>Nov 28th</span>
+                <span>Fri, Nov 27th</span>
               </div>
               <div className="flex justify-between">
                 <span>Christmas</span>
-                <span>Dec 25th</span>
+                <span>Fri, Dec 25th</span>
               </div>
               <div className="flex justify-between">
-                <span>New Year's</span>
-                <span>Jan 1st, 2026</span>
+                <span>New Year's Day</span>
+                <span>Fri, Jan 1st 2027</span>
               </div>
             </div>
             <p className="text-slate-400 text-xs mt-3 italic">Enjoy the holidays and please be safe.</p>
