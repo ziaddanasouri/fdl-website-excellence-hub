@@ -40,10 +40,6 @@ const Footer = () => {
                 <span>Mon, May 25th</span>
               </div>
               <div className="flex justify-between">
-                <span>Independence Day</span>
-                <span>Mon, Jul 6th</span>
-              </div>
-              <div className="flex justify-between">
                 <span>Labor Day</span>
                 <span>Mon, Sep 7th</span>
               </div>
