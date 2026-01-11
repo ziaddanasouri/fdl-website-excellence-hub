@@ -2,6 +2,9 @@
  * Transform FDL_ZIPS.csv to zipServiceList.json
  * 
  * Run with: node scripts/csv-to-zip-json.js
+ * 
+ * CSV format: Zone#,Zip,CITY,DELIVERY DAYS
+ * Example: BROOKLYN,10301,BROOKLYN,"MON,TUE,WED,THU,FRI"
  */
 
 const fs = require('fs');
@@ -57,7 +60,7 @@ for (let i = 1; i < lines.length; i++) {
   // Clean up city name (remove trailing commas)
   const cleanCity = city.replace(/,\s*$/, '').trim();
   
-  // Clean up delivery days: remove spaces around commas
+  // Clean up delivery days: remove spaces around commas (e.g., "TUE, THU" -> "TUE,THU")
   const cleanDays = deliveryDays
     .split(',')
     .map(day => day.trim())
