@@ -30,17 +30,17 @@ const ZipCodeChecker = () => {
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
 
-  // Merge both ZIP datasets at runtime - track source for each ZIP
+  // Merge both ZIP datasets at runtime - FDL (original) takes priority over DNT (new)
   const allZips: Record<string, EnhancedZipData> = {};
   
-  // Add original ZIPs with source tag
-  Object.entries(zipServiceList as Record<string, ZipData>).forEach(([zip, data]) => {
-    allZips[zip] = { ...data, source: 'original' };
-  });
-  
-  // Add new ZIPs with source tag (overwrites if exists)
+  // Add DNT ZIPs first
   Object.entries(newZips as Record<string, ZipData>).forEach(([zip, data]) => {
     allZips[zip] = { ...data, source: 'new' };
+  });
+  
+  // Add FDL ZIPs second so they always overwrite DNT duplicates
+  Object.entries(zipServiceList as Record<string, ZipData>).forEach(([zip, data]) => {
+    allZips[zip] = { ...data, source: 'original' };
   });
 
   const handleSearch = () => {
