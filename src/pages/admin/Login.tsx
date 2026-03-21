@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Truck, Lock, Mail } from 'lucide-react';
-import fdlLogo from '@/assets/fdl-dnt-logo.png';
+import fdlLogo from '@/assets/fdl-logo.png';
 
 export default function AdminLogin() {
   const navigate = useNavigate();
