@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Truck, Eye, EyeOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import fdlLogo from '@/assets/fdl-dnt-logo.png';
+import fdlLogo from '@/assets/fdl-logo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Truck, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import fdlLogo from '@/assets/fdl-dnt-logo-footer.png';
+import fdlLogo from '@/assets/fdl-logo.png';
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={fdlLogo} alt="FDL DNT Logo" className="h-12 w-auto" />
+              <img src={fdlLogo} alt="FDL Logo" className="h-12 w-auto rounded-lg bg-white p-1" />
             </div>
             <p className="text-slate-300">
               Leading 3PL provider with comprehensive warehousing, fulfillment, transportation, and logistics management services across the Northeast.
