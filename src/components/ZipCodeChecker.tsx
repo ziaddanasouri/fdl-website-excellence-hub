@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, CheckCircle, XCircle, Search } from 'lucide-react';
 import zipServiceList from '@/data/zipServiceList.json';
-import newZips from '@/data/new-zips-temp.json';
 
 interface ZipData {
   zone: string;
@@ -13,16 +11,11 @@ interface ZipData {
   delivery_days: string;
 }
 
-interface EnhancedZipData extends ZipData {
-  source: 'original' | 'new';
-}
-
 interface DeliveryResult {
   zone: string;
   city: string;
   schedule: string[];
   isServiced: boolean;
-  source: 'original' | 'new';
 }
 
 const ZipCodeChecker = () => {
@@ -30,69 +23,34 @@ const ZipCodeChecker = () => {
   const [result, setResult] = useState<DeliveryResult | null>(null);
   const [isSearched, setIsSearched] = useState(false);
 
-  // Merge both ZIP datasets at runtime - FDL (original) takes priority over DNT (new)
-  const allZips: Record<string, EnhancedZipData> = {};
-  
-  // Add DNT ZIPs first
-  Object.entries(newZips as Record<string, ZipData>).forEach(([zip, data]) => {
-    allZips[zip] = { ...data, source: 'new' };
-  });
-  
-  // Add FDL ZIPs second so they always overwrite DNT duplicates
-  Object.entries(zipServiceList as Record<string, ZipData>).forEach(([zip, data]) => {
-    allZips[zip] = { ...data, source: 'original' };
-  });
-
   const handleSearch = () => {
-    // Normalize input: digits only, max 5 characters
     const cleanZip = zipCode.replace(/\D/g, '').slice(0, 5);
     setIsSearched(true);
     
-    const zipData: EnhancedZipData | undefined = allZips[cleanZip];
+    const zipData: ZipData | undefined = (zipServiceList as Record<string, ZipData>)[cleanZip];
     
     if (zipData) {
-      // Check if delivery service is available (not "DNT")
       const isServiced = !zipData.delivery_days.includes('DNT');
       const schedule = isServiced 
         ? zipData.delivery_days.split(',').filter(day => day !== 'DNT') 
         : [];
       
-      setResult({
-        zone: zipData.zone,
-        city: zipData.city,
-        schedule,
-        isServiced,
-        source: zipData.source
-      });
+      setResult({ zone: zipData.zone, city: zipData.city, schedule, isServiced });
     } else {
-      setResult({
-        zone: '',
-        city: '',
-        schedule: [],
-        isServiced: false,
-        source: 'original'
-      });
+      setResult({ zone: '', city: '', schedule: [], isServiced: false });
     }
   };
 
   const formatDays = (days: string[]) => {
     const dayMap: { [key: string]: string } = {
-      'MON': 'Monday',
-      'TUE': 'Tuesday', 
-      'WED': 'Wednesday',
-      'THU': 'Thursday',
-      'FRI': 'Friday',
-      'SAT': 'Saturday',
-      'SUN': 'Sunday'
+      'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday',
+      'THU': 'Thursday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'
     };
-    
     return days.map(day => dayMap[day]).join(', ');
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && zipCode.trim()) {
-      handleSearch();
-    }
+    if (e.key === 'Enter' && zipCode.trim()) handleSearch();
   };
 
   return (
@@ -116,11 +74,7 @@ const ZipCodeChecker = () => {
                 maxLength={5}
                 className="flex-1"
               />
-              <Button 
-                onClick={handleSearch}
-                disabled={!zipCode.trim()}
-                className="px-6"
-              >
+              <Button onClick={handleSearch} disabled={!zipCode.trim()} className="px-6">
                 <Search className="h-4 w-4" />
               </Button>
             </div>
@@ -129,44 +83,15 @@ const ZipCodeChecker = () => {
               <div className="mt-4">
                 {result.isServiced ? (
                   <div className="space-y-3">
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2 text-green-600">
-                          <CheckCircle className="h-5 w-5" />
-                          <span className="font-semibold">Service Available!</span>
-                        </div>
-                        {result.source === 'new' ? (
-                          <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
-                            Serviced by DNT
-                          </Badge>
-                        ) : (
-                          <Badge className="bg-green-600 hover:bg-green-700 text-white">
-                            Serviced by FDL
-                          </Badge>
-                        )}
-                      </div>
-                      {result.source === 'new' ? (
-                        <p className="text-sm text-muted-foreground">
-                          <a 
-                            href="https://dntexpress.com/" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800 underline"
-                          >
-                            Contact DNT Express here
-                          </a>
-                        </p>
-                      ) : (
-                        <p className="text-sm text-muted-foreground">
-                          <a 
-                            href="/contact"
-                            className="text-green-600 hover:text-green-800 underline"
-                          >
-                            Contact us here
-                          </a>
-                        </p>
-                      )}
+                    <div className="flex items-center space-x-2 text-green-600">
+                      <CheckCircle className="h-5 w-5" />
+                      <span className="font-semibold">Service Available!</span>
                     </div>
+                    <p className="text-sm text-muted-foreground">
+                      <a href="/contact" className="text-green-600 hover:text-green-800 underline">
+                        Contact us here
+                      </a>
+                    </p>
                     
                     <div className="bg-green-50 p-4 rounded-lg space-y-2">
                       <div className="flex items-center space-x-2">
@@ -191,7 +116,6 @@ const ZipCodeChecker = () => {
                       <XCircle className="h-5 w-5" />
                       <span className="font-semibold">Service Not Available</span>
                     </div>
-                    
                     <div className="bg-red-50 p-4 rounded-lg">
                       <p className="text-sm text-red-700">
                         {result?.city 
