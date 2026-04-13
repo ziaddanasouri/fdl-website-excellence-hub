@@ -762,7 +762,7 @@
   "10509": {
     "zone": "MID-HUDSON",
     "city": "Brewster",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "10510": {
     "zone": "WESTCHESTER",
@@ -777,7 +777,7 @@
   "10512": {
     "zone": "MID-HUDSON",
     "city": "Carmel",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "10513": {
     "zone": "WESTCHESTER",
@@ -792,7 +792,7 @@
   "10516": {
     "zone": "MID-HUDSON",
     "city": "Cold Spring",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "10517": {
     "zone": "WESTCHESTER",
@@ -832,7 +832,7 @@
   "10524": {
     "zone": "MID-HUDSON",
     "city": "Garrison",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "10526": {
     "zone": "WESTCHESTER",
@@ -1022,7 +1022,7 @@
   "10579": {
     "zone": "MID-HUDSON",
     "city": "Putnam Valley",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "10580": {
     "zone": "WESTCHESTER",
@@ -1427,7 +1427,7 @@
   "10974": {
     "zone": "MID-HUDSON",
     "city": "Sloatsburg",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "10975": {
     "zone": "MID-HUDSON",
@@ -2842,7 +2842,7 @@
   "11764": {
     "zone": "HAMPTONS",
     "city": "Miller Place",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11765": {
     "zone": "LONG ISLAND TO 112",
@@ -2852,7 +2852,7 @@
   "11766": {
     "zone": "HAMPTONS",
     "city": "Mount Sinai",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11767": {
     "zone": "LONG ISLAND TO 112",
@@ -2912,7 +2912,7 @@
   "11778": {
     "zone": "HAMPTONS",
     "city": "Rocky Point",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11779": {
     "zone": "LONG ISLAND TO 112",
@@ -2942,7 +2942,7 @@
   "11786": {
     "zone": "HAMPTONS",
     "city": "Shoreham",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11787": {
     "zone": "LONG ISLAND TO 112",
@@ -2957,7 +2957,7 @@
   "11789": {
     "zone": "HAMPTONS",
     "city": "Sound Beach",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11790": {
     "zone": "LONG ISLAND TO 112",
@@ -2972,7 +2972,7 @@
   "11792": {
     "zone": "HAMPTONS",
     "city": "Wading River",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11793": {
     "zone": "LONG ISLAND TO 112",
@@ -3032,177 +3032,177 @@
   "11901": {
     "zone": "HAMPTONS",
     "city": "Riverhead--EHP COSTCO",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11930": {
     "zone": "HAMPTONS",
     "city": "Amagansett,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11931": {
     "zone": "HAMPTONS",
     "city": "Aquebogue",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11932": {
     "zone": "HAMPTONS",
     "city": "Bridgehampton",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11933": {
     "zone": "HAMPTONS",
     "city": "Calverton",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11934": {
     "zone": "HAMPTONS",
     "city": "Center Moriches",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11935": {
     "zone": "HAMPTONS",
     "city": "Cutchogue",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11937": {
     "zone": "HAMPTONS",
     "city": "East Hampton",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11939": {
     "zone": "HAMPTONS",
     "city": "East Marion",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11940": {
     "zone": "HAMPTONS",
     "city": "East Moriches",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11941": {
     "zone": "HAMPTONS",
     "city": "Eastport",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11942": {
     "zone": "HAMPTONS",
     "city": "East Quogue",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11944": {
     "zone": "HAMPTONS",
     "city": "Greenport",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11946": {
     "zone": "HAMPTONS",
     "city": "Hampton Bays",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11947": {
     "zone": "HAMPTONS",
     "city": "Jamesport",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11948": {
     "zone": "HAMPTONS",
     "city": "Laurel,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11949": {
     "zone": "HAMPTONS",
     "city": "Manorville",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11952": {
     "zone": "HAMPTONS",
     "city": "Mattituck",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11953": {
     "zone": "HAMPTONS",
     "city": "Middle Island",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11954": {
     "zone": "HAMPTONS",
     "city": "Montauk",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11955": {
     "zone": "HAMPTONS",
     "city": "Moriches",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11956": {
     "zone": "HAMPTONS",
     "city": "New Suffolk,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11958": {
     "zone": "HAMPTONS",
     "city": "Peconic",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11959": {
     "zone": "HAMPTONS",
     "city": "Quogue",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11960": {
     "zone": "HAMPTONS",
     "city": "Remsenburg",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11961": {
     "zone": "HAMPTONS",
     "city": "Ridge,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11962": {
     "zone": "HAMPTONS",
     "city": "Sagaponack",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11963": {
     "zone": "HAMPTONS",
     "city": "Sag Harbor",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11964": {
     "zone": "HAMPTONS",
     "city": "Shelter Island",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11965": {
     "zone": "HAMPTONS",
     "city": "Shelter Island Heights",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11967": {
     "zone": "HAMPTONS",
     "city": "Shirley,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11968": {
     "zone": "HAMPTONS",
     "city": "Southampton",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11969": {
     "zone": "HAMPTONS",
     "city": "Southampton",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11971": {
     "zone": "HAMPTONS",
     "city": "Southold",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11972": {
     "zone": "HAMPTONS",
     "city": "Speonk,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11974": {
     "zone": "LONG ISLAND TO 112",
@@ -3212,27 +3212,27 @@
   "11975": {
     "zone": "HAMPTONS",
     "city": "Wainscott",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11976": {
     "zone": "HAMPTONS",
     "city": "Water Mill",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11977": {
     "zone": "HAMPTONS",
     "city": "Westhampton",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11978": {
     "zone": "HAMPTONS",
     "city": "W HAMPTON BCH",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "11980": {
     "zone": "HAMPTONS",
     "city": "Yaphank",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "12250": {
     "zone": "MID-HUDSON",
@@ -3523,11 +3523,6 @@
     "zone": "MID-HUDSON",
     "city": "SIDEKICK",
     "delivery_days": "SIDEKICK"
-  },
-  "Zip": {
-    "zone": "Zone#",
-    "city": "CITY",
-    "delivery_days": "DELIVERY DAYS"
   },
   "08801": {
     "zone": "NORTH JERSEY",
@@ -4247,207 +4242,207 @@
   "08201": {
     "zone": "JERSEY SHORE",
     "city": "Absecon",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08401": {
     "zone": "JERSEY SHORE",
     "city": "Atlantic City",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08404": {
     "zone": "JERSEY SHORE",
     "city": "Atlantic City",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08202": {
     "zone": "JERSEY SHORE",
     "city": "Avalon",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08005": {
     "zone": "JERSEY SHORE",
     "city": "Barnegat",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08008": {
     "zone": "JERSEY SHORE",
     "city": "Beach Haven,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08724": {
     "zone": "JERSEY SHORE",
     "city": "Brick Township",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08203": {
     "zone": "JERSEY SHORE",
     "city": "Brigantine",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08310": {
     "zone": "JERSEY SHORE",
     "city": "Buena,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08204": {
     "zone": "JERSEY SHORE",
     "city": "Cape May",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08210": {
     "zone": "JERSEY SHORE",
     "city": "CAPE MAY",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08274": {
     "zone": "JERSEY SHORE",
     "city": "Del Haven",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08251": {
     "zone": "JERSEY SHORE",
     "city": "Del Haven NJ",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08215": {
     "zone": "JERSEY SHORE",
     "city": "Egg Harbor City",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08234": {
     "zone": "JERSEY SHORE",
     "city": "Egg Harbor Township",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08731": {
     "zone": "JERSEY SHORE",
     "city": "Forked River",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08037": {
     "zone": "JERSEY SHORE",
     "city": "Hammonton",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08734": {
     "zone": "JERSEY SHORE",
     "city": "Lanoka Harbor",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08735": {
     "zone": "JERSEY SHORE",
     "city": "Lavallette,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08221": {
     "zone": "JERSEY SHORE",
     "city": "Linwood",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08738": {
     "zone": "JERSEY SHORE",
     "city": "Mantoloking",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08402": {
     "zone": "JERSEY SHORE",
     "city": "Margate City,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08223": {
     "zone": "JERSEY SHORE",
     "city": "Marmora",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08330": {
     "zone": "JERSEY SHORE",
     "city": "Mays Landing",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08087": {
     "zone": "JERSEY SHORE",
     "city": "Mystic Islands",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08225": {
     "zone": "JERSEY SHORE",
     "city": "Northfield",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08230": {
     "zone": "JERSEY SHORE",
     "city": "Ocean View",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08741": {
     "zone": "JERSEY SHORE",
     "city": "Pine Beach",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08232": {
     "zone": "JERSEY SHORE",
     "city": "Pleasantville",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08242": {
     "zone": "JERSEY SHORE",
     "city": "Rio Grande",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08205": {
     "zone": "JERSEY SHORE",
     "city": "Smithville",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08244": {
     "zone": "JERSEY SHORE",
     "city": "Somers Point",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08050": {
     "zone": "JERSEY SHORE",
     "city": "Stafford Township,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08247": {
     "zone": "JERSEY SHORE",
     "city": "Stone Harbor,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08248": {
     "zone": "JERSEY SHORE",
     "city": "Strathmere",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08243": {
     "zone": "JERSEY SHORE",
     "city": "Townsends Inlet",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08250": {
     "zone": "JERSEY SHORE",
     "city": "Tuckahoe",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08406": {
     "zone": "JERSEY SHORE",
     "city": "Ventnor City",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08758": {
     "zone": "JERSEY SHORE",
     "city": "Waretown,",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08260": {
     "zone": "JERSEY SHORE",
     "city": "Wildwood Crest",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "08270": {
     "zone": "JERSEY SHORE",
     "city": "Woodbine",
-    "delivery_days": "TUE, THU"
+    "delivery_days": "TUE,THU"
   },
   "07820": {
     "zone": "NORTH JERSEY",
@@ -4937,7 +4932,7 @@
   "08022": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Columbus",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "07607": {
     "zone": "NORTH JERSEY",
@@ -5787,381 +5782,381 @@
   "08106": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Audubon,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08007": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Barrington",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08031": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Bellmawr",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08091": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Berlin Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08009": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Berlin,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08010": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Beverly,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08012": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Blackwood",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08096": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Blackwood Terrace",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08014": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Bridgeport",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08302": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Bridgeton",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08015": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Browns Mills",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08016": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Burlington",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08101": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Camden",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08102": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Camden",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08105": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Camden",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08018": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Cedar Brook,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08002": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Cherry Hill,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08003": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Cherry Hill,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08034": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Cherry Hill,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08020": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Clarksboro,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08312": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Clayton",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08110": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Delair",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08075": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Delanco,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08060": {
     "zone": "SOUTH WEST JERSEY",
     "city": "EASTAMPTN Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08081": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Erial",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08505": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Fieldsboro,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08518": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Florence,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08322": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Franklinville,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08026": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Gibbsboro",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08027": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Gibbstown",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08028": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Glassboro",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08029": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Glendora,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08030": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Gloucester City",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08035": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Haddon Heights",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08104": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Haddon Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08033": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Haddonfield",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08036": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Hainesport",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08083": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Hi-Nella",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08045": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Lawnside,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08021": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Lindenwold,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08048": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Lumberton",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08049": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Magnolia",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08052": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Maple Shade Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08053": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Marlton",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08055": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Medford Lakes",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08109": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Merchantville",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08332": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Millville,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08057": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Moorestown,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08054": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Mount Laurel Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08344": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Newfield,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08515": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Newfield,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08065": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Palmyra",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08066": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Paulsboro",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08071": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Pitman",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08318": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Pittsgrove Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08074": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Richwood",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08077": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Richwood,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08062": {
     "zone": "SOUTH WEST JERSEY",
     "city": "S HARRISN TWP",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08079": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Salem,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08080": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Sewell,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08086": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Thorofare",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08088": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Vincentown",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08361": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Vineland",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08360": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Vineland,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08043": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Voorhees Township,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08089": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Waterford Works",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08059": {
     "zone": "SOUTH WEST JERSEY",
     "city": "West Collingswood Heights",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08051": {
     "zone": "SOUTH WEST JERSEY",
     "city": "West Deptford",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08093": {
     "zone": "SOUTH WEST JERSEY",
     "city": "West Deptford,",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08094": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Williamstown",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08046": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Willingboro",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08097": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Woodbury Heights",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08107": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Woodlynne",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08108": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Woodlynne",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08098": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Woodstown",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   },
   "08085": {
     "zone": "SOUTH WEST JERSEY",
     "city": "Woolwich Township",
-    "delivery_days": "WED, FRI"
+    "delivery_days": "WED,FRI"
   }
 }
