@@ -1,9 +1,4 @@
 {
-  "7505": {
-    "zone": "NORTH JERSEY",
-    "city": "Paterson",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10000": {
     "zone": "MANHATTAN",
     "city": "MANHATTAN",
@@ -759,11 +754,6 @@
     "city": "Bedford Hills",
     "delivery_days": "TUE,WED,THU,FRI"
   },
-  "10509": {
-    "zone": "MID-HUDSON",
-    "city": "Brewster",
-    "delivery_days": "WED,FRI"
-  },
   "10510": {
     "zone": "WESTCHESTER",
     "city": "Briarcliff Manor",
@@ -774,11 +764,6 @@
     "city": "Buchanan",
     "delivery_days": "TUE,WED,THU,FRI"
   },
-  "10512": {
-    "zone": "MID-HUDSON",
-    "city": "Carmel",
-    "delivery_days": "WED,FRI"
-  },
   "10513": {
     "zone": "WESTCHESTER",
     "city": "White Plains",
@@ -788,11 +773,6 @@
     "zone": "WESTCHESTER",
     "city": "Chappaqua",
     "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10516": {
-    "zone": "MID-HUDSON",
-    "city": "Cold Spring",
-    "delivery_days": "WED,FRI"
   },
   "10517": {
     "zone": "WESTCHESTER",
@@ -828,11 +808,6 @@
     "zone": "WESTCHESTER",
     "city": "Elmsford",
     "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10524": {
-    "zone": "MID-HUDSON",
-    "city": "Garrison",
-    "delivery_days": "WED,FRI"
   },
   "10526": {
     "zone": "WESTCHESTER",
@@ -887,11 +862,6 @@
   "10540": {
     "zone": "WESTCHESTER",
     "city": "Lincolndale",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10541": {
-    "zone": "WESTCHESTER",
-    "city": "Mahopac",
     "delivery_days": "TUE,WED,THU,FRI"
   },
   "10542": {
@@ -1018,11 +988,6 @@
     "zone": "WESTCHESTER",
     "city": "Purdys",
     "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10579": {
-    "zone": "MID-HUDSON",
-    "city": "Putnam Valley",
-    "delivery_days": "WED,FRI"
   },
   "10580": {
     "zone": "WESTCHESTER",
@@ -1234,11 +1199,6 @@
     "city": "New Rochelle",
     "delivery_days": "TUE,WED,THU,FRI"
   },
-  "10901": {
-    "zone": "WESTCHESTER",
-    "city": "Suffern",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10910": {
     "zone": "MID-HUDSON",
     "city": "Arden",
@@ -1254,74 +1214,14 @@
     "city": "Bellvale",
     "delivery_days": "SIDEKICK"
   },
-  "10913": {
-    "zone": "WESTCHESTER",
-    "city": "Blauvelt",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10914": {
-    "zone": "MID-HUDSON",
-    "city": "Blooming Grove",
-    "delivery_days": "SIDEKICK"
-  },
   "10916": {
     "zone": "MID-HUDSON",
     "city": "Campbell Hall",
     "delivery_days": "SIDEKICK"
   },
-  "10917": {
-    "zone": "MID-HUDSON",
-    "city": "Central Valley",
-    "delivery_days": "SIDEKICK"
-  },
-  "10918": {
-    "zone": "MID-HUDSON",
-    "city": "Chester",
-    "delivery_days": "SIDEKICK"
-  },
-  "10920": {
-    "zone": "WESTCHESTER",
-    "city": "Congers",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10921": {
-    "zone": "MID-HUDSON",
-    "city": "Florida",
-    "delivery_days": "SIDEKICK"
-  },
   "10922": {
     "zone": "MID-HUDSON",
     "city": "Fort Montgomery",
-    "delivery_days": "SIDEKICK"
-  },
-  "10923": {
-    "zone": "WESTCHESTER",
-    "city": "Garnerville",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10924": {
-    "zone": "MID-HUDSON",
-    "city": "Goshen",
-    "delivery_days": "SIDEKICK"
-  },
-  "10925": {
-    "zone": "MID-HUDSON",
-    "city": "Greenwood Lake",
-    "delivery_days": "SIDEKICK"
-  },
-  "10926": {
-    "zone": "MID-HUDSON",
-    "city": "Harriman",
-    "delivery_days": "SIDEKICK"
-  },
-  "10927": {
-    "zone": "WESTCHESTER",
-    "city": "Haverstraw",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10928": {
-    "zone": "MID-HUDSON",
-    "city": "Highland Falls",
     "delivery_days": "SIDEKICK"
   },
   "10930": {
@@ -1339,40 +1239,10 @@
     "city": "Johnson",
     "delivery_days": "SIDEKICK"
   },
-  "10940": {
-    "zone": "MID-HUDSON",
-    "city": "Middletown",
-    "delivery_days": "SIDEKICK"
-  },
-  "10941": {
-    "zone": "MID-HUDSON",
-    "city": "Middletown",
-    "delivery_days": "SIDEKICK"
-  },
-  "10950": {
-    "zone": "MID-HUDSON",
-    "city": "Monroe",
-    "delivery_days": "SIDEKICK"
-  },
-  "10952": {
-    "zone": "WESTCHESTER",
-    "city": "Monsey",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10953": {
     "zone": "MID-HUDSON",
     "city": "Mountainville",
     "delivery_days": "SIDEKICK"
-  },
-  "10954": {
-    "zone": "WESTCHESTER",
-    "city": "Nanuet",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10956": {
-    "zone": "WESTCHESTER",
-    "city": "New City",
-    "delivery_days": "TUE,WED,THU,FRI"
   },
   "10958": {
     "zone": "MID-HUDSON",
@@ -1384,39 +1254,9 @@
     "city": "New Milford",
     "delivery_days": "SIDEKICK"
   },
-  "10960": {
-    "zone": "WESTCHESTER",
-    "city": "Grandview On Hudson",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10962": {
-    "zone": "WESTCHESTER",
-    "city": "Orangeburg",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10964": {
     "zone": "WESTCHESTER",
     "city": "Palisades",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10965": {
-    "zone": "WESTCHESTER",
-    "city": "Pearl River",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10968": {
-    "zone": "WESTCHESTER",
-    "city": "Piermont",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10969": {
-    "zone": "MID-HUDSON",
-    "city": "Pine Island",
-    "delivery_days": "SIDEKICK"
-  },
-  "10970": {
-    "zone": "WESTCHESTER",
-    "city": "Pomona",
     "delivery_days": "TUE,WED,THU,FRI"
   },
   "10973": {
@@ -1434,29 +1274,9 @@
     "city": "Southfields",
     "delivery_days": "SIDEKICK"
   },
-  "10976": {
-    "zone": "WESTCHESTER",
-    "city": "Sparkill",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10977": {
-    "zone": "WESTCHESTER",
-    "city": "Spring Valley",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10979": {
     "zone": "MID-HUDSON",
     "city": "Sterling Forest",
-    "delivery_days": "SIDEKICK"
-  },
-  "10980": {
-    "zone": "WESTCHESTER",
-    "city": "Stony Point",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10981": {
-    "zone": "MID-HUDSON",
-    "city": "Sugar Loaf",
     "delivery_days": "SIDEKICK"
   },
   "10982": {
@@ -1464,19 +1284,9 @@
     "city": "Tallman",
     "delivery_days": "TUE,WED,THU,FRI"
   },
-  "10983": {
-    "zone": "WESTCHESTER",
-    "city": "Tappan",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10984": {
     "zone": "WESTCHESTER",
     "city": "Thiells",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10986": {
-    "zone": "WESTCHESTER",
-    "city": "Tomkins Cove",
     "delivery_days": "TUE,WED,THU,FRI"
   },
   "10988": {
@@ -1484,45 +1294,10 @@
     "city": "Unionville",
     "delivery_days": "SIDEKICK"
   },
-  "10989": {
-    "zone": "WESTCHESTER",
-    "city": "Valley Cottage",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10990": {
-    "zone": "MID-HUDSON",
-    "city": "Warwick",
-    "delivery_days": "SIDEKICK"
-  },
-  "10992": {
-    "zone": "MID-HUDSON",
-    "city": "Washingtonville",
-    "delivery_days": "SIDEKICK"
-  },
-  "10993": {
-    "zone": "WESTCHESTER",
-    "city": "West Haverstraw",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10994": {
-    "zone": "WESTCHESTER",
-    "city": "West Nyack",
-    "delivery_days": "TUE,WED,THU,FRI"
-  },
   "10995": {
     "zone": "WESTCHESTER",
     "city": "West Nyack",
     "delivery_days": "TUE,WED,THU,FRI"
-  },
-  "10996": {
-    "zone": "MID-HUDSON",
-    "city": "West Point",
-    "delivery_days": "SIDEKICK"
-  },
-  "10997": {
-    "zone": "MID-HUDSON",
-    "city": "West Point",
-    "delivery_days": "SIDEKICK"
   },
   "10998": {
     "zone": "MID-HUDSON",
@@ -3234,46 +3009,6 @@
     "city": "Yaphank",
     "delivery_days": "TUE,THU"
   },
-  "12250": {
-    "zone": "MID-HUDSON",
-    "city": "Albany",
-    "delivery_days": "SIDEKICK"
-  },
-  "12401": {
-    "zone": "MID-HUDSON",
-    "city": "Kingston",
-    "delivery_days": "SIDEKICK"
-  },
-  "12409": {
-    "zone": "MID-HUDSON",
-    "city": "Bearsville",
-    "delivery_days": "SIDEKICK"
-  },
-  "12484": {
-    "zone": "MID-HUDSON",
-    "city": "Stone Ridge",
-    "delivery_days": "SIDEKICK"
-  },
-  "12491": {
-    "zone": "MID-HUDSON",
-    "city": "West Hurley",
-    "delivery_days": "SIDEKICK"
-  },
-  "12501": {
-    "zone": "MID-HUDSON",
-    "city": "Amenia",
-    "delivery_days": "SIDEKICK"
-  },
-  "12506": {
-    "zone": "MID-HUDSON",
-    "city": "Bangall",
-    "delivery_days": "SIDEKICK"
-  },
-  "12508": {
-    "zone": "MID-HUDSON",
-    "city": "Beacon",
-    "delivery_days": "SIDEKICK"
-  },
   "12510": {
     "zone": "MID-HUDSON",
     "city": "Billings",
@@ -3294,34 +3029,9 @@
     "city": "Clinton Corners",
     "delivery_days": "SIDEKICK"
   },
-  "12518": {
-    "zone": "MID-HUDSON",
-    "city": "Cornwall",
-    "delivery_days": "SIDEKICK"
-  },
-  "12520": {
-    "zone": "MID-HUDSON",
-    "city": "Cornwall On Hudson",
-    "delivery_days": "SIDEKICK"
-  },
-  "12522": {
-    "zone": "MID-HUDSON",
-    "city": "Dover Plains",
-    "delivery_days": "SIDEKICK"
-  },
-  "12524": {
-    "zone": "MID-HUDSON",
-    "city": "Fishkill",
-    "delivery_days": "SIDEKICK"
-  },
   "12527": {
     "zone": "MID-HUDSON",
     "city": "Glenham",
-    "delivery_days": "SIDEKICK"
-  },
-  "12528": {
-    "zone": "MID-HUDSON",
-    "city": "Highland",
     "delivery_days": "SIDEKICK"
   },
   "12531": {
@@ -3329,49 +3039,14 @@
     "city": "Holmes",
     "delivery_days": "SIDEKICK"
   },
-  "12533": {
-    "zone": "MID-HUDSON",
-    "city": "Hopewell Junction",
-    "delivery_days": "SIDEKICK"
-  },
   "12537": {
     "zone": "MID-HUDSON",
     "city": "Hughsonville",
     "delivery_days": "SIDEKICK"
   },
-  "12538": {
-    "zone": "MID-HUDSON",
-    "city": "Hyde Park",
-    "delivery_days": "SIDEKICK"
-  },
-  "12540": {
-    "zone": "MID-HUDSON",
-    "city": "Lagrangeville",
-    "delivery_days": "SIDEKICK"
-  },
   "12543": {
     "zone": "MID-HUDSON",
     "city": "Maybrook",
-    "delivery_days": "SIDEKICK"
-  },
-  "12545": {
-    "zone": "MID-HUDSON",
-    "city": "Millbrook",
-    "delivery_days": "SIDEKICK"
-  },
-  "12546": {
-    "zone": "MID-HUDSON",
-    "city": "Millerton",
-    "delivery_days": "SIDEKICK"
-  },
-  "12549": {
-    "zone": "MID-HUDSON",
-    "city": "Montgomery",
-    "delivery_days": "SIDEKICK"
-  },
-  "12550": {
-    "zone": "MID-HUDSON",
-    "city": "Newburgh",
     "delivery_days": "SIDEKICK"
   },
   "12551": {
@@ -3384,54 +3059,9 @@
     "city": "Newburgh",
     "delivery_days": "SIDEKICK"
   },
-  "12553": {
-    "zone": "MID-HUDSON",
-    "city": "New Windsor",
-    "delivery_days": "SIDEKICK"
-  },
   "12555": {
     "zone": "MID-HUDSON",
     "city": "Newburgh",
-    "delivery_days": "SIDEKICK"
-  },
-  "12561": {
-    "zone": "MID-HUDSON",
-    "city": "New Paltz",
-    "delivery_days": "SIDEKICK"
-  },
-  "12563": {
-    "zone": "MID-HUDSON",
-    "city": "Patterson",
-    "delivery_days": "SIDEKICK"
-  },
-  "12564": {
-    "zone": "MID-HUDSON",
-    "city": "Pawling",
-    "delivery_days": "SIDEKICK"
-  },
-  "12567": {
-    "zone": "MID-HUDSON",
-    "city": "Pine Plains",
-    "delivery_days": "SIDEKICK"
-  },
-  "12569": {
-    "zone": "MID-HUDSON",
-    "city": "Pleasant Valley",
-    "delivery_days": "SIDEKICK"
-  },
-  "12570": {
-    "zone": "MID-HUDSON",
-    "city": "Poughquag",
-    "delivery_days": "SIDEKICK"
-  },
-  "12572": {
-    "zone": "MID-HUDSON",
-    "city": "Rhinebeck",
-    "delivery_days": "SIDEKICK"
-  },
-  "12574": {
-    "zone": "MID-HUDSON",
-    "city": "Rhinecliff",
     "delivery_days": "SIDEKICK"
   },
   "12575": {
@@ -3439,74 +3069,14 @@
     "city": "Rock Tavern",
     "delivery_days": "SIDEKICK"
   },
-  "12577": {
-    "zone": "MID-HUDSON",
-    "city": "Salisbury Mills",
-    "delivery_days": "SIDEKICK"
-  },
-  "12578": {
-    "zone": "MID-HUDSON",
-    "city": "Salt Point",
-    "delivery_days": "SIDEKICK"
-  },
-  "12580": {
-    "zone": "MID-HUDSON",
-    "city": "Staatsburg",
-    "delivery_days": "SIDEKICK"
-  },
   "12581": {
     "zone": "MID-HUDSON",
     "city": "Stanfordville",
     "delivery_days": "SIDEKICK"
   },
-  "12582": {
-    "zone": "MID-HUDSON",
-    "city": "Stormville",
-    "delivery_days": "SIDEKICK"
-  },
-  "12584": {
-    "zone": "MID-HUDSON",
-    "city": "Vails Gate",
-    "delivery_days": "SIDEKICK"
-  },
   "12585": {
     "zone": "MID-HUDSON",
     "city": "Verbank",
-    "delivery_days": "SIDEKICK"
-  },
-  "12586": {
-    "zone": "MID-HUDSON",
-    "city": "Walden",
-    "delivery_days": "SIDEKICK"
-  },
-  "12590": {
-    "zone": "MID-HUDSON",
-    "city": "Wappingers Falls",
-    "delivery_days": "SIDEKICK"
-  },
-  "12592": {
-    "zone": "MID-HUDSON",
-    "city": "Wassaic",
-    "delivery_days": "SIDEKICK"
-  },
-  "12594": {
-    "zone": "MID-HUDSON",
-    "city": "Wingdale",
-    "delivery_days": "SIDEKICK"
-  },
-  "12601": {
-    "zone": "MID-HUDSON",
-    "city": "Poughkeepsie",
-    "delivery_days": "SIDEKICK"
-  },
-  "12602": {
-    "zone": "MID-HUDSON",
-    "city": "Poughkeepsie",
-    "delivery_days": "SIDEKICK"
-  },
-  "12603": {
-    "zone": "MID-HUDSON",
-    "city": "Poughkeepsie",
     "delivery_days": "SIDEKICK"
   },
   "12604": {
