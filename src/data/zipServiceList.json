@@ -3524,11 +3524,6 @@
     "city": "SIDEKICK",
     "delivery_days": "SIDEKICK"
   },
-  "null": {
-    "zone": "Hit <CTRL> F to Search PDF File",
-    "city": null,
-    "delivery_days": null
-  },
   "Zip": {
     "zone": "Zone#",
     "city": "CITY",
