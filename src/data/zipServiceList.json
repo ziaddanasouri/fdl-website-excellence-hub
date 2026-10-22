@@ -1580,9 +1580,9 @@
     "delivery_days": "TUE,THU"
   },
   "08310": {
-    "zone": "JERSEY SHORE",
-    "city": "Buena,",
-    "delivery_days": "TUE,THU"
+    "zone": "SOUTH WEST JERSEY",
+    "city": "Buena",
+    "delivery_days": "WED,FRI"
   },
   "08204": {
     "zone": "JERSEY SHORE",
